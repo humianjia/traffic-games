@@ -1,6 +1,6 @@
 var gameDetailData = {
     "name": "Monster Truck Stunts Free Jeep",
-    "imageUrl": "img/game_icon/racing/monsterTruckStuntsFreeJeep.jpeg",
+    "imageUrl": "img/game_icon/racing/MonsterTruckStuntsFreeJeep.jpeg",
     "gameType": "Racing",
     "rating": "88%",
     "description": "Play Monster Truck Stunts Free Jeep online for free! Test your drifting skills in this fun and challenging racing game.",

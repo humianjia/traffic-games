@@ -76,23 +76,11 @@
             console.log('drivingGamesData is undefined');
         }
         
-        console.log('Total games from categories:', allGames.length);
-        
-        // 如果还是没有游戏数据，尝试使用coolmathGamesData和moreGamesData作为备选
-        if (allGames.length === 0) {
-            console.log('No games from categories, trying coolmath and more games');
-            if (typeof coolmathGamesData !== 'undefined') {
-                console.log('Found coolmathGamesData:', coolmathGamesData.length, 'games');
-                allGames = allGames.concat(coolmathGamesData);
-            } else {
-                console.log('coolmathGamesData is undefined');
-            }
-            if (typeof moreGamesData !== 'undefined') {
-                console.log('Found moreGamesData:', moreGamesData.length, 'games');
-                allGames = allGames.concat(moreGamesData);
-            } else {
-                console.log('moreGamesData is undefined');
-            }
+        // 不包含coolmathGamesData，只使用其他分类的游戏数据
+        if (typeof coolmathGamesData !== 'undefined') {
+            console.log('coolmathGamesData is available but not included');
+        } else {
+            console.log('coolmathGamesData is undefined');
         }
         
         console.log('Total games after all sources:', allGames.length);
@@ -111,6 +99,60 @@
         localStorage.removeItem('dailyMoreGames');
     }
 
+    // 清除所有缓存数据
+    function clearAllCache() {
+        localStorage.removeItem('dailyCoolmathGames');
+        localStorage.removeItem('dailyMoreGames');
+    }
+
+    // 获取每日游戏数据（24个不重复游戏）
+    function getDailyGames() {
+        var today = new Date().toDateString();
+        var storedCoolmath = localStorage.getItem('dailyCoolmathGames');
+        var storedMore = localStorage.getItem('dailyMoreGames');
+        
+        // 如果今天的数据已经存在，直接返回
+        if (storedCoolmath && storedMore) {
+            var parsedCoolmath = JSON.parse(storedCoolmath);
+            var parsedMore = JSON.parse(storedMore);
+            if (parsedCoolmath.date === today && parsedMore.date === today) {
+                return { coolmath: parsedCoolmath.games, more: parsedMore.games };
+            }
+        }
+        
+        // 从所有游戏数据中获取游戏（不包含coolmath）
+        var allGames = getAllGames();
+        console.log('Total games available:', allGames.length);
+        
+        // 随机选择24个不重复的游戏
+        var randomGames = [];
+        if (allGames.length > 0) {
+            // 打乱游戏顺序
+            var shuffled = allGames.sort(function() { return 0.5 - Math.random(); });
+            // 取前24个游戏
+            randomGames = shuffled.slice(0, Math.min(24, shuffled.length));
+        }
+        console.log('Selected games:', randomGames.length);
+        
+        // 分配到两个列表中，各12个
+        var coolmathGames = randomGames.slice(0, 12);
+        var moreGames = randomGames.slice(12, 24);
+        console.log('Coolmath Hot Picks games:', coolmathGames.length);
+        console.log('More Games games:', moreGames.length);
+        
+        // 存储新的游戏和日期
+        localStorage.setItem('dailyCoolmathGames', JSON.stringify({
+            date: today,
+            games: coolmathGames
+        }));
+        localStorage.setItem('dailyMoreGames', JSON.stringify({
+            date: today,
+            games: moreGames
+        }));
+        
+        return { coolmath: coolmathGames, more: moreGames };
+    }
+
     // 获取每日Coolmath Hot Picks游戏
     function getDailyCoolmathGames() {
         var today = new Date().toDateString();
@@ -123,24 +165,9 @@
             }
         }
         
-        // 如果没有存储数据或日期已更新，重新选择游戏
-        var allGames = getAllGames();
-        var randomGames = [];
-        
-        if (allGames.length > 0) {
-            randomGames = getRandomGames(allGames, Math.min(12, allGames.length));
-        } else {
-            // 如果还是没有游戏数据，创建一个空数组
-            randomGames = [];
-        }
-        
-        // 存储新的游戏和日期
-        localStorage.setItem('dailyCoolmathGames', JSON.stringify({
-            date: today,
-            games: randomGames
-        }));
-        
-        return randomGames;
+        // 如果没有缓存，获取新的每日游戏数据
+        var dailyGames = getDailyGames();
+        return dailyGames.coolmath;
     }
 
     // 获取每日More Games游戏
@@ -155,40 +182,9 @@
             }
         }
         
-        // 确保先获取Coolmath Hot Picks游戏
-        var coolmathGames = getDailyCoolmathGames();
-        var coolmathGameIds = coolmathGames.map(game => game.id);
-        
-        // 如果还是没有游戏数据，创建一个空数组
-        if (coolmathGameIds.length === 0) {
-            localStorage.setItem('dailyMoreGames', JSON.stringify({
-                date: today,
-                games: []
-            }));
-            return [];
-        }
-        
-        // 获取所有游戏数据
-        var allGames = getAllGames();
-        
-        // 过滤掉Coolmath Hot Picks中已有的游戏
-        var filteredGames = allGames.filter(game => !coolmathGameIds.includes(game.id));
-        var randomGames = [];
-        
-        if (filteredGames.length > 0) {
-            randomGames = getRandomGames(filteredGames, Math.min(12, filteredGames.length));
-        } else {
-            // 如果过滤后没有游戏，创建一个空数组
-            randomGames = [];
-        }
-        
-        // 存储新的游戏和日期
-        localStorage.setItem('dailyMoreGames', JSON.stringify({
-            date: today,
-            games: randomGames
-        }));
-        
-        return randomGames;
+        // 如果没有缓存，获取新的每日游戏数据
+        var dailyGames = getDailyGames();
+        return dailyGames.more;
     }
 
     function renderGameDetail() {
