@@ -1,0 +1,38 @@
+[
+    {
+        "imageUrl": "img/game_icon/game1.png",
+        "link": "#",
+        "name": "Traffic Rush",
+        "description": "Control traffic lights and manage the flow of vehicles through busy intersections.",
+        "backgroundColor": "linear-gradient(135deg, #f97316, #ef4444)",
+        "badge": "NEW",
+        "badgeType": "new"
+    },
+    {
+        "imageUrl": "img/game_icon/game1.png",
+        "link": "#",
+        "name": "Road Builder",
+        "description": "Build roads, bridges and highways to connect cities and create the perfect network.",
+        "backgroundColor": "linear-gradient(135deg, #8b5cf6, #6366f1)",
+        "badge": "HOT",
+        "badgeType": "hot"
+    },
+    {
+        "imageUrl": "img/game_icon/game1.png",
+        "link": "#",
+        "name": "Escape Traffic",
+        "description": "Navigate through heavy traffic and find your way out of the city maze.",
+        "backgroundColor": "linear-gradient(135deg, #06b6d4, #0ea5e9)",
+        "badge": "",
+        "badgeType": ""
+    },
+    {
+        "imageUrl": "img/game_icon/game1.png",
+        "link": "#",
+        "name": "Parking Master",
+        "description": "Park your car perfectly in challenging spots without hitting any obstacles.",
+        "backgroundColor": "linear-gradient(135deg, #22c55e, #16a34a)",
+        "badge": "",
+        "badgeType": ""
+    }
+]
