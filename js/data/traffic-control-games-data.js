@@ -32,7 +32,7 @@ var trafficControlGamesData = [
         "rating": "87%",
         "description": "Play Traffic Control Math online for free! Test your traffic control skills in this fun and challenging game.",
         "keywords": "Traffic Control Math, traffic control, track game, online game, free game, casual game",
-        "link": "trafficControl/Math.html", 
+        "link": "trafficControl/TrafficControlMath.html", 
         "tags": ["traffic control", "math", "puzzle"],      
         "iframeUrl": "https://html5.gamedistribution.com/d6c884e486a94cefaeb5d639415415b6/?gd_sdk_referrer_url=https://www.onlinegames.io/cat-runner/"
     },
@@ -44,7 +44,7 @@ var trafficControlGamesData = [
         "rating": "87%",
         "description": "Play Traffic Control Time online for free! Test your traffic control skills in this fun and challenging game.",
         "keywords": "Traffic Control Time, traffic control, track game, online game, free game, casual game",
-        "link": "trafficControl/Time.html", 
+        "link": "trafficControl/TrafficControlTime.html", 
         "tags": ["traffic control", "time", "puzzle"],          
         "iframeUrl": "https://html5.gamedistribution.com/1265ebf8ad9346e59f3d87731f2d10ba/?gd_sdk_referrer_url=https://www.onlinegames.io/cat-runner/"
     },
@@ -56,7 +56,7 @@ var trafficControlGamesData = [
         "rating": "87%",
         "description": "Play Traffic Controller online for free! Test your traffic control skills in this fun and challenging game.",
         "keywords": "Traffic Controller, traffic control, track game, online game, free game, casual game", 
-        "link": "trafficControl/Controller.html", 
+        "link": "trafficControl/TrafficController.html", 
         "tags": ["traffic control", "controller", "puzzle"],            
         "iframeUrl": "https://html5.gamedistribution.com/67ba753142cc407eb42747efc1dd25b5/?gd_sdk_referrer_url=https://www.onlinegames.io/cat-runner/"
     },

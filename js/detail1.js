@@ -188,7 +188,7 @@
     }
 
     function renderGameDetail() {
-        if (!gameDetailData) return;
+        if (typeof gameDetailData === 'undefined') return;
 
         objectiveText.textContent = gameDetailData.description;
 
@@ -206,7 +206,7 @@
     }
 
     function renderPieces() {
-        if (!gameDetailData.instructions || !gameDetailData.instructions.pieces) return;
+        if (typeof gameDetailData === 'undefined' || !gameDetailData.instructions || !gameDetailData.instructions.pieces) return;
 
         gameDetailData.instructions.pieces.forEach(function (piece) {
             var pieceCard = document.createElement('div');
@@ -218,7 +218,7 @@
     }
 
     function renderTips() {
-        if (!gameDetailData.tips) return;
+        if (typeof gameDetailData === 'undefined' || !gameDetailData.tips) return;
 
         gameDetailData.tips.forEach(function (tip) {
             var li = document.createElement('li');
@@ -228,7 +228,7 @@
     }
 
     function renderExtendedInfo() {
-        if (!gameDetailData.extendedInfo) return;
+        if (typeof gameDetailData === 'undefined' || !gameDetailData.extendedInfo) return;
 
         gameDetailData.extendedInfo.forEach(function (info) {
             var infoCard = document.createElement('div');
