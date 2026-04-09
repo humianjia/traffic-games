@@ -11,6 +11,9 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWTXKBQEVM"></script>
@@ -25,16 +28,15 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="#" class="logo">
+            <a href="home.html" class="logo">
                 <div class="logo-icon">
                     <svg viewBox="0 0 40 40" width="36" height="36">
-                        <circle cx="20" cy="20" r="18" fill="none" stroke="#4ade80" stroke-width="2.5" />
-                        <circle cx="20" cy="20" r="5" fill="#4ade80" />
-                        <line x1="20" y1="2" x2="20" y2="10" stroke="#4ade80" stroke-width="2.5"
-                            stroke-linecap="round" />
-                        <line x1="20" y1="30" x2="20" y2="38" stroke="#4ade80" stroke-width="2.5"
-                            stroke-linecap="round" />
-                        <line x1="2" y1="20" x2="10" y2="20" stroke="#4ade80" stroke-width="2.5"
+                        <rect x="8" y="8" width="24" height="24" rx="4" fill="none" stroke="#4ade80"
+                            stroke-width="2.5" />
+                        <circle cx="14" cy="16" r="3" fill="#4ade80" />
+                        <circle cx="26" cy="16" r="3" fill="#4ade80" />
+                        <rect x="14" y="22" width="12" height="2" fill="#4ade80" />
+                        <line x1="20" y1="22" x2="20" y2="28" stroke="#4ade80" stroke-width="2.5"
                             stroke-linecap="round" />
                         <line x1="30" y1="20" x2="38" y2="20" stroke="#4ade80" stroke-width="2.5"
                             stroke-linecap="round" />
@@ -47,11 +49,11 @@
                 <div class="nav-dropdown">
                     <a href="#racing" class="nav-link dropdown-toggle">Racing & Driving <span class="dropdown-arrow">▼</span></a>
                     <div class="dropdown-menu">
-                        <a href="/categories.html?category=racing" class="dropdown-item">
+                        <a href="categories.html?category=racing" class="dropdown-item">
                             <span class="dropdown-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">🏎️</span>
                             <span class="dropdown-text">Racing Games</span>
                         </a>
-                        <a href="/categories.html?category=driving" class="dropdown-item">
+                        <a href="categories.html?category=driving" class="dropdown-item">
                             <span class="dropdown-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">🚗</span>
                             <span class="dropdown-text">Driving Games</span>
                         </a>
@@ -60,11 +62,11 @@
                 <div class="nav-dropdown">
                     <a href="#control" class="nav-link dropdown-toggle">Parking & Control <span class="dropdown-arrow">▼</span></a>
                     <div class="dropdown-menu">
-                        <a href="/categories.html?category=parking" class="dropdown-item">
+                        <a href="categories.html?category=parking" class="dropdown-item">
                             <span class="dropdown-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);">🅿️</span>
                             <span class="dropdown-text">Parking Games</span>
                         </a>
-                        <a href="/categories.html?category=trafficControl" class="dropdown-item">
+                        <a href="categories.html?category=trafficControl" class="dropdown-item">
                             <span class="dropdown-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">🚦</span>
                             <span class="dropdown-text">Traffic Control</span>
                         </a>
@@ -73,15 +75,15 @@
                 <div class="nav-dropdown">
                     <a href="#fun" class="nav-link dropdown-toggle">Fun & Casual <span class="dropdown-arrow">▼</span></a>
                     <div class="dropdown-menu">
-                        <a href="/categories.html?category=escape" class="dropdown-item">
+                        <a href="categories.html?category=escape" class="dropdown-item">
                             <span class="dropdown-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">🏃</span>
                             <span class="dropdown-text">Escape Games</span>
                         </a>
-                        <a href="/categories.html?category=clicker" class="dropdown-item">
+                        <a href="categories.html?category=clicker" class="dropdown-item">
                             <span class="dropdown-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);">👆</span>
                             <span class="dropdown-text">Clicker Games</span>
                         </a>
-                        <a href="/categories.html?category=twoPlayer" class="dropdown-item">
+                        <a href="categories.html?category=twoPlayer" class="dropdown-item">
                             <span class="dropdown-icon" style="background: linear-gradient(135deg, #14b8a6, #0d9488);">👥</span>
                             <span class="dropdown-text">2 Player Games</span>
                         </a>
@@ -90,7 +92,7 @@
                 <div class="nav-dropdown">
                     <a href="#trivia" class="nav-link dropdown-toggle">Trivia <span class="dropdown-arrow">▼</span></a>
                     <div class="dropdown-menu">
-                        <a href="/categories.html?category=trivia" class="dropdown-item">
+                        <a href="categories.html?category=trivia" class="dropdown-item">
                             <span class="dropdown-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">❓</span>
                             <span class="dropdown-text">Trivia Games</span>
                         </a>
@@ -127,12 +129,11 @@
     </div> -->
 
     <main class="main">
-        <section class="featured-section">
+        <section class="popular-section" id="popular">
             <div class="section-header">
                 <h2>Recommended For You</h2>
-                <!-- <a href="#" class="see-all">See All &rarr;</a> -->
-            </div>
-            <div class="featured-grid" id="featured-grid"></div>
+                
+            <div class="games-grid" id="featured-grid"></div>
         </section>
 
         <!-- <section class="leaderboard-section" id="leaderboard">
@@ -176,8 +177,8 @@
                 </div>
                 <div class="lb-card">
                     <span class="lb-rank">#4</span>
-                    <div class="lb-thumb" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6);">
-                        <svg viewBox="0 0 40 40" width="28" height="28"><rect x="8" y="8" width="24" height="24" rx="3" fill="rgba(255,255,255,0.9)"/><line x1="8" y1="20" x2="32" y2="20" stroke="#a78bfa" stroke-width="2"/><line x1="20" y1="8" x2="20" y2="32" stroke="#a78bfa" stroke-width="2"/></svg>
+                    <div class="lb-thumb" style="background: linear-gradient(135deg, #2dd4bf, #14b8a6);">
+                        <svg viewBox="0 0 40 40" width="28" height="28"><rect x="8" y="8" width="24" height="24" rx="3" fill="rgba(255,255,255,0.9)"/><line x1="8" y1="20" x2="32" y2="20" stroke="#2dd4bf" stroke-width="2"/><line x1="20" y1="8" x2="20" y2="32" stroke="#2dd4bf" stroke-width="2"/></svg>
                     </div>
                     <div class="lb-info">
                         <h4>Cross Roads</h4>
@@ -271,12 +272,12 @@
                     <h3>Racing Games</h3>
                     <span>24 Games</span>
                     <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#f97316" title="Turbo Race"></div>
-                        <div class="cat-game-dot" style="background:#ef4444" title="Nitro Dash"></div>
-                        <div class="cat-game-dot" style="background:#eab308" title="Speed Way"></div>
-                        <div class="cat-game-dot" style="background:#22c55e" title="Grand Prix"></div>
-                        <div class="cat-game-dot" style="background:#3b82f6" title="Moto Rush"></div>
-                        <div class="cat-game-dot" style="background:#8b5cf6" title="Drag Race"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Turbo Race"></div>
+                        <div class="cat-game-dot" style="background: #e74c3c" title="Nitro Dash"></div>
+                        <div class="cat-game-dot" style="background: #f39c12" title="Speed Way"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Grand Prix"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Moto Rush"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Drag Race"></div>
                     </div>
                 </div>
                 <div class="category-card" onclick="window.location.href='categories.html?category=trafficControl'">
@@ -290,12 +291,12 @@
                     <h3>Traffic Control</h3>
                     <span>18 Games</span>
                     <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#60a5fa" title="Traffic Light"></div>
-                        <div class="cat-game-dot" style="background:#38bdf8" title="Road Manager"></div>
-                        <div class="cat-game-dot" style="background:#06b6d4" title="Signal Pro"></div>
-                        <div class="cat-game-dot" style="background:#14b8a6" title="Flow Control"></div>
-                        <div class="cat-game-dot" style="background:#0ea5e9" title="Cross Guard"></div>
-                        <div class="cat-game-dot" style="background:#6366f1" title="Bridge Boss"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Traffic Light"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Road Manager"></div>
+                        <div class="cat-game-dot" style="background: #f39c12" title="Signal Pro"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Flow Control"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Cross Guard"></div>
+                        <div class="cat-game-dot" style="background: #9b59b6" title="Bridge Boss"></div>
                     </div>
                 </div>
                 <div class="category-card" onclick="window.location.href='categories.html?category=parking'">
@@ -311,50 +312,50 @@
                     <h3>Parking Games</h3>
                     <span>15 Games</span>
                     <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#4ade80" title="Park It"></div>
-                        <div class="cat-game-dot" style="background:#34d399" title="Valet Pro"></div>
-                        <div class="cat-game-dot" style="background:#2dd4bf" title="Spot Master"></div>
-                        <div class="cat-game-dot" style="background:#a3e635" title="Garage King"></div>
-                        <div class="cat-game-dot" style="background:#86efac" title="Reverse In"></div>
-                        <div class="cat-game-dot" style="background:#bbf7d0" title="Tight Fit"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Park It"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Valet Pro"></div>
+                        <div class="cat-game-dot" style="background: #f39c12" title="Spot Master"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Garage King"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Reverse In"></div>
+                        <div class="cat-game-dot" style="background: #9b59b6" title="Tight Fit"></div>
                     </div>
                 </div>
                 <div class="category-card" onclick="window.location.href='categories.html?category=escape'">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                    <div class="cat-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">
                         <svg viewBox="0 0 40 40" width="28" height="28">
                             <polygon points="20,4 36,36 4,36" fill="rgba(255,255,255,0.9)" />
-                            <line x1="20" y1="14" x2="20" y2="24" stroke="#f59e0b" stroke-width="3"
+                            <line x1="20" y1="14" x2="20" y2="24" stroke="#f97316" stroke-width="3"
                                 stroke-linecap="round" />
-                            <circle cx="20" cy="28" r="2" fill="#f59e0b" />
+                            <circle cx="20" cy="28" r="2" fill="#f97316" />
                         </svg>
                     </div>
                     <h3>Escape Games</h3>
                     <span>12 Games</span>
                     <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#fbbf24" title="Escape Run"></div>
-                        <div class="cat-game-dot" style="background:#fb923c" title="Getaway"></div>
-                        <div class="cat-game-dot" style="background:#f97316" title="Break Free"></div>
-                        <div class="cat-game-dot" style="background:#facc15" title="Dash Out"></div>
-                        <div class="cat-game-dot" style="background:#fde047" title="Sneak Away"></div>
-                        <div class="cat-game-dot" style="background:#fdba74" title="Prison Run"></div>
+                        <div class="cat-game-dot" style="background: #f39c12" title="Escape Run"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Getaway"></div>
+                        <div class="cat-game-dot" style="background: #f39c12" title="Break Free"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Dash Out"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Sneak Away"></div>
+                        <div class="cat-game-dot" style="background: #9b59b6" title="Prison Run"></div>
                     </div>
                 </div>
                 <div class="category-card" onclick="window.location.href='categories.html?category=trivia'">
                     <div class="cat-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
                         <svg viewBox="0 0 40 40" width="28" height="28">
                             <rect x="6" y="6" width="28" height="28" rx="14" fill="rgba(255,255,255,0.9)" /><text x="20"
-                                y="26" text-anchor="middle" fill="#8b5cf6" font-size="18" font-weight="bold">?</text>
+                                y="26" text-anchor="middle" fill="#8b5cf6" font-size="24" font-weight="bold">?</text>
                         </svg>
                     </div>
                     <h3>Trivia</h3>
                     <span>20 Games</span>
                     <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#a78bfa" title="Quiz Rush"></div>
-                        <div class="cat-game-dot" style="background:#c084fc" title="Brain On"></div>
-                        <div class="cat-game-dot" style="background:#d8b4fe" title="Fact Check"></div>
-                        <div class="cat-game-dot" style="background:#e9d5ff" title="Mind Race"></div>
-                        <div class="cat-game-dot" style="background:#c4b5fd" title="Smart Car"></div>
-                        <div class="cat-game-dot" style="background:#ddd6fe" title="Road Rules"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Quiz Rush"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Brain On"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Fact Check"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Mind Race"></div>
+                        <div class="cat-game-dot" style="background: #9b59b6" title="Smart Car"></div>
+                        <div class="cat-game-dot" style="background: #f39c12" title="Road Rules"></div>
                     </div>
                 </div>
                 <div class="category-card" onclick="window.location.href='categories.html?category=clicker'">
@@ -368,16 +369,16 @@
                     <h3>Clicker Games</h3>
                     <span>16 Games</span>
                     <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#f472b6" title="Click Car"></div>
-                        <div class="cat-game-dot" style="background:#fb7185" title="Tap Race"></div>
-                        <div class="cat-game-dot" style="background:#fda4af" title="Idle Road"></div>
-                        <div class="cat-game-dot" style="background:#fecdd3" title="Auto Drive"></div>
-                        <div class="cat-game-dot" style="background:#e879f9" title="Speed Tap"></div>
-                        <div class="cat-game-dot" style="background:#f0abfc" title="Turbo Click"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Click Car"></div>
+                        <div class="cat-game-dot" style="background: #e74c3c" title="Tap Race"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Idle Road"></div>
+                        <div class="cat-game-dot" style="background: #f39c12" title="Auto Drive"></div>
+                        <div class="cat-game-dot" style="background: #9b59b6" title="Speed Tap"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Turbo Click"></div>
                     </div>
                 </div>
                 <div class="category-card" onclick="window.location.href='categories.html?category=twoPlayer'">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+                    <div class="cat-icon" style="background: linear-gradient(135deg, #14b8a6, #0d9488);">
                         <svg viewBox="0 0 40 40" width="28" height="28">
                             <circle cx="14" cy="20" r="8" fill="rgba(255,255,255,0.9)" />
                             <circle cx="26" cy="20" r="8" fill="rgba(255,255,255,0.9)" />
@@ -386,16 +387,16 @@
                     <h3>2 Player Games</h3>
                     <span>14 Games</span>
                     <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#22d3ee" title="Dual Race"></div>
-                        <div class="cat-game-dot" style="background:#67e8f9" title="VS Cars"></div>
-                        <div class="cat-game-dot" style="background:#a5f3fc" title="Tag Team"></div>
-                        <div class="cat-game-dot" style="background:#0ea5e9" title="P1 vs P2"></div>
-                        <div class="cat-game-dot" style="background:#38bdf8" title="Split Road"></div>
-                        <div class="cat-game-dot" style="background:#7dd3fc" title="Rival Rush"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Dual Race"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="VS Cars"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Tag Team"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="P1 vs P2"></div>
+                        <div class="cat-game-dot" style="background: #f39c12" title="Split Road"></div>
+                        <div class="cat-game-dot" style="background: #9b59b6" title="Rival Rush"></div>
                     </div>
                 </div>
                 <div class="category-card" onclick="window.location.href='categories.html?category=driving'">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">
+                    <div class="cat-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
                         <svg viewBox="0 0 40 40" width="28" height="28">
                             <rect x="6" y="10" width="28" height="20" rx="3" fill="rgba(255,255,255,0.9)" />
                             <rect x="10" y="6" width="20" height="8" rx="2" fill="rgba(255,255,255,0.7)" />
@@ -406,18 +407,18 @@
                     <h3>Driving Games</h3>
                     <span>22 Games</span>
                     <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#fb923c" title="City Drive"></div>
-                        <div class="cat-game-dot" style="background:#fdba74" title="Highway"></div>
-                        <div class="cat-game-dot" style="background:#fed7aa" title="Off Road"></div>
-                        <div class="cat-game-dot" style="background:#f97316" title="Night Drive"></div>
-                        <div class="cat-game-dot" style="background:#ea580c" title="Desert Run"></div>
-                        <div class="cat-game-dot" style="background:#c2410c" title="Ice Road"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="City Drive"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Highway"></div>
+                        <div class="cat-game-dot" style="background: #f39c12" title="Off Road"></div>
+                        <div class="cat-game-dot" style="background: #2ecc71" title="Night Drive"></div>
+                        <div class="cat-game-dot" style="background: #3498db" title="Desert Run"></div>
+                        <div class="cat-game-dot" style="background: #9b59b6" title="Ice Road"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="guides-section" id="guides">
+        <!-- <section class="guides-section" id="guides">
             <div class="section-header">
                 <h2>Features & Guides</h2>
             </div>
@@ -425,11 +426,11 @@
                 <div class="guide-card">
                     <div class="guide-icon">
                         <svg viewBox="0 0 40 40" width="32" height="32">
-                            <path d="M20 4 L36 34 H4Z" fill="none" stroke="#4ade80" stroke-width="2.5"
+                            <path d="M20 4 L36 34 H4Z" fill="none" stroke="#3498db" stroke-width="2.5"
                                 stroke-linejoin="round" />
-                            <line x1="20" y1="14" x2="20" y2="22" stroke="#4ade80" stroke-width="2.5"
+                            <line x1="20" y1="14" x2="20" y2="22" stroke="#3498db" stroke-width="2.5"
                                 stroke-linecap="round" />
-                            <circle cx="20" cy="27" r="1.5" fill="#4ade80" />
+                            <circle cx="20" cy="27" r="1.5" fill="#3498db" />
                         </svg>
                     </div>
                     <h3>The Traffic Games Promise</h3>
@@ -439,11 +440,11 @@
                 <div class="guide-card">
                     <div class="guide-icon">
                         <svg viewBox="0 0 40 40" width="32" height="32">
-                            <rect x="6" y="6" width="28" height="28" rx="4" fill="none" stroke="#60a5fa"
+                            <rect x="6" y="6" width="28" height="28" rx="4" fill="none" stroke="#2ecc71"
                                 stroke-width="2.5" />
-                            <line x1="12" y1="14" x2="28" y2="14" stroke="#60a5fa" stroke-width="2" />
-                            <line x1="12" y1="20" x2="24" y2="20" stroke="#60a5fa" stroke-width="2" />
-                            <line x1="12" y1="26" x2="20" y2="26" stroke="#60a5fa" stroke-width="2" />
+                            <line x1="12" y1="14" x2="28" y2="14" stroke="#2ecc71" stroke-width="2" />
+                            <line x1="12" y1="20" x2="24" y2="20" stroke="#2ecc71" stroke-width="2" />
+                            <line x1="12" y1="26" x2="20" y2="26" stroke="#2ecc71" stroke-width="2" />
                         </svg>
                     </div>
                     <h3>Our Game Guidelines</h3>
@@ -453,8 +454,8 @@
                 <div class="guide-card">
                     <div class="guide-icon">
                         <svg viewBox="0 0 40 40" width="32" height="32">
-                            <circle cx="20" cy="20" r="14" fill="none" stroke="#fbbf24" stroke-width="2.5" />
-                            <path d="M20 10 L20 20 L26 24" fill="none" stroke="#fbbf24" stroke-width="2.5"
+                            <circle cx="20" cy="20" r="14" fill="none" stroke="#f39c12" stroke-width="2.5" />
+                            <path d="M20 10 L20 20 L26 24" fill="none" stroke="#f39c12" stroke-width="2.5"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
@@ -463,7 +464,7 @@
                         challenges and exciting gameplay.</p>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="popular-section" id="popular">
             <div class="section-header">
@@ -475,6 +476,7 @@
                     <button class="filter-btn" data-filter="top-rated">Top Rated</button>
                 </div>
             </div>
+            <h3>Traffic Games</h3>
             <div class="games-grid" id="gamesGrid"></div>
         </section>
     </main>

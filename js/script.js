@@ -57,7 +57,7 @@
         
         // 如果没有存储数据或日期已更新，重新选择游戏
         var allGames = getAllGames();
-        var randomGames = getRandomGames(allGames, 4);
+        var randomGames = getRandomGames(allGames, 10);
         
         // 存储新的推荐游戏和日期
         localStorage.setItem('dailyRecommendedGames', JSON.stringify({
@@ -126,7 +126,7 @@
 
         games.forEach(function (game) {
             var card = document.createElement('div');
-            card.className = 'featured-card';
+            card.className = 'game-card';
             
             // 调整图片路径
             var imageUrl = game.imageUrl;
@@ -143,32 +143,14 @@
                     gameLink = '../' + gameLink;
                 }
             }
-            
-            var badgeHtml = '';
-            if (game.badge && game.badgeType) {
-                badgeHtml = '<span class="thumb-badge ' + game.badgeType + '">' + game.badge + '</span>';
-            }
 
-            card.innerHTML = '<a href="' + gameLink + '" class="featured-card-link">' +
-                '<div class="game-thumb" style="background: url(' + imageUrl + ') no-repeat center center / cover;">' +
-                    // '<img src="' + imageUrl + '" alt="' + game.name + '" class="thumb-image">' +
-                    badgeHtml +
+            card.innerHTML = '<a href="' + gameLink + '" class="game-card-link">' +
+                '<div class="gc-thumb" style="background: url(' + imageUrl + ') no-repeat center center / cover;">' +
                 '</div>' +
-                '<div class="featured-info">' +
-                    '<h3>' + game.name + '</h3>' +
-                    '<p>' + game.description + '</p>' +
-                '</div>' +
+                '<p class="gc-label">' + game.name + '</p>' +
             '</a>';
 
             featuredGrid.appendChild(card);
-
-            // 移除阻止默认链接行为的代码，允许链接正常跳转
-            /*
-            card.addEventListener('click', function (e) {
-                e.preventDefault();
-                showGameToast(game.name);
-            });
-            */
         });
     }
 
@@ -450,7 +432,7 @@
             
             categoryData.forEach(game => {
                 var card = document.createElement('div');
-                card.className = 'featured-card';
+                card.className = 'game-card';
                 
                 // 调整图片路径
                 var imageUrl = game.imageUrl;
@@ -467,21 +449,11 @@
                         gameLink = '../' + gameLink;
                     }
                 }
-                
-                var badgeHtml = '';
-                if (game.badge && game.badgeType) {
-                    badgeHtml = '<span class="thumb-badge ' + game.badgeType + '">' + game.badge + '</span>';
-                }
 
-                card.innerHTML = '<a href="' + gameLink + '" class="featured-card-link">' +
-                    '<div class="game-thumb" style="background: url(' + imageUrl + ') no-repeat center center / cover;">' +
-                        // '<img src="' + imageUrl + '" alt="' + game.name + '" class="thumb-image">' +
-                        badgeHtml +
+                card.innerHTML = '<a href="' + gameLink + '" class="game-card-link">' +
+                    '<div class="gc-thumb" style="background: url(' + imageUrl + ') no-repeat center center / cover;">' +
                     '</div>' +
-                    '<div class="featured-info">' +
-                        '<h3>' + game.name + '</h3>' +
-                        '<p>' + game.description + '</p>' +
-                    '</div>' +
+                    '<p class="gc-label">' + game.name + '</p>' +
                 '</a>';
 
                 featuredGrid.appendChild(card);
@@ -523,7 +495,7 @@
             
             searchResults.forEach(game => {
                 var card = document.createElement('div');
-                card.className = 'featured-card';
+                card.className = 'game-card';
                 
                 // 调整图片路径
                 var imageUrl = game.imageUrl;
@@ -540,21 +512,11 @@
                         gameLink = '../' + gameLink;
                     }
                 }
-                
-                var badgeHtml = '';
-                if (game.badge && game.badgeType) {
-                    badgeHtml = '<span class="thumb-badge ' + game.badgeType + '">' + game.badge + '</span>';
-                }
 
-                card.innerHTML = '<a href="' + gameLink + '" class="featured-card-link">' +
-                    '<div class="game-thumb" style="background: url(' + imageUrl + ') no-repeat center center / cover;">' +
-                        // '<img src="' + imageUrl + '" alt="' + game.name + '" class="thumb-image">' +
-                        badgeHtml +
+                card.innerHTML = '<a href="' + gameLink + '" class="game-card-link">' +
+                    '<div class="gc-thumb" style="background: url(' + imageUrl + ') no-repeat center center / cover;">' +
                     '</div>' +
-                    '<div class="featured-info">' +
-                        '<h3>' + game.name + '</h3>' +
-                        '<p>' + game.description + '</p>' +
-                    '</div>' +
+                    '<p class="gc-label">' + game.name + '</p>' +
                 '</a>';
 
                 featuredGrid.appendChild(card);
