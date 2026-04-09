@@ -489,11 +489,88 @@
         }
     }
     
-    // 处理URL参数，自动加载分类游戏
+    // 搜索游戏
+    function searchGames(query) {
+        if (!query || query.trim() === '') return;
+        
+        query = query.toLowerCase().trim();
+        var allGames = getAllGames();
+        var searchResults = allGames.filter(function(game) {
+            var gameName = (game.name || '').toLowerCase();
+            var gameDescription = (game.description || '').toLowerCase();
+            var gameTags = (game.tags || []).join(' ').toLowerCase();
+            return gameName.includes(query) || gameDescription.includes(query) || gameTags.includes(query);
+        });
+        
+        // 更新页面标题
+        var categoryTitleElement = document.getElementById('category-title');
+        if (categoryTitleElement) {
+            categoryTitleElement.textContent = 'Search Results for "' + query + '"';
+        }
+        
+        // 渲染搜索结果
+        var featuredGrid = document.getElementById('featured-grid');
+        if (featuredGrid) {
+            featuredGrid.innerHTML = '';
+            
+            if (searchResults.length === 0) {
+                var noResults = document.createElement('div');
+                noResults.className = 'no-results';
+                noResults.innerHTML = '<h3>No results found</h3><p>Try a different search term</p>';
+                featuredGrid.appendChild(noResults);
+                return;
+            }
+            
+            searchResults.forEach(game => {
+                var card = document.createElement('div');
+                card.className = 'featured-card';
+                
+                // 调整图片路径
+                var imageUrl = game.imageUrl;
+                if (window.location.pathname.includes('/coolmath/') || window.location.pathname.includes('/more-games/') || window.location.pathname.includes('/racing/') || window.location.pathname.includes('/trafficControl/') || window.location.pathname.includes('/parking/') || window.location.pathname.includes('/escape/') || window.location.pathname.includes('/trivia/') || window.location.pathname.includes('/clicker/') || window.location.pathname.includes('/twoPlayer/') || window.location.pathname.includes('/driving/')) {
+                    if (!imageUrl.startsWith('../')) {
+                        imageUrl = '../' + imageUrl;
+                    }
+                }
+                
+                // 调整链接路径
+                var gameLink = game.link;
+                if (window.location.pathname.includes('/coolmath/') || window.location.pathname.includes('/more-games/') || window.location.pathname.includes('/racing/') || window.location.pathname.includes('/trafficControl/') || window.location.pathname.includes('/parking/') || window.location.pathname.includes('/escape/') || window.location.pathname.includes('/trivia/') || window.location.pathname.includes('/clicker/') || window.location.pathname.includes('/twoPlayer/') || window.location.pathname.includes('/driving/')) {
+                    if (!gameLink.startsWith('../')) {
+                        gameLink = '../' + gameLink;
+                    }
+                }
+                
+                var badgeHtml = '';
+                if (game.badge && game.badgeType) {
+                    badgeHtml = '<span class="thumb-badge ' + game.badgeType + '">' + game.badge + '</span>';
+                }
+
+                card.innerHTML = '<a href="' + gameLink + '" class="featured-card-link">' +
+                    '<div class="game-thumb" style="background: url(' + imageUrl + ') no-repeat center center / cover;">' +
+                        // '<img src="' + imageUrl + '" alt="' + game.name + '" class="thumb-image">' +
+                        badgeHtml +
+                    '</div>' +
+                    '<div class="featured-info">' +
+                        '<h3>' + game.name + '</h3>' +
+                        '<p>' + game.description + '</p>' +
+                    '</div>' +
+                '</a>';
+
+                featuredGrid.appendChild(card);
+            });
+        }
+    }
+
+    // 处理URL参数，自动加载分类游戏或搜索结果
     function handleUrlParams() {
         var urlParams = new URLSearchParams(window.location.search);
         var category = urlParams.get('category');
-        if (category) {
+        var search = urlParams.get('search');
+        
+        if (search) {
+            searchGames(search);
+        } else if (category) {
             loadCategoryGames(category);
         }
     }

@@ -97,10 +97,15 @@
                     </div>
                 </div>
             </nav>
-            <!-- <div class="header-search">
-                <svg viewBox="0 0 20 20" width="16" height="16"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="#94a3b8" stroke-width="1.5"/><line x1="13" y1="13" x2="18" y2="18" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/></svg>
-                <input type="text" placeholder="Search games...">
-            </div> -->
+            <div class="header-search">
+                <form id="searchForm" action="categories.html" method="GET">
+                    <svg viewBox="0 0 20 20" width="16" height="16"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="#94a3b8" stroke-width="1.5"/><line x1="13" y1="13" x2="18" y2="18" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <input type="text" name="search" placeholder="Search games..." required>
+                    <button type="submit" class="search-btn">
+                        <svg viewBox="0 0 20 20" width="16" height="16"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="#4ade80" stroke-width="1.5"/><line x1="13" y1="13" x2="18" y2="18" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </header>
 
@@ -251,7 +256,7 @@
 
         <section class="categories-section" id="categories">
             <div class="section-header">
-                <h2>Game Categories</h2>
+                <h2 id="category-title">Game Categories</h2>
             </div>
             <div class="categories-grid">
                 <div class="category-card" data-category="racing">
@@ -460,6 +465,10 @@
             </div>
         </section>
 
+        <section class="featured-section">
+            <div class="featured-grid" id="featured-grid"></div>
+        </section>
+
         <section class="popular-section" id="popular">
             <div class="section-header">
                 <h2>Popular Games</h2>
@@ -471,19 +480,6 @@
                 </div>
             </div>
             <div class="games-grid" id="gamesGrid"></div>
-        </section>
-
-        <section class="recommended-section">
-            <div class="section-header">
-                <h2>Coolmath Hot Picks</h2>
-                <!-- <a href="home.html" class="see-all">See All &rarr;</a> -->
-            </div>
-            <div class="recommended-grid" id="recommendedGrid"></div>
-
-            <div class="section-header">
-                <h2>More Games</h2>
-            </div>
-            <div class="more-games-grid" id="moreGamesGrid"></div>
         </section>
     </main>
 
