@@ -1019,10 +1019,27 @@
         });
     }
 
+    function toggleFullscreenMock() {
+        const el = document.getElementById('gameContainer');
+        el.classList.toggle('fullscreen-mock');
+    }
+
     function toggleFullscreen() {
+        // 检测是否为iOS设备
+        const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        
+        if (isiOS) {
+            // iOS设备使用模拟全屏
+            toggleFullscreenMock();
+            return;
+        }
+        
         if (!document.fullscreenElement) {
             if (gameContainer.requestFullscreen) {
                 gameContainer.requestFullscreen();
+            } else if (gameContainer.webkitEnterFullscreen) {
+                // iOS 专用
+                gameContainer.webkitEnterFullscreen();
             } else if (gameContainer.webkitRequestFullscreen) {
                 gameContainer.webkitRequestFullscreen();
             } else if (gameContainer.msRequestFullscreen) {

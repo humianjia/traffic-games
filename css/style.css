@@ -910,6 +910,16 @@ body {
     text-overflow: ellipsis;
 }
 
+.fullscreen-mock {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   z-index: 9999;
+   overflow: auto;
+}
+
 /* 页脚 */
 .footer {
     background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
@@ -1067,6 +1077,25 @@ body {
 }
 
 @media (max-width: 768px) {
+    .container,
+    .header-inner,
+    .game-title-container,
+    .game-launch-container,
+    .detail-container {
+        padding: 0 var(--space-sm) !important;
+        max-width: 100% !important;
+    }
+    
+    /* 确保详情内容区域在移动端能够充分利用宽度 */
+    .game-detail-section .detail-container {
+        padding: 0 var(--space-sm) !important;
+        max-width: 100% !important;
+    }
+    
+    .game-detail-section .detail-content {
+        padding: var(--space-md) !important;
+    }
+    
     .header-inner {
         flex-wrap: wrap;
         justify-content: center;
@@ -1101,7 +1130,8 @@ body {
     .featured-grid,
     .categories-grid,
     .guides-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
     }
     
     .games-grid {
@@ -1120,19 +1150,50 @@ body {
     
     .featured-card-content,
     .category-card,
-    .guide-card {
+    .guide-card,
+    .detail-content {
         padding: var(--space-md);
+    }
+    
+    /* 游戏容器适配 */
+    .game-iframe-container {
+        padding-bottom: 75%; /* 调整为更适合移动端的宽高比 */
+    }
+    
+    /* 优化触摸目标大小 */
+    .fullscreen-btn {
+        width: 44px;
+        height: 44px;
+    }
+    
+    /* 优化游戏卡片在移动端的显示 */
+    .game-card {
+        transition: all 0.3s ease;
+    }
+    
+    .game-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
     }
 }
 
 @media (max-width: 480px) {
+    .container,
+    .header-inner,
+    .game-title-container,
+    .game-launch-container,
+    .detail-container {
+        padding: 0 var(--space-xs);
+        max-width: 100%;
+    }
+    
     .logo-text {
         font-size: 1.5rem;
     }
     
     .logo-icon svg {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
     }
     
     .nav {
@@ -1157,28 +1218,62 @@ body {
         right: 5%;
     }
     
-    .games-grid {
+    .featured-grid,
+    .categories-grid,
+    .guides-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
     }
     
     .cat-icon,
     .guide-icon {
-        width: 64px;
-        height: 64px;
+        width: 56px;
+        height: 56px;
     }
     
     .cat-icon svg,
     .guide-icon svg {
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
     }
     
     .featured-card-image {
-        height: 180px;
+        height: 160px;
     }
     
     .gc-thumb {
-        height: 120px;
+        height: 100px;
+    }
+    
+    /* 游戏容器适配 */
+    .game-iframe-container {
+        padding-bottom: 80%; /* 调整为更适合小屏幕移动端的宽高比 */
+    }
+    
+    /* 优化小屏幕上的触摸目标大小 */
+    .fullscreen-btn {
+        width: 48px;
+        height: 48px;
+    }
+    
+    /* 优化小屏幕上的游戏卡片 */
+    .game-card {
+        padding: var(--space-xs);
+    }
+    
+    .gc-label {
+        font-size: 0.75rem;
+        padding: 0 var(--space-xs) var(--space-xs);
+    }
+    
+    /* 优化小屏幕上的详情内容 */
+    .detail-content {
+        padding: var(--space-sm);
     }
 }
 
@@ -1387,12 +1482,20 @@ body {
     padding: var(--space-2xl) 0;
 }
 
-.game-launch-section {
-    background-color: var(--bg-primary);
-    border-radius: var(--radius-xl);
-    padding: var(--space-2xl);
+.game-title-section {
     margin-bottom: var(--space-2xl);
-    box-shadow: var(--shadow-md);
+}
+
+.game-title-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.game-launch-section {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: var(--space-2xl);
+    box-shadow: none;
 }
 
 .game-launch-container {
@@ -1400,12 +1503,57 @@ body {
     margin: 0 auto;
 }
 
+.game-title-area {
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9), rgba(30, 30, 30, 0.9));
+    padding: var(--space-2xl);
+    margin-bottom: var(--space-xl);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+
+
+.game-title-area::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+}
+
 .game-title-area h1 {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: normal;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
     color: var(--text-primary);
-    margin-bottom: var(--space-xl);
+    margin: 0;
     text-align: center;
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        0 0 10px rgba(99, 102, 241, 0.3);
+    position: relative;
+    z-index: 1;
+    letter-spacing: 1px;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+    100% { transform: translateY(0) rotate(0deg); }
 }
 
 .game-iframe-container {
@@ -1413,8 +1561,6 @@ body {
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
 }
 
 .game-iframe-container iframe {
@@ -1424,7 +1570,6 @@ body {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: var(--radius-lg);
 }
 
 .fullscreen-btn {
