@@ -21,6 +21,25 @@
     var extendedInfoGrid = document.getElementById('extendedInfoGrid');
     var recommendedGrid = document.getElementById('recommendedGrid');
     var moreGamesGrid = document.getElementById('moreGamesGrid');
+    
+    // 为iframe添加load事件监听器，当游戏加载完成后自动设置焦点
+    var iframe = gameContainer.querySelector('iframe');
+    if (iframe) {
+        iframe.addEventListener('load', function() {
+            setTimeout(() => {
+                iframe.focus();
+                // 对于iOS设备，可能需要模拟点击事件
+                if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+                    const clickEvent = new MouseEvent('click', {
+                        bubbles: true,
+                        cancelable: true,
+                        view: window
+                    });
+                    iframe.dispatchEvent(clickEvent);
+                }
+            }, 100);
+        });
+    }
 
     // 获取所有游戏数据
     function getAllGames() {
@@ -1022,6 +1041,23 @@
     function toggleFullscreenMock() {
         const el = document.getElementById('gameContainer');
         el.classList.toggle('fullscreen-mock');
+        
+        // 尝试将焦点设置到iframe上，解决全屏后需要再点击一下才能正常访问的问题
+        setTimeout(() => {
+            const iframe = el.querySelector('iframe');
+            if (iframe) {
+                iframe.focus();
+                // 对于iOS设备，可能需要模拟点击事件
+                if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+                    const clickEvent = new MouseEvent('click', {
+                        bubbles: true,
+                        cancelable: true,
+                        view: window
+                    });
+                    iframe.dispatchEvent(clickEvent);
+                }
+            }
+        }, 100);
     }
 
     function toggleFullscreen() {
