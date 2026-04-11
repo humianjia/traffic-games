@@ -1,0 +1,289 @@
+const fs = require('fs');
+const path = require('path');
+
+// 读取clicker-games-data.js文件
+const dataPath = path.join(__dirname, 'js', 'data', 'clicker-games-data.js');
+const content = fs.readFileSync(dataPath, 'utf8');
+
+// 提取JSON数据
+const jsonMatch = content.match(/var clickerGamesData = \[(.*)\];/s);
+if (!jsonMatch) {
+    console.error('无法提取JSON数据');
+    process.exit(1);
+}
+
+const jsonString = `[${jsonMatch[1]}]`;
+const games = JSON.parse(jsonString);
+
+// 从第11个元素开始处理（索引10）
+const startIndex = 10;
+const processedIds = new Set();
+
+// 确保clicker目录存在
+const clickerDir = path.join(__dirname, 'clicker');
+if (!fs.existsSync(clickerDir)) {
+    fs.mkdirSync(clickerDir, { recursive: true });
+}
+
+// 处理每个游戏
+for (let i = startIndex; i < games.length; i++) {
+    const game = games[i];
+    const gameId = game.id;
+    
+    // 检查是否重复
+    if (processedIds.has(gameId)) {
+        console.log(`跳过重复ID: ${gameId}`);
+        continue;
+    }
+    
+    // 添加到已处理集合
+    processedIds.add(gameId);
+    
+    // 生成文件名
+    const fileName = game.link.replace('clicker/', '');
+    const filePath = path.join(clickerDir, fileName);
+    
+    // 生成页面标题
+    const pageTitle = `${game.name} - Play Free Online Clicker Game`;
+    
+    // 生成HTML内容
+    const html = `<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="${game.description}" />
+    <meta name="keywords" content="${game.keywords}" />
+    <meta name="robots" content="index, follow" />
+    <title>traffic games - ${game.name} - Play Free Online Clicker Game</title>
+    <link rel="canonical" href="https://trafficgames.com/clicker/${fileName}" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/detail1.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWTXKBQEVM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VWTXKBQEVM');
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../home.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" width="36" height="36">
+                        <rect x="8" y="8" width="24" height="24" rx="4" fill="none" stroke="#4ade80"
+                            stroke-width="2.5" />
+                        <circle cx="14" cy="16" r="3" fill="#4ade80" />
+                        <circle cx="26" cy="16" r="3" fill="#4ade80" />
+                        <rect x="14" y="22" width="12" height="2" fill="#4ade80" />
+                        <line x1="20" y1="22" x2="20" y2="28" stroke="#4ade80" stroke-width="2.5"
+                            stroke-linecap="round" />
+                        <line x1="30" y1="20" x2="38" y2="20" stroke="#4ade80" stroke-width="2.5"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <span class="logo-text">Traffic Games</span>
+            </a>
+                        <nav class="nav">
+                <!-- <a href="home.html" class="nav-link">Home</a> -->
+                <div class="nav-dropdown">
+                    <a href="#racing" class="nav-link dropdown-toggle">Racing & Driving <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../categories.html?category=racing" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">🏎️</span>
+                            <span class="dropdown-text">Racing Games</span>
+                        </a>
+                        <a href="../categories.html?category=driving" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">🚗</span>
+                            <span class="dropdown-text">Driving Games</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#control" class="nav-link dropdown-toggle">Parking & Control <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../categories.html?category=parking" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);">🅿️</span>
+                            <span class="dropdown-text">Parking Games</span>
+                        </a>
+                        <a href="../categories.html?category=trafficControl" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">🚦</span>
+                            <span class="dropdown-text">Traffic Control</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#fun" class="nav-link dropdown-toggle">Fun & Casual <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../categories.html?category=escape" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">🏃</span>
+                            <span class="dropdown-text">Escape Games</span>
+                        </a>
+                        <a href="../categories.html?category=clicker" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);">👆</span>
+                            <span class="dropdown-text">Clicker Games</span>
+                        </a>
+                        <a href="../categories.html?category=twoPlayer" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #14b8a6, #0d9488);">👥</span>
+                            <span class="dropdown-text">2 Player Games</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="#trivia" class="nav-link dropdown-toggle">Trivia <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../categories.html?category=trivia" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">❓</span>
+                            <span class="dropdown-text">Trivia Games</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="header-search">
+                <form id="searchForm" action="../categories.html" method="GET">
+                    <svg viewBox="0 0 20 20" width="16" height="16"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="#94a3b8" stroke-width="1.5"/><line x1="13" y1="13" x2="18" y2="18" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <input type="text" name="search" placeholder="Search games..." required>
+                    <button type="submit" class="search-btn">
+                        <svg viewBox="0 0 20 20" width="16" height="16"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="#4ade80" stroke-width="1.5"/><line x1="13" y1="13" x2="18" y2="18" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail-main">
+        <section class="game-launch-section">
+            <div class="game-launch-container">
+                <div class="game-title-area">
+                    <h1>${game.name} - traffic games</h1>
+                </div>
+                  
+                <div class="game-iframe-container" id="gameContainer">
+                    <iframe src="${game.iframeUrl}" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                    <button class="fullscreen-btn" id="fullscreenBtn">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path
+                                d="M7 14H5v5h5v-5H7zM14 14h-2v5h5v-5h-3zM17 3h-3v5h5V3h-2zM7 3H5v5h5V3H7zM4 7H2v5h5V7H4zM17 7h-3v5h5V7h-2zM4 14H2v5h5v-5H4zM17 14h-3v5h5v-5h-2zM14 17h-2v3h5v-3h-3zM7 17H5v3h5v-3H7z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="game-detail-section">
+            <div class="detail-container">
+                <div class="detail-content">
+                    <div class="detail-block">
+                        <h2 class="detail-title">${game.name} - Play Free Online</h2>
+                        <p class="detail-description" id="objectiveText">${game.description}</p>
+                        <p>${game.description}</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h2 class="detail-title">How to Play ${game.name}</h2>
+                        <p>Use your mouse or finger to interact with the game. Click or tap to perform actions and follow the on-screen instructions.</p>
+                        <p>Practice regularly to improve your skills and achieve higher scores in this exciting clicker game.</p>
+                    </div>
+
+                    <div class="detail-block">
+                        <h2 class="detail-title">Features of ${game.name}</h2>
+                        <p>${game.name} offers a range of features that make it an engaging game experience:</p>
+                        <ul>
+                            <li>Easy to learn, hard to master gameplay</li>
+                            <li>Addictive clicker mechanics</li>
+                            <li>Regular updates with new content</li>
+                            <li>Compatible with all devices</li>
+                            <li>Free to play online</li>
+                        </ul>
+                        <p>Whether you're a casual gamer or a dedicated player, ${game.name} provides hours of entertainment for players of all ages.</p>
+                    </div>
+
+                    <div class="detail-block seo-only">
+                        <h2 class="detail-title">${game.name}</h2>
+                        <div class="pieces-grid" id="piecesGrid"></div>
+                    </div>
+
+                    <div class="detail-block seo-only">
+                        <h2 class="detail-title">${game.name}</h2>
+                        <ul class="tips-list" id="tipsList"></ul>
+                    </div>
+
+                    <div class="detail-block seo-only">
+                        <h2 class="detail-title">Traffic Games</h2>
+                        <div class="extended-info-grid" id="extendedInfoGrid"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommended-section">
+            <div class="section-header">
+                <h2>Coolmath Hot Picks</h2>
+            </div>
+            <div class="recommended-grid" id="recommendedGrid"></div>
+
+            <div class="section-header">
+                <h2>More Games</h2>
+            </div>
+            <div class="more-games-grid" id="moreGamesGrid"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4>Traffic Games</h4>
+                <p>Play best free online traffic, driving, and racing games. No downloads required!</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../index.html#categories">Categories</a>
+                <a href="../index.html#leaderboard">Leaderboard</a>
+                <a href="../index.html#popular">Popular</a>
+            </div>
+            <div class="footer-col">
+                <h4>Game Categories</h4>
+                <a href="../home.html">Racing Games</a>
+                <a href="../home.html">Traffic Control</a>
+                <a href="../home.html">Parking Games</a>
+                <a href="../home.html">Escape Games</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Traffic Games. All rights reserved. Play free online games.</p>
+        </div>
+    </footer>
+
+    <script src="../js/clicker/${fileName.replace('.html', '-data.js')}"></script>
+    <script src="../js/data/racing-games-data.js"></script>
+    <script src="../js/data/traffic-control-games-data.js"></script>
+    <script src="../js/data/parking-games-data.js"></script>
+    <script src="../js/data/escape-games-data.js"></script>
+    <script src="../js/data/trivia-games-data.js"></script>
+    <script src="../js/data/clicker-games-data.js"></script>
+    <script src="../js/data/twoPlayer-games-data.js"></script>
+    <script src="../js/data/driving-games-data.js"></script>
+    <script src="../js/detail1.js"></script>
+</body>
+
+</html>`;
+    
+    // 写入文件
+    fs.writeFileSync(filePath, html, 'utf8');
+    console.log(`生成页面: ${filePath}`);
+}
+
+console.log(`处理完成，共生成 ${processedIds.size} 个页面`);
