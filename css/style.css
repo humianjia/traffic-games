@@ -1219,9 +1219,13 @@ body {
     }
     
     .featured-grid,
-    .categories-grid,
     .guides-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-md);
     }
     
@@ -1973,12 +1977,18 @@ body {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
-        padding: 0 !important;
+        padding-bottom: 75% !important;
+        height: 0 !important;
+        overflow: hidden !important;
     }
     
     .game-iframe-container iframe {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100% !important;
         height: 100% !important;
+        border: none !important;
     }
     
     /* 确保详情内容区域不溢出 */
