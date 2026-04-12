@@ -352,7 +352,7 @@
     }
 
     var style = document.createElement('style');
-    style.textContent = '.game-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(20px);background:#1a1a26;border:1px solid #2a2a3e;color:#f0f0f5;padding:12px 24px;border-radius:10px;font-size:14px;display:flex;align-items:center;gap:10px;opacity:0;transition:all 0.3s;z-index:9999;box-shadow:0 8px 32px rgba(0,0,0,0.4);}.game-toast.show{opacity:1;transform:translateX(-50%) translateY(0);}.toast-play{color:#4ade80;font-size:16px;}';
+    style.textContent = '@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"); .game-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(20px);background:#1a1a26;border:1px solid #2a2a3e;color:#f0f0f5;padding:12px 24px;border-radius:10px;font-size:14px;display:flex;align-items:center;gap:10px;opacity:0;transition:all 0.3s;z-index:9999;box-shadow:0 8px 32px rgba(0,0,0,0.4);} .game-toast.show{opacity:1;transform:translateX(-50%) translateY(0);} .toast-play{color:#4ade80;font-size:16px;} .custom-pagination{display:flex;justify-content:flex-end;margin-top:40px;width:100%;padding:0 32px;} .pagination-container{display:flex;align-items:center;gap:10px;padding:16px 24px;background:linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);border-radius:20px;box-shadow:0 12px 40px rgba(0,0,0,0.5);backdrop-filter:blur(10px);animation:gradientShift 8s ease infinite;} .pagination-btn{padding:10px 20px;background:linear-gradient(145deg, #2a2a3e, #3a3a4e);color:#f0f0f5;border:2px solid #4a4a5e;border-radius:12px;font-family:"Poppins", sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);position:relative;overflow:hidden;min-width:45px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.3);} .pagination-btn::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg, transparent, rgba(74, 222, 128, 0.3), transparent);transition:all 0.6s ease;} .pagination-btn:hover:not(:disabled)::before{left:100%;} .pagination-btn:hover:not(:disabled){background:linear-gradient(145deg, #3a3a4e, #4a4a5e);border-color:#4ade80;transform:translateY(-3px) scale(1.05);box-shadow:0 8px 25px rgba(74, 222, 128, 0.4);animation:bounce 0.5s ease;} .pagination-btn:active:not(:disabled){transform:translateY(0) scale(0.98);} .pagination-btn.active{background:linear-gradient(145deg, #4ade80, #34d399);color:#1a1a2e;border-color:#4ade80;box-shadow:0 0 25px rgba(74, 222, 128, 0.6);animation:glow 2s ease-in-out infinite alternate;} .pagination-btn:disabled{opacity:0.5;cursor:not-allowed;transform:scale(0.95);} .pagination-ellipsis{color:#94a3b8;font-family:"Poppins", sans-serif;font-size:16px;padding:0 10px;font-weight:600;} .pagination-info{margin-left:20px;color:#94a3b8;font-family:"Poppins", sans-serif;font-size:14px;font-weight:600;background:linear-gradient(145deg, #2a2a3e, #3a3a4e);padding:8px 16px;border-radius:8px;border:2px solid #4a4a5e;box-shadow:0 4px 15px rgba(0,0,0,0.3);transition:all 0.3s ease;} .pagination-info:hover{background:linear-gradient(145deg, #3a3a4e, #4a4a5e);border-color:#4ade80;transform:translateY(-2px);box-shadow:0 6px 20px rgba(74, 222, 128, 0.3);} @keyframes gradientShift{0%{background-position:0% 50%;} 50%{background-position:100% 50%;} 100%{background-position:0% 50%;}} @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(74, 222, 128, 0.4);} 70%{box-shadow:0 0 0 15px rgba(74, 222, 128, 0);} 100%{box-shadow:0 0 0 0 rgba(74, 222, 128, 0);}} @keyframes glow{0%{box-shadow:0 0 10px rgba(74, 222, 128, 0.6);} 100%{box-shadow:0 0 30px rgba(74, 222, 128, 0.9);}} @keyframes bounce{0%, 20%, 50%, 80%, 100%{transform:translateY(0) scale(1);} 40%{transform:translateY(-10px) scale(1.05);} 60%{transform:translateY(-5px) scale(1.02);}} @media (max-width: 768px){ .custom-pagination{justify-content:center;} .pagination-container{flex-wrap:wrap;justify-content:center;gap:8px;padding:12px 20px;border-radius:16px;} .pagination-info{margin-left:0;margin-top:10px;order:2;width:100%;text-align:center;} .pagination-btn{padding:8px 16px;font-size:12px;min-width:40px;} .pagination-ellipsis{padding:0 8px;font-size:14px;} }';
     document.head.appendChild(style);
     
     // 添加分类卡片点击事件
@@ -376,8 +376,15 @@
         });
     }
 
+    // 全局变量用于分页
+    var currentPage = 1;
+    var itemsPerPage = 20;
+    var currentData = [];
+    var currentCategory = '';
+    var currentSearchQuery = '';
+    
     // 加载分类游戏
-    function loadCategoryGames(category) {
+    function loadCategoryGames(category, page = 1) {
         var categoryData;
         var categoryTitle;
         
@@ -419,6 +426,12 @@
                 return;
         }
         
+        // 更新全局变量
+        currentData = categoryData;
+        currentCategory = category;
+        currentSearchQuery = '';
+        currentPage = page;
+        
         // 更新页面标题
         var categoryTitleElement = document.getElementById('category-title');
         if (categoryTitleElement) {
@@ -426,43 +439,11 @@
         }
         
         // 渲染分类游戏
-        var featuredGrid = document.getElementById('featured-grid');
-        if (featuredGrid) {
-            featuredGrid.innerHTML = '';
-            
-            categoryData.forEach(game => {
-                var card = document.createElement('div');
-                card.className = 'game-card';
-                
-                // 调整图片路径
-                var imageUrl = game.imageUrl;
-                if (window.location.pathname.includes('/coolmath/') || window.location.pathname.includes('/more-games/') || window.location.pathname.includes('/racing/') || window.location.pathname.includes('/trafficControl/') || window.location.pathname.includes('/parking/') || window.location.pathname.includes('/escape/') || window.location.pathname.includes('/trivia/') || window.location.pathname.includes('/clicker/') || window.location.pathname.includes('/twoPlayer/') || window.location.pathname.includes('/driving/')) {
-                    if (!imageUrl.startsWith('../')) {
-                        imageUrl = '../' + imageUrl;
-                    }
-                }
-                
-                // 调整链接路径
-                var gameLink = game.link;
-                if (window.location.pathname.includes('/coolmath/') || window.location.pathname.includes('/more-games/') || window.location.pathname.includes('/racing/') || window.location.pathname.includes('/trafficControl/') || window.location.pathname.includes('/parking/') || window.location.pathname.includes('/escape/') || window.location.pathname.includes('/trivia/') || window.location.pathname.includes('/clicker/') || window.location.pathname.includes('/twoPlayer/') || window.location.pathname.includes('/driving/')) {
-                    if (!gameLink.startsWith('../')) {
-                        gameLink = '../' + gameLink;
-                    }
-                }
-
-                card.innerHTML = '<a href="' + gameLink + '" class="game-card-link">' +
-                    '<div class="gc-thumb" style="background: url(' + imageUrl + ') no-repeat center center / cover;">' +
-                    '</div>' +
-                    '<p class="gc-label">' + game.name + '</p>' +
-                '</a>';
-
-                featuredGrid.appendChild(card);
-            });
-        }
+        renderPagedGames(categoryData, page);
     }
     
     // 搜索游戏
-    function searchGames(query) {
+    function searchGames(query, page = 1) {
         if (!query || query.trim() === '') return;
         
         query = query.toLowerCase().trim();
@@ -474,6 +455,12 @@
             return gameName.includes(query) || gameDescription.includes(query) || gameTags.includes(query);
         });
         
+        // 更新全局变量
+        currentData = searchResults;
+        currentSearchQuery = query;
+        currentCategory = '';
+        currentPage = page;
+        
         // 更新页面标题
         var categoryTitleElement = document.getElementById('category-title');
         if (categoryTitleElement) {
@@ -481,59 +468,202 @@
         }
         
         // 渲染搜索结果
-        var featuredGrid = document.getElementById('featured-grid');
-        if (featuredGrid) {
-            featuredGrid.innerHTML = '';
-            
-            if (searchResults.length === 0) {
-                var noResults = document.createElement('div');
-                noResults.className = 'no-results';
-                noResults.innerHTML = '<h3>No results found</h3><p>Try a different search term</p>';
-                featuredGrid.appendChild(noResults);
-                return;
-            }
-            
-            searchResults.forEach(game => {
-                var card = document.createElement('div');
-                card.className = 'game-card';
-                
-                // 调整图片路径
-                var imageUrl = game.imageUrl;
-                if (window.location.pathname.includes('/coolmath/') || window.location.pathname.includes('/more-games/') || window.location.pathname.includes('/racing/') || window.location.pathname.includes('/trafficControl/') || window.location.pathname.includes('/parking/') || window.location.pathname.includes('/escape/') || window.location.pathname.includes('/trivia/') || window.location.pathname.includes('/clicker/') || window.location.pathname.includes('/twoPlayer/') || window.location.pathname.includes('/driving/')) {
-                    if (!imageUrl.startsWith('../')) {
-                        imageUrl = '../' + imageUrl;
-                    }
-                }
-                
-                // 调整链接路径
-                var gameLink = game.link;
-                if (window.location.pathname.includes('/coolmath/') || window.location.pathname.includes('/more-games/') || window.location.pathname.includes('/racing/') || window.location.pathname.includes('/trafficControl/') || window.location.pathname.includes('/parking/') || window.location.pathname.includes('/escape/') || window.location.pathname.includes('/trivia/') || window.location.pathname.includes('/clicker/') || window.location.pathname.includes('/twoPlayer/') || window.location.pathname.includes('/driving/')) {
-                    if (!gameLink.startsWith('../')) {
-                        gameLink = '../' + gameLink;
-                    }
-                }
-
-                card.innerHTML = '<a href="' + gameLink + '" class="game-card-link">' +
-                    '<div class="gc-thumb" style="background: url(' + imageUrl + ') no-repeat center center / cover;">' +
-                    '</div>' +
-                    '<p class="gc-label">' + game.name + '</p>' +
-                '</a>';
-
-                featuredGrid.appendChild(card);
-            });
-        }
+        renderPagedGames(searchResults, page);
     }
 
+    // 渲染分页游戏数据
+    function renderPagedGames(games, page) {
+        var featuredGrid = document.getElementById('featured-grid');
+        if (!featuredGrid) return;
+        
+        featuredGrid.innerHTML = '';
+        
+        if (games.length === 0) {
+            var noResults = document.createElement('div');
+            noResults.className = 'no-results';
+            noResults.innerHTML = '<h3>No results found</h3><p>Try a different search term</p>';
+            featuredGrid.appendChild(noResults);
+            return;
+        }
+        
+        // 计算分页数据
+        var startIndex = (page - 1) * itemsPerPage;
+        var endIndex = startIndex + itemsPerPage;
+        var pagedGames = games.slice(startIndex, endIndex);
+        
+        // 渲染游戏卡片
+        pagedGames.forEach(game => {
+            var card = document.createElement('div');
+            card.className = 'game-card';
+            
+            // 调整图片路径
+            var imageUrl = game.imageUrl;
+            if (window.location.pathname.includes('/coolmath/') || window.location.pathname.includes('/more-games/') || window.location.pathname.includes('/racing/') || window.location.pathname.includes('/trafficControl/') || window.location.pathname.includes('/parking/') || window.location.pathname.includes('/escape/') || window.location.pathname.includes('/trivia/') || window.location.pathname.includes('/clicker/') || window.location.pathname.includes('/twoPlayer/') || window.location.pathname.includes('/driving/')) {
+                if (!imageUrl.startsWith('../')) {
+                    imageUrl = '../' + imageUrl;
+                }
+            }
+            
+            // 调整链接路径
+            var gameLink = game.link;
+            if (window.location.pathname.includes('/coolmath/') || window.location.pathname.includes('/more-games/') || window.location.pathname.includes('/racing/') || window.location.pathname.includes('/trafficControl/') || window.location.pathname.includes('/parking/') || window.location.pathname.includes('/escape/') || window.location.pathname.includes('/trivia/') || window.location.pathname.includes('/clicker/') || window.location.pathname.includes('/twoPlayer/') || window.location.pathname.includes('/driving/')) {
+                if (!gameLink.startsWith('../')) {
+                    gameLink = '../' + gameLink;
+                }
+            }
+
+            card.innerHTML = '<a href="' + gameLink + '" class="game-card-link">' +
+                '<div class="gc-thumb" style="background: url(' + imageUrl + ') no-repeat center center / cover;">' +
+                '</div>' +
+                '<p class="gc-label">' + game.name + '</p>' +
+            '</a>';
+
+            featuredGrid.appendChild(card);
+        });
+        
+        // 渲染分页控件
+        renderPagination(games.length, page);
+    }
+    
+    // 渲染分页控件
+    function renderPagination(totalItems, currentPage) {
+        var featuredGrid = document.getElementById('featured-grid');
+        if (!featuredGrid) return;
+        
+        var totalPages = Math.ceil(totalItems / itemsPerPage);
+        
+        // 只有当总页数大于1时才显示分页控件
+        if (totalPages <= 1) return;
+        
+        // 移除现有的分页控件
+        var existingPagination = document.querySelector('.custom-pagination');
+        if (existingPagination) {
+            existingPagination.remove();
+        }
+        
+        var paginationWrapper = document.createElement('div');
+        paginationWrapper.className = 'custom-pagination';
+        
+        var paginationContainer = document.createElement('div');
+        paginationContainer.className = 'pagination-container';
+        
+        // 上一页按钮
+        var prevButton = document.createElement('button');
+        prevButton.className = 'pagination-btn';
+        prevButton.textContent = '←';
+        prevButton.disabled = currentPage === 1;
+        prevButton.addEventListener('click', function() {
+            if (currentPage > 1) {
+                if (currentSearchQuery) {
+                    searchGames(currentSearchQuery, currentPage - 1);
+                } else if (currentCategory) {
+                    loadCategoryGames(currentCategory, currentPage - 1);
+                }
+            }
+        });
+        paginationContainer.appendChild(prevButton);
+        
+        // 页码按钮
+        var startPage = Math.max(1, currentPage - 2);
+        var endPage = Math.min(totalPages, startPage + 4);
+        
+        if (startPage > 1) {
+            var firstPageButton = document.createElement('button');
+            firstPageButton.className = 'pagination-btn';
+            firstPageButton.textContent = '1';
+            firstPageButton.addEventListener('click', function() {
+                if (currentSearchQuery) {
+                    searchGames(currentSearchQuery, 1);
+                } else if (currentCategory) {
+                    loadCategoryGames(currentCategory, 1);
+                }
+            });
+            paginationContainer.appendChild(firstPageButton);
+            
+            if (startPage > 2) {
+                var ellipsis = document.createElement('span');
+                ellipsis.className = 'pagination-ellipsis';
+                ellipsis.textContent = '...';
+                paginationContainer.appendChild(ellipsis);
+            }
+        }
+        
+        for (var i = startPage; i <= endPage; i++) {
+            var pageButton = document.createElement('button');
+            pageButton.className = 'pagination-btn ' + (i === currentPage ? 'active' : '');
+            pageButton.textContent = i;
+            pageButton.addEventListener('click', (function(pageNum) {
+                return function() {
+                    if (currentSearchQuery) {
+                        searchGames(currentSearchQuery, pageNum);
+                    } else if (currentCategory) {
+                        loadCategoryGames(currentCategory, pageNum);
+                    }
+                };
+            })(i));
+            paginationContainer.appendChild(pageButton);
+        }
+        
+        if (endPage < totalPages) {
+            if (endPage < totalPages - 1) {
+                var ellipsis = document.createElement('span');
+                ellipsis.className = 'pagination-ellipsis';
+                ellipsis.textContent = '...';
+                paginationContainer.appendChild(ellipsis);
+            }
+            
+            var lastPageButton = document.createElement('button');
+            lastPageButton.className = 'pagination-btn';
+            lastPageButton.textContent = totalPages;
+            lastPageButton.addEventListener('click', function() {
+                if (currentSearchQuery) {
+                    searchGames(currentSearchQuery, totalPages);
+                } else if (currentCategory) {
+                    loadCategoryGames(currentCategory, totalPages);
+                }
+            });
+            paginationContainer.appendChild(lastPageButton);
+        }
+        
+        // 下一页按钮
+        var nextButton = document.createElement('button');
+        nextButton.className = 'pagination-btn';
+        nextButton.textContent = '→';
+        nextButton.disabled = currentPage === totalPages;
+        nextButton.addEventListener('click', function() {
+            if (currentPage < totalPages) {
+                if (currentSearchQuery) {
+                    searchGames(currentSearchQuery, currentPage + 1);
+                } else if (currentCategory) {
+                    loadCategoryGames(currentCategory, currentPage + 1);
+                }
+            }
+        });
+        paginationContainer.appendChild(nextButton);
+        
+        // 页码信息
+        var pageInfo = document.createElement('span');
+        pageInfo.className = 'pagination-info';
+        pageInfo.textContent = 'Page ' + currentPage + ' of ' + totalPages + ' (' + totalItems + ' games)';
+        paginationContainer.appendChild(pageInfo);
+        
+        paginationWrapper.appendChild(paginationContainer);
+        
+        // 添加新的分页控件
+        featuredGrid.parentNode.appendChild(paginationWrapper);
+    }
+    
     // 处理URL参数，自动加载分类游戏或搜索结果
     function handleUrlParams() {
         var urlParams = new URLSearchParams(window.location.search);
         var category = urlParams.get('category');
         var search = urlParams.get('search');
+        var page = parseInt(urlParams.get('page')) || 1;
         
         if (search) {
-            searchGames(search);
+            searchGames(search, page);
         } else if (category) {
-            loadCategoryGames(category);
+            loadCategoryGames(category, page);
         }
     }
     
