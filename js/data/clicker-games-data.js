@@ -109,7 +109,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Sandbox - Destroy the Ragdoll",
-        "link": "clicker/Sandbox-DestroytheRagdoll.html",
+        "link": "clicker/SandboxDestroytheRagdoll.html",
         "tags": [
             "sandbox - destroy the ragdoll"
         ],
@@ -123,7 +123,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Idle PinBall - Merge Clicker",
-        "link": "clicker/IdlePinBall-MergeClicker.html",
+        "link": "clicker/IdlePinBallMergeClicker.html",
         "tags": [
             "idle pinball - merge clicker"
         ],
@@ -389,7 +389,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Sneaker Factory!",
-        "link": "clicker/SneakerFactory!.html",
+        "link": "clicker/SneakerFactory.html",
         "tags": [
             "sneaker factory!"
         ],
@@ -417,7 +417,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Boost Your Brain!",
-        "link": "clicker/BoostYourBrain!.html",
+        "link": "clicker/BoostYourBrain.html",
         "tags": [
             "boost your brain!"
         ],
@@ -431,7 +431,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Rocket Sky!",
-        "link": "clicker/RocketSky!.html",
+        "link": "clicker/RocketSky.html",
         "tags": [
             "rocket sky!"
         ],
@@ -473,7 +473,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Obby: Gym Simulator, Escape",
-        "link": "clicker/Obby:GymSimulator,Escape.html",
+        "link": "clicker/ObbyGymSimulatorEscape.html",
         "tags": [
             "obby: gym simulator, escape"
         ],
@@ -557,7 +557,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Tung Tung Sagur: Clicker",
-        "link": "clicker/TungTungSagur:Clicker.html",
+        "link": "clicker/TungTungSagurClicker.html",
         "tags": [
             "tung tung sagur: clicker"
         ],
@@ -613,7 +613,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Italian Brainrot: Neuro Beasts",
-        "link": "clicker/ItalianBrainrot:NeuroBeasts.html",
+        "link": "clicker/ItalianBrainrotNeuroBeasts.html",
         "tags": [
             "italian brainrot: neuro beasts"
         ],
@@ -725,7 +725,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "sprunki clicker & merge phase 3",
-        "link": "clicker/sprunkiclicker&mergephase3.html",
+        "link": "clicker/sprunkiclickermergephase3.html",
         "tags": [
             "sprunki clicker & merge phase 3"
         ],
@@ -767,7 +767,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Color Nuts & Bolts Puzzle",
-        "link": "clicker/ColorNuts&BoltsPuzzle.html",
+        "link": "clicker/ColorNutsBoltsPuzzle.html",
         "tags": [
             "color nuts & bolts puzzle"
         ],
@@ -823,7 +823,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Sigma Boy: Musical Clicker",
-        "link": "clicker/SigmaBoy:MusicalClicker.html",
+        "link": "clicker/SigmaBoyMusicalClicker.html",
         "tags": [
             "sigma boy: musical clicker"
         ],
@@ -963,7 +963,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Idle Dice 3D: Incremental Game",
-        "link": "clicker/IdleDice3D:IncrementalGame.html",
+        "link": "clicker/IdleDice3DIncrementalGame.html",
         "tags": [
             "idle dice 3d: incremental game"
         ],
@@ -991,7 +991,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Idle Drive: Merge, Upgrade, Drive",
-        "link": "clicker/IdleDrive:Merge,Upgrade,Drive.html",
+        "link": "clicker/IdleDriveMergeUpgradeDrive.html",
         "tags": [
             "idle drive: merge, upgrade, drive"
         ],
@@ -1005,7 +1005,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Merge Town!",
-        "link": "clicker/MergeTown!.html",
+        "link": "clicker/MergeTown.html",
         "tags": [
             "merge town!"
         ],
@@ -1047,7 +1047,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "PopCats: Merge the cats!",
-        "link": "clicker/PopCats:Mergethecats!.html",
+        "link": "clicker/PopCatsMergethecats.html",
         "tags": [
             "popcats: merge the cats!"
         ],
@@ -1187,7 +1187,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Kung-Fu Little Animals",
-        "link": "clicker/Kung-FuLittleAnimals.html",
+        "link": "clicker/KungFuLittleAnimals.html",
         "tags": [
             "kung-fu little animals"
         ],
@@ -1313,7 +1313,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Club Tycoon: Idle Clicker",
-        "link": "clicker/ClubTycoon:IdleClicker.html",
+        "link": "clicker/ClubTycoonIdleClicker.html",
         "tags": [
             "club tycoon: idle clicker"
         ],
@@ -1369,7 +1369,7 @@ var clickerGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Clash Rider - Clicker Tycoon",
-        "link": "clicker/ClashRider-ClickerTycoon.html",
+        "link": "clicker/ClashRiderClickerTycoon.html",
         "tags": [
             "clash rider - clicker tycoon"
         ],

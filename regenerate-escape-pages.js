@@ -28,7 +28,7 @@ function generateEscapePages() {
         // 替换模板内容
         let pageContent = templateContent
             .replace(/Arcade GP/g, game.name)
-            .replace(/https:\/\/html5\.gamedistribution\.com\/3fc01c17076c44149e3e4b6d79b3134f\/\?gd_sdk_referrer_url=https%3A%2F%2Fwww\.onlinegames\.io%2Fcat-runner\//g, game.iframeUrl)
+            .replace(/https:\/\/html5\.gamedistribution\.com\/3fc01c17076c44149e3e4b6d79b3134f\/\?gd_sdk_referrer_url=https:\/\/www\.onlinegames\.io\/cat-runner\//g, game.iframeUrl)
             .replace(/<meta name="keywords" content="[^"]*" \/>/g, `<meta name="keywords" content="${game.keywords}, escape games, puzzle games, free online games" />`)
             .replace(/<title>traffic games - Arcade GP - Play Free Online Driving Game<\/title>/g, `<title>traffic games - ${game.name} - Play Free Online Escape Game</title>`)
             .replace(/<link rel="canonical" href="https:\/\/trafficgames\.com\/driving\/ArcadeGP\.html" \/>/g, `<link rel="canonical" href="https://trafficgames.com/escape/${fileName}.html" />`)

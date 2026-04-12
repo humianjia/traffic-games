@@ -36,7 +36,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Obby: Tsunami Escape +1 by Car",
-        "link": "escape/Obby:TsunamiEscape+1byCar.html",
+        "link": "escape/ObbyTsunamiEscape1byCar.html",
         "tags": [
             "obby: tsunami escape +1 by car"
         ],
@@ -92,7 +92,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Candy Crunch: Sugar Escape",
-        "link": "escape/CandyCrunch:SugarEscape.html",
+        "link": "escape/CandyCrunchSugarEscape.html",
         "tags": [
             "candy crunch: sugar escape"
         ],
@@ -134,7 +134,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Arrow Escape: Puzzle",
-        "link": "escape/ArrowEscape:Puzzle.html",
+        "link": "escape/ArrowEscapePuzzle.html",
         "tags": [
             "arrow escape: puzzle"
         ],
@@ -246,7 +246,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Prison Master: Escape Journey",
-        "link": "escape/PrisonMaster:EscapeJourney.html",
+        "link": "escape/PrisonMasterEscapeJourney.html",
         "tags": [
             "prison master: escape journey"
         ],
@@ -274,7 +274,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "School Escape: Obbie Run!",
-        "link": "escape/SchoolEscape:ObbieRun!.html",
+        "link": "escape/SchoolEscapeObbieRun.html",
         "tags": [
             "school escape: obbie run!"
         ],
@@ -344,7 +344,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Escape & Steal Brainrot: Sahur Hills",
-        "link": "escape/Escape&StealBrainrot:SahurHills.html",
+        "link": "escape/EscapeStealBrainrotSahurHills.html",
         "tags": [
             "escape & steal brainrot: sahur hills"
         ],
@@ -386,7 +386,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Impostor among us: Escape from prison",
-        "link": "escape/Impostoramongus:Escapefromprison.html",
+        "link": "escape/ImpostoramongusEscapefromprison.html",
         "tags": [
             "impostor among us: escape from prison"
         ],
@@ -400,7 +400,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Knock and Run. 100 Doors Escape",
-        "link": "escape/KnockandRun.100DoorsEscape.html",
+        "link": "escape/KnockandRun100DoorsEscape.html",
         "tags": [
             "knock and run. 100 doors escape"
         ],
@@ -442,7 +442,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Hidden Object - Girl and Cat",
-        "link": "escape/HiddenObject-GirlandCat.html",
+        "link": "escape/HiddenObjectGirlandCat.html",
         "tags": [
             "hidden object - girl and cat"
         ],
@@ -526,7 +526,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Noob: Jailbreak 2",
-        "link": "escape/Noob:Jailbreak2.html",
+        "link": "escape/NoobJailbreak2.html",
         "tags": [
             "noob: jailbreak 2"
         ],
@@ -680,7 +680,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Schoolboy Runaway: room escape",
-        "link": "escape/SchoolboyRunaway:roomescape.html",
+        "link": "escape/SchoolboyRunawayroomescape.html",
         "tags": [
             "schoolboy runaway: room escape"
         ],
@@ -694,7 +694,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Fruitsland: Escape from the Amusement Park",
-        "link": "escape/Fruitsland:EscapefromtheAmusementPark.html",
+        "link": "escape/FruitslandEscapefromtheAmusementPark.html",
         "tags": [
             "fruitsland: escape from the amusement park"
         ],
@@ -722,7 +722,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "The Road Home: Granny Escape",
-        "link": "escape/TheRoadHome:GrannyEscape.html",
+        "link": "escape/TheRoadHomeGrannyEscape.html",
         "tags": [
             "the road home: granny escape"
         ],
@@ -806,7 +806,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Obby Escape: Prison Rat Dance",
-        "link": "escape/ObbyEscape:PrisonRatDance.html",
+        "link": "escape/ObbyEscapePrisonRatDance.html",
         "tags": [
             "obby escape: prison rat dance"
         ],
@@ -834,7 +834,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Obby: Gym Simulator, Escape",
-        "link": "escape/Obby:GymSimulator,Escape.html",
+        "link": "escape/ObbyGymSimulatorEscape.html",
         "tags": [
             "obby: gym simulator, escape"
         ],
@@ -890,7 +890,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Superhero Escape Run – Parkour Challenge!",
-        "link": "escape/SuperheroEscapeRun–ParkourChallenge!.html",
+        "link": "escape/SuperheroEscapeRun–ParkourChallenge.html",
         "tags": [
             "superhero escape run – parkour challenge!"
         ],
@@ -904,7 +904,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Cat Escape - Hide and Seek",
-        "link": "escape/CatEscape-HideandSeek.html",
+        "link": "escape/CatEscapeHideandSeek.html",
         "tags": [
             "cat escape - hide and seek"
         ],
@@ -1128,7 +1128,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Bank Robbery: Escape",
-        "link": "escape/BankRobbery:Escape.html",
+        "link": "escape/BankRobberyEscape.html",
         "tags": [
             "bank robbery: escape"
         ],
@@ -1254,7 +1254,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "GTA: Grand Vegas Crime",
-        "link": "escape/GTA:GrandVegasCrime.html",
+        "link": "escape/GTAGrandVegasCrime.html",
         "tags": [
             "gta: grand vegas crime"
         ],
@@ -1268,7 +1268,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "JailBreak : Escape from Prison",
-        "link": "escape/JailBreak:EscapefromPrison.html",
+        "link": "escape/JailBreakEscapefromPrison.html",
         "tags": [
             "jailbreak : escape from prison"
         ],
@@ -1352,7 +1352,7 @@ var escapeGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Escape or Die - Troll Devil Levels",
-        "link": "escape/EscapeorDie-TrollDevilLevels.html",
+        "link": "escape/EscapeorDieTrollDevilLevels.html",
         "tags": [
             "escape or die - troll devil levels"
         ],

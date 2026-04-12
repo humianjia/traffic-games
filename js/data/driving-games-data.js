@@ -596,7 +596,7 @@ var drivingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Offroad Jeep Driving Adventure: Jeep Car Games",
-        "link": "driving/OffroadJeepDrivingAdventure:JeepCarGames.html",
+        "link": "driving/OffroadJeepDrivingAdventureJeepCarGames.html",
         "tags": [
             "offroad jeep driving adventure: jeep car games"
         ],
@@ -638,7 +638,7 @@ var drivingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Car Highway Racing 2019 : Car Racing Simulator",
-        "link": "driving/CarHighwayRacing2019:CarRacingSimulator.html",
+        "link": "driving/CarHighwayRacing2019CarRacingSimulator.html",
         "tags": [
             "car highway racing 2019 : car racing simulator"
         ],
@@ -652,7 +652,7 @@ var drivingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "City Taxi Driver Simulator : Car Driving Games",
-        "link": "driving/CityTaxiDriverSimulator:CarDrivingGames.html",
+        "link": "driving/CityTaxiDriverSimulatorCarDrivingGames.html",
         "tags": [
             "city taxi driver simulator : car driving games"
         ],

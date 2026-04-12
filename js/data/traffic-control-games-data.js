@@ -134,7 +134,7 @@ var trafficControlGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Car Jam: Traffic Puzzle",
-        "link": "trafficControl/CarJam:TrafficPuzzle.html",
+        "link": "trafficControl/CarJamTrafficPuzzle.html",
         "tags": [
             "car jam: traffic puzzle"
         ],
@@ -302,7 +302,7 @@ var trafficControlGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Motorcycle Racer: Road Mayhem",
-        "link": "trafficControl/MotorcycleRacer:RoadMayhem.html",
+        "link": "trafficControl/MotorcycleRacerRoadMayhem.html",
         "tags": [
             "motorcycle racer: road mayhem"
         ],
@@ -1170,7 +1170,7 @@ var trafficControlGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Polygon Drift: Endless Traffic Racing",
-        "link": "trafficControl/PolygonDrift:EndlessTrafficRacing.html",
+        "link": "trafficControl/PolygonDriftEndlessTrafficRacing.html",
         "tags": [
             "polygon drift: endless traffic racing"
         ],
@@ -1198,7 +1198,7 @@ var trafficControlGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Reckless Car Revolt : Highway Car Racer",
-        "link": "trafficControl/RecklessCarRevolt:HighwayCarRacer.html",
+        "link": "trafficControl/RecklessCarRevoltHighwayCarRacer.html",
         "tags": [
             "reckless car revolt : highway car racer"
         ],
@@ -1254,7 +1254,7 @@ var trafficControlGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "GT Highway Car Driving : Busy Roads Racer 2020",
-        "link": "trafficControl/GTHighwayCarDriving:BusyRoadsRacer2020.html",
+        "link": "trafficControl/GTHighwayCarDrivingBusyRoadsRacer2020.html",
         "tags": [
             "gt highway car driving : busy roads racer 2020"
         ],
@@ -1268,7 +1268,7 @@ var trafficControlGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Drive in Traffic : Race The Traffic 2020",
-        "link": "trafficControl/DriveinTraffic:RaceTheTraffic2020.html",
+        "link": "trafficControl/DriveinTrafficRaceTheTraffic2020.html",
         "tags": [
             "drive in traffic : race the traffic 2020"
         ],

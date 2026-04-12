@@ -36,7 +36,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Bimka Drive - Smash cars into splinters!",
-        "link": "racing/BimkaDrive-Smashcarsintosplinters!.html",
+        "link": "racing/BimkaDriveSmashcarsintosplinters.html",
         "tags": [
             "bimka drive - smash cars into splinters!"
         ],
@@ -50,7 +50,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Obby: Tsunami Escape +1 by Car",
-        "link": "racing/Obby:TsunamiEscape+1byCar.html",
+        "link": "racing/ObbyTsunamiEscape1byCar.html",
         "tags": [
             "obby: tsunami escape +1 by car"
         ],
@@ -92,7 +92,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Cars with Guns: Wasteland Showdown",
-        "link": "racing/CarswithGuns:WastelandShowdown.html",
+        "link": "racing/CarswithGunsWastelandShowdown.html",
         "tags": [
             "cars with guns: wasteland showdown"
         ],
@@ -260,7 +260,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Max Crusher 2 - Destruction, Drift, and Racing!",
-        "link": "racing/MaxCrusher2-Destruction,Drift,andRacing!.html",
+        "link": "racing/MaxCrusher2DestructionDriftandRacing.html",
         "tags": [
             "max crusher 2 - destruction, drift, and racing!"
         ],
@@ -344,7 +344,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Hill Racing - Egg drop!",
-        "link": "racing/HillRacing-Eggdrop!.html",
+        "link": "racing/HillRacingEggdrop.html",
         "tags": [
             "hill racing - egg drop!"
         ],
@@ -414,7 +414,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Epic Racing - Descent on Cars",
-        "link": "racing/EpicRacing-DescentonCars.html",
+        "link": "racing/EpicRacingDescentonCars.html",
         "tags": [
             "epic racing - descent on cars"
         ],
@@ -442,7 +442,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Car Crash Test: Abandoned City",
-        "link": "racing/CarCrashTest:AbandonedCity.html",
+        "link": "racing/CarCrashTestAbandonedCity.html",
         "tags": [
             "car crash test: abandoned city"
         ],
@@ -540,7 +540,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Cool Cars: racing at altitude",
-        "link": "racing/CoolCars:racingataltitude.html",
+        "link": "racing/CoolCarsracingataltitude.html",
         "tags": [
             "cool cars: racing at altitude"
         ],
@@ -652,7 +652,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Marble Run - Ultimate Race!",
-        "link": "racing/MarbleRun-UltimateRace!.html",
+        "link": "racing/MarbleRunUltimateRace.html",
         "tags": [
             "marble run - ultimate race!"
         ],
@@ -722,7 +722,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Shape Transforming: Shifting Run",
-        "link": "racing/ShapeTransforming:ShiftingRun.html",
+        "link": "racing/ShapeTransformingShiftingRun.html",
         "tags": [
             "shape transforming: shifting run"
         ],
@@ -736,7 +736,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Max Crusher: Crazy Destruction and Car Crashes",
-        "link": "racing/MaxCrusher:CrazyDestructionandCarCrashes.html",
+        "link": "racing/MaxCrusherCrazyDestructionandCarCrashes.html",
         "tags": [
             "max crusher: crazy destruction and car crashes"
         ],
@@ -820,7 +820,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Dr. Parking",
-        "link": "racing/Dr.Parking.html",
+        "link": "racing/DrParking.html",
         "tags": [
             "dr. parking"
         ],
@@ -834,7 +834,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Mr Reckless: Car Chase Simulator",
-        "link": "racing/MrReckless:CarChaseSimulator.html",
+        "link": "racing/MrRecklessCarChaseSimulator.html",
         "tags": [
             "mr reckless: car chase simulator"
         ],
@@ -848,7 +848,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Draw Climb Race - The Ultimate Hill Climbing Challenge",
-        "link": "racing/DrawClimbRace-TheUltimateHillClimbingChallenge.html",
+        "link": "racing/DrawClimbRaceTheUltimateHillClimbingChallenge.html",
         "tags": [
             "draw climb race - the ultimate hill climbing challenge"
         ],
@@ -1114,7 +1114,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Stickman battle 1-4 Players",
-        "link": "racing/Stickmanbattle1-4Players.html",
+        "link": "racing/Stickmanbattle14Players.html",
         "tags": [
             "stickman battle 1-4 players"
         ],
@@ -1128,7 +1128,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Race It: Car Racing",
-        "link": "racing/RaceIt:CarRacing.html",
+        "link": "racing/RaceItCarRacing.html",
         "tags": [
             "race it: car racing"
         ],
@@ -1184,7 +1184,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Downhill Car Ride: Crash Test",
-        "link": "racing/DownhillCarRide:CrashTest.html",
+        "link": "racing/DownhillCarRideCrashTest.html",
         "tags": [
             "downhill car ride: crash test"
         ],
@@ -1198,7 +1198,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Mr. Drifter: Car Chase Simulator",
-        "link": "racing/Mr.Drifter:CarChaseSimulator.html",
+        "link": "racing/MrDrifterCarChaseSimulator.html",
         "tags": [
             "mr. drifter: car chase simulator"
         ],
@@ -1296,7 +1296,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Survival Racing: Extreme Road",
-        "link": "racing/SurvivalRacing:ExtremeRoad.html",
+        "link": "racing/SurvivalRacingExtremeRoad.html",
         "tags": [
             "survival racing: extreme road"
         ],
@@ -1310,7 +1310,7 @@ var racingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "L.O.L. Surprise! O.M.G. B.B. Driver",
-        "link": "racing/L.O.L.Surprise!O.M.G.B.B.Driver.html",
+        "link": "racing/LOLSurpriseOMGBBDriver.html",
         "tags": [
             "l.o.l. surprise! o.m.g. b.b. driver"
         ],

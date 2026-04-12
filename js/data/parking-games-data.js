@@ -78,7 +78,7 @@ var parkingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Dr. Parking",
-        "link": "parking/Dr.Parking.html",
+        "link": "parking/DrParking.html",
         "tags": [
             "dr. parking"
         ],
@@ -92,7 +92,7 @@ var parkingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Disassemble the picture: Puzzle!",
-        "link": "parking/Disassemblethepicture:Puzzle!.html",
+        "link": "parking/DisassemblethepicturePuzzle.html",
         "tags": [
             "disassemble the picture: puzzle!"
         ],
@@ -134,7 +134,7 @@ var parkingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Park Them All!",
-        "link": "parking/ParkThemAll!.html",
+        "link": "parking/ParkThemAll.html",
         "tags": [
             "park them all!"
         ],
@@ -204,7 +204,7 @@ var parkingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Drive-in Cinema: Idle Game",
-        "link": "parking/Drive-inCinema:IdleGame.html",
+        "link": "parking/DriveinCinemaIdleGame.html",
         "tags": [
             "drive-in cinema: idle game"
         ],
@@ -232,7 +232,7 @@ var parkingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Sort: My Parking Area",
-        "link": "parking/Sort:MyParkingArea.html",
+        "link": "parking/SortMyParkingArea.html",
         "tags": [
             "sort: my parking area"
         ],
@@ -386,7 +386,7 @@ var parkingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Parking Fury 3D: Beach City 2",
-        "link": "parking/ParkingFury3D:BeachCity2.html",
+        "link": "parking/ParkingFury3DBeachCity2.html",
         "tags": [
             "parking fury 3d: beach city 2"
         ],
@@ -456,7 +456,7 @@ var parkingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Parking Fury 3D: Night City",
-        "link": "parking/ParkingFury3D:NightCity.html",
+        "link": "parking/ParkingFury3DNightCity.html",
         "tags": [
             "parking fury 3d: night city"
         ],
@@ -470,7 +470,7 @@ var parkingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Toy Cars: 3D Racing",
-        "link": "parking/ToyCars:3DRacing.html",
+        "link": "parking/ToyCars3DRacing.html",
         "tags": [
             "toy cars: 3d racing"
         ],
@@ -1086,7 +1086,7 @@ var parkingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Parking Fury 3D: Bounty Hunter",
-        "link": "parking/ParkingFury3D:BountyHunter.html",
+        "link": "parking/ParkingFury3DBountyHunter.html",
         "tags": [
             "parking fury 3d: bounty hunter"
         ],
@@ -1100,7 +1100,7 @@ var parkingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Parking Fury 3D: Beach City",
-        "link": "parking/ParkingFury3D:BeachCity.html",
+        "link": "parking/ParkingFury3DBeachCity.html",
         "tags": [
             "parking fury 3d: beach city"
         ],
@@ -1212,7 +1212,7 @@ var parkingGamesData = [
         "rating": "N/A",
         "description": "No description available",
         "keywords": "Parking Fury 3D: Night Thief",
-        "link": "parking/ParkingFury3D:NightThief.html",
+        "link": "parking/ParkingFury3DNightThief.html",
         "tags": [
             "parking fury 3d: night thief"
         ],
