@@ -5,13 +5,7 @@
     box-sizing: border-box;
 }
 
-/* 引入五线谱字体_akvo */
-@font-face {
-    font-family: '五线谱字体_akvo';
-    src: url('../js/data/五线谱字体_akvo.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 /* CSS变量 - 现代、深色主题游戏网站配色方案 */
 :root {
@@ -1543,8 +1537,8 @@ body {
 .game-title-area h1 {
     font-size: 2rem;
     font-weight: normal;
-    font-style: normal;
-    font-family: '五线谱字体_akvo', 'Playfair Display', serif;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
     color: var(--text-primary);
     margin: 0;
     text-align: center;
