@@ -1550,6 +1550,88 @@ body {
     letter-spacing: 1px;
 }
 
+.game-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.game-description-section {
+    padding: 2rem 0;
+    background: var(--background-secondary);
+}
+
+.game-description-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.game-description-container h2 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.game-description-container p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.game-features {
+    margin-top: 1.5rem;
+    background: var(--background-primary);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+.game-features h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.game-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.game-features li {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.game-features li::before {
+    content: '🎮';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.game-launch-container h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.game-launch-container p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
