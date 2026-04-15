@@ -142,10 +142,37 @@
     </header>
 
     <main class="detail-main">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Traffic Games</h1>
+                    <h2>The Ultimate Collection of Online Traffic Games</h2>
+                    <p>Experience the thrill of high-speed racing, challenging parking, and exciting traffic control games. Play for free, no downloads required!</p>
+                    <div class="hero-buttons">
+                        <a href="#game-container" class="btn-primary">Play Now</a>
+                        <a href="#categories" class="btn-secondary">Explore Games</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-car-animation">
+                        <svg viewBox="0 0 200 100" class="car-svg">
+                            <rect x="30" y="60" width="120" height="20" rx="5" fill="#4ade80" />
+                            <circle cx="45" cy="80" r="10" fill="#333" />
+                            <circle cx="105" cy="80" r="10" fill="#333" />
+                            <rect x="20" y="50" width="140" height="15" rx="3" fill="#4ade80" />
+                            <rect x="130" y="45" width="30" height="10" rx="2" fill="#333" />
+                            <rect x="40" y="40" width="20" height="10" rx="2" fill="#333" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="game-title-section">
             <div class="game-title-container">
                 <div class="game-title-area">
-                    <h1>Traffic Games - Traffic Jam 3D</h1>
+                    <h1>Traffic Jam 3D</h1>
                     <p class="game-subtitle">Play the exciting Traffic Jam 3D game online for free!</p>
                 </div>
             </div>
@@ -170,13 +197,23 @@
             </div>
         </section>
 
-        <section class="game-launch-section">
+        <section class="game-launch-section" id="game-container">
             <div class="game-launch-container">
                 <h2>Play Traffic Jam 3D Now</h2>
                 <p>Click the game below to start playing. Use arrow keys to navigate through traffic and avoid collisions.</p>
                 <div class="game-iframe-container" id="gameContainer">
-                    <iframe src="https://trafficjam3d.github.io/traffic-jam-3d/" width="100%" height="100%"
+                    <iframe id="gameIframe" width="100%" height="100%"
                         frameborder="0" allowfullscreen></iframe>
+
+                    <div class="play-overlay" id="playOverlay">
+                        <button class="play-btn" id="playBtn">
+                            <svg viewBox="0 0 24 24" width="60" height="60" fill="white">
+                                <circle cx="12" cy="12" r="10" fill="rgba(74, 222, 128, 0.8)" />
+                                <path d="M8 6v12l8-6z" fill="white" />
+                            </svg>
+                            <span>Play Now</span>
+                        </button>
+                    </div>
 
                     <button class="fullscreen-btn" id="fullscreenBtn">
                         <svg viewBox="0 0 24 24" width="20" height="20">
@@ -185,6 +222,74 @@
                                 fill="currentColor" />
                         </svg>
                     </button>
+                </div>
+                <div class="game-controls">
+                    <h3>Game Controls</h3>
+                    <div class="controls-grid">
+                        <div class="control-item">
+                            <span class="control-key">↑</span>
+                            <span class="control-label">Accelerate</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="control-key">↓</span>
+                            <span class="control-label">Brake</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="control-key">← →</span>
+                            <span class="control-label">Change Lanes</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="control-key">N</span>
+                            <span class="control-label">Nitro Boost</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Categories Section -->
+        <section class="categories-section" id="categories">
+            <div class="categories-container">
+                <h2>Explore Game Categories</h2>
+                <p>Discover our wide variety of traffic games, from high-speed racing to challenging parking.</p>
+                <div class="categories-grid">
+                    <a href="categories.html?category=racing" class="category-card">
+                        <div class="category-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="white">
+                                <path d="M19 17h2c.6 0 1-.4 1-1V8c0-.6-.4-1-1-1h-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-2zM5 5h12v10H5V5z"/>
+                                <path d="M8 16h8M7 6h10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Racing Games</h3>
+                        <p>Experience high-speed racing through traffic</p>
+                    </a>
+                    <a href="categories.html?category=driving" class="category-card">
+                        <div class="category-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="white">
+                                <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                            </svg>
+                        </div>
+                        <h3>Driving Games</h3>
+                        <p>Test your driving skills in various scenarios</p>
+                    </a>
+                    <a href="categories.html?category=parking" class="category-card">
+                        <div class="category-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="white">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h5v5H7z"/>
+                            </svg>
+                        </div>
+                        <h3>Parking Games</h3>
+                        <p>Master the art of parking in challenging situations</p>
+                    </a>
+                    <a href="categories.html?category=trafficControl" class="category-card">
+                        <div class="category-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="white">
+                                <path d="M13 5.08c3.06.44 5.48 2.86 5.92 5.92h3.03c-.47-4.72-4.23-8.48-8.95-8.95v3.03zM18.92 13c-.44 3.06-2.86 5.48-5.92 5.92v3.03c4.72-.47 8.48-4.23 8.95-8.95h-3.03zM11 18.92c-3.39-.49-6-3.4-6-6.92s2.61-6.43 6-6.92V2.05c-5.05.5-9 4.76-9 9.95 0 5.19 3.95 9.45 9 9.95v-3.03zM5.08 11H2.05c.5-5.05 4.76-9 9.95-9v3.03c-3.39.49-6 3.4-6 6.92s2.61 6.43 6 6.92v3.03c-5.19-.5-9.45-4.76-9.95-9.95h3.03z"/>
+                            </svg>
+                        </div>
+                        <h3>Traffic Control</h3>
+                        <p>Manage traffic flow and prevent accidents</p>
+                    </a>
                 </div>
             </div>
         </section>
@@ -455,6 +560,23 @@
     <script src="js/data/twoPlayer-games-data.js"></script>
     <script src="js/data/driving-games-data.js"></script>
     <script src="js/detail1.js"></script>
+    <script>
+        // 等待DOM加载完成
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取元素
+            const playBtn = document.getElementById('playBtn');
+            const playOverlay = document.getElementById('playOverlay');
+            const gameIframe = document.getElementById('gameIframe');
+            
+            // 点击play按钮时加载iframe
+            playBtn.addEventListener('click', function() {
+                // 设置iframe的src属性
+                gameIframe.src = 'https://trafficjam3d.github.io/traffic-jam-3d/';
+                
+                // 隐藏play overlay
+                playOverlay.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
-
 </html>
