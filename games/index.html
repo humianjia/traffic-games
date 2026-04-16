@@ -9,6 +9,64 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
+      // Override UnityLoader.downloadJob to support split files
+      var originalDownloadJob = UnityLoader.downloadJob;
+      UnityLoader.downloadJob = function(e, t) {
+        var url = t.parameters.url;
+        if (url.indexOf("TrafficJam3D-build-4.data.unityweb") !== -1) {
+          var chunks = [];
+          var numChunks = 3;
+          var loadedChunks = 0;
+          var chunkUrls = [];
+          for (var i = 1; i <= numChunks; i++) {
+            chunkUrls.push(url + "." + ("00" + i).slice(-3));
+          }
+
+          var progressArray = new Array(numChunks).fill(0);
+          var totalExpectedSize = 35024289; // Known total size
+
+          chunkUrls.forEach(function(chunkUrl, index) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", chunkUrl);
+            xhr.responseType = "arraybuffer";
+            xhr.onprogress = function(event) {
+              if (event.lengthComputable) {
+                progressArray[index] = event.loaded;
+                var totalLoaded = progressArray.reduce(function(a, b) { return a + b; }, 0);
+                if (t.parameters.onprogress) {
+                  t.parameters.onprogress({
+                    lengthComputable: true,
+                    loaded: totalLoaded,
+                    total: totalExpectedSize
+                  });
+                }
+              }
+            };
+            xhr.onload = function() {
+              if (xhr.status === 200) {
+                chunks[index] = new Uint8Array(xhr.response);
+                loadedChunks++;
+                if (loadedChunks === numChunks) {
+                  var totalLength = chunks.reduce(function(acc, chunk) { return acc + chunk.length; }, 0);
+                  var combined = new Uint8Array(totalLength);
+                  var offset = 0;
+                  chunks.forEach(function(chunk) {
+                    combined.set(chunk, offset);
+                    offset += chunk.length;
+                  });
+                  UnityLoader.Compression.decompress(combined, function(decompressed) {
+                    t.complete(decompressed);
+                  });
+                }
+              }
+            };
+            xhr.send();
+          });
+        } else {
+          originalDownloadJob(e, t);
+        }
+      };
+
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/TrafficJam3D-build-4.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
     </script>
     <link rel="canonical" href="https://trafficjam3d.github.io/" />
