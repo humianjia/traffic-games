@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Traffic Jam 3D">
+    <title>Traffic Jam 3D - 交通堵塞3D游戏</title>
+    <meta name="description" content="Play Traffic Jam 3D online for free. Navigate through traffic, avoid collisions, and race to the finish line in this exciting 3D traffic game." />
+    <meta name="keywords" content="Traffic Jam 3D, traffic game, online game, free game, 3D game, racing game" />
+    <link rel="canonical" href="https://www.trafficgames.online/games/traffic-jam-3d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="../" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" width="36" height="36">
+                        <rect x="8" y="8" width="24" height="24" rx="4" fill="none" stroke="#4ade80" stroke-width="2.5" />
+                        <circle cx="14" cy="16" r="3" fill="#4ade80" />
+                        <circle cx="26" cy="16" r="3" fill="#4ade80" />
+                        <rect x="14" y="22" width="12" height="2" fill="#4ade80" />
+                        <line x1="20" y1="22" x2="20" y2="28" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" />
+                        <line x1="30" y1="20" x2="38" y2="20" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <span class="logo-text">Traffic Games</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../" class="nav-link">
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <span class="nav-text">Games ▼</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="../categories.html?category=racing" class="dropdown-item">
+                                <span class="dropdown-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">🏎️</span>
+                                <span class="dropdown-text">Racing Games</span>
+                            </a>
+                            <a href="../categories.html?category=driving" class="dropdown-item">
+                                <span class="dropdown-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">🚗</span>
+                                <span class="dropdown-text">Driving Games</span>
+                            </a>
+                            <a href="../categories.html?category=parking" class="dropdown-item">
+                                <span class="dropdown-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);">🅿️</span>
+                                <span class="dropdown-text">Parking Games</span>
+                            </a>
+                            <a href="../categories.html?category=trafficControl" class="dropdown-item">
+                                <span class="dropdown-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">🚦</span>
+                                <span class="dropdown-text">Traffic Control</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <span class="nav-text">Fun & Casual ▼</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="../categories.html?category=escape" class="dropdown-item">
+                                <span class="dropdown-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">🏃</span>
+                                <span class="dropdown-text">Escape Games</span>
+                            </a>
+                            <a href="../categories.html?category=clicker" class="dropdown-item">
+                                <span class="dropdown-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);">👆</span>
+                                <span class="dropdown-text">Clicker Games</span>
+                            </a>
+                            <a href="../categories.html?category=twoPlayer" class="dropdown-item">
+                                <span class="dropdown-icon" style="background: linear-gradient(135deg, #14b8a6, #0d9488);">👥</span>
+                                <span class="dropdown-text">2 Player Games</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../about.html" class="nav-link">
+                            <span class="nav-text">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../contact.html" class="nav-link">
+                            <span class="nav-text">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor" />
+                    <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="currentColor" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="detail-main">
+        <section class="game-title-section">
+            <div class="game-title-container">
+                <div class="game-title-area">
+                    <h1>Traffic Jam 3D</h1>
+                    <p class="game-subtitle">Play the exciting Traffic Jam 3D game online for free!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="game-description-section">
+            <div class="game-description-container">
+                <h2>About Traffic Jam 3D</h2>
+                <p>Traffic Jam 3D is an exciting online game where you navigate through busy traffic, avoiding collisions and racing to reach your destination. With realistic 3D graphics and intuitive controls, this game offers hours of entertainment for players of all ages.</p>
+                <h3>Game Features</h3>
+                <ul>
+                    <li>Realistic 3D graphics</li>
+                    <li>Intuitive controls</li>
+                    <li>Multiple game modes</li>
+                    <li>Challenging levels</li>
+                    <li>Leaderboard system</li>
+                    <li>Free to play</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="game-launch-section" id="game-container">
+            <div class="game-launch-container">
+                <h2>Play Traffic Jam 3D Now</h2>
+                <p>Click the game below to start playing. Use arrow keys to navigate through traffic and avoid collisions.</p>
+                <div class="game-iframe-container" id="gameContainer">
+                    <iframe id="gameIframe" width="100%" height="100%"
+                        frameborder="0" allowfullscreen></iframe>
+
+                    <div class="play-overlay" id="playOverlay">
+                        <button class="play-btn" id="playBtn">
+                            <svg viewBox="0 0 24 24" width="60" height="60" fill="white">
+                                <circle cx="12" cy="12" r="10" fill="rgba(74, 222, 128, 0.8)" />
+                                <path d="M8 6v12l8-6z" fill="white" />
+                            </svg>
+                            <span>Play Now</span>
+                        </button>
+                    </div>
+
+                    <button class="fullscreen-btn" id="fullscreenBtn">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path
+                                d="M7 14H5v5h5v-5H7zM14 14h-2v5h5v-5h-3zM17 3h-3v5h5V3h-2zM7 3H5v5h5V3H7zM4 7H2v5h5V7H4zM17 7h-3v5h5V7h-2zM4 14H2v5h5v-5H4zM17 14h-3v5h5v-5h-2zM14 17h-2v3h5v-3h-3zM7 17H5v3h5v-3H7z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="game-controls">
+                    <h3>Game Controls</h3>
+                    <div class="controls-grid">
+                        <div class="control-item">
+                            <span class="control-key">↑</span>
+                            <span class="control-label">Accelerate</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="control-key">↓</span>
+                            <span class="control-label">Brake</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="control-key">← →</span>
+                            <span class="control-label">Change Lanes</span>
+                        </div>
+                        <div class="control-item">
+                            <span class="control-key">N</span>
+                            <span class="control-label">Nitro Boost</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="../" class="footer-logo-link">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 40 40" width="36" height="36">
+                            <rect x="8" y="8" width="24" height="24" rx="4" fill="none" stroke="#4ade80" stroke-width="2.5" />
+                            <circle cx="14" cy="16" r="3" fill="#4ade80" />
+                            <circle cx="26" cy="16" r="3" fill="#4ade80" />
+                            <rect x="14" y="22" width="12" height="2" fill="#4ade80" />
+                            <line x1="20" y1="22" x2="20" y2="28" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" />
+                            <line x1="30" y1="20" x2="38" y2="20" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <span class="logo-text">Traffic Games</span>
+                </a>
+                <p class="footer-tagline">The Ultimate Collection of Online Traffic Games</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-link-group">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../categories.html">Games</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-link-group">
+                    <h3>Game Categories</h3>
+                    <ul>
+                        <li><a href="../categories.html?category=racing">Racing Games</a></li>
+                        <li><a href="../categories.html?category=driving">Driving Games</a></li>
+                        <li><a href="../categories.html?category=parking">Parking Games</a></li>
+                        <li><a href="../categories.html?category=trafficControl">Traffic Control</a></li>
+                    </ul>
+                </div>
+                <div class="footer-link-group">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                        <li><a href="../cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Traffic Games. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/detail1.js"></script>
+    <script>
+        // 等待DOM加载完成
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取元素
+            const playBtn = document.getElementById('playBtn');
+            const playOverlay = document.getElementById('playOverlay');
+            const gameIframe = document.getElementById('gameIframe');
+            
+            // 点击play按钮时加载iframe
+            playBtn.addEventListener('click', function() {
+                // 设置iframe的src属性
+                gameIframe.src = 'index.html';
+                
+                // 隐藏play overlay
+                playOverlay.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
