@@ -47,14 +47,19 @@
                 chunks[index] = new Uint8Array(xhr.response);
                 loadedChunks++;
                 if (loadedChunks === numChunks) {
-                  var totalLength = chunks.reduce(function(acc, chunk) { return acc + chunk.length; }, 0);
+                  var totalLength = 0;
+                  for (var j = 0; j < chunks.length; j++) totalLength += chunks[j].length;
                   var combined = new Uint8Array(totalLength);
                   var offset = 0;
-                  chunks.forEach(function(chunk) {
-                    combined.set(chunk, offset);
-                    offset += chunk.length;
-                  });
+                  for (var j = 0; j < chunks.length; j++) {
+                    combined.set(chunks[j], offset);
+                    offset += chunks[j].length;
+                  }
+                  // Clear chunks to release memory before decompression
+                  chunks = []; 
                   UnityLoader.Compression.decompress(combined, function(decompressed) {
+                    // Clear combined to release memory after decompression
+                    combined = null;
                     t.complete(decompressed);
                   });
                 }
