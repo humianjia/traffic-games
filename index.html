@@ -267,7 +267,7 @@
                     </div>
                     <div class="screenshot-card bento-item-side-1">
                         <div class="screenshot-wrapper">
-                            <img src="img/screenshots/ss1.png" alt="Traffic Jam 3D Garage">
+                            <img src="img/screenshots/ss1.png" alt="Traffic Jam 3D Garage" loading="lazy">
                             <div class="screenshot-overlay">
                                 <span class="ss-tag">Garage</span>
                                 <h3>Customization</h3>
@@ -276,7 +276,7 @@
                     </div>
                     <div class="screenshot-card bento-item-side-2">
                         <div class="screenshot-wrapper">
-                            <img src="img/screenshots/ss2.png" alt="Traffic Jam 3D Game Modes">
+                            <img src="img/screenshots/ss2.png" alt="Traffic Jam 3D Game Modes" loading="lazy">
                             <div class="screenshot-overlay">
                                 <span class="ss-tag">Modes</span>
                                 <h3>Challenges</h3>
@@ -285,7 +285,7 @@
                     </div>
                     <div class="screenshot-card bento-item-bottom">
                         <div class="screenshot-wrapper">
-                            <img src="img/screenshots/ss3.png" alt="Traffic Jam 3D Levels">
+                            <img src="img/screenshots/ss3.png" alt="Traffic Jam 3D Levels" loading="lazy">
                             <div class="screenshot-overlay">
                                 <span class="ss-tag">Levels</span>
                                 <h3>Challenging Missions</h3>
@@ -620,10 +620,25 @@
             
             // 点击play按钮时加载iframe
             playBtn.addEventListener('click', function() {
-                // 设置iframe的src属性
-                gameIframe.src = 'games/index.html';
-                // gameIframe.src = 'https://trafficjam3d.github.io/traffic-jam-3d/';
-                // 隐藏play overlay
+                const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+                const isAndroid = /Android/i.test(navigator.userAgent);
+
+                // 针对 iOS 的终极方案：直接跳转 (因为 iOS Safari 的 Iframe 内存限制极严)
+                if (isIOS) {
+                    window.location.href = 'https://trafficjam3d.github.io/traffic-jam-3d/';
+                    return;
+                }
+
+                // 针对 Android 的优化方案：清理主页内存后加载 Iframe
+                if (isAndroid) {
+                    const screenshotsSection = document.querySelector('.screenshots-section');
+                    if (screenshotsSection) {
+                        screenshotsSection.remove();
+                    }
+                }
+
+                // PC端或Android端：正常加载 Iframe
+                gameIframe.src = 'https://trafficjam3d.github.io/traffic-jam-3d/';
                 playOverlay.classList.add('hidden');
             });
         });
