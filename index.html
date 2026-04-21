@@ -8,11 +8,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Traffic Games">
     <meta name="description"
-        content="Play free online traffic games including Traffic Racer, the best traffic rider game. Enjoy high-speed motorcycle racing, car racing, and traffic control games for free." />
+        content="Play free online Traffic Games - the ultimate collection of Traffic Racer, Traffic Control, and Traffic Rider games. Enjoy high-speed racing, parking challenges, and exciting traffic games. No downloads required!" />
     <meta name="keywords"
-        content="traffic games, traffic rider games, traffic rider, road traffic games, traffic games car, traffic car games, traffic racer, motorcycle racing games, car racing games, free online games, best traffic rider, traffic rider online" />
-    <meta name="robots" content="index, follow" />
-    <title>Traffic Games - Play Free Online Traffic Racer & Traffic Rider Games</title>
+        content="traffic games, free traffic games, online traffic games, traffic racer games, traffic rider games, traffic control games, driving games, car games, racing games, parking games, traffic jam games, traffic games online" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="author" content="Traffic Games" />
+    <meta property="og:title" content="Traffic Games - Play Free Online Traffic Racer & Racing Games" />
+    <meta property="og:description" content="The ultimate collection of free online traffic games including Traffic Racer, Traffic Control, and Traffic Rider games." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.trafficgames.com/" />
+    <title>Traffic Games - Free Online Traffic Racer, Racing & Control Games</title>
     <link rel="canonical" href="/" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
@@ -26,6 +31,42 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="js/detail1.css">
+
+    <!-- JSON-LD Schema Markup for Traffic Games -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Traffic Games",
+        "description": "Play free online Traffic Games - Traffic Racer, Traffic Control, and Traffic Rider games",
+        "url": "https://www.trafficgames.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.trafficgames.com/categories.html?search={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Traffic Games - Free Online Games",
+        "description": "The ultimate collection of free online traffic games including Traffic Racer, Traffic Control, Traffic Rider, Racing Games, and Driving Games",
+        "url": "https://www.trafficgames.com/",
+        "mainEntity": {
+            "@type": "Game",
+            "name": "Traffic Games",
+            "description": "A collection of free online traffic games with Traffic Racer, Traffic Control, and Traffic Rider games",
+            "keywords": "traffic games, traffic racer, traffic control, traffic rider, racing games, driving games"
+        }
+    }
+    </script>
+
     <style>
         /* ===== 酷炫动画效果 ===== */
         
@@ -334,18 +375,135 @@
             position: relative;
         }
         
-        /* 响应式粒子 */
+        /* 响应式优化 - 移动设备 */
         @media (max-width: 768px) {
+            /* 完全禁用粒子系统 */
             .particles-container {
-                display: none;
+                display: none !important;
+            }
+            
+            /* 禁用或简化复杂动画 */
+            .hero-section {
+                animation: none !important;
+                background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+            }
+            
+            .hero-section::before {
+                display: none !important;
             }
             
             .hero-content h1 {
+                animation: none !important;
                 font-size: 2.5rem;
             }
             
             .hero-content h2 {
+                animation: none !important;
                 font-size: 1.5rem;
+            }
+            
+            .hero-content p {
+                animation: none !important;
+            }
+            
+            .btn-primary, .btn-secondary {
+                animation: none !important;
+            }
+            
+            /* 禁用3D变换 */
+            .screenshot-card:hover {
+                transform: none !important;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+            }
+            
+            .screenshot-wrapper::after {
+                display: none !important;
+            }
+            
+            .screenshot-overlay {
+                animation: none !important;
+            }
+            
+            /* 简化各种动画 */
+            .game-launch-section::before {
+                animation: none !important;
+            }
+            
+            .play-btn {
+                animation: none !important;
+            }
+            
+            .car-svg {
+                animation: none !important;
+                filter: none !important;
+            }
+            
+            .section-header {
+                animation: none !important;
+            }
+            
+            .control-key {
+                animation: none !important;
+            }
+            
+            .control-item:hover {
+                transform: none !important;
+            }
+
+            /* ===== 移动端导航栏优化 ===== */
+            /* 隐藏导航菜单，只保留Logo和搜索框 */
+            .nav {
+                display: none;
+            }
+
+            .header-inner {
+                padding: 8px 12px;
+                gap: 12px;
+            }
+
+            .logo-text {
+                display: none;
+            }
+
+            .logo-icon {
+                margin-right: 0;
+            }
+
+            .header-search {
+                flex: 1;
+            }
+
+            .header-search form {
+                width: 100%;
+                padding: 6px 8px;
+            }
+
+            .header-search input {
+                min-width: auto;
+                flex: 1;
+                font-size: 0.85rem;
+                padding: 4px 8px;
+            }
+
+            .search-btn {
+                padding: 4px 8px;
+            }
+        }
+        
+        /* iOS 特殊优化 */
+        @supports (-webkit-touch-callout: none) {
+            .particles-container {
+                display: none !important;
+            }
+            
+            /* 禁用所有复杂动画 */
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+            
+            .hero-section {
+                background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
             }
         }
     </style>
@@ -360,7 +518,7 @@
 </head>
 
 <body>
-    <!-- 浮动粒子效果 -->
+    <!-- 浮动粒子效果（移动设备禁用） -->
     <div class="particles-container" id="particlesContainer"></div>
 
     <header class="header">
@@ -472,9 +630,9 @@
         <section class="hero-section">
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1>Traffic Games</h1>
-                    <h2>The Ultimate Collection of Online Traffic Games</h2>
-                    <p>Experience the thrill of high-speed racing, challenging parking, and exciting traffic control games. Play for free, no downloads required!</p>
+                    <h1>Traffic Games - Play Free Online Traffic Racer & Racing Games</h1>
+                    <h2>The Ultimate Collection of Traffic Games Online</h2>
+                    <p>Discover the best free online <strong>Traffic Games</strong> including Traffic Racer, Traffic Control, and Traffic Rider games. Experience high-speed racing, challenging parking scenarios, and exciting traffic control challenges. All Traffic Games are free to play with no downloads required!</p>
                     <div class="hero-buttons">
                         <a href="#game-container" class="btn-primary">Play Now</a>
                         <a href="#categories" class="btn-secondary">Explore Games</a>
@@ -506,18 +664,18 @@
 
         <section class="game-description-section">
             <div class="game-description-container">
-                <h2>About Traffic Jam 3D</h2>
-                <p>Traffic Jam 3D is a thrilling traffic game where you navigate through busy streets, avoid collisions, and test your driving skills. With realistic graphics and smooth controls, this game offers an immersive gaming experience for players of all ages.</p>
-                <p>In Traffic Jam 3D, you'll face challenging traffic scenarios where you need to make quick decisions to avoid accidents. The game features multiple levels of increasing difficulty, keeping you engaged and entertained for hours.</p>
+                <h2>About Traffic Jam 3D - Premium Traffic Games Online</h2>
+                <p><strong>Traffic Jam 3D</strong> is one of our most popular <strong>traffic games</strong> - a thrilling traffic game where you navigate through busy streets, avoid collisions, and test your driving skills. As a top-tier <strong>Traffic Games</strong> offering, this game provides realistic graphics and smooth controls for an immersive gaming experience for players of all ages.</p>
+                <p>This free online <strong>traffic game</strong> puts you in challenging <strong>traffic games</strong> scenarios where you need to make quick decisions to avoid accidents. Among the best <strong>traffic games</strong> available, Traffic Jam 3D features multiple difficulty levels, keeping you engaged with exciting traffic games challenges for hours.</p>
                 <div class="game-features">
-                    <h3>Game Features</h3>
+                    <h3>Traffic Games Features</h3>
                     <ul>
-                        <li>Realistic 3D graphics</li>
-                        <li>Smooth and responsive controls</li>
-                        <li>Multiple difficulty levels</li>
-                        <li>Challenging traffic scenarios</li>
+                        <li>Realistic 3D graphics for immersive traffic games experience</li>
+                        <li>Smooth and responsive controls in traffic games</li>
+                        <li>Multiple difficulty levels in this traffic game</li>
+                        <li>Challenging traffic scenarios and traffic games levels</li>
                         <li>Score tracking and leaderboards</li>
-                        <li>Free to play, no downloads required</li>
+                        <li>Free to play - no downloads required for this traffic game</li>
                     </ul>
                 </div>
             </div>
@@ -593,24 +751,6 @@
                     </div>
                     <div class="screenshot-card bento-item-side-1">
                         <div class="screenshot-wrapper">
-                            <img src="img/screenshots/ss1.png" alt="Traffic Jam 3D Garage" loading="lazy">
-                            <div class="screenshot-overlay">
-                                <span class="ss-tag">Garage</span>
-                                <h3>Customization</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screenshot-card bento-item-side-2">
-                        <div class="screenshot-wrapper">
-                            <img src="img/screenshots/ss2.png" alt="Traffic Jam 3D Game Modes" loading="lazy">
-                            <div class="screenshot-overlay">
-                                <span class="ss-tag">Modes</span>
-                                <h3>Challenges</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screenshot-card bento-item-bottom">
-                        <div class="screenshot-wrapper">
                             <img src="img/screenshots/ss3.png" alt="Traffic Jam 3D Levels" loading="lazy">
                             <div class="screenshot-overlay">
                                 <span class="ss-tag">Levels</span>
@@ -626,8 +766,8 @@
         <!-- Game Categories Section -->
         <section class="categories-section" id="categories">
             <div class="categories-container">
-                <h2>Explore Game Categories</h2>
-                <p>Discover our wide variety of traffic games, from high-speed racing to challenging parking.</p>
+                <h2>Explore Our Traffic Games Categories</h2>
+                <p>Discover our wide variety of free traffic games, from high-speed racing to challenging parking. Find your favorite traffic game today.</p>
                 <div class="categories-grid">
                     <a href="categories.html?category=racing" class="category-card">
                         <div class="category-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
@@ -637,7 +777,7 @@
                             </svg>
                         </div>
                         <h3>Racing Games</h3>
-                        <p>Experience high-speed racing through traffic</p>
+                        <p>Experience high-speed racing through traffic - top traffic games for racing fans</p>
                     </a>
                     <a href="categories.html?category=driving" class="category-card">
                         <div class="category-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">
@@ -646,7 +786,7 @@
                             </svg>
                         </div>
                         <h3>Driving Games</h3>
-                        <p>Test your driving skills in various scenarios</p>
+                        <p>Test your driving skills in various traffic games scenarios</p>
                     </a>
                     <a href="categories.html?category=parking" class="category-card">
                         <div class="category-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
@@ -655,7 +795,7 @@
                             </svg>
                         </div>
                         <h3>Parking Games</h3>
-                        <p>Master the art of parking in challenging situations</p>
+                        <p>Master parking in challenging traffic games situations</p>
                     </a>
                     <a href="categories.html?category=trafficControl" class="category-card">
                         <div class="category-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
@@ -664,7 +804,7 @@
                             </svg>
                         </div>
                         <h3>Traffic Control</h3>
-                        <p>Manage traffic flow and prevent accidents</p>
+                        <p>Manage traffic flow in our traffic control games</p>
                     </a>
                 </div>
             </div>
@@ -674,37 +814,37 @@
             <div class="detail-container">
                 <div class="detail-content">
                     <div class="detail-block">
-                        <h2>Best Traffic Games Collection</h2>
+                        <h2>Best Collection of Free Traffic Games Online</h2>
                         
-                        <h3>Racing & Driving Games</h3>
-                        <h4>Traffic Racer Games</h4>
-                        <p>Experience the thrill of high-speed racing through traffic with our collection of Traffic Racer games. Navigate through busy streets, avoid collisions, and test your driving skills.</p>
+                        <h3>Racing & Driving Traffic Games</h3>
+                        <h4>Traffic Racer Games Collection</h4>
+                        <p>Experience the thrill of high-speed racing through traffic with our premium collection of Traffic Racer games. Navigate through busy streets, avoid collisions, and test your driving skills in the best traffic games available online.</p>
                         
                         <h4>Motorcycle Racing Games</h4>
-                        <p>Feel the wind in your hair as you race through traffic on a motorcycle. Our motorcycle racing games offer realistic graphics and exciting gameplay.</p>
+                        <p>Feel the wind in your hair as you race through traffic on a motorcycle. Our motorcycle racing games offer realistic graphics and exciting gameplay as part of our traffic games collection.</p>
                         
-                        <h4>Car Racing Games</h4>
-                        <p>Test your driving skills in our car racing games. Race against opponents, navigate through traffic, and reach the finish line first.</p>
+                        <h4>Car Racing Games - Traffic Games</h4>
+                        <p>Test your driving skills in our car racing traffic games. Race against opponents, navigate through traffic, and reach the finish line first in these exciting traffic games.</p>
                         
-                        <h3>Parking & Control Games</h3>
-                        <h4>Parking Games</h4>
-                        <p>Master the art of parking in challenging situations. Our parking games will test your precision and patience.</p>
+                        <h3>Parking & Traffic Control Games</h3>
+                        <h4>Free Parking Games</h4>
+                        <p>Master the art of parking in challenging situations. Our parking games within the traffic games collection will test your precision and patience.</p>
                         
                         <h4>Traffic Control Games</h4>
-                        <p>Manage traffic flow and prevent accidents in our traffic control games. Make quick decisions to keep traffic moving smoothly.</p>
+                        <p>Manage traffic flow and prevent accidents in our traffic control games. Make quick decisions to keep traffic moving smoothly in these strategic traffic games.</p>
                         
-                        <h3>Fun & Casual Games</h3>
+                        <h3>Fun & Casual Traffic Games</h3>
                         <h4>Escape Games</h4>
-                        <p>Navigate through obstacles and escape challenging situations in our escape games.</p>
+                        <p>Navigate through obstacles and escape challenging situations in our escape games, another exciting category in our traffic games platform.</p>
                         
                         <h4>Clicker Games</h4>
-                        <p>Simple yet addictive, our clicker games are perfect for quick gaming sessions.</p>
+                        <p>Simple yet addictive, our clicker games are perfect for quick gaming sessions alongside our traffic games.</p>
                         
-                        <h4>2 Player Games</h4>
-                        <p>Challenge a friend in our 2 player games for double the fun.</p>
+                        <h4>2 Player Traffic Games</h4>
+                        <p>Challenge a friend in our 2 player games for double the fun. Play competitive traffic games with friends online.</p>
                         
-                        <h3>Trivia Games</h3>
-                        <p>Test your knowledge with our traffic-themed trivia games.</p>
+                        <h3>Trivia Traffic Games</h3>
+                        <p>Test your knowledge with our traffic-themed trivia games and expand your traffic games experience.</p>
                     </div>
 
                     <div class="detail-block">
@@ -935,12 +1075,25 @@
     <script src="js/data/driving-games-data.js"></script>
     <script src="js/detail1.js"></script>
     <script>
-        // 粒子效果生成函数
+        // 检测设备类型，移动设备和iOS上禁用粒子效果
+        function isMobileDevice() {
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            const isMobile = /Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            const isSmallScreen = window.innerWidth <= 768;
+            return isIOS || isMobile || isSmallScreen;
+        }
+        
+        // 粒子效果生成函数（仅在桌面设备上运行）
         function createParticles() {
+            // 移动设备上禁用粒子以节省内存
+            if (isMobileDevice()) {
+                return;
+            }
+            
             const container = document.getElementById('particlesContainer');
             if (!container) return;
             
-            const particleCount = 50;
+            const particleCount = 30; // 减少粒子数量从50到30
             const colors = ['particle', 'particle accent', 'particle success'];
             
             for (let i = 0; i < particleCount; i++) {
@@ -978,10 +1131,10 @@
                 const isAndroid = /Android/i.test(navigator.userAgent);
 
                 // 针对 iOS 的终极方案：直接跳转 (因为 iOS Safari 的 Iframe 内存限制极严)
-                if (isIOS) {
-                    window.location.href = 'https://trafficjam3d.github.io/traffic-jam-3d/';
-                    return;
-                }
+                // if (isIOS) {
+                //     window.location.href = 'https://trafficjam3d.github.io/traffic-jam-3d/';
+                //     return;
+                // }
 
                 // 针对 Android 的优化方案：清理主页内存后加载 Iframe
                 if (isAndroid) {
