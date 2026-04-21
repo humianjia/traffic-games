@@ -56,7 +56,7 @@ const generatePage = (game) => {
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="../home.html" class="logo">
+            <a href="../" class="logo">
                 <div class="logo-icon">
                     <svg viewBox="0 0 40 40" width="36" height="36">
                         <rect x="8" y="8" width="24" height="24" rx="4" fill="none" stroke="#4ade80"
@@ -73,7 +73,7 @@ const generatePage = (game) => {
                 <span class="logo-text">Traffic Games</span>
             </a>
                         <nav class="nav">
-                <!-- <a href="home.html" class="nav-link">Home</a> -->
+                <!-- <a href="/" class="nav-link">Home</a> -->
                 <div class="nav-dropdown">
                     <a href="#racing" class="nav-link dropdown-toggle">Racing & Driving <span class="dropdown-arrow">▼</span></a>
                     <div class="dropdown-menu">
@@ -226,17 +226,17 @@ const generatePage = (game) => {
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
-                <a href="../home.html">Home</a>
+                <a href="../">Home</a>
                 <a href="../index.html#categories">Categories</a>
                 <a href="../index.html#leaderboard">Leaderboard</a>
                 <a href="../index.html#popular">Popular</a>
             </div>
             <div class="footer-col">
                 <h4>Game Categories</h4>
-                <a href="../home.html">Racing Games</a>
-                <a href="../home.html">Traffic Control</a>
-                <a href="../home.html">Parking Games</a>
-                <a href="../home.html">Escape Games</a>
+                <a href="../">Racing Games</a>
+                <a href="../">Traffic Control</a>
+                <a href="../">Parking Games</a>
+                <a href="../">Escape Games</a>
             </div>
             <div class="footer-col">
                 <h4>Support</h4>

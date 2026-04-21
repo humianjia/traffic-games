@@ -382,6 +382,33 @@
     var currentData = [];
     var currentCategory = '';
     var currentSearchQuery = '';
+    var isAllGamesMode = false;
+    
+    // 加载所有游戏 (用于 categories.html 无参数时)
+    function loadAllGames(page = 1) {
+        var allGames = getAllGames();
+        
+        // 更新全局变量
+        currentData = allGames;
+        currentCategory = '';
+        currentSearchQuery = '';
+        isAllGamesMode = true;
+        currentPage = page;
+        
+        // 更新页面标题
+        var categoryTitleElement = document.getElementById('category-title');
+        if (categoryTitleElement) {
+            categoryTitleElement.textContent = 'All Games (' + allGames.length + ')';
+        }
+
+        var categoryDescElement = document.getElementById('category-description');
+        if (categoryDescElement) {
+            categoryDescElement.style.display = 'block';
+        }
+        
+        // 渲染游戏
+        renderPagedGames(allGames, page);
+    }
     
     // 加载分类游戏
     function loadCategoryGames(category, page = 1) {
@@ -430,12 +457,18 @@
         currentData = categoryData;
         currentCategory = category;
         currentSearchQuery = '';
+        isAllGamesMode = false;
         currentPage = page;
         
         // 更新页面标题
         var categoryTitleElement = document.getElementById('category-title');
         if (categoryTitleElement) {
             categoryTitleElement.textContent = categoryTitle;
+        }
+
+        var categoryDescElement = document.getElementById('category-description');
+        if (categoryDescElement) {
+            categoryDescElement.style.display = 'none';
         }
         
         // 渲染分类游戏
@@ -459,12 +492,18 @@
         currentData = searchResults;
         currentSearchQuery = query;
         currentCategory = '';
+        isAllGamesMode = false;
         currentPage = page;
         
         // 更新页面标题
         var categoryTitleElement = document.getElementById('category-title');
         if (categoryTitleElement) {
             categoryTitleElement.textContent = 'Search Results for "' + query + '"';
+        }
+
+        var categoryDescElement = document.getElementById('category-description');
+        if (categoryDescElement) {
+            categoryDescElement.style.display = 'none';
         }
         
         // 渲染搜索结果
@@ -533,13 +572,13 @@
         var totalPages = Math.ceil(totalItems / itemsPerPage);
         
         // 只有当总页数大于1时才显示分页控件
-        if (totalPages <= 1) return;
-        
         // 移除现有的分页控件
         var existingPagination = document.querySelector('.custom-pagination');
         if (existingPagination) {
             existingPagination.remove();
         }
+
+        if (totalPages <= 1) return;
         
         var paginationWrapper = document.createElement('div');
         paginationWrapper.className = 'custom-pagination';
@@ -558,6 +597,8 @@
                     searchGames(currentSearchQuery, currentPage - 1);
                 } else if (currentCategory) {
                     loadCategoryGames(currentCategory, currentPage - 1);
+                } else if (isAllGamesMode) {
+                    loadAllGames(currentPage - 1);
                 }
             }
         });
@@ -576,6 +617,8 @@
                     searchGames(currentSearchQuery, 1);
                 } else if (currentCategory) {
                     loadCategoryGames(currentCategory, 1);
+                } else if (isAllGamesMode) {
+                    loadAllGames(1);
                 }
             });
             paginationContainer.appendChild(firstPageButton);
@@ -598,6 +641,8 @@
                         searchGames(currentSearchQuery, pageNum);
                     } else if (currentCategory) {
                         loadCategoryGames(currentCategory, pageNum);
+                    } else if (isAllGamesMode) {
+                        loadAllGames(pageNum);
                     }
                 };
             })(i));
@@ -620,6 +665,8 @@
                     searchGames(currentSearchQuery, totalPages);
                 } else if (currentCategory) {
                     loadCategoryGames(currentCategory, totalPages);
+                } else if (isAllGamesMode) {
+                    loadAllGames(totalPages);
                 }
             });
             paginationContainer.appendChild(lastPageButton);
@@ -636,6 +683,8 @@
                     searchGames(currentSearchQuery, currentPage + 1);
                 } else if (currentCategory) {
                     loadCategoryGames(currentCategory, currentPage + 1);
+                } else if (isAllGamesMode) {
+                    loadAllGames(currentPage + 1);
                 }
             }
         });
@@ -664,6 +713,11 @@
             searchGames(search, page);
         } else if (category) {
             loadCategoryGames(category, page);
+        } else {
+            // 如果是在 categories.html 页面且没有参数，加载所有游戏
+            if (window.location.pathname.includes('categories.html')) {
+                loadAllGames(page);
+            }
         }
     }
     
