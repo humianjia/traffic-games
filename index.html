@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 
 <head>
@@ -330,7 +330,131 @@
             animation: pulse 4s ease-in-out infinite;
             pointer-events: none;
         }
-        
+
+        .game-launch-container {
+            position: relative;
+            z-index: 1;
+            padding: 32px;
+        }
+
+        .game-launch-section h2,
+        .game-description-section h2,
+        .detail-block h2,
+        .section-header h2 {
+            letter-spacing: -0.03em;
+            text-shadow: 0 0 16px rgba(74, 222, 128, 0.12);
+        }
+
+        .game-description-section p,
+        .detail-block p,
+        .categories-container p,
+        .hero-content p,
+        .section-header p {
+            color: rgba(226, 232, 240, 0.92);
+            font-size: 1.03rem;
+            line-height: 1.8;
+        }
+
+        .detail-block h3 {
+            color: #8be5ff;
+            margin-top: 28px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .detail-block h4 {
+            color: #cbd5e1;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .game-iframe-container {
+            position: relative;
+            min-height: 420px;
+            background: #0f172a url('img/game_icon/index.png') center 40% / 36% no-repeat;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 28px 68px rgba(0, 0, 0, 0.28);
+        }
+
+        .game-iframe-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9));
+            pointer-events: none;
+        }
+
+        .game-iframe-container iframe {
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            border: none;
+        }
+
+        .game-iframe-container.loaded iframe {
+            opacity: 1;
+        }
+
+        .play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(15, 23, 42, 0.60);
+            backdrop-filter: blur(10px);
+            z-index: 3;
+            transition: opacity 0.3s ease;
+        }
+
+        .play-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .play-btn {
+            animation: scaleIn 0.5s ease-out;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 30px;
+            border-radius: 999px;
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .play-btn span {
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        .fullscreen-btn {
+            position: absolute;
+            bottom: 22px;
+            right: 22px;
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(15, 23, 42, 0.85);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, background 0.3s ease;
+            z-index: 3;
+        }
+
+        .fullscreen-btn:hover {
+            transform: translateY(-2px);
+            background: rgba(59, 130, 246, 0.92);
+        }
+
         /* 播放按钮动画 */
         .play-btn {
             animation: scaleIn 0.5s ease-out;
@@ -1124,7 +1248,16 @@
             const playBtn = document.getElementById('playBtn');
             const playOverlay = document.getElementById('playOverlay');
             const gameIframe = document.getElementById('gameIframe');
-            
+            const gameContainer = document.getElementById('gameContainer');
+
+            // 预设 iframe 未加载透明度，显示占位图
+            if (gameIframe) {
+                gameIframe.style.opacity = '0';
+                gameIframe.addEventListener('load', function() {
+                    gameContainer && gameContainer.classList.add('loaded');
+                });
+            }
+
             // 点击play按钮时加载iframe
             playBtn.addEventListener('click', function() {
                 const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);

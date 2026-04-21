@@ -979,28 +979,73 @@ body {
     border-color: var(--primary);
 }
 
-/* 分类区域 */
+/* 分类区域 - Enhanced */
 .categories-section {
-    margin-bottom: var(--space-2xl);
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.categories-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.categories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.categories-section h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.categories-section > p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
 }
 
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-md);
+    gap: 24px;
 }
 
 .category-card {
     width: 100%;
     box-sizing: border-box;
-    background-color: var(--bg-card);
-    border-radius: var(--radius-xl);
-    padding: var(--space-md);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border-radius: 24px;
+    padding: 32px 24px;
     text-align: center;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition-normal);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     cursor: pointer;
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     position: relative;
     overflow: hidden;
 }
@@ -1013,52 +1058,60 @@ body {
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, var(--secondary), var(--primary));
+    transition: height 0.3s ease;
+}
+
+.category-card:hover::before {
+    height: 100%;
+    opacity: 0.1;
 }
 
 .category-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: var(--shadow-hover), var(--glow-secondary);
-    border-color: var(--secondary);
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.3);
 }
 
-.cat-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+.category-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto var(--space-md);
-    font-size: 1.8rem;
-    background: linear-gradient(135deg, var(--primary), var(--purple));
-    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
-    transition: var(--transition-normal);
+    margin: 0 auto 24px;
+    font-size: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.category-card:hover .cat-icon {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+.category-card:hover .category-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
-.cat-icon svg {
-    width: 40px;
-    height: 40px;
+.category-icon svg {
+    width: 44px;
+    height: 44px;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
 }
 
 .category-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: var(--space-sm);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.category-card span {
-    font-size: 0.9rem;
+.category-card p {
+    font-size: 1rem;
     color: var(--text-secondary);
-    display: block;
-    margin-bottom: var(--space-md);
+    line-height: 1.6;
+    margin: 0;
 }
 
 .cat-games {
@@ -1333,30 +1386,68 @@ body {
    overflow: auto;
 }
 
-/* Game Screenshots Gallery */
+/* Game Screenshots Gallery - Enhanced */
 .screenshots-section {
-    padding: 80px 0;
-    background: radial-gradient(circle at center, #1a1a2e 0%, var(--bg-primary) 100%);
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
     position: relative;
     overflow: hidden;
+}
+
+.screenshots-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .screenshots-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.screenshots-section .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.screenshots-section .section-header h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.screenshots-section .section-header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .screenshots-grid {
     display: grid;
-    gap: 20px;
+    gap: 24px;
     margin-top: 40px;
 }
 
-/* Bento Layout */
+/* Bento Layout - Enhanced */
 .bento-layout {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 300px);
+    grid-template-rows: repeat(2, 320px);
 }
 
 .bento-item-hero {
@@ -1381,11 +1472,18 @@ body {
 
 .screenshot-card {
     position: relative;
-    border-radius: 20px;
+    border-radius: 24px;
     overflow: hidden;
-    background: #111;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.screenshot-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.3);
 }
 
 .screenshot-wrapper {
@@ -1401,30 +1499,58 @@ body {
     transition: transform 0.8s ease;
 }
 
+.screenshot-card:hover .screenshot-wrapper img {
+    transform: scale(1.1);
+}
+
 .screenshot-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 30px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 40px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
     color: white;
-    transform: translateY(10px);
+    transform: translateY(20px);
+    opacity: 0.9;
     transition: all 0.5s ease;
 }
 
+.screenshot-card:hover .screenshot-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.screenshot-overlay .ss-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, var(--primary), var(--purple));
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
 .screenshot-overlay h3 {
-    font-size: 1.5rem;
-    margin: 5px 0;
+    font-size: 1.8rem;
+    margin: 10px 0;
     font-weight: 800;
     letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .screenshot-overlay p {
-    font-size: 0.9rem;
-    opacity: 0.7;
+    font-size: 1rem;
+    opacity: 0.8;
     margin: 0;
-    max-width: 80%;
+    max-width: 90%;
+    line-height: 1.5;
 }
 
 .ss-tag {
