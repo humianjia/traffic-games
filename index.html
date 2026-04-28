@@ -638,6 +638,89 @@
                 background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
             }
         }
+        
+        /* Cookie Consent Banner */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 20px;
+            z-index: 9999;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-content p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .cookie-content a {
+            color: #4ade80;
+            text-decoration: underline;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .cookie-btn {
+            padding: 10px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cookie-btn.accept {
+            background: #4ade80;
+            color: #0f172a;
+        }
+        
+        .cookie-btn.accept:hover {
+            background: #22c55e;
+        }
+        
+        .cookie-btn.decline {
+            background: transparent;
+            color: #e2e8f0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .cookie-btn.decline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 600px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+        }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWTXKBQEVM"></script>
@@ -654,6 +737,17 @@
     <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-7534347140708021">
     </amp-auto-ads>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent" style="display: none;">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience and serve personalized ads. By continuing to use our site, you agree to our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="cookie-btn accept">Accept</button>
+                <button id="declineCookies" class="cookie-btn decline">Decline</button>
+            </div>
+        </div>
+    </div>
 
     <!-- 浮动粒子效果（移动设备禁用） -->
     <div class="particles-container" id="particlesContainer"></div>
@@ -793,7 +887,7 @@
         <section class="game-title-section">
             <div class="game-title-container">
                 <div class="game-title-area">
-                    <h1>Traffic Jam 3D</h1>
+                    <h2>Traffic Jam 3D</h2>
                     <p class="game-subtitle">Play the exciting Traffic Jam 3D game online for free!</p>
                 </div>
             </div>
@@ -1182,8 +1276,8 @@
             </div>
             <div class="footer-col">
                 <h4>Support</h4>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/privacy-policy.html">Terms of Service</a>
                 <a href="#">FAQ</a>
             </div>
         </div>
@@ -1244,6 +1338,43 @@
         } else {
             createParticles();
         }
+
+        // Cookie Consent Management
+        (function() {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptBtn = document.getElementById('acceptCookies');
+            const declineBtn = document.getElementById('declineCookies');
+            const consentKey = 'cookieConsent';
+            
+            // Check if user has already made a choice
+            const consent = localStorage.getItem(consentKey);
+            if (!consent) {
+                // Show banner after 1 second
+                setTimeout(() => {
+                    cookieConsent.style.display = 'block';
+                }, 1000);
+            }
+            
+            // Accept cookies
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem(consentKey, 'accepted');
+                cookieConsent.style.display = 'none';
+                // Enable personalized ads
+                if (window.adsbygoogle) {
+                    window.adsbygoogle.requestNonPersonalizedAds = 0;
+                }
+            });
+            
+            // Decline cookies
+            declineBtn.addEventListener('click', function() {
+                localStorage.setItem(consentKey, 'declined');
+                cookieConsent.style.display = 'none';
+                // Disable personalized ads
+                if (window.adsbygoogle) {
+                    window.adsbygoogle.requestNonPersonalizedAds = 1;
+                }
+            });
+        })();
 
         // 等待DOM加载完成
         document.addEventListener('DOMContentLoaded', function() {

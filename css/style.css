@@ -2247,7 +2247,7 @@ body {
     animation: float 6s ease-in-out infinite;
 }
 
-.game-title-area h1 {
+.game-title-area h2 {
     font-size: 2rem;
     font-weight: normal;
     font-style: italic;
@@ -2859,7 +2859,7 @@ body {
         padding: var(--space-xl) !important;
     }
     
-    .game-title-area h1 {
+    .game-title-area h2 {
         font-size: 1.5rem !important;
         word-wrap: break-word !important;
     }
@@ -2897,7 +2897,7 @@ body {
 /* 小屏幕移动端优化 */
 @media (max-width: 480px) {
     /* 进一步优化小屏幕 */
-    .game-title-area h1 {
+    .game-title-area h2 {
         font-size: 1.2rem !important;
     }
     
