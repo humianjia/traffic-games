@@ -2837,6 +2837,12 @@ body {
         width: 100% !important;
         height: 100% !important;
         border: none !important;
+        opacity: 0 !important;
+        transition: opacity 0.3s ease !important;
+    }
+
+    .game-iframe-container.loaded iframe {
+        opacity: 1 !important;
     }
     
     /* 确保详情内容区域不溢出 */
