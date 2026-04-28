@@ -2374,6 +2374,12 @@ body {
     height: 100%;
     border: none;
     border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.game-iframe-container.loaded iframe {
+    opacity: 1;
 }
 
 .play-overlay {
