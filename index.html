@@ -376,32 +376,32 @@
         .game-iframe-container {
             position: relative;
             min-height: 420px;
-            background: #0f172a url('img/game_icon/index.png') center 40% / 36% no-repeat;
+            /* background: #0f172a url('img/game_icon/index.png') center 40% / 36% no-repeat; */
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 28px;
             overflow: hidden;
             box-shadow: 0 28px 68px rgba(0, 0, 0, 0.28);
         }
 
-        .game-iframe-container::before {
+        /* .game-iframe-container::before {
             content: '';
             position: absolute;
             inset: 0;
             background: linear-gradient(180deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9));
             pointer-events: none;
-        }
+        } */
 
-        .game-iframe-container iframe {
+        /* .game-iframe-container iframe {
             position: relative;
             z-index: 2;
             opacity: 0;
             transition: opacity 0.35s ease;
             border: none;
-        }
+        } */
 
-        .game-iframe-container.loaded iframe {
+        /* .game-iframe-container.loaded iframe {
             opacity: 1;
-        }
+        } */
 
         .play-overlay {
             position: absolute;
@@ -815,17 +815,7 @@
                 <p>Click the game below to start playing. Use arrow keys to navigate through traffic and avoid collisions.</p>
                 <div class="game-iframe-container" id="gameContainer">
                     <iframe id="gameIframe" width="100%" height="100%"
-                        frameborder="0" allowfullscreen></iframe>
-
-                    <div class="play-overlay" id="playOverlay">
-                        <button class="play-btn" id="playBtn">
-                            <svg viewBox="0 0 24 24" width="60" height="60" fill="white">
-                                <circle cx="12" cy="12" r="10" fill="rgba(74, 222, 128, 0.8)" />
-                                <path d="M8 6v12l8-6z" fill="white" />
-                            </svg>
-                            <span>Play Now</span>
-                        </button>
-                    </div>
+                        frameborder="0" allowfullscreen src="https://trafficjam3d.github.io/traffic-jam-3d/"></iframe>
 
                     <button class="fullscreen-btn" id="fullscreenBtn">
                         <svg viewBox="0 0 24 24" width="20" height="20">
@@ -1249,43 +1239,13 @@
         // 等待DOM加载完成
         document.addEventListener('DOMContentLoaded', function() {
             // 获取元素
-            const playBtn = document.getElementById('playBtn');
-            const playOverlay = document.getElementById('playOverlay');
             const gameIframe = document.getElementById('gameIframe');
             const gameContainer = document.getElementById('gameContainer');
 
-            // 预设 iframe 未加载透明度，显示占位图
+            // iframe直接显示，无需点击播放
             if (gameIframe) {
-                gameIframe.style.opacity = '0';
-                gameIframe.addEventListener('load', function() {
-                    gameContainer && gameContainer.classList.add('loaded');
-                });
+                gameIframe.style.opacity = '1';
             }
-
-            // 点击play按钮时加载iframe
-            playBtn.addEventListener('click', function() {
-                const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-                const isAndroid = /Android/i.test(navigator.userAgent);
-
-                // 针对 iOS 的终极方案：直接跳转 (因为 iOS Safari 的 Iframe 内存限制极严)
-                // if (isIOS) {
-                //     window.location.href = 'https://trafficjam3d.github.io/traffic-jam-3d/';
-                //     return;
-                // }
-
-                // 针对 Android 的优化方案：清理主页内存后加载 Iframe
-                if (isAndroid) {
-                    const screenshotsSection = document.querySelector('.screenshots-section');
-                    if (screenshotsSection) {
-                        screenshotsSection.remove();
-                    }
-                }
-
-                // PC端或Android端：正常加载 Iframe
-                // gameIframe.src = 'https://trafficjam3d.github.io/traffic-jam-3d/';
-                gameIframe.src = 'https://html5.gamedistribution.com/cecfade6d8ef4fb7a4b1924452da4204/?gd_sdk_referrer_url=https://www.onlinegames.io/cat-runner/';
-                playOverlay.classList.add('hidden');
-            });
         });
     </script>
 </body>
