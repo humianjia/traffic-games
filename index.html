@@ -1,24 +1,31 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Traffic Games">
+    <meta name="apple-mobile-web-app-title" content="Traffic Games Online">
+    <!-- SEO优化：强化online/free/no download关键词 -->
     <meta name="description"
-        content="Play Traffic Jam 3D online for free. Navigate through busy city streets, avoid collisions, and test your driving skills in this exciting 3D simulation. No downloads required - play instantly in your browser!" />
+        content="Play free driving and racing games directly in your browser. No downloads needed - enjoy instant gaming on mobile or desktop. Features realistic 3D graphics and smooth controls." />
     <meta name="keywords"
-        content="traffic jam 3d, driving game, online driving simulation, free car game, 3d driving game, browser game" />
+        content="free online games, browser racing games, driving simulation, car games, motorcycle racing, parking games" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="author" content="Traffic Games" />
-    <meta property="og:title" content="Traffic Jam 3D - Free Online Driving Game" />
-    <meta property="og:description" content="Test your driving skills in this exciting 3D simulation. Navigate busy streets, avoid collisions, and compete for high scores. Play free in your browser!" />
+    <meta name="author" content="Traffic Games Online" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Online Racing Games - Play in Your Browser" />
+    <meta property="og:description" content="Enjoy free driving and racing games instantly in your browser. Realistic 3D graphics, no downloads required. Works on mobile and desktop!" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.trafficgames.com/" />
-    <title>Traffic Jam 3D - Free Online Driving Game | Play Now</title>
-    <link rel="canonical" href="/" />
+    <meta property="og:site_name" content="Traffic Games Online" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Online Racing Games - Play in Your Browser" />
+    <meta name="twitter:description" content="Enjoy free driving games instantly. No download needed!" />
+    <title>Free Online Racing Games - Play in Your Browser</title>
+    <link rel="canonical" href="https://www.trafficgames.com/" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
@@ -36,18 +43,15 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7534347140708021"
         crossorigin="anonymous"></script>
 
-    <!-- AMP Auto Ads -->
-    <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
-
-    <!-- JSON-LD Schema Markup -->
+    <!-- JSON-LD Schema Markup优化 - 强化在线游戏属性 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Traffic Games",
-        "description": "Play free online driving and racing games. No downloads required - enjoy instant gaming in your browser.",
+        "name": "Traffic Games Online",
+        "description": "Play free Traffic Games Online - Traffic Racer, Traffic Rider, and Traffic Control games in your browser. No download required.",
         "url": "https://www.trafficgames.com/",
+        "inLanguage": "en",
         "potentialAction": {
             "@type": "SearchAction",
             "target": {
@@ -62,23 +66,39 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "VideoGame",
-        "name": "Traffic Jam 3D",
-        "description": "A free online driving simulation game where players navigate through busy city streets, avoid collisions, and test their driving skills.",
+        "@type": "CollectionPage",
+        "name": "Traffic Games Online - Play Free in Browser",
+        "description": "The ultimate collection of free online traffic games. Play Traffic Racer, Traffic Rider, Traffic Control, and Racing Games instantly in your browser. No download needed!",
         "url": "https://www.trafficgames.com/",
-        "genre": ["Driving", "Racing", "Simulation"],
-        "gamePlatform": ["Web Browser", "Mobile Browser"],
-        "applicationCategory": "Game",
-        "operatingSystem": "Any",
+        "inLanguage": "en",
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Traffic Racing Games",
+                    "description": "High-speed racing through traffic"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Traffic Control Games",
+                    "description": "Manage traffic flow and prevent accidents"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Traffic Rider Games",
+                    "description": "Motorcycle racing through busy streets"
+                }
+            ]
+        },
         "offers": {
             "@type": "Offer",
             "price": "0",
-            "priceCurrency": "USD"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.5",
-            "ratingCount": "10000"
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
         }
     }
     </script>
@@ -388,32 +408,32 @@
         .game-iframe-container {
             position: relative;
             min-height: 420px;
-            /* background: #0f172a url('img/game_icon/index.png') center 40% / 36% no-repeat; */
+            background: #0f172a url('img/game_icon/index.png') center 40% / 36% no-repeat;
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 28px;
             overflow: hidden;
             box-shadow: 0 28px 68px rgba(0, 0, 0, 0.28);
         }
 
-        /* .game-iframe-container::before {
+        .game-iframe-container::before {
             content: '';
             position: absolute;
             inset: 0;
             background: linear-gradient(180deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9));
             pointer-events: none;
-        } */
+        }
 
-        /* .game-iframe-container iframe {
+        .game-iframe-container iframe {
             position: relative;
             z-index: 2;
             opacity: 0;
             transition: opacity 0.35s ease;
             border: none;
-        } */
+        }
 
-        /* .game-iframe-container.loaded iframe {
+        .game-iframe-container.loaded iframe {
             opacity: 1;
-        } */
+        }
 
         .play-overlay {
             position: absolute;
@@ -430,63 +450,6 @@
         .play-overlay.hidden {
             opacity: 0;
             pointer-events: none;
-        }
-
-        /* Side Ads - Fixed Position */
-        .side-ads-row {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 10px;
-            pointer-events: none;
-            z-index: 100;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .side-ads-row .side-ad {
-            pointer-events: auto;
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 12px;
-            overflow: hidden;
-            min-width: 160px;
-            min-height: 600px;
-        }
-
-        .side-ad ins {
-            display: block;
-        }
-
-        .bottom-ad {
-            margin: 20px auto;
-            text-align: center;
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 12px;
-            padding: 10px;
-            max-width: 750px;
-        }
-
-        .bottom-ad ins {
-            display: inline-block;
-        }
-
-        /* Hide side ads on smaller screens */
-        @media (max-width: 1400px) {
-            .side-ads-row {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .bottom-ad ins {
-                width: 100% !important;
-                max-width: 320px;
-                height: 100px !important;
-            }
         }
 
         .play-btn {
@@ -703,187 +666,6 @@
                 background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
             }
         }
-        
-        /* Cookie Consent Banner */
-        .cookie-consent {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 20px;
-            z-index: 9999;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .cookie-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .cookie-content p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #e2e8f0;
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .cookie-content a {
-            color: #4ade80;
-            text-decoration: underline;
-        }
-        
-        .cookie-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .cookie-btn {
-            padding: 10px 24px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-        
-        .cookie-btn.accept {
-            background: #4ade80;
-            color: #0f172a;
-        }
-        
-        .cookie-btn.accept:hover {
-            background: #22c55e;
-        }
-        
-        .cookie-btn.decline {
-            background: transparent;
-            color: #e2e8f0;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .cookie-btn.decline:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        @media (max-width: 600px) {
-            .cookie-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .cookie-buttons {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        
-        /* Tips Section */
-        .tips-section {
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        }
-        
-        .tips-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .tips-container h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: var(--text-primary);
-        }
-        
-        .tips-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-        
-        .tip-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 24px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .tip-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .tip-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-            color: var(--accent-green);
-        }
-        
-        .tip-card p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-        
-        /* FAQ Section */
-        .faq-section {
-            padding: 60px 20px;
-            background: var(--bg-primary);
-        }
-        
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-container h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: var(--text-primary);
-        }
-        
-        .faq-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 10px;
-            padding: 24px;
-            margin-bottom: 16px;
-        }
-        
-        .faq-item h3 {
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-            color: var(--text-primary);
-        }
-        
-        .faq-item p {
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-        
-        @media (max-width: 768px) {
-            .tips-section,
-            .faq-section {
-                padding: 40px 16px;
-            }
-            
-            .tips-container h2,
-            .faq-container h2 {
-                font-size: 1.5rem;
-            }
-        }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWTXKBQEVM"></script>
@@ -896,23 +678,24 @@
 </head>
 
 <body>
-    <!-- AMP Auto Ads -->
-    <amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-7534347140708021">
-    </amp-auto-ads>
-
     <!-- Cookie Consent Banner -->
-    <div id="cookieConsent" class="cookie-consent" style="display: none;">
-        <div class="cookie-content">
-            <p>We use cookies to enhance your experience and serve personalized ads. By continuing to use our site, you agree to our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
-            <div class="cookie-buttons">
-                <button id="acceptCookies" class="cookie-btn accept">Accept</button>
-                <button id="declineCookies" class="cookie-btn decline">Decline</button>
+    <div id="cookieConsent" style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(15, 23, 42, 0.98); border-top: 1px solid rgba(255,255,255,0.1); padding: 20px; z-index: 9999; display: none;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <div style="flex: 1; min-width: 280px;">
+                <p style="margin: 0; color: #e2e8f0; font-size: 0.95rem; line-height: 1.5;">
+                    <strong style="color: #4ade80;">We use cookies</strong> to enhance your experience and serve personalized ads through Google AdSense. By continuing to use our site, you agree to our 
+                    <a href="/privacy-policy.html" style="color: #4ade80; text-decoration: underline;">Privacy Policy</a> and 
+                    <a href="/privacy-policy.html" style="color: #4ade80; text-decoration: underline;">Cookie Policy</a>.
+                </p>
+            </div>
+            <div style="display: flex; gap: 12px;">
+                <button onclick="acceptCookies()" style="background: #4ade80; color: #0f172a; border: none; padding: 10px 24px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 0.9rem;">Accept</button>
+                <button onclick="declineCookies()" style="background: transparent; color: #94a3b8; border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 8px; font-weight: 500; cursor: pointer; font-size: 0.9rem;">Decline</button>
             </div>
         </div>
     </div>
-
-    <!-- 浮动粒子效果（移动设备禁用） -->
+    
+    <!-- Floating Particles -->
     <div class="particles-container" id="particlesContainer"></div>
 
     <header class="header">
@@ -1019,17 +802,43 @@
         </div>
     </header>
 
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" style="background: rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 12px 0;">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 24px;">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList" style="display: flex; list-style: none; gap: 8px; font-size: 0.85rem; color: var(--text-secondary);">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/" style="color: var(--text-secondary); text-decoration: none;">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li style="color: var(--text-muted);">/</li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name" style="color: var(--text-primary);">Traffic Games Online</span>
+                    <meta itemprop="item" content="https://www.trafficgames.com/" />
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </div>
+    </nav>
+
     <main class="detail-main">
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1>Play Traffic Jam 3D - Free Online Driving Game</h1>
-                    <h2>Test Your Driving Skills in This Exciting 3D Simulation</h2>
-                    <p>Jump into the driver's seat and navigate through busy city streets in this thrilling driving simulation. Avoid collisions, master challenging scenarios, and compete for high scores. Play instantly in your browser with no downloads required!</p>
+                    <h1>Free Online Racing Games</h1>
+                    <h2>Play Instantly in Your Browser - No Download Required</h2>
+                    <p>Welcome to our collection of free driving and racing games. Experience high-speed action, realistic 3D graphics, and smooth gameplay directly in your web browser. Whether you enjoy weaving through busy highways, mastering precision parking, or managing complex traffic scenarios, you'll find something exciting here. All games run instantly without downloads, work perfectly on mobile and desktop, and are completely free to play.</p>
+                    <div class="hero-selling-points" style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+                        <span class="selling-point" style="background: rgba(74, 222, 128, 0.2); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; color: #4ade80;">✓ 100% Free</span>
+                        <span class="selling-point" style="background: rgba(74, 222, 128, 0.2); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; color: #4ade80;">✓ No Download</span>
+                        <span class="selling-point" style="background: rgba(74, 222, 128, 0.2); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; color: #4ade80;">✓ Mobile Ready</span>
+                        <span class="selling-point" style="background: rgba(74, 222, 128, 0.2); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; color: #4ade80;">✓ Instant Play</span>
+                    </div>
                     <div class="hero-buttons">
-                        <a href="#game-container" class="btn-primary">Play Now</a>
-                        <a href="#categories" class="btn-secondary">Explore Games</a>
+                        <a href="#game-container" class="btn-primary">Start Playing Now</a>
+                        <a href="#categories" class="btn-secondary">Browse All Games</a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -1047,61 +856,56 @@
             </div>
         </section>
 
+        <!-- Game Title Section -->
         <section class="game-title-section">
             <div class="game-title-container">
                 <div class="game-title-area">
-                    <h2>Traffic Jam 3D</h2>
-                    <p class="game-subtitle">Play the exciting Traffic Jam 3D game online for free!</p>
+                    <h2>Featured Game: Traffic Jam 3D</h2>
+                    <p class="game-subtitle">Experience high-speed racing action right in your browser</p>
                 </div>
             </div>
         </section>
 
+        <!-- Game Description -->
         <section class="game-description-section">
             <div class="game-description-container">
                 <h2>About Traffic Jam 3D</h2>
-                <p>Traffic Jam 3D is an exciting driving simulation that puts your reflexes and decision-making skills to the test. Navigate through busy city streets, avoid collisions with other vehicles, and reach your destination safely. With realistic 3D graphics and intuitive controls, this game offers an immersive experience for players of all skill levels.</p>
-                <p>Whether you are a casual gamer looking for quick entertainment or a driving enthusiast seeking a challenge, Traffic Jam 3D delivers engaging gameplay that keeps you coming back. The game features progressive difficulty, ensuring that both beginners and experienced players find the right level of challenge.</p>
+                <p>Traffic Jam 3D puts you behind the wheel in a thrilling high-speed driving experience. Navigate through dense highway traffic, dodge other vehicles, and test your reflexes as you push for the longest run possible. The concept is simple - avoid crashes and survive as long as you can - but the execution is where the excitement lies.</p>
+                <p>What makes this game special is its accessibility. Built with modern web technologies, it runs smoothly directly in your browser without requiring any downloads or installations. Whether you're on a quick break at work, commuting on public transit, or relaxing at home, you can jump into the action within seconds. The realistic 3D graphics create an immersive atmosphere that makes every near-miss feel intense.</p>
+                <p>The game scales with your skill level through multiple difficulty settings. Beginners can start with easier modes to learn the handling and traffic patterns, while experienced players can challenge themselves with faster speeds and denser roads. The controls are intuitive - steer to avoid obstacles, accelerate when the road is clear, and brake when necessary. It's easy to learn but difficult to master.</p>
                 <div class="game-features">
                     <h3>Game Features</h3>
                     <ul>
-                        <li>Realistic 3D graphics with detailed vehicle models and environments</li>
-                        <li>Smooth and responsive controls for precise maneuvering</li>
-                        <li>Multiple difficulty levels that adapt to your skill</li>
-                        <li>Dynamic traffic scenarios with varying congestion levels</li>
-                        <li>Global score tracking and competitive leaderboards</li>
-                        <li>Instant play - no downloads or installations required</li>
-                        <li>Works on desktop, tablet, and mobile devices</li>
+                        <li><strong>Instant Access:</strong> Play immediately in your browser without any setup</li>
+                        <li><strong>Immersive 3D Graphics:</strong> Realistic visuals that bring the highway to life</li>
+                        <li><strong>Universal Compatibility:</strong> Works seamlessly on phones, tablets, and computers</li>
+                        <li><strong>Adaptive Difficulty:</strong> Multiple modes from casual to challenging</li>
+                        <li><strong>Personal Records:</strong> Track your best runs and compete against yourself</li>
+                        <li><strong>Truly Free:</strong> No hidden fees, subscriptions, or premium content</li>
+                        <li><strong>Optimized Performance:</strong> Runs smoothly even on older hardware</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Side Ads Row -->
-        <div class="side-ads-row">
-            <div class="side-ad left-ad">
-                <ins class="adsbygoogle"
-                     style="display:block;width:160px;height:600px"
-                     data-ad-client="ca-pub-7534347140708021"
-                     data-ad-slot="LEFT_AD_SLOT"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-            <div class="side-ad right-ad">
-                <ins class="adsbygoogle"
-                     style="display:block;width:160px;height:600px"
-                     data-ad-client="ca-pub-7534347140708021"
-                     data-ad-slot="RIGHT_AD_SLOT"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-        </div>
-
+        <!-- 游戏启动区 -->
         <section class="game-launch-section" id="game-container">
             <div class="game-launch-container">
-                <h2>Play Traffic Jam 3D Now</h2>
-                <p>Click the game below to start playing. Use arrow keys to navigate through traffic and avoid collisions.</p>
-                
+                <h2>Play Traffic Jam 3D Free in Your Browser</h2>
+                <p>Click the play button below to start Traffic Jam 3D instantly. Use arrow keys to navigate through traffic and avoid collisions. Works on all devices!</p>
                 <div class="game-iframe-container" id="gameContainer">
                     <iframe id="gameIframe" width="100%" height="100%"
-                        frameborder="0" allowfullscreen src="https://trafficjam3d.github.io/traffic-jam-3d/"></iframe>
+                        frameborder="0" allowfullscreen></iframe>
+
+                    <div class="play-overlay" id="playOverlay">
+                        <button class="play-btn" id="playBtn">
+                            <svg viewBox="0 0 24 24" width="60" height="60" fill="white">
+                                <circle cx="12" cy="12" r="10" fill="rgba(74, 222, 128, 0.8)" />
+                                <path d="M8 6v12l8-6z" fill="white" />
+                            </svg>
+                            <span>Play Now</span>
+                        </button>
+                    </div>
 
                     <button class="fullscreen-btn" id="fullscreenBtn">
                         <svg viewBox="0 0 24 24" width="20" height="20">
@@ -1111,16 +915,6 @@
                         </svg>
                     </button>
                 </div>
-                
-                <!-- Bottom Ad -->
-                <div class="bottom-ad">
-                    <ins class="adsbygoogle"
-                         style="display:block;width:728px;height:90px;margin:20px auto"
-                         data-ad-client="ca-pub-7534347140708021"
-                         data-ad-slot="BOTTOM_AD_SLOT"></ins>
-                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-                </div>
-                
                 <div class="game-controls">
                     <h3>Game Controls</h3>
                     <div class="controls-grid">
@@ -1181,7 +975,7 @@
         <section class="categories-section" id="categories">
             <div class="categories-container">
                 <h2>Game Categories</h2>
-                <p>Browse our diverse collection of driving and racing games. From high-speed competitions to precision parking challenges, find the perfect game for your mood.</p>
+                <p>Browse our diverse collection of driving and racing games. From high-speed competitions to precision parking challenges - all playable instantly in your browser!</p>
                 <div class="categories-grid">
                     <a href="categories.html?category=racing" class="category-card">
                         <div class="category-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
@@ -1191,7 +985,7 @@
                             </svg>
                         </div>
                         <h3>Racing Games</h3>
-                        <p>High-speed competitions through busy streets and open roads</p>
+                        <p>High-speed competitions through busy streets and highways</p>
                     </a>
                     <a href="categories.html?category=driving" class="category-card">
                         <div class="category-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">
@@ -1200,7 +994,7 @@
                             </svg>
                         </div>
                         <h3>Driving Games</h3>
-                        <p>Realistic driving simulations and skill-based challenges</p>
+                        <p>Test your skills in realistic driving simulations</p>
                     </a>
                     <a href="categories.html?category=parking" class="category-card">
                         <div class="category-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
@@ -1209,7 +1003,7 @@
                             </svg>
                         </div>
                         <h3>Parking Games</h3>
-                        <p>Master parking in challenging traffic games situations</p>
+                        <p>Master precision parking in challenging scenarios</p>
                     </a>
                     <a href="categories.html?category=trafficControl" class="category-card">
                         <div class="category-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
@@ -1217,56 +1011,382 @@
                                 <path d="M13 5.08c3.06.44 5.48 2.86 5.92 5.92h3.03c-.47-4.72-4.23-8.48-8.95-8.95v3.03zM18.92 13c-.44 3.06-2.86 5.48-5.92 5.92v3.03c4.72-.47 8.48-4.23 8.95-8.95h-3.03zM11 18.92c-3.39-.49-6-3.4-6-6.92s2.61-6.43 6-6.92V2.05c-5.05.5-9 4.76-9 9.95 0 5.19 3.95 9.45 9 9.95v-3.03zM5.08 11H2.05c.5-5.05 4.76-9 9.95-9v3.03c-3.39.49-6 3.4-6 6.92s2.61 6.43 6 6.92v3.03c-5.19-.5-9.45-4.76-9.95-9.95h3.03z"/>
                             </svg>
                         </div>
-                        <h3>Traffic Control</h3>
-                        <p>Manage traffic flow in our traffic control games</p>
+                        <h3>Management Games</h3>
+                        <p>Control traffic flow and manage complex road systems</p>
                     </a>
                 </div>
             </div>
         </section>
 
+        <!-- Detailed Content Section -->
         <section class="game-detail-section">
             <div class="detail-container">
                 <div class="detail-content">
+                    
+                    <!-- Game Categories Grid -->
                     <div class="detail-block">
-                        <h2>Explore Our Game Collection</h2>
+                        <h2>Explore Games by Category</h2>
+                        <p>Discover our diverse collection of driving and racing experiences. Click any category to start playing instantly!</p>
                         
-                        <h3>Racing & Driving Games</h3>
-                        <h4>High-Speed Racing</h4>
-                        <p>Experience the adrenaline rush of racing through busy city streets. Our racing collection features realistic physics, stunning 3D graphics, and challenging gameplay that tests your reflexes and decision-making skills.</p>
+                        <div class="game-types-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 28px;">
+                            
+                            <!-- Racing Games -->
+                            <a href="categories.html?category=racing" class="game-type-card" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.05)); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 16px; padding: 24px; transition: all 0.3s; text-decoration: none; display: block; cursor: pointer;">
+                                <div class="type-icon" style="width: 56px; height: 56px; background: linear-gradient(135deg, #ef4444, #dc2626); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                    <span style="font-size: 28px;">🏎️</span>
+                                </div>
+                                <h3 style="color: #ef4444; margin-bottom: 8px;">Racing Games</h3>
+                                <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">Experience high-speed action with street racing, arcade GP, drift battles, and car combat. From police chases to formula racing - pure adrenaline on wheels.</p>
+                                <div class="type-tags" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;">
+                                    <span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Street Racing</span>
+                                    <span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Drift</span>
+                                    <span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Arcade</span>
+                                    <span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Car Combat</span>
+                                </div>
+                            </a>
+                            
+                            <!-- Parking Games -->
+                            <a href="categories.html?category=parking" class="game-type-card" style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(22, 163, 74, 0.05)); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 16px; padding: 24px; transition: all 0.3s; text-decoration: none; display: block; cursor: pointer;">
+                                <div class="type-icon" style="width: 56px; height: 56px; background: linear-gradient(135deg, #22c55e, #16a34a); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                    <span style="font-size: 28px;">🅿️</span>
+                                </div>
+                                <h3 style="color: #22c55e; margin-bottom: 8px;">Parking Games</h3>
+                                <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">Master precision driving in challenging scenarios. Navigate tight spaces, solve parking puzzles, and prove your skills in realistic 3D environments.</p>
+                                <div class="type-tags" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;">
+                                    <span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Precision</span>
+                                    <span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Puzzle</span>
+                                    <span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">3D Simulator</span>
+                                    <span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Skills</span>
+                                </div>
+                            </a>
+                            
+                            <!-- City Driving & Simulation - Police/Taxi/Bus -->
+                            <a href="categories.html?category=driving" class="game-type-card" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.05)); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 16px; padding: 24px; transition: all 0.3s; text-decoration: none; display: block; cursor: pointer;">
+                                <div class="type-icon" style="width: 56px; height: 56px; background: linear-gradient(135deg, #3b82f6, #2563eb); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                    <span style="font-size: 28px;">🚓</span>
+                                </div>
+                                <h3 style="color: #3b82f6; margin-bottom: 8px;">Police & Emergency Driving <span style="font-size: 0.75rem; opacity: 0.8;">(60+)</span></h3>
+                                <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">Experience law enforcement and emergency driving with Police Car Simulator, Jail Prison Van Police Game, and Traffic Cop 3D. Chase criminals, transport prisoners, and maintain order on the streets.</p>
+                                <div class="type-tags" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;">
+                                    <span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Police Chase</span>
+                                    <span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Simulation</span>
+                                    <span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Emergency</span>
+                                    <span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">City</span>
+                                </div>
+                            </a>
+                            
+                            <!-- Car Stunts & Destruction -->
+                            <a href="categories.html?category=racing" class="game-type-card" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.05)); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 16px; padding: 24px; transition: all 0.3s; text-decoration: none; display: block; cursor: pointer;">
+                                <div class="type-icon" style="width: 56px; height: 56px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                    <span style="font-size: 28px;">💥</span>
+                                </div>
+                                <h3 style="color: #f59e0b; margin-bottom: 8px;">Car Stunts & Destruction <span style="font-size: 0.75rem; opacity: 0.8;">(40+)</span></h3>
+                                <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">Unleash chaos with Mega Ramp Car Stunts, Car Destruction King, Max Crusher, and Cars with Guns: Wasteland Showdown. Perform impossible stunts, crash cars, and blow things up!</p>
+                                <div class="type-tags" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;">
+                                    <span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Stunts</span>
+                                    <span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Destruction</span>
+                                    <span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Ramps</span>
+                                    <span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Combat</span>
+                                </div>
+                            </a>
+                            
+                            <!-- City Drivers - BMW, Lamborghini, Supercars -->
+                            <a href="categories.html?category=racing" class="game-type-card" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(124, 58, 237, 0.05)); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 16px; padding: 24px; transition: all 0.3s; text-decoration: none; display: block; cursor: pointer;">
+                                <div class="type-icon" style="width: 56px; height: 56px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                    <span style="font-size: 28px;">🏙️</span>
+                                </div>
+                                <h3 style="color: #8b5cf6; margin-bottom: 8px;">City Driver Series <span style="font-size: 0.75rem; opacity: 0.8;">(30+)</span></h3>
+                                <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">Cruise through urban landscapes in i8 City Driver, M5 City Driver, Urus City Driver, and Chiron City Driver. Drive luxury supercars, explore open cities, and experience realistic city driving physics.</p>
+                                <div class="type-tags" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;">
+                                    <span style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Supercars</span>
+                                    <span style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Open World</span>
+                                    <span style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">BMW</span>
+                                    <span style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Lamborghini</span>
+                                </div>
+                            </a>
+                            
+                            <!-- Off-Road & Truck Games -->
+                            <a href="categories.html?category=driving" class="game-type-card" style="background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(13, 148, 136, 0.05)); border: 1px solid rgba(20, 184, 166, 0.2); border-radius: 16px; padding: 24px; transition: all 0.3s; text-decoration: none; display: block; cursor: pointer;">
+                                <div class="type-icon" style="width: 56px; height: 56px; background: linear-gradient(135deg, #14b8a6, #0d9488); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                    <span style="font-size: 28px;">🚛</span>
+                                </div>
+                                <h3 style="color: #14b8a6; margin-bottom: 8px;">Off-Road & Truck Driving <span style="font-size: 0.75rem; opacity: 0.8;">(25+)</span></h3>
+                                <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">Conquer rough terrain with Offroad Climb 4x4, Rock Crawling, Land Cruiser Offroad Driver, and Impossible Truck Tracks Drive. Master monster trucks, navigate extreme terrain, and complete delivery missions.</p>
+                                <div class="type-tags" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;">
+                                    <span style="background: rgba(20, 184, 166, 0.15); color: #14b8a6; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Off-Road</span>
+                                    <span style="background: rgba(20, 184, 166, 0.15); color: #14b8a6; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Trucks</span>
+                                    <span style="background: rgba(20, 184, 166, 0.15); color: #14b8a6; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">4x4</span>
+                                    <span style="background: rgba(20, 184, 166, 0.15); color: #14b8a6; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Extreme</span>
+                                </div>
+                            </a>
+                        </div>
                         
-                        <h4>Motorcycle Racing</h4>
-                        <p>Feel the excitement of two-wheeled racing with our motorcycle games. Weave through traffic, perform stunts, and compete for the best times on challenging courses.</p>
+                        <!-- 悬停效果样式 -->
+                        <style>
+                            .game-type-card:hover {
+                                transform: translateY(-4px);
+                                box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+                            }
+                        </style>
+                    </div>
+
+                    <!-- 2. 平台支持可视化对比 -->
+                    <div class="detail-block">
+                        <h2>Play Anywhere - Cross Platform Support</h2>
+                        <p>Our traffic games work seamlessly across all your devices. No downloads, no installations - just pure gaming fun!</p>
                         
-                        <h4>Car Racing</h4>
-                        <p>Race against opponents or the clock in our diverse selection of car racing games. From street racing to track competitions, find the perfect racing experience for your skill level.</p>
+                        <!-- 平台支持可视化 -->
+                        <div class="platform-showcase" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 28px; text-align: center;">
+                            <div class="platform-item" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 28px 20px; border: 1px solid rgba(255,255,255,0.08);">
+                                <div style="font-size: 48px; margin-bottom: 12px;">💻</div>
+                                <h4 style="margin-bottom: 8px;">Desktop</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary);">Windows & Mac</p>
+                                <div style="margin-top: 12px; color: #4ade80; font-size: 0.8rem;">✓ Full HD Support</div>
+                            </div>
+                            <div class="platform-item" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 28px 20px; border: 1px solid rgba(255,255,255,0.08);">
+                                <div style="font-size: 48px; margin-bottom: 12px;">📱</div>
+                                <h4 style="margin-bottom: 8px;">Mobile</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary);">iOS & Android</p>
+                                <div style="margin-top: 12px; color: #4ade80; font-size: 0.8rem;">✓ Touch Optimized</div>
+                            </div>
+                            <div class="platform-item" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 28px 20px; border: 1px solid rgba(255,255,255,0.08);">
+                                <div style="font-size: 48px; margin-bottom: 12px;">📱</div>
+                                <h4 style="margin-bottom: 8px;">Tablet</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary);">iPad & Android</p>
+                                <div style="margin-top: 12px; color: #4ade80; font-size: 0.8rem;">✓ Large Screen</div>
+                            </div>
+                            <div class="platform-item" style="background: rgba(255,255,255,0.03); border-radius: 16px; padding: 28px 20px; border: 1px solid rgba(255,255,255,0.08);">
+                                <div style="font-size: 48px; margin-bottom: 12px;">🌐</div>
+                                <h4 style="margin-bottom: 8px;">Browser</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary);">Chrome, Safari, etc.</p>
+                                <div style="margin-top: 12px; color: #4ade80; font-size: 0.8rem;">✓ Instant Play</div>
+                            </div>
+                        </div>
                         
-                        <h3>Parking & Management Games</h3>
-                        <h4>Parking Challenges</h4>
-                        <p>Test your precision and spatial awareness with our parking games. Navigate tight spaces, avoid obstacles, and master the art of perfect parking in increasingly difficult scenarios.</p>
+                        <!-- 特性对比条 -->
+                        <div class="features-bar" style="margin-top: 32px; background: rgba(255,255,255,0.02); border-radius: 12px; padding: 20px 24px; border: 1px solid rgba(255,255,255,0.06);">
+                            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 16px;">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <span style="color: #4ade80; font-size: 1.2rem;">⚡</span>
+                                    <span>Instant Loading</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <span style="color: #4ade80; font-size: 1.2rem;">🔄</span>
+                                    <span>Auto-Save Progress</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <span style="color: #4ade80; font-size: 1.2rem;">🎮</span>
+                                    <span>Controller Support</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <span style="color: #4ade80; font-size: 1.2rem;">📊</span>
+                                    <span>Leaderboards</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. 游戏特性时间线 -->
+                    <div class="detail-block">
+                        <h2>Why Choose Our Traffic Games?</h2>
+                        <p>Experience the best online gaming with features designed for maximum enjoyment!</p>
                         
-                        <h4>Traffic Management</h4>
-                        <p>Take control of busy intersections and manage traffic flow to prevent accidents. These strategic games challenge you to think quickly and make smart decisions under pressure.</p>
+                        <!-- 特性时间线 -->
+                        <div class="features-timeline" style="margin-top: 32px; position: relative;">
+                            <div style="position: absolute; left: 24px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #4ade80, #3b82f6);"></div>
+                            
+                            <div class="timeline-item" style="display: flex; gap: 20px; margin-bottom: 28px; padding-left: 60px; position: relative;">
+                                <div style="position: absolute; left: 12px; width: 24px; height: 24px; background: #4ade80; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">1</div>
+                                <div style="flex: 1; background: rgba(74, 222, 128, 0.05); border-radius: 12px; padding: 20px; border: 1px solid rgba(74, 222, 128, 0.15);">
+                                    <h4 style="color: #4ade80; margin-bottom: 8px;">🚀 Instant Play - No Waiting</h4>
+                                    <p style="font-size: 0.9rem; line-height: 1.6;">Jump straight into the action! No downloads, no installations, no registration required. Just click and play your favorite traffic games instantly in your browser.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" style="display: flex; gap: 20px; margin-bottom: 28px; padding-left: 60px; position: relative;">
+                                <div style="position: absolute; left: 12px; width: 24px; height: 24px; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">2</div>
+                                <div style="flex: 1; background: rgba(59, 130, 246, 0.05); border-radius: 12px; padding: 20px; border: 1px solid rgba(59, 130, 246, 0.15);">
+                                    <h4 style="color: #3b82f6; margin-bottom: 8px;">📱 Play on Any Device</h4>
+                                    <p style="font-size: 0.9rem; line-height: 1.6;">Whether you're on a phone, tablet, or computer, our games adapt perfectly to your screen. Enjoy the same great experience everywhere!</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" style="display: flex; gap: 20px; margin-bottom: 28px; padding-left: 60px; position: relative;">
+                                <div style="position: absolute; left: 12px; width: 24px; height: 24px; background: #8b5cf6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">3</div>
+                                <div style="flex: 1; background: rgba(139, 92, 246, 0.05); border-radius: 12px; padding: 20px; border: 1px solid rgba(139, 92, 246, 0.15);">
+                                    <h4 style="color: #8b5cf6; margin-bottom: 8px;">🎮 100+ Free Games</h4>
+                                    <p style="font-size: 0.9rem; line-height: 1.6;">Access our entire collection of traffic games without spending a penny. From racing to parking, we have something for everyone!</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" style="display: flex; gap: 20px; padding-left: 60px; position: relative;">
+                                <div style="position: absolute; left: 12px; width: 24px; height: 24px; background: #f59e0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">4</div>
+                                <div style="flex: 1; background: rgba(245, 158, 11, 0.05); border-radius: 12px; padding: 20px; border: 1px solid rgba(245, 158, 11, 0.15);">
+                                    <h4 style="color: #f59e0b; margin-bottom: 8px;">🏆 Compete & Win</h4>
+                                    <p style="font-size: 0.9rem; line-height: 1.6;">Challenge friends, climb leaderboards, and unlock achievements. Show off your skills and become the ultimate traffic game champion!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. 每日推荐游戏展示网格 - 基于站内实际游戏 -->
+                    <div class="detail-block">
+                        <h2>🌟 Daily Recommended Games</h2>
+                        <p>Hand-picked traffic games for you to enjoy today! These selections change regularly, so come back tomorrow for new recommendations. All games are free to play instantly!</p>
                         
-                        <h3>Casual & Fun Games</h3>
-                        <h4>Escape Adventures</h4>
-                        <p>Navigate through obstacles and find your way out of challenging situations. These puzzle-adventure games combine driving skills with problem-solving.</p>
+                        <div class="popular-games-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 28px;">
+                            
+                            <!-- Daily Pick 1: GT Traffic Racer -->
+                            <a href="racing/GTTrafficRacer.html" class="popular-game-card" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8)); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s; text-decoration: none; display: block;">
+                                <div style="height: 140px; overflow: hidden;">
+                                    <img src="img/game_icon/racing/GTTrafficRacer.jpg" alt="GT Traffic Racer" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                                </div>
+                                <div style="padding: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+                                        <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 600;">DAILY PICK</span>
+                                        <h4 style="font-size: 1rem; color: var(--text-color);">GT Traffic Racer</h4>
+                                    </div>
+                                    <div style="margin-bottom: 8px;">
+                                        <span style="font-size: 0.75rem; color: var(--text-secondary);">🏁 High-Speed Highway Racing</span>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px;">Race through busy highways in powerful GT cars. Dodge traffic, earn points, and unlock new vehicles in this thrilling racing game.</p>
+                                    <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                        <span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Racing</span>
+                                        <span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Traffic</span>
+                                        <span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Arcade</span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- Daily Pick 2: Car Jam Escape -->
+                            <a href="parking/CarJamEscape.html" class="popular-game-card" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8)); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s; text-decoration: none; display: block;">
+                                <div style="height: 140px; overflow: hidden;">
+                                    <img src="img/game_icon/parking/CarJamEscape.jpg" alt="Car Jam Escape" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                                </div>
+                                <div style="padding: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+                                        <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 600;">DAILY PICK</span>
+                                        <h4 style="font-size: 1rem; color: var(--text-color);">Car Jam Escape</h4>
+                                    </div>
+                                    <div style="margin-bottom: 8px;">
+                                        <span style="font-size: 0.75rem; color: var(--text-secondary);">🧩 Puzzle Parking Challenge</span>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px;">Navigate through crowded parking lots and find your way out. Solve parking puzzles and test your spatial reasoning skills.</p>
+                                    <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                        <span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Parking</span>
+                                        <span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Puzzle</span>
+                                        <span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Casual</span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- Daily Pick 3: Police Car Real Cop Simulator -->
+                            <a href="driving/PoliceCarRealCopSimulator.html" class="popular-game-card" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8)); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s; text-decoration: none; display: block;">
+                                <div style="height: 140px; overflow: hidden;">
+                                    <img src="img/game_icon/driving/PoliceCarRealCopSimulator.jpg" alt="Police Car Real Cop Simulator" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                                </div>
+                                <div style="padding: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+                                        <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 600;">DAILY PICK</span>
+                                        <h4 style="font-size: 1rem; color: var(--text-color);">Police Car Simulator</h4>
+                                    </div>
+                                    <div style="margin-bottom: 8px;">
+                                        <span style="font-size: 0.75rem; color: var(--text-secondary);">🚓 Police Chase Action</span>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px;">Experience the thrill of being a police officer. Chase criminals, patrol the city, and maintain law and order on the streets.</p>
+                                    <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                        <span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Police</span>
+                                        <span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Simulation</span>
+                                        <span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Action</span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- Daily Pick 4: Mega Ramp Car Stunts -->
+                            <a href="racing/MegaRampCarStunts.html" class="popular-game-card" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8)); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s; text-decoration: none; display: block;">
+                                <div style="height: 140px; overflow: hidden;">
+                                    <img src="img/game_icon/racing/MegaRampCarStunts.jpg" alt="Mega Ramp Car Stunts" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                                </div>
+                                <div style="padding: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+                                        <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 600;">DAILY PICK</span>
+                                        <h4 style="font-size: 1rem; color: var(--text-color);">Mega Ramp Car Stunts</h4>
+                                    </div>
+                                    <div style="margin-bottom: 8px;">
+                                        <span style="font-size: 0.75rem; color: var(--text-secondary);">💥 Extreme Stunt Driving</span>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px;">Perform impossible stunts on massive ramps. Launch cars into the air, do flips, and crash in spectacular ways!</p>
+                                    <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                        <span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Stunts</span>
+                                        <span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Ramps</span>
+                                        <span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">3D</span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- Daily Pick 5: i8 City Driver -->
+                            <a href="racing/i8CityDriver.html" class="popular-game-card" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8)); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s; text-decoration: none; display: block;">
+                                <div style="height: 140px; overflow: hidden;">
+                                    <img src="img/game_icon/racing/i8CityDriver.jpg" alt="i8 City Driver" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                                </div>
+                                <div style="padding: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+                                        <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 600;">DAILY PICK</span>
+                                        <h4 style="font-size: 1rem; color: var(--text-color);">i8 City Driver</h4>
+                                    </div>
+                                    <div style="margin-bottom: 8px;">
+                                        <span style="font-size: 0.75rem; color: var(--text-secondary);">🏙️ Luxury City Driving</span>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px;">Drive the iconic BMW i8 through an open city. Experience realistic driving physics and explore urban landscapes.</p>
+                                    <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                        <span style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Supercar</span>
+                                        <span style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">City</span>
+                                        <span style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Simulation</span>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <!-- Daily Pick 6: Car Parking Master 3D -->
+                            <a href="parking/CarParkingMaster3D.html" class="popular-game-card" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8)); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s; text-decoration: none; display: block;">
+                                <div style="height: 140px; overflow: hidden;">
+                                    <img src="img/game_icon/parking/CarParkingMaster3D–RealDrivingSimulator.jpg" alt="Car Parking Master 3D" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                                </div>
+                                <div style="padding: 16px;">
+                                    <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+                                        <span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 2px 8px; border-radius: 6px; font-size: 0.65rem; font-weight: 600;">DAILY PICK</span>
+                                        <h4 style="font-size: 1rem; color: var(--text-color);">Car Parking Master 3D</h4>
+                                    </div>
+                                    <div style="margin-bottom: 8px;">
+                                        <span style="font-size: 0.75rem; color: var(--text-secondary);">🎯 Realistic Parking Sim</span>
+                                    </div>
+                                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px;">Master the art of parking in realistic 3D environments. Navigate tight spaces, avoid obstacles, and perfect your skills.</p>
+                                    <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                        <span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Parking</span>
+                                        <span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">3D</span>
+                                        <span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 3px 8px; border-radius: 8px; font-size: 0.7rem;">Skills</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                         
-                        <h4>Clicker Games</h4>
-                        <p>Simple yet addictive, our clicker games are perfect for quick gaming sessions when you want instant fun without complex controls.</p>
-                        
-                        <h4>2 Player Games</h4>
-                        <p>Challenge friends in competitive multiplayer games. Race head-to-head or work together to achieve high scores in cooperative modes.</p>
-                        
-                        <h3>Trivia & Knowledge Games</h3>
-                        <p>Test your knowledge of driving rules, vehicle mechanics, and road safety with our educational trivia games.</p>
+                        <!-- 悬停效果样式 -->
+                        <style>
+                            .popular-game-card:hover {
+                                transform: translateY(-4px);
+                                box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+                            }
+                            .popular-game-card:hover img {
+                                transform: scale(1.05);
+                            }
+                        </style>
                     </div>
 
                     <div class="detail-block">
-                        <h2>Featured Game: Traffic Jam 3D</h2>
+                        <h2>Popular Traffic Games</h2>
                         
-                        <h3>Overview</h3>
-                        <p class="detail-description" id="objectiveText">Traffic Jam 3D is our flagship driving simulation that puts you in the driver's seat of challenging urban navigation. The game combines realistic physics with intuitive controls to create an engaging experience for players of all skill levels.</p>
-                        <p>Whether you have five minutes or an hour, this game adapts to your schedule with quick-play modes and longer challenges. Compete on global leaderboards or challenge yourself to beat your personal best.</p>
+                        <h3>Traffic Racer - The Ultimate Traffic Rider Game</h3>
+                        <p class="detail-description" id="objectiveText">Play Traffic Racer, one of the most exciting traffic rider games available online. Navigate through busy streets, avoid collisions, and test your driving skills in this thrilling traffic rider game. With realistic graphics and smooth controls, Traffic Racer offers an immersive gaming experience for players of all ages. Whether you're a casual gamer or a serious racing enthusiast, this traffic rider game will keep you entertained for hours.</p>
+                        <p>Traffic Racer is a top-rated traffic rider game that challenges you to navigate through traffic at high speeds. With multiple game modes and difficulty levels, you can customize your gaming experience to match your skill level. Compete against your friends and see who can get the highest score in this exciting traffic rider game.</p>
                         
                         <h4>What You'll Do in the Game</h4>
                         <p>When you enter the game, you'll:</p>
@@ -1362,59 +1482,146 @@
                         <h3>Exciting Gameplay Experience</h3>
                         <p>Traffic games offer a unique gaming experience that combines skill, strategy, and excitement. They test your ability to make quick decisions, react to changing situations, and maintain control under pressure.</p>
                         
-                        <h3>Improve Your Skills</h3>
-                        <p>Playing traffic games can help improve your hand-eye coordination and reaction time, making them a fun and beneficial activity for players of all ages.</p>
+                        <h3>No Download Required</h3>
+                        <p>All traffic games on our site are <strong>browser-based</strong>. No installation, no waiting - just click and play instantly! Save storage space on your device while enjoying high-quality racing games.</p>
                         
-                        <h3>Free to Play</h3>
-                        <p>All of our traffic games are free to play and require no downloads, making them accessible to anyone with an internet connection.</p>
+                        <h3>Mobile & Desktop Support</h3>
+                        <p>Play <strong>traffic games online</strong> on any device! Our games are optimized for smartphones, tablets, laptops, and desktop computers. Enjoy seamless gameplay whether you're at home or on the go.</p>
                         
-                        <h3>Suitable for All Ages</h3>
-                        <p>Our traffic games are designed to be fun and engaging for players of all ages, from casual gamers to serious racing enthusiasts.</p>
+                        <h3>Completely Free to Play</h3>
+                        <p>Every game in our collection is <strong>100% free</strong>. No hidden fees, no premium subscriptions - just unlimited access to the best traffic racing games available online!</p>
                     </div>
 
+                    <!-- How to Play区块 -->
                     <div class="detail-block">
-                        <h2>How to Play Traffic Games</h2>
+                        <h2>How to Play Traffic Games Online</h2>
+                        
+                        <h3>Getting Started</h3>
+                        <p>Playing <strong>traffic games online</strong> is easy! Simply browse our collection, click on any game, and start playing instantly in your browser. No account creation or download required.</p>
                         
                         <h3>Game Controls</h3>
-                        <p>Most of our traffic games use simple controls, such as arrow keys or mouse clicks, making them easy to pick up and play.</p>
+                        <p>Most traffic games use intuitive controls:</p>
+                        <ul>
+                            <li><strong>Arrow Keys:</strong> Steer, accelerate, and brake</li>
+                            <li><strong>Spacebar:</strong> Handbrake or nitro boost</li>
+                            <li><strong>Mouse:</strong> Menu navigation and some games</li>
+                            <li><strong>Touch:</strong> On-screen controls for mobile devices</li>
+                        </ul>
                         
-                        <h3>Tips & Strategies</h3>
-                        <p>Learn helpful tips and strategies to improve your gameplay and beat your high scores.</p>
-                        
-                        <h3>Game Modes</h3>
-                        <p>Many of our traffic games offer multiple game modes, allowing you to customize your gaming experience.</p>
+                        <h3>Tips for Beginners</h3>
+                        <p>Start with easier levels to learn the controls. Focus on avoiding collisions rather than speed at first. Use nitro boosts strategically on straight stretches for maximum effect.</p>
                     </div>
 
+                    <!-- 5. 网站特色亮点（替代虚假统计数据） -->
                     <div class="detail-block">
-                        <h2>About Traffic Games</h2>
+                        <h2>Why Play Traffic Games on Our Site?</h2>
+                        <p>Discover what makes our traffic gaming experience special!</p>
                         
-                        <h3>Our Mission</h3>
-                        <p>Traffic Games is your premier destination for free online traffic rider games, racing games, and driving games. We strive to provide high-quality games that are fun and engaging for players of all ages.</p>
-                        
-                        <h3>Game Categories</h3>
-                        <p>Our collection includes the best traffic rider games, motorcycle racing games, car racing games, parking games, and traffic control games. With a wide variety of games to choose from, you'll never run out of exciting challenges.</p>
-                        
-                        <h3>Latest Updates</h3>
-                        <p>We regularly update our game collection with new and exciting titles, so be sure to check back often for the latest games.</p>
-                        
-                        <h3>Contact Us</h3>
-                        <p>If you have any questions or feedback, please don't hesitate to contact us.</p>
+                        <div class="features-highlight-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 28px;">
+                            <div class="feature-highlight-card" style="background: linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(34, 197, 94, 0.05)); border-radius: 16px; padding: 24px; border: 1px solid rgba(74, 222, 128, 0.2); display: flex; align-items: flex-start; gap: 16px;">
+                                <div style="font-size: 2rem; flex-shrink: 0;">🎮</div>
+                                <div>
+                                    <h4 style="color: #4ade80; margin-bottom: 8px; font-size: 1.1rem;">Curated Game Collection</h4>
+                                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">Hand-picked selection of the best traffic games from top developers. Every game is tested for quality and performance.</p>
+                                </div>
+                            </div>
+                            <div class="feature-highlight-card" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.05)); border-radius: 16px; padding: 24px; border: 1px solid rgba(59, 130, 246, 0.2); display: flex; align-items: flex-start; gap: 16px;">
+                                <div style="font-size: 2rem; flex-shrink: 0;">⚡</div>
+                                <div>
+                                    <h4 style="color: #3b82f6; margin-bottom: 8px; font-size: 1.1rem;">Instant Play Technology</h4>
+                                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">No downloads, no waiting. Our optimized platform loads games directly in your browser using HTML5 technology.</p>
+                                </div>
+                            </div>
+                            <div class="feature-highlight-card" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(124, 58, 237, 0.05)); border-radius: 16px; padding: 24px; border: 1px solid rgba(139, 92, 246, 0.2); display: flex; align-items: flex-start; gap: 16px;">
+                                <div style="font-size: 2rem; flex-shrink: 0;">📱</div>
+                                <div>
+                                    <h4 style="color: #8b5cf6; margin-bottom: 8px; font-size: 1.1rem;">Universal Compatibility</h4>
+                                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">Play on any device with a web browser. Desktop, laptop, tablet, or smartphone - the experience is always smooth.</p>
+                                </div>
+                            </div>
+                            <div class="feature-highlight-card" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.05)); border-radius: 16px; padding: 24px; border: 1px solid rgba(245, 158, 11, 0.2); display: flex; align-items: flex-start; gap: 16px;">
+                                <div style="font-size: 2rem; flex-shrink: 0;">🔒</div>
+                                <div>
+                                    <h4 style="color: #f59e0b; margin-bottom: 8px; font-size: 1.1rem;">Safe & Secure Gaming</h4>
+                                    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">All games run in sandboxed iframes. No malware, no unwanted downloads - just pure gaming fun in a secure environment.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="detail-block">
-                        <h2>Frequently Asked Questions</h2>
+                    <!-- 6. FAQ - Casual Style -->
+                    <div class="detail-block faq-section">
+                        <h2>Common Questions</h2>
+                        <p>Got questions? Click to see answers</p>
                         
-                        <h3>How to Play Traffic Games?</h3>
-                        <p>Most of our traffic games use simple controls, such as arrow keys or mouse clicks. Each game has its own set of instructions, which can usually be found in the game description or tutorial.</p>
-                        
-                        <h3>Are Traffic Games Free?</h3>
-                        <p>Yes, all of our traffic games are free to play and require no downloads.</p>
-                        
-                        <h3>Do I Need to Download Traffic Games?</h3>
-                        <p>No, all of our traffic games are browser-based and can be played directly from our website.</p>
-                        
-                        <h3>What Devices Can I Play Traffic Games On?</h3>
-                        <p>Our traffic games are compatible with most devices, including desktops, laptops, tablets, and smartphones.</p>
+                        <div class="faq-accordion" style="margin-top: 28px;">
+                            
+                            <!-- FAQ 1 - Extended -->
+                            <div class="faq-item" style="background: rgba(255,255,255,0.02); border-radius: 12px; margin-bottom: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06);">
+                                <button class="faq-question" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('.faq-icon').style.transform = this.nextElementSibling.style.display === 'none' ? 'rotate(0deg)' : 'rotate(180deg)';" style="width: 100%; padding: 20px 24px; background: none; border: none; color: var(--text-primary); text-align: left; font-size: 1rem; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                                    <span>🎮 What types of traffic games can I play here?</span>
+                                    <span class="faq-icon" style="transition: transform 0.3s;">▼</span>
+                                </button>
+                                <div class="faq-answer" style="display: none; padding: 0 24px 20px;">
+                                    <p style="line-height: 1.7; color: var(--text-secondary);">We offer a wide variety of <strong>free online traffic games</strong> to suit different preferences. Our racing collection includes popular titles like <strong>Traffic Racer</strong> and <strong>Traffic Rider</strong> where you speed through highway traffic. For puzzle lovers, we have <strong>parking games</strong> like Parking Master that test your precision and spatial awareness. Strategy fans can try our <strong>traffic control games</strong> where you manage intersections and keep traffic flowing smoothly. We also feature exciting <strong>escape games</strong> where you dodge obstacles and outrun pursuers. All games are browser-based, meaning you can <strong>play traffic games online</strong> instantly without any downloads or installations.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ 2 - Extended -->
+                            <div class="faq-item" style="background: rgba(255,255,255,0.02); border-radius: 12px; margin-bottom: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06);">
+                                <button class="faq-question" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('.faq-icon').style.transform = this.nextElementSibling.style.display === 'none' ? 'rotate(0deg)' : 'rotate(180deg)';" style="width: 100%; padding: 20px 24px; background: none; border: none; color: var(--text-primary); text-align: left; font-size: 1rem; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                                    <span>💰 Are these traffic games really free to play?</span>
+                                    <span class="faq-icon" style="transition: transform 0.3s;">▼</span>
+                                </button>
+                                <div class="faq-answer" style="display: none; padding: 0 24px 20px;">
+                                    <p style="line-height: 1.7; color: var(--text-secondary);">Yes, absolutely! All <strong>traffic games on our site are completely free</strong> to play. We don't require any credit card information, there are no hidden fees, and no premium subscriptions needed. These are <strong>free browser games</strong> that developers have made available on the web, and we've simply gathered the best ones in one convenient place. You can play as much as you want, whenever you want, without spending a penny. Some games may show ads to support the developers, but gameplay is never restricted. Whether you want to play for five minutes or five hours, all features remain unlocked and completely free.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ 3 - Extended -->
+                            <div class="faq-item" style="background: rgba(255,255,255,0.02); border-radius: 12px; margin-bottom: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06);">
+                                <button class="faq-question" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('.faq-icon').style.transform = this.nextElementSibling.style.display === 'none' ? 'rotate(0deg)' : 'rotate(180deg)';" style="width: 100%; padding: 20px 24px; background: none; border: none; color: var(--text-primary); text-align: left; font-size: 1rem; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                                    <span>📥 Do I need to download or install anything?</span>
+                                    <span class="faq-icon" style="transition: transform 0.3s;">▼</span>
+                                </button>
+                                <div class="faq-answer" style="display: none; padding: 0 24px 20px;">
+                                    <p style="line-height: 1.7; color: var(--text-secondary);">Not at all! Our <strong>online traffic games</strong> run directly in your web browser using modern HTML5 technology. This means zero downloads, zero installations, and zero storage space used on your device. Simply visit our website, click on any game that catches your interest, and start playing immediately. This approach has several advantages: you don't have to worry about app store approvals, your device stays clutter-free, and you can play on any computer or mobile device with internet access. Whether you're using Chrome, Safari, Firefox, or Edge, our <strong>browser racing games</strong> work seamlessly across all modern web browsers.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ 4 - Extended -->
+                            <div class="faq-item" style="background: rgba(255,255,255,0.02); border-radius: 12px; margin-bottom: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06);">
+                                <button class="faq-question" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('.faq-icon').style.transform = this.nextElementSibling.style.display === 'none' ? 'rotate(0deg)' : 'rotate(180deg)';" style="width: 100%; padding: 20px 24px; background: none; border: none; color: var(--text-primary); text-align: left; font-size: 1rem; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                                    <span>📱 Can I play these games on my mobile phone?</span>
+                                    <span class="faq-icon" style="transition: transform 0.3s;">▼</span>
+                                </button>
+                                <div class="faq-answer" style="display: none; padding: 0 24px 20px;">
+                                    <p style="line-height: 1.7; color: var(--text-secondary);">Absolutely! Our <strong>traffic games are fully mobile-friendly</strong> and work great on smartphones and tablets. Whether you have an iPhone, iPad, Android phone, or Android tablet, as long as you have a web browser and internet connection, you can play. The games automatically detect your screen size and adjust the controls accordingly - on mobile devices, you'll use touch controls with on-screen buttons or swipe gestures. The graphics and gameplay remain smooth and responsive, giving you the same great experience as playing on a computer. This makes our games perfect for playing during your commute, while waiting in line, or whenever you have a few minutes to spare.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ 5 - Extended -->
+                            <div class="faq-item" style="background: rgba(255,255,255,0.02); border-radius: 12px; margin-bottom: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06);">
+                                <button class="faq-question" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('.faq-icon').style.transform = this.nextElementSibling.style.display === 'none' ? 'rotate(0deg)' : 'rotate(180deg)';" style="width: 100%; padding: 20px 24px; background: none; border: none; color: var(--text-primary); text-align: left; font-size: 1rem; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                                    <span>🏆 What are the best traffic games to start with?</span>
+                                    <span class="faq-icon" style="transition: transform 0.3s;">▼</span>
+                                </button>
+                                <div class="faq-answer" style="display: none; padding: 0 24px 20px;">
+                                    <p style="line-height: 1.7; color: var(--text-secondary);">The best game depends on what type of experience you're looking for. For pure racing excitement, we recommend starting with <strong>Traffic Racer</strong> - it's easy to learn but challenging to master, with smooth controls and addictive gameplay. If you prefer motorcycles, <strong>Traffic Rider</strong> offers a thrilling first-person perspective that makes you feel like you're really on the road. For players who enjoy strategic thinking, our traffic control games provide a different kind of challenge where you manage intersections and prevent accidents. Parking games are great for a more relaxed, puzzle-like experience. We suggest trying a few different types to see what you enjoy most - since everything is free, you have nothing to lose!</p>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ 6 - Extended -->
+                            <div class="faq-item" style="background: rgba(255,255,255,0.02); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06);">
+                                <button class="faq-question" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('.faq-icon').style.transform = this.nextElementSibling.style.display === 'none' ? 'rotate(0deg)' : 'rotate(180deg)';" style="width: 100%; padding: 20px 24px; background: none; border: none; color: var(--text-primary); text-align: left; font-size: 1rem; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                                    <span>👨‍👩‍👧‍👦 Are these games appropriate for children?</span>
+                                    <span class="faq-icon" style="transition: transform 0.3s;">▼</span>
+                                </button>
+                                <div class="faq-answer" style="display: none; padding: 0 24px 20px;">
+                                    <p style="line-height: 1.7; color: var(--text-secondary);">Yes, our <strong>traffic games are family-friendly</strong> and suitable for players of all ages. There's no violence, blood, or inappropriate content - just driving, parking, and traffic management challenges. In fact, many parents find these games educational as they help develop hand-eye coordination, spatial awareness, quick decision-making, and even basic understanding of traffic rules. The games provide a safe virtual environment where kids can practice reaction times and strategic thinking. However, as with any screen-based activity, we recommend parents monitor play time and ensure it doesn't interfere with homework, physical activity, or sleep. The games are designed to be engaging but not addictive, with natural stopping points between levels.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="detail-block seo-only">
@@ -1447,54 +1654,6 @@
             </div>
             <div class="more-games-grid" id="moreGamesGrid"></div>
         </section>
-
-        <!-- Tips & Strategies Section -->
-        <section class="tips-section">
-            <div class="tips-container">
-                <h2>Tips & Strategies for Traffic Jam 3D</h2>
-                <div class="tips-grid">
-                    <div class="tip-card">
-                        <h3>🎯 Master the Basics</h3>
-                        <p>Start with slower speeds to get comfortable with the controls. Focus on maintaining a safe distance from other vehicles and anticipate traffic patterns before they develop.</p>
-                    </div>
-                    <div class="tip-card">
-                        <h3>⚡ Use Nitro Wisely</h3>
-                        <p>Save your nitro boosts for straight stretches where you have clear visibility. Avoid using nitro in heavy traffic or when approaching intersections.</p>
-                    </div>
-                    <div class="tip-card">
-                        <h3>🛡️ Defensive Driving</h3>
-                        <p>Always expect the unexpected. Watch for vehicles changing lanes suddenly and be prepared to brake or swerve to avoid collisions.</p>
-                    </div>
-                    <div class="tip-card">
-                        <h3>📈 Score Multipliers</h3>
-                        <p>Maintain a high speed without crashing to build your score multiplier. Near-misses with other vehicles also add bonus points.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <div class="faq-container">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-item">
-                    <h3>Is Traffic Jam 3D free to play?</h3>
-                    <p>Yes, Traffic Jam 3D is completely free to play. You can enjoy the full game directly in your web browser without any downloads, installations, or hidden fees.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can I play on mobile devices?</h3>
-                    <p>Absolutely! Traffic Jam 3D is optimized for both desktop and mobile play. The game works on smartphones, tablets, and computers with a modern web browser.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How do I save my progress?</h3>
-                    <p>Your high scores are automatically saved to the global leaderboard. Create a free account to track your personal bests and compete with players worldwide.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What makes this game different from other driving games?</h3>
-                    <p>Traffic Jam 3D focuses on realistic traffic navigation rather than just speed. The challenge lies in reading traffic patterns, timing your moves, and avoiding accidents while maintaining progress.</p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
@@ -1517,10 +1676,9 @@
             </div>
             <div class="footer-col">
                 <h4>Support</h4>
-                <a href="/about.html">About Us</a>
-                <a href="/contact.html">Contact</a>
-                <a href="/privacy-policy.html">Privacy Policy</a>
-                <a href="/privacy-policy.html">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -1581,53 +1739,68 @@
             createParticles();
         }
 
-        // Cookie Consent Management
-        (function() {
-            const cookieConsent = document.getElementById('cookieConsent');
-            const acceptBtn = document.getElementById('acceptCookies');
-            const declineBtn = document.getElementById('declineCookies');
-            const consentKey = 'cookieConsent';
-            
-            // Check if user has already made a choice
-            const consent = localStorage.getItem(consentKey);
-            if (!consent) {
-                // Show banner after 1 second
-                setTimeout(() => {
-                    cookieConsent.style.display = 'block';
-                }, 1000);
-            }
-            
-            // Accept cookies
-            acceptBtn.addEventListener('click', function() {
-                localStorage.setItem(consentKey, 'accepted');
-                cookieConsent.style.display = 'none';
-                // Enable personalized ads
-                if (window.adsbygoogle) {
-                    window.adsbygoogle.requestNonPersonalizedAds = 0;
-                }
-            });
-            
-            // Decline cookies
-            declineBtn.addEventListener('click', function() {
-                localStorage.setItem(consentKey, 'declined');
-                cookieConsent.style.display = 'none';
-                // Disable personalized ads
-                if (window.adsbygoogle) {
-                    window.adsbygoogle.requestNonPersonalizedAds = 1;
-                }
-            });
-        })();
-
         // 等待DOM加载完成
         document.addEventListener('DOMContentLoaded', function() {
             // 获取元素
+            const playBtn = document.getElementById('playBtn');
+            const playOverlay = document.getElementById('playOverlay');
             const gameIframe = document.getElementById('gameIframe');
             const gameContainer = document.getElementById('gameContainer');
 
-            // iframe直接显示，无需点击播放
-            if (gameIframe) {
-                gameIframe.style.opacity = '1';
+            // Cookie Consent Functions
+            function showCookieConsent() {
+                const consent = localStorage.getItem('cookieConsent');
+                if (!consent) {
+                    document.getElementById('cookieConsent').style.display = 'block';
+                }
             }
+            
+            function acceptCookies() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                document.getElementById('cookieConsent').style.display = 'none';
+                // Enable ads
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }
+            
+            function declineCookies() {
+                localStorage.setItem('cookieConsent', 'declined');
+                document.getElementById('cookieConsent').style.display = 'none';
+            }
+            
+            // Show cookie banner on load
+            showCookieConsent();
+            
+            // 预设 iframe 未加载透明度，显示占位图
+            if (gameIframe) {
+                gameIframe.style.opacity = '0';
+                gameIframe.addEventListener('load', function() {
+                    gameContainer && gameContainer.classList.add('loaded');
+                });
+            }
+
+            // 点击play按钮时加载iframe
+            playBtn.addEventListener('click', function() {
+                const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+                const isAndroid = /Android/i.test(navigator.userAgent);
+
+                // 针对 iOS 的终极方案：直接跳转 (因为 iOS Safari 的 Iframe 内存限制极严)
+                // if (isIOS) {
+                //     window.location.href = 'https://trafficjam3d.github.io/traffic-jam-3d/';
+                //     return;
+                // }
+
+                // 针对 Android 的优化方案：清理主页内存后加载 Iframe
+                if (isAndroid) {
+                    const screenshotsSection = document.querySelector('.screenshots-section');
+                    if (screenshotsSection) {
+                        screenshotsSection.remove();
+                    }
+                }
+
+                // PC端或Android端：正常加载 Iframe
+                gameIframe.src = 'https://trafficjam3d.github.io/traffic-jam-3d/';
+                playOverlay.classList.add('hidden');
+            });
         });
     </script>
 </body>
