@@ -432,6 +432,56 @@
             pointer-events: none;
         }
 
+        /* Game Area with Ads */
+        .game-area-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .side-ad {
+            flex-shrink: 0;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 12px;
+            overflow: hidden;
+            min-width: 160px;
+            min-height: 600px;
+        }
+
+        .side-ad ins {
+            display: block;
+        }
+
+        .bottom-ad {
+            margin: 20px auto;
+            text-align: center;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 12px;
+            padding: 10px;
+            max-width: 750px;
+        }
+
+        .bottom-ad ins {
+            display: inline-block;
+        }
+
+        /* Hide side ads on mobile */
+        @media (max-width: 1200px) {
+            .side-ad {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .bottom-ad ins {
+                width: 100% !important;
+                max-width: 320px;
+                height: 100px !important;
+            }
+        }
+
         .play-btn {
             animation: scaleIn 0.5s ease-out;
             display: inline-flex;
@@ -1023,18 +1073,51 @@
             <div class="game-launch-container">
                 <h2>Play Traffic Jam 3D Now</h2>
                 <p>Click the game below to start playing. Use arrow keys to navigate through traffic and avoid collisions.</p>
-                <div class="game-iframe-container" id="gameContainer">
-                    <iframe id="gameIframe" width="100%" height="100%"
-                        frameborder="0" allowfullscreen src="https://trafficjam3d.github.io/traffic-jam-3d/"></iframe>
+                
+                <!-- Game Area with Side Ads -->
+                <div class="game-area-wrapper">
+                    <!-- Left Ad -->
+                    <div class="side-ad left-ad">
+                        <ins class="adsbygoogle"
+                             style="display:block;width:160px;height:600px"
+                             data-ad-client="ca-pub-7534347140708021"
+                             data-ad-slot="LEFT_AD_SLOT"></ins>
+                        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                    </div>
+                    
+                    <!-- Game Container -->
+                    <div class="game-iframe-container" id="gameContainer">
+                        <iframe id="gameIframe" width="100%" height="100%"
+                            frameborder="0" allowfullscreen src="https://trafficjam3d.github.io/traffic-jam-3d/"></iframe>
 
-                    <button class="fullscreen-btn" id="fullscreenBtn">
-                        <svg viewBox="0 0 24 24" width="20" height="20">
-                            <path
-                                d="M7 14H5v5h5v-5H7zM14 14h-2v5h5v-5h-3zM17 3h-3v5h5V3h-2zM7 3H5v5h5V3H7zM4 7H2v5h5V7H4zM17 7h-3v5h5V7h-2zM4 14H2v5h5v-5H4zM17 14h-3v5h5v-5h-2zM14 17h-2v3h5v-3h-3zM7 17H5v3h5v-3H7z"
-                                fill="currentColor" />
-                        </svg>
-                    </button>
+                        <button class="fullscreen-btn" id="fullscreenBtn">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path
+                                    d="M7 14H5v5h5v-5H7zM14 14h-2v5h5v-5h-3zM17 3h-3v5h5V3h-2zM7 3H5v5h5V3H7zM4 7H2v5h5V7H4zM17 7h-3v5h5V7h-2zM4 14H2v5h5v-5H4zM17 14h-3v5h5v-5h-2zM14 17h-2v3h5v-3h-3zM7 17H5v3h5v-3H7z"
+                                    fill="currentColor" />
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Right Ad -->
+                    <div class="side-ad right-ad">
+                        <ins class="adsbygoogle"
+                             style="display:block;width:160px;height:600px"
+                             data-ad-client="ca-pub-7534347140708021"
+                             data-ad-slot="RIGHT_AD_SLOT"></ins>
+                        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                    </div>
                 </div>
+                
+                <!-- Bottom Ad -->
+                <div class="bottom-ad">
+                    <ins class="adsbygoogle"
+                         style="display:block;width:728px;height:90px;margin:20px auto"
+                         data-ad-client="ca-pub-7534347140708021"
+                         data-ad-slot="BOTTOM_AD_SLOT"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
+                
                 <div class="game-controls">
                     <h3>Game Controls</h3>
                     <div class="controls-grid">
