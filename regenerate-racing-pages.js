@@ -37,17 +37,17 @@ const generatePage = (game) => {
     <!-- SEO优化：强化online/free/browser关键词 -->
     <meta name="description" content="Play ${gameName} Online for Free! Enjoy this exciting traffic racing game directly in your browser. No download required - start playing instantly on mobile or desktop!" />
     <meta name="keywords" content="${gameName}, ${gameName} online, play ${gameName}, traffic games, racing games online, free racing games, browser games, no download games, car games online" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noindex, follow" />
     <!-- 优化Title：核心词前置 -->
     <title>${gameName} Online - Play Free Racing Game in Browser | Traffic Games</title>
-    <link rel="canonical" href="https://www.trafficgames.com/racing/${safeFileName}.html" />
+    <link rel="canonical" href="https://www.trafficgames.online/racing/${safeFileName}.html" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../js/detail1.css">
     <!-- Open Graph标签 -->
     <meta property="og:title" content="${gameName} Online - Play Free in Your Browser" />
     <meta property="og:description" content="Play ${gameName} for free! No download required - play instantly in your browser on mobile or desktop!" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.trafficgames.com/racing/${safeFileName}.html" />
+    <meta property="og:url" content="https://www.trafficgames.online/racing/${safeFileName}.html" />
     <meta property="og:site_name" content="Traffic Games Online" />
     <!-- Twitter Card标签 -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -276,9 +276,9 @@ const generatePage = (game) => {
             </div>
             <div class="footer-col">
                 <h4>Support</h4>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">FAQ</a>
+                <a href="../privacy-policy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms of Service</a>
+                <a href="../contact.html">Contact</a>
             </div>
         </div>
         <div class="footer-bottom">

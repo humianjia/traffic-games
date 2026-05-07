@@ -2,219 +2,262 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Traffic Games</title>
-    <meta name="description" content="Learn about Traffic Games, your destination for free online driving and racing games. Discover our mission and commitment to quality gaming experiences." />
-    <link rel="canonical" href="/about.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Learn how Traffic Games Online curates browser-based traffic, driving, parking, and strategy games for quick play sessions.">
+    <meta name="robots" content="index, follow">
+    <title>About Traffic Games Online</title>
+    <link rel="canonical" href="https://www.trafficgames.online/about.html">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #0a0e1a;
-            --bg-secondary: #111827;
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --accent-green: #4ade80;
+            --bg: #09111f;
+            --panel: rgba(15, 27, 49, 0.94);
+            --panel-soft: rgba(15, 23, 42, 0.52);
+            --border: rgba(148, 163, 184, 0.16);
+            --text: #f8fafc;
+            --muted: #cbd5e1;
+            --green: #4ade80;
+            --blue: #38bdf8;
+            --shadow: 0 18px 46px rgba(2, 6, 23, 0.45);
         }
-        
+
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top, rgba(56, 189, 248, 0.16), transparent 30%),
+                linear-gradient(180deg, #08101d 0%, #0b1425 45%, #09111f 100%);
         }
-        
-        .header {
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 16px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-inner {
-            max-width: 1200px;
+
+        .wrap {
+            width: min(1040px, calc(100% - 32px));
             margin: 0 auto;
-            padding: 0 20px;
+        }
+
+        .site-header,
+        .site-footer {
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .site-footer {
+            border-bottom: 0;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            margin-top: 56px;
+        }
+
+        .header-row,
+        .footer-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            text-decoration: none;
-        }
-        
-        .nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            margin-left: 24px;
-            transition: color 0.3s;
-        }
-        
-        .nav a:hover {
-            color: var(--text-primary);
-        }
-        
-        .hero {
-            padding: 80px 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-        }
-        
-        .hero p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        
-        .content h2 {
-            font-size: 1.8rem;
-            margin: 40px 0 20px;
-            color: var(--accent-green);
-        }
-        
-        .content h2:first-child {
-            margin-top: 0;
-        }
-        
-        .content p {
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-            line-height: 1.8;
-        }
-        
-        .values {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 24px;
-            margin: 40px 0;
+            padding: 18px 0;
         }
-        
-        .value-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
+
+        .brand {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .nav,
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .nav a,
+        .footer-links a,
+        .inline-link {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .nav a:hover,
+        .footer-links a:hover,
+        .inline-link:hover {
+            color: var(--green);
+        }
+
+        .hero {
+            padding: 72px 0 28px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(74, 222, 128, 0.12);
+            color: var(--green);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 18px 0 16px;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.04;
+            letter-spacing: -0.05em;
+        }
+
+        .hero p,
+        .intro {
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 28px;
+        }
+
+        .card,
+        .statement {
             padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            background: var(--panel);
+            box-shadow: var(--shadow);
         }
-        
-        .value-card h3 {
-            color: var(--accent-green);
-            margin-bottom: 12px;
+
+        .card h2,
+        .statement h2 {
+            margin: 0 0 12px;
+            font-size: 1.2rem;
         }
-        
-        .value-card p {
-            color: var(--text-secondary);
+
+        .card p,
+        .statement p,
+        .statement li {
+            color: var(--muted);
+        }
+
+        .statement {
+            margin-top: 20px;
+            background: var(--panel-soft);
+        }
+
+        .statement ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .cta {
+            margin-top: 28px;
+            padding: 24px;
+            border: 1px solid rgba(56, 189, 248, 0.16);
+            border-radius: 24px;
+            background: linear-gradient(145deg, rgba(8, 15, 28, 0.88), rgba(12, 24, 43, 0.92));
+        }
+
+        .cta a {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .footer-copy {
+            color: var(--muted);
             font-size: 0.95rem;
         }
-        
-        .footer {
-            background: var(--bg-secondary);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        .footer p {
-            color: var(--text-secondary);
-        }
-        
-        .footer a {
-            color: var(--accent-green);
-            text-decoration: none;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.8rem;
+
+        @media (max-width: 760px) {
+            .header-row,
+            .footer-row {
+                flex-direction: column;
+                align-items: flex-start;
             }
-            
-            .nav a {
-                margin-left: 16px;
-                font-size: 0.9rem;
+
+            .grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-inner">
-            <a href="/" class="logo">Traffic Games</a>
-            <nav class="nav">
+    <header class="site-header">
+        <div class="wrap header-row">
+            <a class="brand" href="/">Traffic Games Online</a>
+            <nav class="nav" aria-label="Primary">
                 <a href="/">Home</a>
                 <a href="categories.html">Categories</a>
-                <a href="about.html">About</a>
-                <a href="privacy-policy.html">Privacy</a>
+                <a href="games/traffic-jam-3d.html">Featured Game</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <h1>About Traffic Games</h1>
-        <p>Your destination for quality online gaming experiences</p>
-    </section>
+    <main class="wrap">
+        <section class="hero">
+            <span class="eyebrow">About The Site</span>
+            <h1>Traffic Games Online focuses on small, browser-ready driving and traffic game sessions.</h1>
+            <p>We keep the public site intentionally small for readers and reviewers: a concise homepage, a short category guide, a featured playable page, and clear support and policy documents.</p>
+        </section>
 
-    <main class="content">
-        <h2>Our Story</h2>
-        <p>Traffic Games was founded with a simple mission: to provide gamers around the world with access to high-quality, engaging driving and racing games that can be played instantly in any web browser.</p>
-        <p>What started as a small collection of traffic simulation games has grown into a comprehensive platform featuring diverse driving experiences. From navigating busy city streets to mastering precision parking, our games challenge players to develop real driving skills while having fun.</p>
+        <p class="intro">The project curates browser games around traffic, driving, parking, and route-management themes. We publish summary pages that explain the game style, basic controls, and what players can expect before they choose to launch a title.</p>
 
-        <h2>Our Mission</h2>
-        <p>We believe that great games should be accessible to everyone. That is why all our games are completely free to play, require no downloads or installations, and work seamlessly across all devices. Whether you have five minutes or five hours, you can jump into a game and start enjoying the experience immediately.</p>
+        <section class="grid" aria-label="Editorial overview">
+            <article class="card">
+                <h2>What We Publish</h2>
+                <p>Our live public surface highlights a limited set of editorial pages rather than exposing every template or archive page to search and review systems. That helps keep the site easier to understand and maintain.</p>
+            </article>
+            <article class="card">
+                <h2>How Games Are Selected</h2>
+                <p>We look for lightweight browser games with clear controls, short session loops, and themes that fit the wider traffic and driving category. The goal is to help players find a game quickly without digging through clutter.</p>
+            </article>
+            <article class="card">
+                <h2>Advertising And Transparency</h2>
+                <p>Advertising helps support hosting and ongoing maintenance. We pair ad-supported pages with straightforward policy pages so visitors can review privacy, cookie, and usage terms in one place.</p>
+            </article>
+            <article class="card">
+                <h2>Support And Updates</h2>
+                <p>When a featured page, link, or embedded build needs attention, we update the public pages first. General site questions can be sent through the contact details on our <a class="inline-link" href="contact.html">contact page</a>.</p>
+            </article>
+        </section>
 
-        <h2>Our Values</h2>
-        <div class="values">
-            <div class="value-card">
-                <h3>🎮 Quality First</h3>
-                <p>Every game on our platform is carefully selected and tested to ensure smooth gameplay, intuitive controls, and engaging mechanics.</p>
-            </div>
-            <div class="value-card">
-                <h3>🌐 Universal Access</h3>
-                <p>Our games work on any device with a modern web browser. Play on your computer, tablet, or smartphone - the experience is always optimized.</p>
-            </div>
-            <div class="value-card">
-                <h3>🔒 Player Privacy</h3>
-                <p>We respect your privacy. No forced registrations, no intrusive data collection. Just pure gaming enjoyment.</p>
-            </div>
-            <div class="value-card">
-                <h3>📈 Continuous Improvement</h3>
-                <p>We regularly update our game collection and platform features based on player feedback and emerging technologies.</p>
-            </div>
-        </div>
+        <section class="statement">
+            <h2>What This Review-Ready Version Prioritizes</h2>
+            <ul>
+                <li>One consistent public domain: <code>https://www.trafficgames.online</code></li>
+                <li>Readable editorial pages instead of thin template sprawl</li>
+                <li>Direct access to privacy, cookie, and terms information</li>
+                <li>A smaller crawl surface for search and ad review systems</li>
+            </ul>
+        </section>
 
-        <h2>Why Choose Us?</h2>
-        <p>Unlike many gaming sites that bombard users with excessive advertisements and intrusive pop-ups, we prioritize the player experience. Our clean, modern interface puts the games front and center, minimizing distractions and maximizing enjoyment.</p>
-        <p>We also understand that learning to navigate traffic is a valuable skill. Many of our games incorporate realistic driving physics and traffic rules, offering entertainment that can actually improve your real-world driving awareness.</p>
-
-        <h2>Join Our Community</h2>
-        <p>Millions of players worldwide have discovered Traffic Games. Whether you are a casual gamer looking for a quick break or a driving enthusiast seeking a challenge, you will find something to love in our collection.</p>
-        <p>Thank you for choosing Traffic Games. We are constantly working to improve and expand our offerings, so check back regularly for new games and features.</p>
+        <section class="cta">
+            <h2>Need a policy or contact link?</h2>
+            <p>Visit <a href="privacy-policy.html">Privacy Policy</a>, <a href="cookies.html">Cookie Policy</a>, <a href="terms.html">Terms of Service</a>, or <a href="contact.html">Contact</a> for the current public information set.</p>
+        </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 Traffic Games. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
+    <footer class="site-footer">
+        <div class="wrap footer-row">
+            <p class="footer-copy">&copy; 2026 Traffic Games Online. Public information pages for browser traffic and driving games.</p>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

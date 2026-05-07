@@ -1,565 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Traffic Games Online">
-    <!-- SEO优化：强化分类页关键词 -->
-    <meta name="description" content="Browse all Traffic Games Online categories! Play free Traffic Racer, Traffic Rider, Racing, Parking & Control games in your browser. No download required - start playing instantly on mobile or desktop!" />
-    <meta name="keywords" content="traffic games categories, free traffic games, play traffic racer online, traffic rider games, racing games online, parking games free, traffic control games, browser games, no download games, online car games" />
-    <meta name="robots" content="index, follow" />
-    <!-- 优化Title：核心词前置 -->
-    <title>Traffic Games Online - Browse Free Racing, Parking & Control Games</title>
-    <link rel="canonical" href="https://www.trafficgames.com/categories.html" />
+    <meta name="description" content="Read the current category guides for Traffic Games Online, covering browser racing, driving, parking, and traffic strategy play styles.">
+    <meta name="keywords" content="traffic games categories, browser racing guide, parking game guide, driving game guide, traffic control game guide">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Traffic Games Online Categories">
+    <meta property="og:description" content="A smaller category guide set for the review-ready public version of Traffic Games Online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.trafficgames.online/categories.html">
+    <title>Traffic Games Online Categories</title>
+    <link rel="canonical" href="https://www.trafficgames.online/categories.html">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Open Graph标签 -->
-    <meta property="og:title" content="Traffic Games Online - Browse All Categories" />
-    <meta property="og:description" content="Explore free traffic games categories. Racing, Parking, Control games - all playable in browser with no download!" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.trafficgames.com/categories.html" />
-    <meta property="og:site_name" content="Traffic Games Online" />
-    <!-- Twitter Card标签 -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Traffic Games Online - Browse All Categories" />
-    <meta name="twitter:description" content="Free traffic games - Racing, Parking, Control. Play instantly in browser!" />
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7534347140708021"
-        crossorigin="anonymous"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWTXKBQEVM"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-VWTXKBQEVM');
-    </script>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7534347140708021" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --bg: #09111f;
+            --panel: rgba(15, 27, 49, 0.92);
+            --panel-soft: rgba(15, 23, 42, 0.52);
+            --border: rgba(148, 163, 184, 0.16);
+            --text: #f8fafc;
+            --muted: #cbd5e1;
+            --green: #4ade80;
+            --blue: #38bdf8;
+            --amber: #f59e0b;
+            --shadow: 0 18px 46px rgba(2, 6, 23, 0.45);
+        }
 
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 30%),
+                linear-gradient(180deg, #08101d 0%, #0b1425 45%, #09111f 100%);
+        }
+
+        .wrap {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            backdrop-filter: blur(14px);
+            background: rgba(7, 13, 24, 0.84);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .header-row,
+        .footer-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 18px 0;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, rgba(74, 222, 128, 0.2), rgba(56, 189, 248, 0.22));
+            border: 1px solid rgba(74, 222, 128, 0.28);
+        }
+
+        nav,
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a,
+        .footer-links a,
+        .mini-nav a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        .footer-links a:hover,
+        .mini-nav a:hover {
+            color: var(--text);
+        }
+
+        main {
+            padding: 56px 0 80px;
+        }
+
+        .hero,
+        .panel,
+        .guide {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+        }
+
+        .hero,
+        .panel {
+            padding: 32px;
+        }
+
+        .hero h1,
+        .panel h2,
+        .guide h2 {
+            margin: 0 0 14px;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.1rem, 5vw, 3.7rem);
+        }
+
+        .panel h2,
+        .guide h2 {
+            font-size: clamp(1.45rem, 3vw, 2.2rem);
+        }
+
+        p,
+        li {
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+        section + section {
+            margin-top: 24px;
+        }
+
+        .mini-nav {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .mini-nav a {
+            display: block;
+            padding: 16px 18px;
+            border-radius: 18px;
+            background: var(--panel-soft);
+            border: 1px solid rgba(148, 163, 184, 0.14);
+        }
+
+        .mini-nav strong {
+            display: block;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .guide {
+            padding: 28px;
+        }
+
+        .guide small {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            background: rgba(56, 189, 248, 0.12);
+            color: #bae6fd;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .guide-card {
+            padding: 20px;
+            border-radius: 22px;
+            background: var(--panel-soft);
+            border: 1px solid rgba(148, 163, 184, 0.14);
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 18px;
+            border-radius: 14px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--green), #22c55e);
+            color: #052e16;
+        }
+
+        .btn-secondary {
+            background: rgba(15, 23, 42, 0.56);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            color: var(--text);
+        }
+
+        .site-footer {
+            border-top: 1px solid rgba(148, 163, 184, 0.12);
+            padding: 28px 0 40px;
+        }
+
+        @media (max-width: 900px) {
+            .header-row,
+            .footer-row,
+            .guide-grid,
+            .mini-nav {
+                grid-template-columns: 1fr;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
 <body>
-    <header class="header">
-        <div class="header-inner">
-            <a href="/" class="logo">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 40 40" width="36" height="36">
-                        <rect x="8" y="8" width="24" height="24" rx="4" fill="none" stroke="#4ade80"
-                            stroke-width="2.5" />
-                        <circle cx="14" cy="16" r="3" fill="#4ade80" />
-                        <circle cx="26" cy="16" r="3" fill="#4ade80" />
-                        <rect x="14" y="22" width="12" height="2" fill="#4ade80" />
-                        <line x1="20" y1="22" x2="20" y2="28" stroke="#4ade80" stroke-width="2.5"
-                            stroke-linecap="round" />
-                        <line x1="30" y1="20" x2="38" y2="20" stroke="#4ade80" stroke-width="2.5"
-                            stroke-linecap="round" />
-                    </svg>
-                </div>
-                <span class="logo-text">Traffic Games</span>
+    <header class="site-header">
+        <div class="wrap header-row">
+            <a href="/" class="brand">
+                <span class="brand-mark">TG</span>
+                <span>Traffic Games Online</span>
             </a>
-                        <nav class="nav">
-                <!-- <a href="/" class="nav-link">Home</a> -->
-                <div class="nav-dropdown">
-                    <a href="#racing" class="nav-link dropdown-toggle">Racing & Driving <span class="dropdown-arrow">▼</span></a>
-                    <div class="dropdown-menu">
-                        <a href="categories.html?category=racing" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">🏎️</span>
-                            <span class="dropdown-text">Racing Games</span>
-                        </a>
-                        <a href="categories.html?category=driving" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">🚗</span>
-                            <span class="dropdown-text">Driving Games</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="nav-dropdown">
-                    <a href="#control" class="nav-link dropdown-toggle">Parking & Control <span class="dropdown-arrow">▼</span></a>
-                    <div class="dropdown-menu">
-                        <a href="categories.html?category=parking" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);">🅿️</span>
-                            <span class="dropdown-text">Parking Games</span>
-                        </a>
-                        <a href="categories.html?category=trafficControl" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">🚦</span>
-                            <span class="dropdown-text">Traffic Control</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="nav-dropdown">
-                    <a href="#fun" class="nav-link dropdown-toggle">Fun & Casual <span class="dropdown-arrow">▼</span></a>
-                    <div class="dropdown-menu">
-                        <a href="categories.html?category=escape" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">🏃</span>
-                            <span class="dropdown-text">Escape Games</span>
-                        </a>
-                        <a href="categories.html?category=clicker" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);">👆</span>
-                            <span class="dropdown-text">Clicker Games</span>
-                        </a>
-                        <a href="categories.html?category=twoPlayer" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #14b8a6, #0d9488);">👥</span>
-                            <span class="dropdown-text">2 Player Games</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="nav-dropdown">
-                    <a href="#trivia" class="nav-link dropdown-toggle">Trivia <span class="dropdown-arrow">▼</span></a>
-                    <div class="dropdown-menu">
-                        <a href="categories.html?category=trivia" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">❓</span>
-                            <span class="dropdown-text">Trivia Games</span>
-                        </a>
-                    </div>
-                </div>
+            <nav aria-label="Primary">
+                <a href="/">Home</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy</a>
             </nav>
-            <div class="header-search">
-                <form id="searchForm" action="categories.html" method="GET">
-                    <svg viewBox="0 0 20 20" width="16" height="16"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="#94a3b8" stroke-width="1.5"/><line x1="13" y1="13" x2="18" y2="18" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    <input type="text" name="search" placeholder="Search games..." required>
-                    <button type="submit" class="search-btn">
-                        <svg viewBox="0 0 20 20" width="16" height="16"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="#4ade80" stroke-width="1.5"/><line x1="13" y1="13" x2="18" y2="18" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    </button>
-                </form>
-            </div>
         </div>
     </header>
 
-    <!-- <div class="category-bar">
-        <div class="category-bar-inner">
-            <a href="#" class="cat-tag active">All Games</a>
-            <a href="#" class="cat-tag">Racing</a>
-            <a href="#" class="cat-tag">Parking</a>
-            <a href="#" class="cat-tag">Driving</a>
-            <a href="#" class="cat-tag">Traffic Control</a>
-            <a href="#" class="cat-tag">Road Builder</a>
-            <a href="#" class="cat-tag">Escape Games</a>
-            <a href="#" class="cat-tag">Trivia</a>
-            <a href="#" class="cat-tag">Clicker Games</a>
-            <a href="#" class="cat-tag">2 Player Games</a>
-            <a href="#" class="cat-tag">Puzzle</a>
-            <a href="#" class="cat-tag">Strategy</a>
-        </div>
-    </div> -->
-
-    <main class="main">
-        <!-- SEO优化的分类页头部 -->
-        <section class="featured-section">
-            <div class="section-header">
-                <h1 id="category-title" style="font-size: 2.5rem; font-weight: 700; margin-bottom: 12px;">Traffic Games Online - Free Browser Games</h1>
-                <p id="category-description" style="color: var(--text-secondary); margin-top: 8px; font-size: 1rem; line-height: 1.6;">
-                    Browse our complete collection of <strong>free traffic games</strong>! Play <strong>Traffic Racer</strong>, <strong>Traffic Rider</strong>, Racing, Parking & Control games instantly in your browser. 
-                    <span style="display: block; margin-top: 8px;">✓ No Download Required ✓ Mobile & Desktop Friendly ✓ 100% Free</span>
-                </p>
-            </div>
-            <div class="categories-grid" id="featured-grid"></div>
-        </section>
-
-        <!-- <section class="leaderboard-section" id="leaderboard">
-            <div class="section-header">
-                <h2>Top 10 Leaderboard</h2>
-                <a href="#" class="see-all">Full Rankings &rarr;</a>
-            </div>
-            <div class="leaderboard-grid">
-                <div class="lb-card rank-1">
-                    <span class="lb-rank">#1</span>
-                    <div class="lb-thumb" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">
-                        <svg viewBox="0 0 40 40" width="28" height="28"><polygon points="20,4 24,15 36,15 27,22 30,34 20,27 10,34 13,22 4,15 16,15" fill="rgba(255,255,255,0.9)"/></svg>
-                    </div>
-                    <div class="lb-info">
-                        <h4>Traffic Jam 3D</h4>
-                        <span class="lb-score">98,450 pts</span>
-                    </div>
-                    <div class="lb-trend up">&#9650;</div>
-                </div>
-                <div class="lb-card rank-2">
-                    <span class="lb-rank">#2</span>
-                    <div class="lb-thumb" style="background: linear-gradient(135deg, #60a5fa, #3b82f6);">
-                        <svg viewBox="0 0 40 40" width="28" height="28"><rect x="6" y="14" width="28" height="16" rx="4" fill="rgba(255,255,255,0.9)"/><rect x="10" y="8" width="20" height="10" rx="3" fill="rgba(255,255,255,0.7)"/></svg>
-                    </div>
-                    <div class="lb-info">
-                        <h4>Highway Racer</h4>
-                        <span class="lb-score">87,200 pts</span>
-                    </div>
-                    <div class="lb-trend up">&#9650;</div>
-                </div>
-                <div class="lb-card rank-3">
-                    <span class="lb-rank">#3</span>
-                    <div class="lb-thumb" style="background: linear-gradient(135deg, #f87171, #ef4444);">
-                        <svg viewBox="0 0 40 40" width="28" height="28"><circle cx="20" cy="14" r="5" fill="rgba(255,255,255,0.9)"/><rect x="8" y="20" width="24" height="14" rx="4" fill="rgba(255,255,255,0.9)"/></svg>
-                    </div>
-                    <div class="lb-info">
-                        <h4>Drift King</h4>
-                        <span class="lb-score">76,890 pts</span>
-                    </div>
-                    <div class="lb-trend down">&#9660;</div>
-                </div>
-                <div class="lb-card">
-                    <span class="lb-rank">#4</span>
-                    <div class="lb-thumb" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6);">
-                        <svg viewBox="0 0 40 40" width="28" height="28"><rect x="8" y="8" width="24" height="24" rx="3" fill="rgba(255,255,255,0.9)"/><line x1="8" y1="20" x2="32" y2="20" stroke="#a78bfa" stroke-width="2"/><line x1="20" y1="8" x2="20" y2="32" stroke="#a78bfa" stroke-width="2"/></svg>
-                    </div>
-                    <div class="lb-info">
-                        <h4>Cross Roads</h4>
-                        <span class="lb-score">65,340 pts</span>
-                    </div>
-                    <div class="lb-trend up">&#9650;</div>
-                </div>
-                <div class="lb-card">
-                    <span class="lb-rank">#5</span>
-                    <div class="lb-thumb" style="background: linear-gradient(135deg, #34d399, #10b981);">
-                        <svg viewBox="0 0 40 40" width="28" height="28"><polygon points="20,6 36,34 4,34" fill="rgba(255,255,255,0.9)"/><text x="20" y="28" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">P</text></svg>
-                    </div>
-                    <div class="lb-info">
-                        <h4>Parking Frenzy</h4>
-                        <span class="lb-score">58,120 pts</span>
-                    </div>
-                    <div class="lb-trend same">&mdash;</div>
-                </div>
-                <div class="lb-card">
-                    <span class="lb-rank">#6</span>
-                    <div class="lb-thumb" style="background: linear-gradient(135deg, #fb923c, #f97316);">
-                        <svg viewBox="0 0 40 40" width="28" height="28"><circle cx="20" cy="20" r="14" fill="rgba(255,255,255,0.9)"/><path d="M14 20 L20 14 L26 20 L20 26Z" fill="#fb923c"/></svg>
-                    </div>
-                    <div class="lb-info">
-                        <h4>Signal Master</h4>
-                        <span class="lb-score">52,780 pts</span>
-                    </div>
-                    <div class="lb-trend up">&#9650;</div>
-                </div>
-                <div class="lb-card">
-                    <span class="lb-rank">#7</span>
-                    <div class="lb-thumb" style="background: linear-gradient(135deg, #38bdf8, #0ea5e9);">
-                        <svg viewBox="0 0 40 40" width="28" height="28"><rect x="6" y="18" width="28" height="14" rx="3" fill="rgba(255,255,255,0.9)"/><rect x="4" y="14" width="10" height="10" rx="2" fill="rgba(255,255,255,0.7)"/></svg>
-                    </div>
-                    <div class="lb-info">
-                        <h4>Truck Simulator</h4>
-                        <span class="lb-score">47,560 pts</span>
-                    </div>
-                    <div class="lb-trend down">&#9660;</div>
-                </div>
-                <div class="lb-card">
-                    <span class="lb-rank">#8</span>
-                    <div class="lb-thumb" style="background: linear-gradient(135deg, #f472b6, #ec4899);">
-                        <svg viewBox="0 0 40 40" width="28" height="28"><circle cx="20" cy="20" r="14" fill="rgba(255,255,255,0.9)"/><circle cx="20" cy="20" r="6" fill="#ec4899"/></svg>
-                    </div>
-                    <div class="lb-info">
-                        <h4>Roundabout</h4>
-                        <span class="lb-score">41,230 pts</span>
-                    </div>
-                    <div class="lb-trend up">&#9650;</div>
-                </div>
-                <div class="lb-card">
-                    <span class="lb-rank">#9</span>
-                    <div class="lb-thumb" style="background: linear-gradient(135deg, #facc15, #eab308);">
-                        <svg viewBox="0 0 40 40" width="28" height="28"><rect x="8" y="10" width="24" height="20" rx="3" fill="rgba(255,255,255,0.9)"/><circle cx="15" cy="32" r="3" fill="rgba(0,0,0,0.2)"/><circle cx="25" cy="32" r="3" fill="rgba(0,0,0,0.2)"/></svg>
-                    </div>
-                    <div class="lb-info">
-                        <h4>School Bus</h4>
-                        <span class="lb-score">38,900 pts</span>
-                    </div>
-                    <div class="lb-trend same">&mdash;</div>
-                </div>
-                <div class="lb-card">
-                    <span class="lb-rank">#10</span>
-                    <div class="lb-thumb" style="background: linear-gradient(135deg, #2dd4bf, #14b8a6);">
-                        <svg viewBox="0 0 40 40" width="28" height="28"><path d="M8 30 L20 8 L32 30Z" fill="rgba(255,255,255,0.9)"/><line x1="20" y1="16" x2="20" y2="24" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round"/><circle cx="20" cy="27" r="1.5" fill="#14b8a6"/></svg>
-                    </div>
-                    <div class="lb-info">
-                        <h4>Speed Trap</h4>
-                        <span class="lb-score">35,670 pts</span>
-                    </div>
-                    <div class="lb-trend down">&#9660;</div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- SEO优化的分类网格 -->
-        <section class="categories-section" id="categories">
-            <div class="section-header">
-                <h2>Popular Traffic Games Categories</h2>
-                <p style="color: var(--text-secondary); margin-top: 8px;">Choose your favorite category and start playing instantly - all games are free!</p>
-            </div>
-            <div class="categories-grid">
-                <div class="category-card" data-category="racing">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
-                        <svg viewBox="0 0 40 40" width="28" height="28">
-                            <rect x="6" y="14" width="28" height="16" rx="4" fill="rgba(255,255,255,0.9)" />
-                            <rect x="10" y="8" width="20" height="10" rx="3" fill="rgba(255,255,255,0.7)" />
-                            <circle cx="14" cy="32" r="3" fill="rgba(0,0,0,0.2)" />
-                            <circle cx="26" cy="32" r="3" fill="rgba(0,0,0,0.2)" />
-                        </svg>
-                    </div>
-                    <h3>Traffic Racing Games</h3>
-                    <span>24 Free Games</span>
-                    <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#f97316" title="Traffic Racer"></div>
-                        <div class="cat-game-dot" style="background:#ef4444" title="Traffic Rider"></div>
-                        <div class="cat-game-dot" style="background:#eab308" title="Highway Racer"></div>
-                        <div class="cat-game-dot" style="background:#22c55e" title="Speed Racing"></div>
-                        <div class="cat-game-dot" style="background:#3b82f6" title="Car Games"></div>
-                        <div class="cat-game-dot" style="background:#8b5cf6" title="Drag Racing"></div>
-                    </div>
-                </div>
-                <div class="category-card" data-category="trafficControl">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
-                        <svg viewBox="0 0 40 40" width="28" height="28">
-                            <rect x="4" y="4" width="32" height="32" rx="4" fill="rgba(255,255,255,0.9)" />
-                            <line x1="4" y1="20" x2="36" y2="20" stroke="#3b82f6" stroke-width="3" />
-                            <line x1="20" y1="4" x2="20" y2="36" stroke="#3b82f6" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <h3>Traffic Control Games</h3>
-                    <span>18 Free Games</span>
-                    <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#60a5fa" title="Traffic Light"></div>
-                        <div class="cat-game-dot" style="background:#38bdf8" title="Road Manager"></div>
-                        <div class="cat-game-dot" style="background:#06b6d4" title="Signal Pro"></div>
-                        <div class="cat-game-dot" style="background:#14b8a6" title="Flow Control"></div>
-                        <div class="cat-game-dot" style="background:#0ea5e9" title="Cross Guard"></div>
-                        <div class="cat-game-dot" style="background:#6366f1" title="Bridge Boss"></div>
-                    </div>
-                </div>
-                <div class="category-card" data-category="parking">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
-                        <svg viewBox="0 0 40 40" width="28" height="28">
-                            <rect x="8" y="6" width="24" height="28" rx="4" fill="rgba(255,255,255,0.9)" />
-                            <rect x="12" y="10" width="7" height="7" rx="1" fill="#22c55e" />
-                            <rect x="21" y="10" width="7" height="7" rx="1" fill="#22c55e" />
-                            <rect x="12" y="20" width="7" height="7" rx="1" fill="#22c55e" />
-                            <rect x="21" y="20" width="7" height="7" rx="1" fill="#22c55e" />
-                        </svg>
-                    </div>
-                    <h3>Free Parking Games</h3>
-                    <span>15 Free Games</span>
-                    <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#4ade80" title="Park It"></div>
-                        <div class="cat-game-dot" style="background:#34d399" title="Valet Pro"></div>
-                        <div class="cat-game-dot" style="background:#2dd4bf" title="Spot Master"></div>
-                        <div class="cat-game-dot" style="background:#a3e635" title="Garage King"></div>
-                        <div class="cat-game-dot" style="background:#86efac" title="Reverse In"></div>
-                        <div class="cat-game-dot" style="background:#bbf7d0" title="Tight Fit"></div>
-                    </div>
-                </div>
-                <div class="category-card" data-category="escape">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
-                        <svg viewBox="0 0 40 40" width="28" height="28">
-                            <polygon points="20,4 36,36 4,36" fill="rgba(255,255,255,0.9)" />
-                            <line x1="20" y1="14" x2="20" y2="24" stroke="#f59e0b" stroke-width="3"
-                                stroke-linecap="round" />
-                            <circle cx="20" cy="28" r="2" fill="#f59e0b" />
-                        </svg>
-                    </div>
-                    <h3>Traffic Escape Games</h3>
-                    <span>12 Free Games</span>
-                    <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#fbbf24" title="Escape Run"></div>
-                        <div class="cat-game-dot" style="background:#fb923c" title="Getaway"></div>
-                        <div class="cat-game-dot" style="background:#f97316" title="Break Free"></div>
-                        <div class="cat-game-dot" style="background:#facc15" title="Dash Out"></div>
-                        <div class="cat-game-dot" style="background:#fde047" title="Sneak Away"></div>
-                        <div class="cat-game-dot" style="background:#fdba74" title="Prison Run"></div>
-                    </div>
-                </div>
-                <div class="category-card" data-category="trivia">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
-                        <svg viewBox="0 0 40 40" width="28" height="28">
-                            <rect x="6" y="6" width="28" height="28" rx="14" fill="rgba(255,255,255,0.9)" /><text x="20"
-                                y="26" text-anchor="middle" fill="#8b5cf6" font-size="18" font-weight="bold">?</text>
-                        </svg>
-                    </div>
-                    <h3>Trivia</h3>
-                    <span>20 Games</span>
-                    <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#a78bfa" title="Quiz Rush"></div>
-                        <div class="cat-game-dot" style="background:#c084fc" title="Brain On"></div>
-                        <div class="cat-game-dot" style="background:#d8b4fe" title="Fact Check"></div>
-                        <div class="cat-game-dot" style="background:#e9d5ff" title="Mind Race"></div>
-                        <div class="cat-game-dot" style="background:#c4b5fd" title="Smart Car"></div>
-                        <div class="cat-game-dot" style="background:#ddd6fe" title="Road Rules"></div>
-                    </div>
-                </div>
-                <div class="category-card" data-category="clicker">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);">
-                        <svg viewBox="0 0 40 40" width="28" height="28">
-                            <circle cx="20" cy="20" r="14" fill="rgba(255,255,255,0.9)" />
-                            <circle cx="20" cy="20" r="5" fill="#ec4899" />
-                            <circle cx="20" cy="20" r="9" fill="none" stroke="#ec4899" stroke-width="1.5" />
-                        </svg>
-                    </div>
-                    <h3>Clicker Games</h3>
-                    <span>16 Games</span>
-                    <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#f472b6" title="Click Car"></div>
-                        <div class="cat-game-dot" style="background:#fb7185" title="Tap Race"></div>
-                        <div class="cat-game-dot" style="background:#fda4af" title="Idle Road"></div>
-                        <div class="cat-game-dot" style="background:#fecdd3" title="Auto Drive"></div>
-                        <div class="cat-game-dot" style="background:#e879f9" title="Speed Tap"></div>
-                        <div class="cat-game-dot" style="background:#f0abfc" title="Turbo Click"></div>
-                    </div>
-                </div>
-                <div class="category-card" data-category="twoPlayer">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
-                        <svg viewBox="0 0 40 40" width="28" height="28">
-                            <circle cx="14" cy="20" r="8" fill="rgba(255,255,255,0.9)" />
-                            <circle cx="26" cy="20" r="8" fill="rgba(255,255,255,0.9)" />
-                        </svg>
-                    </div>
-                    <h3>2 Player Games</h3>
-                    <span>14 Games</span>
-                    <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#22d3ee" title="Dual Race"></div>
-                        <div class="cat-game-dot" style="background:#67e8f9" title="VS Cars"></div>
-                        <div class="cat-game-dot" style="background:#a5f3fc" title="Tag Team"></div>
-                        <div class="cat-game-dot" style="background:#0ea5e9" title="P1 vs P2"></div>
-                        <div class="cat-game-dot" style="background:#38bdf8" title="Split Road"></div>
-                        <div class="cat-game-dot" style="background:#7dd3fc" title="Rival Rush"></div>
-                    </div>
-                </div>
-                <div class="category-card" data-category="driving">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">
-                        <svg viewBox="0 0 40 40" width="28" height="28">
-                            <rect x="6" y="10" width="28" height="20" rx="3" fill="rgba(255,255,255,0.9)" />
-                            <rect x="10" y="6" width="20" height="8" rx="2" fill="rgba(255,255,255,0.7)" />
-                            <circle cx="14" cy="32" r="3" fill="rgba(0,0,0,0.2)" />
-                            <circle cx="26" cy="32" r="3" fill="rgba(0,0,0,0.2)" />
-                        </svg>
-                    </div>
-                    <h3>Driving Games</h3>
-                    <span>22 Games</span>
-                    <div class="cat-games">
-                        <div class="cat-game-dot" style="background:#fb923c" title="City Drive"></div>
-                        <div class="cat-game-dot" style="background:#fdba74" title="Highway"></div>
-                        <div class="cat-game-dot" style="background:#fed7aa" title="Off Road"></div>
-                        <div class="cat-game-dot" style="background:#f97316" title="Night Drive"></div>
-                        <div class="cat-game-dot" style="background:#ea580c" title="Desert Run"></div>
-                        <div class="cat-game-dot" style="background:#c2410c" title="Ice Road"></div>
-                    </div>
-                </div>
+    <main class="wrap">
+        <section class="hero">
+            <h1>Category guides for the smaller public version of Traffic Games Online.</h1>
+            <p>This page explains the four categories we are actively exposing in the review-ready release. The goal is to make the site easier to understand, easier to navigate, and less dependent on giant index pages full of lightly differentiated templates.</p>
+            <div class="mini-nav">
+                <a href="#racing">
+                    <strong>Racing</strong>
+                    <span>Fast, reflex-first runs</span>
+                </a>
+                <a href="#driving">
+                    <strong>Driving</strong>
+                    <span>Handling, camera feel, and road control</span>
+                </a>
+                <a href="#parking">
+                    <strong>Parking</strong>
+                    <span>Lower-speed planning and precision</span>
+                </a>
+                <a href="#traffic-control">
+                    <strong>Traffic control</strong>
+                    <span>Timing, sequencing, and flow management</span>
+                </a>
             </div>
         </section>
 
-        <!-- <section class="guides-section" id="guides">
-            <div class="section-header">
-                <h2>Features & Guides</h2>
+        <section class="panel">
+            <h2>How to use this page</h2>
+            <p>The category notes below are meant to help players decide where to start. We are intentionally keeping the public sitemap small while we refresh the larger archive, so this page focuses on what each category feels like rather than pushing every individual title into view.</p>
+            <div class="cta-row">
+                <a class="btn btn-primary" href="games/traffic-jam-3d.html">Open the featured Traffic Jam 3D page</a>
+                <a class="btn btn-secondary" href="contact.html">Suggest a category you want refreshed next</a>
             </div>
-            <div class="guides-grid">
-                <div class="guide-card">
-                    <div class="guide-icon">
-                        <svg viewBox="0 0 40 40" width="32" height="32">
-                            <path d="M20 4 L36 34 H4Z" fill="none" stroke="#4ade80" stroke-width="2.5"
-                                stroke-linejoin="round" />
-                            <line x1="20" y1="14" x2="20" y2="22" stroke="#4ade80" stroke-width="2.5"
-                                stroke-linecap="round" />
-                            <circle cx="20" cy="27" r="1.5" fill="#4ade80" />
-                        </svg>
-                    </div>
-                    <h3>The Traffic Games Promise</h3>
-                    <p>All our games are free to play, safe for kids, and require no downloads. We test every game to
-                        ensure quality and fun gameplay.</p>
-                </div>
-                <div class="guide-card">
-                    <div class="guide-icon">
-                        <svg viewBox="0 0 40 40" width="32" height="32">
-                            <rect x="6" y="6" width="28" height="28" rx="4" fill="none" stroke="#60a5fa"
-                                stroke-width="2.5" />
-                            <line x1="12" y1="14" x2="28" y2="14" stroke="#60a5fa" stroke-width="2" />
-                            <line x1="12" y1="20" x2="24" y2="20" stroke="#60a5fa" stroke-width="2" />
-                            <line x1="12" y1="26" x2="20" y2="26" stroke="#60a5fa" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3>Our Game Guidelines</h3>
-                    <p>Learn the rules and strategies for each game type. Master traffic control, perfect your parking
-                        skills, and dominate the leaderboards.</p>
-                </div>
-                <div class="guide-card">
-                    <div class="guide-icon">
-                        <svg viewBox="0 0 40 40" width="32" height="32">
-                            <circle cx="20" cy="20" r="14" fill="none" stroke="#fbbf24" stroke-width="2.5" />
-                            <path d="M20 10 L20 20 L26 24" fill="none" stroke="#fbbf24" stroke-width="2.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <h3>New Games Every Week</h3>
-                    <p>We add new traffic and driving games every week. Check back regularly to discover fresh
-                        challenges and exciting gameplay.</p>
-                </div>
-            </div>
-        </section> -->
-
-        <section class="featured-section">
-            <div class="featured-grid" id="featured-grid"></div>
         </section>
 
-        <section class="popular-section" id="popular">
-            <div class="section-header">
-                <h2>Popular Games</h2>
-                <div class="filter-tabs">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="new">New</button>
-                    <button class="filter-btn" data-filter="trending">Trending</button>
-                    <button class="filter-btn" data-filter="top-rated">Top Rated</button>
-                </div>
+        <section class="guide" id="racing">
+            <small>Racing guide</small>
+            <h2>Racing pages are about pace, lane changes, and pressure.</h2>
+            <p>In this collection, racing games are the best fit for players who want quick runs and immediate feedback. Sessions usually revolve around dodging traffic, reading gaps early, and committing to a move before the road closes around you.</p>
+            <div class="guide-grid">
+                <article class="guide-card">
+                    <h3>What to expect</h3>
+                    <p>Short loops, simple controls, rising speed, and a focus on rhythm rather than deep simulation.</p>
+                </article>
+                <article class="guide-card">
+                    <h3>Good first habit</h3>
+                    <p>Keep your eyes one or two car lengths ahead instead of reacting only to the bumper right in front of you.</p>
+                </article>
             </div>
-            <div class="games-grid" id="gamesGrid"></div>
+        </section>
+
+        <section class="guide" id="driving">
+            <small>Driving guide</small>
+            <h2>Driving pages leave a little more room for control and experimentation.</h2>
+            <p>Driving games in the archive tend to be slower and more flexible than pure racers. They work best for players who like getting used to a vehicle, testing the turning radius, and understanding how a course reacts to braking or overcorrection.</p>
+            <div class="guide-grid">
+                <article class="guide-card">
+                    <h3>What to expect</h3>
+                    <p>More open road layouts, steadier pacing, and room to recover after mistakes.</p>
+                </article>
+                <article class="guide-card">
+                    <h3>Good first habit</h3>
+                    <p>Use a light touch on steering inputs. Most browser driving games become much easier once you stop correcting too hard.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="guide" id="parking">
+            <small>Parking guide</small>
+            <h2>Parking pages are puzzle-like even when the subject is a car.</h2>
+            <p>The parking group is less about speed and more about reading space. These pages are useful for players who enjoy slower decision making, obstacle order, and lining up a clean route before they commit to the turn.</p>
+            <div class="guide-grid">
+                <article class="guide-card">
+                    <h3>What to expect</h3>
+                    <p>Tight angles, small corrections, and repeated attempts where every extra movement matters.</p>
+                </article>
+                <article class="guide-card">
+                    <h3>Good first habit</h3>
+                    <p>Pause before the final move. A short reset usually saves more time than forcing a bad angle into the space.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="guide" id="traffic-control">
+            <small>Traffic control guide</small>
+            <h2>Traffic control pages shift the focus from steering to sequencing.</h2>
+            <p>These are the most strategic pages in the collection. Instead of controlling one vehicle, you are usually deciding when a line of vehicles should move, stop, merge, or cross. The challenge comes from staying calm as the board gets busy.</p>
+            <div class="guide-grid">
+                <article class="guide-card">
+                    <h3>What to expect</h3>
+                    <p>Pattern recognition, timing windows, and a constant balance between safety and throughput.</p>
+                </article>
+                <article class="guide-card">
+                    <h3>Good first habit</h3>
+                    <p>Untangle the biggest risk first. Clearing one dangerous conflict is often better than making several small moves too early.</p>
+                </article>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-col">
-                <h4>Traffic Games</h4>
-                <p>Play the best free online traffic, driving, and racing games. No downloads required!</p>
+    <footer class="site-footer">
+        <div class="wrap footer-row">
+            <div>
+                <strong>Traffic Games Online</strong>
+                <p>Category notes for the review-ready public release dated May 7, 2026.</p>
             </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
+            <div class="footer-links">
                 <a href="/">Home</a>
-                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="terms.html">Terms of Service</a>
             </div>
-            <div class="footer-col">
-                <h4>Game Categories</h4>
-                <a href="categories.html?category=racing">Racing Games</a>
-                <a href="categories.html?category=parking">Parking Games</a>
-                <a href="categories.html?category=trafficControl">Traffic Control</a>
-                <a href="categories.html?category=twoPlayer">2 Player Games</a>
-            </div>
-            <div class="footer-col">
-                <h4>Support</h4>
-                <a href="#">Contact Us</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">FAQ</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Traffic Games. All rights reserved. Play free online games.</p>
         </div>
     </footer>
 
-    <script src="js/data/featured-games-data.js"></script>
-    <script src="js/data/games-data.js"></script>
-    <script src="js/data/new-games-data.js"></script>
-    <script src="js/data/trending-games-data.js"></script>
-    <script src="js/data/top-rated-games-data.js"></script>
-    <script src="js/data/racing-games-data.js"></script>
-    <script src="js/data/traffic-control-games-data.js"></script>
-    <script src="js/data/parking-games-data.js"></script>
-    <script src="js/data/escape-games-data.js"></script>
-    <script src="js/data/trivia-games-data.js"></script>
-    <script src="js/data/clicker-games-data.js"></script>
-    <script src="js/data/twoPlayer-games-data.js"></script>
-    <script src="js/data/driving-games-data.js"></script>
-    <script src="js/coolmath/coolmath-games-data.js"></script>
-    <script src="js/detail1.js"></script>
-    <script src="js/script.js"></script>
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var category = params.get('category');
+            var map = {
+                racing: 'racing',
+                driving: 'driving',
+                parking: 'parking',
+                trafficControl: 'traffic-control'
+            };
+
+            if (category && map[category]) {
+                var target = document.getElementById(map[category]);
+                if (target) {
+                    setTimeout(function () {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 80);
+                }
+            }
+        })();
+    </script>
 </body>
-
 </html>
-
-
-

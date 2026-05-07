@@ -35,9 +35,9 @@ const generatePage = (game) => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Play the best traffic games online. Enjoy a wide variety of traffic games including racing, parking, and traffic control games." />
     <meta name="keywords" content="traffic games, traffic rider games, traffic rider, road traffic games, traffic games car, traffic car games, ${gameName}, driving games, free online games, car games" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noindex, follow" />
     <title>traffic games - ${gameName} - Play Free Online Driving Game</title>
-    <link rel="canonical" href="https://trafficgames.com/driving/${safeFileName}.html" />
+    <link rel="canonical" href="https://www.trafficgames.online/driving/${safeFileName}.html" />
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../favicon.ico" sizes="16x16" type="image/x-icon">
@@ -240,9 +240,9 @@ const generatePage = (game) => {
             </div>
             <div class="footer-col">
                 <h4>Support</h4>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">FAQ</a>
+                <a href="../privacy-policy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms of Service</a>
+                <a href="../contact.html">Contact</a>
             </div>
         </div>
         <div class="footer-bottom">

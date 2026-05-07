@@ -1,139 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.trafficgames.com/</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Categories Page -->
-  <url>
-    <loc>https://www.trafficgames.com/categories.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Racing Games -->
-  <url>
-    <loc>https://www.trafficgames.com/racing/TrafficRacer.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.trafficgames.online/</loc>
+    <lastmod>2026-05-07</lastmod>
   </url>
   <url>
-    <loc>https://www.trafficgames.com/racing/TrafficRider.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.trafficgames.online/categories.html</loc>
+    <lastmod>2026-05-07</lastmod>
   </url>
   <url>
-    <loc>https://www.trafficgames.com/racing/TrafficTour.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.trafficgames.online/about.html</loc>
+    <lastmod>2026-05-07</lastmod>
   </url>
   <url>
-    <loc>https://www.trafficgames.com/racing/HighwayRacer.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.trafficgames.online/contact.html</loc>
+    <lastmod>2026-05-07</lastmod>
   </url>
   <url>
-    <loc>https://www.trafficgames.com/racing/SpeedRacing.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.trafficgames.online/privacy-policy.html</loc>
+    <lastmod>2026-05-07</lastmod>
   </url>
   <url>
-    <loc>https://www.trafficgames.com/racing/CarGames.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.trafficgames.online/cookies.html</loc>
+    <lastmod>2026-05-07</lastmod>
   </url>
   <url>
-    <loc>https://www.trafficgames.com/racing/DragRacing.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.trafficgames.online/terms.html</loc>
+    <lastmod>2026-05-07</lastmod>
   </url>
   <url>
-    <loc>https://www.trafficgames.com/racing/NitroRacing.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Driving Games -->
-  <url>
-    <loc>https://www.trafficgames.com/driving/CityDriving.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.trafficgames.com/driving/HighwayDriving.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.trafficgames.com/driving/OffroadDriving.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Parking Games -->
-  <url>
-    <loc>https://www.trafficgames.com/parking/ParkingMaster.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.trafficgames.com/parking/RealCarParking.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.trafficgames.com/parking/TruckParking.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Traffic Control Games -->
-  <url>
-    <loc>https://www.trafficgames.com/control/TrafficControl.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.trafficgames.com/control/IntersectionControl.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Escape Games -->
-  <url>
-    <loc>https://www.trafficgames.com/escape/TrafficEscape.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.trafficgames.com/escape/PoliceChase.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.trafficgames.online/games/traffic-jam-3d.html</loc>
+    <lastmod>2026-05-07</lastmod>
   </url>
 </urlset>

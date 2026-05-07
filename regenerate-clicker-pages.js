@@ -31,7 +31,7 @@ function generateClickerPages() {
             .replace(/https:\/\/html5\.gamedistribution\.com\/3fc01c17076c44149e3e4b6d79b3134f\/\?gd_sdk_referrer_url=https:\/\/www\.onlinegames\.io\/cat-runner\//g, game.iframeUrl)
             .replace(/<meta name="keywords" content="[^"]*" \/>/g, `<meta name="keywords" content="${game.keywords}, clicker games, idle games, free online games" />`)
             .replace(/<title>traffic games - Arcade GP - Play Free Online Driving Game<\/title>/g, `<title>traffic games - ${game.name} - Play Free Online Clicker Game</title>`)
-            .replace(/<link rel="canonical" href="https:\/\/trafficgames\.com\/driving\/ArcadeGP\.html" \/>/g, `<link rel="canonical" href="https://trafficgames.com/clicker/${fileName}.html" />`)
+            .replace(/<link rel="canonical" href="https:\/\/www\.trafficgames\.online\/driving\/ArcadeGP\.html" \/>/g, `<link rel="canonical" href="https://www.trafficgames.online/clicker/${fileName}.html" />`)
             .replace(/<h1>Arcade GP - traffic games<\/h1>/g, `<h1>${game.name} - traffic games</h1>`)
             .replace(/<h2 class="detail-title">Arcade GP - High-Speed Racing Action<\/h2>/g, `<h2 class="detail-title">${game.name} - Clicker Fun</h2>`)
             .replace(/Play Arcade GP, an exciting arcade-style racing game where you can compete in high-speed races against other drivers\. Test your skills on challenging tracks and become the champion of the Arcade GP circuit\./g, `Play ${game.name}, an exciting clicker game where you can tap, click, and collect resources to build your way to success. Test your clicking skills and become a master clicker!`)
