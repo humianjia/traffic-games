@@ -3,55 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Traffic Games Online is a curated browser gaming site focused on racing, driving, parking, and traffic strategy picks that load quickly and are easy to understand.">
-    <meta name="keywords" content="traffic games online, browser racing games, parking games, driving games, traffic strategy games">
+    <meta name="description" content="Traffic Games is a stylish browser collection of traffic, driving, parking, and racing games with instant homepage play.">
+    <meta name="keywords" content="traffic games, driving games, racing games, parking games, browser games">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="author" content="Traffic Games Online">
-    <meta property="og:title" content="Traffic Games Online - Curated Browser Game Picks">
-    <meta property="og:description" content="Explore a smaller, review-ready collection of browser racing, driving, parking, and traffic strategy picks.">
+    <meta name="author" content="Traffic Games">
+    <meta property="og:title" content="Traffic Games | Online Driving and Racing Games">
+    <meta property="og:description" content="Play fast-paced traffic, driving, parking, and racing games in one stylish place.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.trafficgames.online/">
-    <meta property="og:site_name" content="Traffic Games Online">
+    <meta property="og:site_name" content="Traffic Games">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Traffic Games Online - Curated Browser Game Picks">
-    <meta name="twitter:description" content="A cleaner browser game collection with clear policies, curated links, and a featured locally hosted game.">
-    <title>Traffic Games Online - Curated Browser Game Picks</title>
+    <meta name="twitter:title" content="Traffic Games | Online Driving and Racing Games">
+    <meta name="twitter:description" content="Play fast-paced traffic, driving, parking, and racing games in one stylish place.">
+    <title>Traffic Games | Online Driving and Racing Games</title>
     <link rel="canonical" href="https://www.trafficgames.online/">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7534347140708021" crossorigin="anonymous"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Traffic Games Online",
+        "name": "Traffic Games",
         "url": "https://www.trafficgames.online/",
-        "description": "A curated browser gaming site focused on racing, driving, parking, and traffic strategy picks.",
-        "inLanguage": "en",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://www.trafficgames.online/categories.html",
-            "query-input": "required name=search_term_string"
-        }
+        "description": "An online collection of traffic, driving, parking, and racing games with instant homepage play.",
+        "inLanguage": "en"
     }
     </script>
     <style>
         :root {
-            --bg: #09111f;
-            --panel: #0f1b31;
-            --panel-soft: #132340;
-            --border: rgba(148, 163, 184, 0.18);
-            --text: #f8fafc;
-            --muted: #cbd5e1;
-            --green: #4ade80;
-            --green-dark: #22c55e;
-            --blue: #38bdf8;
-            --amber: #f59e0b;
-            --shadow: 0 20px 50px rgba(2, 6, 23, 0.45);
+            --bg: #04070b;
+            --bg-deep: #07111a;
+            --surface: rgba(8, 14, 22, 0.74);
+            --surface-strong: rgba(10, 17, 27, 0.92);
+            --surface-soft: rgba(255, 255, 255, 0.05);
+            --line: rgba(255, 255, 255, 0.1);
+            --line-strong: rgba(255, 255, 255, 0.18);
+            --text: #f4f8ff;
+            --muted: #94a8c1;
+            --muted-strong: #cfe0f2;
+            --cyan: #48d8ff;
+            --cyan-soft: rgba(72, 216, 255, 0.22);
+            --amber: #ffb44d;
+            --amber-soft: rgba(255, 180, 77, 0.2);
+            --green: #7ef1b7;
+            --rose: #ff738b;
+            --shadow: 0 30px 90px rgba(1, 6, 16, 0.48);
+            --glow-cyan: 0 0 0 1px rgba(72, 216, 255, 0.18), 0 0 22px rgba(72, 216, 255, 0.16);
+            --glow-amber: 0 0 0 1px rgba(255, 180, 77, 0.2), 0 0 24px rgba(255, 180, 77, 0.18);
+            --radius-xl: 30px;
+            --radius-lg: 24px;
+            --radius-md: 18px;
+            --content-width: min(1220px, calc(100% - 24px));
+            --scroll-y: 0px;
         }
 
         * {
@@ -64,561 +72,1294 @@
 
         body {
             margin: 0;
-            font-family: "Inter", sans-serif;
             color: var(--text);
+            font-family: "Manrope", sans-serif;
             background:
-                radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 32%),
-                radial-gradient(circle at 80% 0%, rgba(74, 222, 128, 0.16), transparent 26%),
-                linear-gradient(180deg, #08101d 0%, #0b1425 45%, #09111f 100%);
+                radial-gradient(circle at 16% 12%, rgba(72, 216, 255, 0.22), transparent 18%),
+                radial-gradient(circle at 84% 18%, rgba(255, 180, 77, 0.18), transparent 16%),
+                linear-gradient(180deg, #03060a 0%, #071019 42%, #060b11 100%);
+            overflow-x: hidden;
+        }
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        body::before {
+            background:
+                radial-gradient(circle at 20% 30%, rgba(72, 216, 255, 0.12), transparent 20%),
+                radial-gradient(circle at 80% 20%, rgba(255, 180, 77, 0.1), transparent 18%),
+                linear-gradient(120deg, rgba(72, 216, 255, 0.05), transparent 30%, rgba(255, 115, 139, 0.05) 68%, transparent 100%);
+            filter: blur(22px);
+            animation: skyShift 16s ease-in-out infinite alternate;
+            transform: translateY(calc(var(--scroll-y) * -0.03));
+        }
+
+        body::after {
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 34%),
+                repeating-linear-gradient(90deg, transparent 0 116px, rgba(255, 255, 255, 0.018) 116px 117px);
+            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.82), transparent 88%);
+            opacity: 0.8;
         }
 
         a {
             color: inherit;
         }
 
-        .wrap {
-            width: min(1120px, calc(100% - 32px));
-            margin: 0 auto;
+        img {
+            display: block;
+            max-width: 100%;
         }
 
-        .site-header {
+        .atmosphere {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            display: block;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.72), rgba(72, 216, 255, 0.22) 55%, transparent 72%);
+            opacity: 0.24;
+            filter: blur(1px);
+            animation: floatParticle var(--duration, 16s) linear infinite;
+            animation-delay: var(--delay, 0s);
+            transform: translate3d(0, 0, 0);
+        }
+
+        .topbar {
             position: sticky;
             top: 0;
-            z-index: 30;
-            backdrop-filter: blur(14px);
-            background: rgba(7, 13, 24, 0.82);
-            border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+            z-index: 60;
+            background: rgba(6, 10, 15, 0.24);
+            border-bottom: 1px solid transparent;
+            transition: background 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, backdrop-filter 0.28s ease;
         }
 
-        .header-row,
-        .footer-row {
+        .topbar.is-scrolled {
+            background: rgba(6, 10, 15, 0.74);
+            border-bottom-color: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px) saturate(120%);
+            box-shadow: 0 10px 34px rgba(0, 0, 0, 0.18);
+        }
+
+        .topbar-inner {
+            width: var(--content-width);
+            min-height: 64px;
+            margin: 0 auto;
+            padding: 10px 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 24px;
-            padding: 18px 0;
+            gap: 18px;
         }
 
         .brand {
             display: inline-flex;
             align-items: center;
             gap: 12px;
+            color: var(--text);
             text-decoration: none;
             font-weight: 800;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.04em;
+            transition: transform 0.22s ease, filter 0.22s ease;
+            white-space: nowrap;
+        }
+
+        .brand:hover {
+            transform: scale(1.03);
+            filter: drop-shadow(0 0 18px rgba(72, 216, 255, 0.22));
         }
 
         .brand-mark {
             width: 42px;
             height: 42px;
-            border-radius: 14px;
             display: grid;
             place-items: center;
-            background: linear-gradient(135deg, rgba(74, 222, 128, 0.2), rgba(56, 189, 248, 0.22));
-            border: 1px solid rgba(74, 222, 128, 0.28);
+            border-radius: 14px;
+            background: linear-gradient(145deg, rgba(72, 216, 255, 0.14), rgba(255, 180, 77, 0.16));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 18px rgba(72, 216, 255, 0.08);
         }
 
-        nav {
+        .brand-mark img {
+            width: 26px;
+            height: 26px;
+        }
+
+        .brand span:last-child {
+            font-size: 1.04rem;
+        }
+
+        .topbar nav {
             display: flex;
             flex-wrap: wrap;
+            justify-content: flex-end;
             gap: 18px;
         }
 
-        nav a,
-        .footer-links a,
-        .category-card a,
-        .feature-meta a {
+        .topbar nav a {
+            position: relative;
             color: var(--muted);
             text-decoration: none;
+            font-size: 0.93rem;
+            font-weight: 700;
+            transition: color 0.22s ease;
         }
 
-        nav a:hover,
-        .footer-links a:hover,
-        .feature-meta a:hover {
+        .topbar nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -8px;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(72, 216, 255, 0), rgba(72, 216, 255, 1), rgba(255, 180, 77, 1), rgba(255, 180, 77, 0));
+            opacity: 0;
+            transform: scaleX(0.3);
+            transition: opacity 0.22s ease, transform 0.22s ease;
+            box-shadow: 0 0 12px rgba(72, 216, 255, 0.28);
+        }
+
+        .topbar nav a:hover {
             color: var(--text);
         }
 
-        main {
-            padding: 56px 0 80px;
+        .topbar nav a:hover::after {
+            opacity: 1;
+            transform: scaleX(1);
         }
 
-        section + section {
-            margin-top: 28px;
+        .page {
+            width: var(--content-width);
+            margin: 0 auto;
+            padding: 18px 0 46px;
         }
 
-        .hero,
-        .panel {
-            background: linear-gradient(180deg, rgba(15, 27, 49, 0.92), rgba(11, 21, 39, 0.92));
-            border: 1px solid var(--border);
-            border-radius: 28px;
+        .section {
+            position: relative;
+            overflow: hidden;
+            margin-top: 16px;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background:
+                linear-gradient(180deg, rgba(9, 15, 24, 0.9), rgba(6, 10, 16, 0.96)),
+                radial-gradient(circle at top right, rgba(72, 216, 255, 0.1), transparent 28%);
             box-shadow: var(--shadow);
         }
 
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+            transition-delay: var(--delay, 0s);
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         .hero {
-            padding: 56px;
+            padding: 20px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 12% 16%, rgba(72, 216, 255, 0.16), transparent 18%),
+                radial-gradient(circle at 90% 18%, rgba(255, 180, 77, 0.12), transparent 18%);
+            transform: translateY(calc(var(--scroll-y) * -0.02));
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            left: -20%;
+            right: -20%;
+            bottom: 158px;
+            height: 84px;
+            background:
+                linear-gradient(90deg, transparent 0%, rgba(72, 216, 255, 0.16) 22%, rgba(72, 216, 255, 0.04) 38%, transparent 55%, rgba(255, 180, 77, 0.14) 74%, transparent 100%);
+            filter: blur(12px);
+            opacity: 0.82;
+            animation: lightSweep 10s linear infinite;
+            pointer-events: none;
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 1;
             display: grid;
-            grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-            gap: 32px;
-            overflow: hidden;
+            gap: 12px;
+            padding: 8px 2px 18px;
         }
 
         .eyebrow {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
+            width: fit-content;
+            min-height: 34px;
+            padding: 7px 13px;
             border-radius: 999px;
-            background: rgba(74, 222, 128, 0.14);
-            color: #d9f99d;
-            font-size: 0.88rem;
-            font-weight: 600;
-            margin-bottom: 18px;
+            background: rgba(72, 216, 255, 0.1);
+            border: 1px solid rgba(72, 216, 255, 0.16);
+            color: #d9f7ff;
+            font-size: 0.79rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            box-shadow: var(--glow-cyan);
+            animation: breatheGlow 4.2s ease-in-out infinite;
         }
 
         h1,
         h2,
         h3 {
-            margin: 0 0 14px;
-            letter-spacing: -0.04em;
+            margin: 0;
+            font-family: "Space Grotesk", sans-serif;
+            letter-spacing: -0.05em;
         }
 
         h1 {
-            font-size: clamp(2.2rem, 5vw, 4.1rem);
-            line-height: 1.03;
+            font-size: clamp(2.9rem, 6vw, 5.3rem);
+            line-height: 0.86;
+            text-shadow: 0 0 24px rgba(72, 216, 255, 0.12);
         }
 
         h2 {
-            font-size: clamp(1.5rem, 3vw, 2.35rem);
-            line-height: 1.08;
+            font-size: clamp(1.55rem, 3vw, 2.45rem);
+            line-height: 0.94;
         }
 
         h3 {
-            font-size: 1.08rem;
+            font-size: 1.12rem;
+            line-height: 1.06;
         }
 
-        p,
-        li {
+        p {
+            margin: 0;
             color: var(--muted);
-            line-height: 1.75;
+            line-height: 1.68;
         }
 
-        .hero p {
-            font-size: 1.05rem;
+        .hero-title,
+        .hero-subtitle,
+        .hero-actions {
+            opacity: 0;
+            transform: translateY(18px);
+            animation: heroReveal 0.7s ease forwards;
+        }
+
+        .hero-title {
+            animation-delay: 0.08s;
+        }
+
+        .hero-subtitle {
             max-width: 58ch;
+            font-size: 1rem;
+            animation-delay: 0.22s;
         }
 
-        .actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 26px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 20px;
-            border-radius: 14px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-1px);
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--green), var(--green-dark));
-            color: #052e16;
-            box-shadow: 0 12px 28px rgba(74, 222, 128, 0.28);
-        }
-
-        .btn-secondary {
-            border: 1px solid rgba(148, 163, 184, 0.24);
-            color: var(--text);
-            background: rgba(15, 23, 42, 0.55);
-        }
-
-        .hero-aside,
-        .feature-visual,
-        .category-card,
-        .value-card,
-        .faq-item {
-            background: rgba(15, 23, 42, 0.48);
-            border: 1px solid rgba(148, 163, 184, 0.15);
-            border-radius: 24px;
-        }
-
-        .hero-aside {
-            padding: 22px;
-            display: grid;
-            gap: 18px;
-            align-content: start;
-        }
-
-        .hero-aside strong {
-            display: block;
-            margin-bottom: 6px;
-            color: #e2e8f0;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 14px;
-        }
-
-        .stat {
-            padding: 14px;
-            border-radius: 18px;
-            background: rgba(8, 16, 29, 0.74);
-            border: 1px solid rgba(148, 163, 184, 0.12);
-        }
-
-        .stat strong {
-            font-size: 1.32rem;
-            color: var(--green);
-        }
-
-        .grid-3,
-        .grid-4,
-        .feature-layout {
-            display: grid;
-            gap: 18px;
-        }
-
-        .grid-3 {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .grid-4 {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-        }
-
-        .panel {
-            padding: 28px;
-        }
-
-        .feature-layout {
-            grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-            align-items: center;
-        }
-
-        .feature-visual {
-            overflow: hidden;
-        }
-
-        .feature-visual img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            min-height: 320px;
-        }
-
-        .feature-meta {
-            margin-top: 18px;
+        .hero-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
-            color: #dbeafe;
-            font-size: 0.92rem;
+            margin-top: 6px;
+            animation-delay: 0.34s;
         }
 
-        .category-card,
-        .value-card,
-        .faq-item {
-            padding: 22px;
+        .btn {
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 47px;
+            padding: 12px 18px;
+            border-radius: 16px;
+            border: 1px solid transparent;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 800;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+            will-change: transform;
         }
 
-        .category-card span {
-            display: inline-block;
-            margin-bottom: 12px;
-            padding: 6px 10px;
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ffbf5f, #ff9f43 60%, #ffd974 100%);
+            color: #281302;
+            box-shadow: 0 16px 36px rgba(255, 180, 77, 0.18);
+        }
+
+        .btn-primary::before {
+            content: "";
+            position: absolute;
+            inset: -20% auto -20% -120%;
+            width: 56%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.56), transparent);
+            transform: skewX(-18deg);
+            transition: left 0.6s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 140%;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 16px 40px rgba(255, 180, 77, 0.28), 0 0 20px rgba(255, 180, 77, 0.18);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.12);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        }
+
+        .btn-secondary:hover {
+            border-color: rgba(72, 216, 255, 0.24);
+            box-shadow: 0 0 0 1px rgba(72, 216, 255, 0.14), 0 0 22px rgba(72, 216, 255, 0.12);
+        }
+
+        .hero-player {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            border-radius: 26px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background:
+                linear-gradient(180deg, rgba(10, 16, 24, 0.96), rgba(6, 10, 16, 0.98)),
+                radial-gradient(circle at top right, rgba(255, 180, 77, 0.14), transparent 28%);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-player::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 36%),
+                linear-gradient(135deg, transparent 0%, rgba(72, 216, 255, 0.08) 44%, transparent 68%);
+            pointer-events: none;
+        }
+
+        .player-top {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .player-label {
+            display: inline-flex;
+            align-items: center;
+            min-height: 28px;
+            padding: 4px 10px;
             border-radius: 999px;
-            background: rgba(56, 189, 248, 0.12);
-            color: #bae6fd;
-            font-size: 0.84rem;
-            font-weight: 600;
+            background: rgba(126, 241, 183, 0.12);
+            color: #e0ffef;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
-        .faq-item p:last-child,
-        .value-card p:last-child,
-        .category-card p:last-child {
-            margin-bottom: 0;
+        .player-title {
+            display: block;
+            margin-top: 8px;
+            color: var(--text);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.16rem;
+            letter-spacing: -0.04em;
+        }
+
+        .player-link {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .player-link:hover {
+            color: #ffffff;
+            text-shadow: 0 0 16px rgba(72, 216, 255, 0.18);
+        }
+
+        .hero-player iframe {
+            position: relative;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            min-height: 458px;
+            border: 0;
+            background: #05080d;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .section-head p {
+            margin-top: 8px;
+            max-width: 60ch;
+        }
+
+        .section-meta {
+            display: inline-flex;
+            align-items: center;
+            min-height: 36px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            font-size: 0.84rem;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .game-showcase,
+        .category-strip,
+        .cta,
+        .about {
+            padding: 20px;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .game-card {
+            position: relative;
+            overflow: hidden;
+            min-height: 0;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background:
+                linear-gradient(180deg, rgba(14, 21, 31, 0.94), rgba(9, 14, 21, 0.98)),
+                radial-gradient(circle at top right, rgba(72, 216, 255, 0.1), transparent 28%);
+            transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+        }
+
+        .game-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(72, 216, 255, 0.18), transparent 30%, transparent 70%, rgba(255, 180, 77, 0.16));
+            opacity: 0;
+            transition: opacity 0.28s ease;
+            pointer-events: none;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(72, 216, 255, 0.28);
+            box-shadow: 0 24px 48px rgba(1, 6, 16, 0.4), 0 0 0 1px rgba(72, 216, 255, 0.14), 0 0 24px rgba(72, 216, 255, 0.14);
+        }
+
+        .game-card:hover::before {
+            opacity: 1;
+        }
+
+        .game-card a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px;
+            min-height: 100%;
+            text-decoration: none;
+        }
+
+        .game-media {
+            position: relative;
+            overflow: hidden;
+            width: 74px;
+            height: 74px;
+            flex: 0 0 74px;
+            border-radius: 18px;
+            background: #08121b;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .game-media::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(3, 6, 10, 0.18) 48%, rgba(3, 6, 10, 0.62) 100%);
+            transition: opacity 0.28s ease;
+            opacity: 0.9;
+            pointer-events: none;
+        }
+
+        .game-card:hover .game-media::after {
+            opacity: 0.68;
+        }
+
+        .game-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.02);
+            transition: transform 0.32s ease;
+        }
+
+        .game-card:hover .game-media img {
+            transform: scale(1.08);
+        }
+
+        .game-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 0;
+            padding: 0;
+        }
+
+        .game-tag {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            min-height: 28px;
+            padding: 5px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #d8e5f4;
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transform: translateX(-8px);
+            opacity: 0.76;
+            transition: transform 0.26s ease, opacity 0.26s ease;
+        }
+
+        .game-card:hover .game-tag {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .game-copy h3,
+        .card-link {
+            transition: opacity 0.26s ease, transform 0.26s ease;
+        }
+
+        .game-copy h3 {
+            margin-top: 10px;
+            opacity: 0.92;
+            font-size: 1rem;
+            line-height: 1.18;
+        }
+
+        .game-card:hover .game-copy h3 {
+            opacity: 1;
+        }
+
+        .card-link {
+            width: fit-content;
+            margin-top: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            min-height: 38px;
+            padding: 9px 14px;
+            font-size: 0.84rem;
+        }
+
+        .card-link::after {
+            content: "->";
+            margin-left: 8px;
+            transition: transform 0.22s ease;
+        }
+
+        .game-card:hover .card-link {
+            background: linear-gradient(135deg, rgba(72, 216, 255, 0.18), rgba(255, 180, 77, 0.12));
+            border-color: rgba(72, 216, 255, 0.28);
+            box-shadow: 0 0 0 1px rgba(72, 216, 255, 0.14), 0 0 18px rgba(72, 216, 255, 0.1);
+        }
+
+        .game-card:hover .card-link::after {
+            transform: translateX(4px);
+        }
+
+        .category-row {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .category-chip {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-height: 56px;
+            padding: 12px 14px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+                radial-gradient(circle at top right, rgba(72, 216, 255, 0.08), transparent 46%);
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 800;
+            transition: transform 0.24s ease, color 0.24s ease, border-color 0.24s ease, background 0.24s ease, box-shadow 0.24s ease;
+        }
+
+        .category-chip::after {
+            content: "";
+            position: absolute;
+            left: 14px;
+            right: 14px;
+            bottom: 0;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(72, 216, 255, 0), rgba(72, 216, 255, 1), rgba(255, 180, 77, 1), rgba(255, 180, 77, 0));
+            transform: scaleX(0.2);
+            opacity: 0;
+            transition: transform 0.24s ease, opacity 0.24s ease;
+        }
+
+        .category-chip:hover {
+            transform: translateY(-4px);
+            color: var(--text);
+            border-color: rgba(72, 216, 255, 0.2);
+            background:
+                linear-gradient(180deg, rgba(72, 216, 255, 0.1), rgba(255, 180, 77, 0.06)),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+            box-shadow: 0 16px 30px rgba(1, 6, 16, 0.28), 0 0 20px rgba(72, 216, 255, 0.08);
+        }
+
+        .category-chip:hover::after {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        .chip-mark {
+            width: 16px;
+            height: 16px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, rgba(72, 216, 255, 0.94), rgba(255, 180, 77, 0.9));
+            box-shadow: 0 0 16px rgba(72, 216, 255, 0.2);
+            transform: rotate(0deg) scale(1);
+            transition: transform 0.24s ease;
+            flex: 0 0 auto;
+        }
+
+        .category-chip:hover .chip-mark {
+            transform: rotate(6deg) scale(1.1);
+        }
+
+        .category-chip span:last-child {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .cta {
+            background:
+                linear-gradient(135deg, rgba(72, 216, 255, 0.11), rgba(9, 14, 22, 0.96) 36%, rgba(255, 180, 77, 0.1) 100%),
+                linear-gradient(180deg, rgba(9, 15, 24, 0.9), rgba(6, 10, 16, 0.96));
+        }
+
+        .cta::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, transparent 0%, rgba(72, 216, 255, 0.1) 22%, transparent 44%, rgba(255, 180, 77, 0.1) 76%, transparent 100%);
+            animation: pulseRoad 12s linear infinite;
+            pointer-events: none;
+        }
+
+        .cta::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(72, 216, 255, 0.88), rgba(255, 180, 77, 0.88), transparent);
+            box-shadow: 0 0 16px rgba(72, 216, 255, 0.2);
+            pointer-events: none;
+        }
+
+        .cta-inner {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .cta-copy h2 {
+            text-shadow: 0 0 20px rgba(72, 216, 255, 0.14);
+        }
+
+        .cta-copy p {
+            margin-top: 10px;
+            max-width: 50ch;
+        }
+
+        .cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .about-card {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 20px;
+            align-items: end;
+        }
+
+        .about-copy p {
+            margin-top: 12px;
+            max-width: 66ch;
+        }
+
+        .about-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .about-stat {
+            min-width: 136px;
+            padding: 14px 16px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        }
+
+        .about-stat strong {
+            display: block;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.45rem;
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .about-stat span {
+            display: block;
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 0.88rem;
+            line-height: 1.45;
         }
 
         .site-footer {
-            border-top: 1px solid rgba(148, 163, 184, 0.12);
-            padding: 28px 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 18px 20px;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .site-footer::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            top: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(72, 216, 255, 0.82), rgba(255, 180, 77, 0.82), transparent);
+            box-shadow: 0 0 14px rgba(72, 216, 255, 0.16);
+        }
+
+        .footer-copy {
+            opacity: 0;
+            animation: footerFade 0.9s ease 0.4s forwards;
         }
 
         .footer-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px 18px;
+            justify-content: flex-end;
+            gap: 14px;
         }
 
-        .cookie-banner {
-            position: fixed;
-            left: 16px;
-            right: 16px;
-            bottom: 16px;
-            z-index: 40;
-            display: none;
+        .footer-links a {
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.22s ease, text-shadow 0.22s ease;
         }
 
-        .cookie-card {
-            width: min(980px, 100%);
-            margin: 0 auto;
-            padding: 18px 20px;
-            background: rgba(6, 11, 20, 0.95);
-            border: 1px solid rgba(148, 163, 184, 0.18);
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-        }
-
-        .cookie-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 14px;
-        }
-
-        .cookie-actions button {
-            appearance: none;
-            border: 0;
-            border-radius: 12px;
-            padding: 12px 16px;
-            font: inherit;
-            font-weight: 700;
-            cursor: pointer;
-        }
-
-        .accept-btn {
-            background: linear-gradient(135deg, var(--green), var(--green-dark));
-            color: #052e16;
-        }
-
-        .decline-btn {
-            background: rgba(30, 41, 59, 0.85);
+        .footer-links a:hover {
             color: var(--text);
-            border: 1px solid rgba(148, 163, 184, 0.18);
+            text-shadow: 0 0 16px rgba(72, 216, 255, 0.16);
         }
 
-        @media (max-width: 980px) {
-            .hero,
-            .feature-layout,
-            .grid-3,
-            .grid-4,
-            .stats {
-                grid-template-columns: 1fr;
+        @keyframes skyShift {
+            0% {
+                transform: translate3d(0, calc(var(--scroll-y) * -0.03), 0) scale(1);
+            }
+            100% {
+                transform: translate3d(-2%, calc(var(--scroll-y) * -0.03 - 8px), 0) scale(1.06);
+            }
+        }
+
+        @keyframes floatParticle {
+            0% {
+                transform: translate3d(0, 0, 0) scale(0.9);
+                opacity: 0;
+            }
+            12% {
+                opacity: 0.24;
+            }
+            88% {
+                opacity: 0.2;
+            }
+            100% {
+                transform: translate3d(var(--drift-x, 30px), -120vh, 0) scale(1.16);
+                opacity: 0;
+            }
+        }
+
+        @keyframes breatheGlow {
+            0%, 100% {
+                box-shadow: var(--glow-cyan);
+            }
+            50% {
+                box-shadow: 0 0 0 1px rgba(72, 216, 255, 0.22), 0 0 26px rgba(72, 216, 255, 0.24);
+            }
+        }
+
+        @keyframes heroReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes lightSweep {
+            0% {
+                transform: translateX(-12%) skewX(-8deg);
+            }
+            100% {
+                transform: translateX(12%) skewX(-8deg);
+            }
+        }
+
+        @keyframes pulseRoad {
+            0% {
+                transform: translateX(-12%);
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 0.92;
+            }
+            100% {
+                transform: translateX(12%);
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes footerFade {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 1160px) {
+            .showcase-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
             }
 
-            .hero {
-                padding: 28px;
+            .category-row {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
             }
 
-            .panel {
-                padding: 22px;
+            .hero-player iframe {
+                min-height: 404px;
             }
+        }
 
-            .header-row,
-            .footer-row {
+        @media (max-width: 920px) {
+            .topbar-inner,
+            .section-head,
+            .cta-inner,
+            .about-card,
+            .site-footer {
                 align-items: flex-start;
                 flex-direction: column;
+            }
+
+            .topbar nav,
+            .footer-links,
+            .about-stats {
+                justify-content: flex-start;
+            }
+
+            .showcase-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .category-row {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 700px) {
+            .page,
+            .topbar-inner {
+                width: min(100% - 20px, 100%);
+            }
+
+            .hero,
+            .game-showcase,
+            .category-strip,
+            .cta,
+            .about,
+            .site-footer {
+                border-radius: 24px;
+            }
+
+            .hero,
+            .game-showcase,
+            .category-strip,
+            .cta,
+            .about {
+                padding: 16px;
+            }
+
+            h1 {
+                font-size: clamp(2.4rem, 15vw, 4rem);
+            }
+
+            .hero-player iframe {
+                min-height: 310px;
+            }
+
+            .showcase-grid,
+            .category-row {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="wrap header-row">
-            <a href="/" class="brand">
-                <span class="brand-mark">TG</span>
-                <span>Traffic Games Online</span>
+    <div class="atmosphere" aria-hidden="true">
+        <span class="particle" style="left:8%; bottom:-40px; width:10px; height:10px; --duration: 17s; --delay: 0s; --drift-x: 24px;"></span>
+        <span class="particle" style="left:18%; bottom:-80px; width:6px; height:6px; --duration: 13s; --delay: 2s; --drift-x: 38px;"></span>
+        <span class="particle" style="left:31%; bottom:-60px; width:12px; height:12px; --duration: 19s; --delay: 1s; --drift-x: -22px;"></span>
+        <span class="particle" style="left:47%; bottom:-52px; width:8px; height:8px; --duration: 15s; --delay: 4s; --drift-x: 26px;"></span>
+        <span class="particle" style="left:62%; bottom:-88px; width:7px; height:7px; --duration: 14s; --delay: 3s; --drift-x: -18px;"></span>
+        <span class="particle" style="left:73%; bottom:-46px; width:11px; height:11px; --duration: 16s; --delay: 1.4s; --drift-x: 34px;"></span>
+        <span class="particle" style="left:86%; bottom:-74px; width:9px; height:9px; --duration: 18s; --delay: 5s; --drift-x: -28px;"></span>
+    </div>
+
+    <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+            <a href="/" class="brand" aria-label="Traffic Games home">
+                <span class="brand-mark">
+                    <img src="favicon.svg" alt="">
+                </span>
+                <span>Traffic Games</span>
             </a>
             <nav aria-label="Primary">
                 <a href="/">Home</a>
-                <a href="categories.html">Categories</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy-policy.html">Privacy</a>
+                <a href="#showcase">Featured</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+                <a href="games/traffic-jam-3d.html">Traffic Jam 3D</a>
             </nav>
         </div>
     </header>
 
-    <main class="wrap">
-        <section class="hero">
-            <div>
-                <div class="eyebrow">Review-ready site refresh</div>
-                <h1>Browser racing and driving picks, trimmed down to the pages that are easiest to trust.</h1>
-                <p>This public version of Traffic Games Online focuses on a smaller set of editorial pages, a locally hosted featured game, and clear privacy and policy links while the broader archive is being refreshed.</p>
-                <div class="actions">
-                    <a href="games/traffic-jam-3d.html" class="btn btn-primary">Open the featured game page</a>
-                    <a href="categories.html" class="btn btn-secondary">Browse the curated categories</a>
+    <main class="page">
+        <section class="section hero reveal">
+            <div class="hero-copy">
+                <div class="eyebrow">Online Driving and Racing Games</div>
+                <h1 class="hero-title">Traffic Games</h1>
+                <p class="hero-subtitle">Play fast-paced traffic, driving, parking, and racing games in one stylish place.</p>
+                <div class="hero-actions">
+                    <a href="#categories" class="btn btn-primary">Explore Games</a>
+                    <a href="#showcase" class="btn btn-secondary">Top Picks</a>
                 </div>
             </div>
-            <aside class="hero-aside">
+
+            <div class="hero-player">
+                <div class="player-top">
+                    <div>
+                        <span class="player-label" id="spotlightLabel">Play instantly</span>
+                        <strong class="player-title" id="spotlightTitle">Traffic Jam 3D</strong>
+                    </div>
+                    <a class="player-link" id="spotlightLink" href="games/traffic-jam-3d.html">Open Page</a>
+                </div>
+                <iframe
+                    id="homeGameFrame"
+                    title="Traffic Jam 3D"
+                    src="https://html5.gamedistribution.com/337302b23b5943d8bcfc501d81d50cdb/?gd_sdk_referrer_url=https%3A%2F%2Fwww.onlinegames.io%2Fcat-runner%2F"
+                    loading="eager"
+                    allow="autoplay; fullscreen; gamepad"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </section>
+
+        <aside class="ad-left"></aside>
+
+        <section class="section game-showcase reveal" id="showcase">
+            <div class="section-head reveal" style="--delay: 0.02s;">
                 <div>
-                    <strong>What changed in this release</strong>
-                    <p>We reduced the visible catalog, replaced broken support links, aligned the domain, and published clearer legal pages.</p>
+                    <h2>Featured Games</h2>
+                    <p>Jump into the most popular traffic and driving games right now.</p>
                 </div>
-                <div class="stats">
-                    <div class="stat">
+                <div class="section-meta" id="showcaseMeta">708 games live</div>
+            </div>
+            <div class="showcase-grid" id="featuredGrid"></div>
+        </section>
+
+        <section class="section category-strip reveal" id="categories">
+            <div class="section-head reveal" style="--delay: 0.02s;">
+                <div>
+                    <h2>Categories</h2>
+                </div>
+            </div>
+            <div class="category-row" id="categoryStrip"></div>
+        </section>
+
+        <section class="section cta reveal" id="cta">
+            <div class="cta-inner">
+                <div class="cta-copy">
+                    <h2>Hit the road and keep the momentum going.</h2>
+                    <p>Browse more picks, jump between categories, or return to the featured run whenever you want another fast session.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="categories.html" class="btn btn-primary">Browse All Categories</a>
+                    <a href="games/traffic-jam-3d.html" class="btn btn-secondary">Open Featured Game</a>
+                </div>
+            </div>
+        </section>
+
+        <aside class="ad-right"></aside>
+
+        <section class="section about reveal" id="about">
+            <div class="about-card">
+                <div class="about-copy">
+                    <h2>About Traffic Games</h2>
+                    <p>Traffic Games is an online collection of driving, racing, parking, and traffic challenge games. Designed with a sleek urban style, it offers quick access to exciting browser games for players who love speed and action.</p>
+                </div>
+                <div class="about-stats" id="aboutStats">
+                    <div class="about-stat">
+                        <strong>708</strong>
+                        <span>games in the archive</span>
+                    </div>
+                    <div class="about-stat">
+                        <strong>8</strong>
+                        <span>existing collections</span>
+                    </div>
+                    <div class="about-stat">
                         <strong>1</strong>
-                        <p>featured locally hosted game page</p>
-                    </div>
-                    <div class="stat">
-                        <strong>4</strong>
-                        <p>category guides written for humans</p>
-                    </div>
-                    <div class="stat">
-                        <strong>3</strong>
-                        <p>core legal pages linked site-wide</p>
+                        <span>instant homepage play</span>
                     </div>
                 </div>
-            </aside>
-        </section>
-
-        <section class="panel grid-3">
-            <article class="value-card">
-                <h3>Smaller public surface</h3>
-                <p>Instead of exposing hundreds of thin template pages, this version prioritizes a smaller public set of pages with clearer copy and simpler navigation.</p>
-            </article>
-            <article class="value-card">
-                <h3>Local featured build</h3>
-                <p>The featured game page launches a build hosted inside this project, which is easier to document and maintain than a chain of third-party embeds.</p>
-            </article>
-            <article class="value-card">
-                <h3>Working support links</h3>
-                <p>Privacy, cookie, terms, and content-policy links now point to real documents, and the sitemap only lists pages that are intentionally public.</p>
-            </article>
-        </section>
-
-        <section class="panel feature-layout">
-            <div>
-                <h2>Featured page: Traffic Jam 3D</h2>
-                <p>Traffic Jam 3D is the lead game page for this review-ready release. It has a dedicated description, a clear control summary, troubleshooting notes, and a lazy-loaded local game build so the page still contains useful publisher content before gameplay starts.</p>
-                <ul>
-                    <li>Dedicated page with original summary and play guidance</li>
-                    <li>Hosted under the same site instead of an off-site launcher</li>
-                    <li>Best suited for players who want quick, reflex-heavy traffic dodging</li>
-                </ul>
-                <div class="actions">
-                    <a href="games/traffic-jam-3d.html" class="btn btn-primary">Go to the Traffic Jam 3D page</a>
-                </div>
-                <div class="feature-meta">
-                    <span>Featured page URL</span>
-                    <a href="https://www.trafficgames.online/games/traffic-jam-3d.html">trafficgames.online/games/traffic-jam-3d.html</a>
-                </div>
-            </div>
-            <div class="feature-visual">
-                <img src="img/screenshots/ss1.png" alt="Traffic Jam 3D gameplay preview">
             </div>
         </section>
 
-        <section class="panel">
-            <h2>Current category guide set</h2>
-            <p>These category pages explain the kind of play you can expect from the collection without pushing the whole archive into the public navigation. They are meant to be simple orientation pages, not giant index dumps.</p>
-            <div class="grid-4">
-                <article class="category-card">
-                    <span>Racing</span>
-                    <h3>High-speed browser racing</h3>
-                    <p>Focused on pace, lane changes, timing, and short-session adrenaline.</p>
-                    <a href="categories.html#racing">Open racing guide</a>
-                </article>
-                <article class="category-card">
-                    <span>Driving</span>
-                    <h3>Open-road handling</h3>
-                    <p>More room to experiment with camera feel, braking rhythm, and vehicle control.</p>
-                    <a href="categories.html#driving">Open driving guide</a>
-                </article>
-                <article class="category-card">
-                    <span>Parking</span>
-                    <h3>Precision and planning</h3>
-                    <p>Lower-speed puzzle-like play built around spacing, turning radius, and route order.</p>
-                    <a href="categories.html#parking">Open parking guide</a>
-                </article>
-                <article class="category-card">
-                    <span>Traffic control</span>
-                    <h3>Flow and decision making</h3>
-                    <p>Strategy-oriented play where timing, sequencing, and risk management matter most.</p>
-                    <a href="categories.html#traffic-control">Open traffic control guide</a>
-                </article>
-            </div>
-        </section>
-
-        <section class="panel grid-3">
-            <article class="faq-item">
-                <h3>Why is the public catalog smaller right now?</h3>
-                <p>We are treating this release as a cleanup pass. Pages with repetitive structure or incomplete support links are being refreshed before they return to the public sitemap.</p>
-            </article>
-            <article class="faq-item">
-                <h3>Do games require downloads?</h3>
-                <p>No. The featured page uses a browser build hosted with the site. The goal is fast access, short load times, and less confusion about where the content lives.</p>
-            </article>
-            <article class="faq-item">
-                <h3>How do privacy choices work here?</h3>
-                <p>The site publishes separate privacy, cookie, terms, and content-policy pages. The banner below stores a simple accept or decline preference in local storage.</p>
-            </article>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="wrap footer-row">
-            <div>
-                <strong>Traffic Games Online</strong>
-                <p>A curated browser gaming site built around a smaller public page set for the May 7, 2026 review refresh.</p>
-            </div>
+        <footer class="section site-footer reveal">
+            <span class="footer-copy">Traffic Games Online</span>
             <div class="footer-links">
                 <a href="categories.html">Categories</a>
-                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="cookies.html">Cookie Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="content-policy.html">Content Policy</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </main>
 
-    <div class="cookie-banner" id="cookieConsent">
-        <div class="cookie-card">
-            <strong>Cookie choice</strong>
-            <p>We use cookies to remember basic site preferences and to support advertising. Read the <a href="/privacy-policy.html">privacy policy</a> and <a href="/cookies.html">cookie policy</a> for details.</p>
-            <div class="cookie-actions">
-                <button class="accept-btn" type="button" id="acceptCookies">Accept</button>
-                <button class="decline-btn" type="button" id="declineCookies">Decline</button>
-            </div>
-        </div>
-    </div>
-
+    <script src="js/game-hub-config.js"></script>
     <script>
         (function () {
-            var banner = document.getElementById('cookieConsent');
-            var accept = document.getElementById('acceptCookies');
-            var decline = document.getElementById('declineCookies');
-            var saved = localStorage.getItem('cookieConsent');
+            var config = window.gameHubCatalog || {};
+            var spotlight = config.featuredBuild || {};
+            var cards = [
+                {
+                    tag: "Racing",
+                    title: "Highway Racer Pro",
+                    href: "racing/GTTrafficRacer.html",
+                    image: "img/game_icon/racing/GTTrafficRacer.jpg"
+                },
+                {
+                    tag: "Driving",
+                    title: "City Traffic Driver",
+                    href: "driving/ExtremeCarDrivingSimulator.html",
+                    image: "img/game_icon/driving/ExtremeCarDrivingSimulator.jpeg"
+                },
+                {
+                    tag: "Parking",
+                    title: "Parking Master 3D",
+                    href: "parking/ParkingFury3D.html",
+                    image: "img/game_icon/parking/ParkingFury3D.jpeg"
+                },
+                {
+                    tag: "Control",
+                    title: "Traffic Control Rush",
+                    href: "trafficControl/TrafficTapSurvival.html",
+                    image: "img/game_icon/trafficControl/TrafficTapSurvival.jpg"
+                }
+            ];
+            var categoryItems = [
+                { label: "Traffic Driving", href: "driving-games.html" },
+                { label: "Car Racing", href: "racing-games.html" },
+                { label: "Highway Escape", href: "escape-games.html" },
+                { label: "Parking Challenge", href: "parking-games.html" },
+                { label: "Traffic Control", href: "traffic-control-games.html" },
+                { label: "Reaction Games", href: "clicker-games.html" }
+            ];
 
-            if (!saved && banner) {
-                banner.style.display = 'block';
+            var spotlightLabel = document.getElementById("spotlightLabel");
+            var spotlightTitle = document.getElementById("spotlightTitle");
+            var spotlightLink = document.getElementById("spotlightLink");
+            var homeGameFrame = document.getElementById("homeGameFrame");
+            var featuredGrid = document.getElementById("featuredGrid");
+            var categoryStrip = document.getElementById("categoryStrip");
+            var showcaseMeta = document.getElementById("showcaseMeta");
+            var aboutStats = document.getElementById("aboutStats");
+            var topbar = document.getElementById("topbar");
+            var reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+
+            if (spotlight.label && spotlightLabel) {
+                spotlightLabel.textContent = spotlight.label;
             }
 
-            if (accept) {
-                accept.addEventListener('click', function () {
-                    localStorage.setItem('cookieConsent', 'accepted');
-                    banner.style.display = 'none';
+            if (spotlight.title && spotlightTitle) {
+                spotlightTitle.textContent = spotlight.title;
+            }
+
+            if (spotlight.href && spotlightLink) {
+                spotlightLink.href = spotlight.href;
+            }
+
+            if (spotlight.iframeSrc && homeGameFrame && homeGameFrame.src !== spotlight.iframeSrc) {
+                homeGameFrame.src = spotlight.iframeSrc;
+            }
+
+            if (showcaseMeta) {
+                showcaseMeta.textContent = String(config.totalGames || 708) + " games live";
+            }
+
+            if (featuredGrid) {
+                featuredGrid.innerHTML = cards.map(function (card, index) {
+                    return '' +
+                        '<article class="game-card reveal" style="--delay:' + String(index * 0.12) + 's">' +
+                            '<a href="' + card.href + '">' +
+                                '<div class="game-media">' +
+                                    '<img src="' + card.image + '" alt="' + escapeHtml(card.title) + '">' +
+                                '</div>' +
+                                '<div class="game-copy">' +
+                                    '<span class="game-tag">' + escapeHtml(card.tag) + '</span>' +
+                                    '<h3>' + escapeHtml(card.title) + '</h3>' +
+                                    '<span class="btn btn-secondary card-link">Play Now</span>' +
+                                '</div>' +
+                            '</a>' +
+                        '</article>';
+                }).join("");
+                reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+            }
+
+            if (categoryStrip) {
+                categoryStrip.innerHTML = categoryItems.map(function (item, index) {
+                    return '' +
+                        '<a class="category-chip reveal" style="--delay:' + String(index * 0.08) + 's" href="' + item.href + '">' +
+                            '<span class="chip-mark" aria-hidden="true"></span>' +
+                            '<span>' + escapeHtml(item.label) + '</span>' +
+                        '</a>';
+                }).join("");
+                reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+            }
+
+            if (aboutStats) {
+                var categoryCount = config.categoryCount || 8;
+                aboutStats.innerHTML = '' +
+                    '<div class="about-stat"><strong>' + String(config.totalGames || 708) + '</strong><span>games in the archive</span></div>' +
+                    '<div class="about-stat"><strong>' + String(categoryCount) + '</strong><span>existing collections</span></div>' +
+                    '<div class="about-stat"><strong>1</strong><span>instant homepage play</span></div>';
+            }
+
+            if ("IntersectionObserver" in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.16,
+                    rootMargin: "0px 0px -40px 0px"
+                });
+
+                reveals.forEach(function (item) {
+                    observer.observe(item);
+                });
+            } else {
+                reveals.forEach(function (item) {
+                    item.classList.add("is-visible");
                 });
             }
 
-            if (decline) {
-                decline.addEventListener('click', function () {
-                    localStorage.setItem('cookieConsent', 'declined');
-                    banner.style.display = 'none';
-                });
+            updateScene();
+            window.addEventListener("scroll", updateScene, { passive: true });
+            window.addEventListener("resize", updateScene);
+
+            function updateScene() {
+                var offset = window.scrollY || window.pageYOffset || 0;
+                document.documentElement.style.setProperty("--scroll-y", offset + "px");
+                if (topbar) {
+                    topbar.classList.toggle("is-scrolled", offset > 12);
+                }
+            }
+
+            function escapeHtml(value) {
+                return String(value)
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#39;");
             }
         })();
     </script>
