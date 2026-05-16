@@ -398,14 +398,20 @@
         }
 
         .game-card a {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 12px;
             height: 100%;
+            padding: 12px;
             text-decoration: none;
         }
 
         .game-thumb {
-            aspect-ratio: 16 / 11;
+            width: 72px;
+            height: 72px;
+            flex: 0 0 72px;
             overflow: hidden;
+            border-radius: 16px;
             background: rgba(8, 14, 26, 0.72);
         }
 
@@ -421,16 +427,12 @@
         }
 
         .game-copy {
-            padding: 16px;
+            padding: 0;
         }
 
         .game-copy h3 {
-            font-size: 1.04rem;
-        }
-
-        .game-copy p {
-            margin: 8px 0 0;
-            font-size: 0.93rem;
+            font-size: 0.98rem;
+            line-height: 1.18;
         }
 
         .trail {
@@ -604,9 +606,9 @@
             if (miniNav) {
                 miniNav.innerHTML = categories.map(function (category) {
                     return '' +
-                        '<a href="#' + category.id + '">' +
+                        '<a href="' + (category.pageHref || ('categories.html#' + category.id)) + '">' +
                             '<strong>' + escapeHtml(category.label) + '</strong>' +
-                            '<span>' + escapeHtml(category.description) + '</span>' +
+                            '<span>View all games</span>' +
                         '</a>';
                 }).join('');
             }
@@ -623,7 +625,6 @@
                                     '</div>' +
                                     '<div class="game-copy">' +
                                         '<h3>' + escapeHtml(item.title) + '</h3>' +
-                                        '<p>' + escapeHtml(item.blurb) + '</p>' +
                                     '</div>' +
                                 '</a>' +
                             '</article>';
@@ -645,7 +646,7 @@
                                     '<div class="trail">' + trails + '</div>' +
                                 '</div>' +
                                 '<div class="category-action">' +
-                                    '<a href="' + category.href + '">Link to this section</a>' +
+                                    '<a href="' + (category.pageHref || category.href) + '">View all games</a>' +
                                 '</div>' +
                             '</div>' +
                             '<div class="game-grid">' + games + '</div>' +

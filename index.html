@@ -20,6 +20,8 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
+    <link rel="dns-prefetch" href="//html5.gamedistribution.com">
+    <link rel="preconnect" href="https://html5.gamedistribution.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -201,44 +203,103 @@
             font-size: 1.04rem;
         }
 
-        .topbar nav {
+        .nav {
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-end;
-            gap: 18px;
+            align-items: center;
+            gap: 12px;
         }
 
-        .topbar nav a {
+        .nav-link {
             position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 42px;
+            padding: 10px 14px;
+            border-radius: 14px;
+            border: 1px solid transparent;
             color: var(--muted);
             text-decoration: none;
-            font-size: 0.93rem;
+            font-size: 0.92rem;
             font-weight: 700;
-            transition: color 0.22s ease;
+            background: rgba(255, 255, 255, 0.02);
+            transition: color 0.22s ease, border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+            cursor: pointer;
+            list-style: none;
         }
 
-        .topbar nav a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: -8px;
-            height: 2px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, rgba(72, 216, 255, 0), rgba(72, 216, 255, 1), rgba(255, 180, 77, 1), rgba(255, 180, 77, 0));
-            opacity: 0;
-            transform: scaleX(0.3);
-            transition: opacity 0.22s ease, transform 0.22s ease;
-            box-shadow: 0 0 12px rgba(72, 216, 255, 0.28);
-        }
-
-        .topbar nav a:hover {
+        .nav-link:hover,
+        .nav-dropdown[open] > .nav-link {
             color: var(--text);
+            border-color: rgba(72, 216, 255, 0.18);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 0 1px rgba(72, 216, 255, 0.08), 0 0 18px rgba(72, 216, 255, 0.08);
         }
 
-        .topbar nav a:hover::after {
-            opacity: 1;
-            transform: scaleX(1);
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .dropdown-arrow {
+            color: var(--muted-strong);
+            font-size: 0.76rem;
+            transition: transform 0.2s ease;
+        }
+
+        .nav-dropdown[open] .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            min-width: 230px;
+            padding: 12px;
+            display: grid;
+            gap: 8px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(8, 14, 22, 0.95);
+            box-shadow: 0 22px 46px rgba(1, 6, 16, 0.42);
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            border: 1px solid transparent;
+            color: var(--muted);
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.03);
+            transition: color 0.22s ease, border-color 0.22s ease, background 0.22s ease, transform 0.22s ease;
+        }
+
+        .dropdown-item:hover {
+            color: var(--text);
+            border-color: rgba(72, 216, 255, 0.18);
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateX(2px);
+        }
+
+        .dropdown-icon {
+            width: 28px;
+            height: 28px;
+            flex: 0 0 28px;
+            border-radius: 10px;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .dropdown-text {
+            line-height: 1.2;
         }
 
         .page {
@@ -514,14 +575,66 @@
             text-shadow: 0 0 16px rgba(72, 216, 255, 0.18);
         }
 
+        .player-stage {
+            position: relative;
+            min-height: 458px;
+            background: #05080d;
+        }
+
         .hero-player iframe {
             position: relative;
             z-index: 1;
             display: block;
             width: 100%;
+            height: 100%;
             min-height: 458px;
             border: 0;
             background: #05080d;
+        }
+
+        .player-fullscreen {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            z-index: 2;
+            width: 48px;
+            height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 14px;
+            background: rgba(6, 10, 16, 0.72);
+            color: var(--text);
+            cursor: pointer;
+            box-shadow: 0 12px 26px rgba(1, 6, 16, 0.3);
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .player-fullscreen:hover {
+            transform: translateY(-2px);
+            border-color: rgba(72, 216, 255, 0.24);
+            background: rgba(10, 16, 24, 0.88);
+            box-shadow: 0 0 0 1px rgba(72, 216, 255, 0.12), 0 0 18px rgba(72, 216, 255, 0.12);
+        }
+
+        .player-fullscreen:active {
+            transform: scale(0.97);
+        }
+
+        .player-stage:fullscreen,
+        .player-stage:-webkit-full-screen {
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+            background: #000;
+        }
+
+        .player-stage:fullscreen iframe,
+        .player-stage:-webkit-full-screen iframe {
+            min-height: 100vh;
+            height: 100vh;
         }
 
         .section-head {
@@ -560,8 +673,8 @@
 
         .showcase-grid {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 14px;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 12px;
         }
 
         .game-card {
@@ -598,20 +711,17 @@
         }
 
         .game-card a {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 12px;
+            display: block;
             min-height: 100%;
+            padding: 10px;
             text-decoration: none;
         }
 
         .game-media {
             position: relative;
             overflow: hidden;
-            width: 74px;
-            height: 74px;
-            flex: 0 0 74px;
+            width: 100%;
+            aspect-ratio: 1 / 1;
             border-radius: 18px;
             background: #08121b;
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -646,21 +756,21 @@
         .game-copy {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             min-width: 0;
-            padding: 0;
+            padding: 12px 2px 2px;
         }
 
         .game-tag {
             display: inline-flex;
             align-items: center;
             width: fit-content;
-            min-height: 28px;
-            padding: 5px 10px;
+            min-height: 24px;
+            padding: 4px 8px;
             border-radius: 999px;
             background: rgba(255, 255, 255, 0.06);
             color: #d8e5f4;
-            font-size: 0.74rem;
+            font-size: 0.68rem;
             font-weight: 800;
             letter-spacing: 0.08em;
             text-transform: uppercase;
@@ -674,45 +784,16 @@
             opacity: 1;
         }
 
-        .game-copy h3,
-        .card-link {
-            transition: opacity 0.26s ease, transform 0.26s ease;
-        }
-
         .game-copy h3 {
-            margin-top: 10px;
+            margin-top: 8px;
             opacity: 0.92;
-            font-size: 1rem;
-            line-height: 1.18;
+            font-size: 0.92rem;
+            line-height: 1.25;
+            transition: opacity 0.26s ease;
         }
 
         .game-card:hover .game-copy h3 {
             opacity: 1;
-        }
-
-        .card-link {
-            width: fit-content;
-            margin-top: 12px;
-            background: rgba(255, 255, 255, 0.05);
-            min-height: 38px;
-            padding: 9px 14px;
-            font-size: 0.84rem;
-        }
-
-        .card-link::after {
-            content: "->";
-            margin-left: 8px;
-            transition: transform 0.22s ease;
-        }
-
-        .game-card:hover .card-link {
-            background: linear-gradient(135deg, rgba(72, 216, 255, 0.18), rgba(255, 180, 77, 0.12));
-            border-color: rgba(72, 216, 255, 0.28);
-            box-shadow: 0 0 0 1px rgba(72, 216, 255, 0.14), 0 0 18px rgba(72, 216, 255, 0.1);
-        }
-
-        .game-card:hover .card-link::after {
-            transform: translateX(4px);
         }
 
         .category-row {
@@ -1004,7 +1085,7 @@
 
         @media (max-width: 1160px) {
             .showcase-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-template-columns: repeat(5, minmax(0, 1fr));
             }
 
             .category-row {
@@ -1026,14 +1107,14 @@
                 flex-direction: column;
             }
 
-            .topbar nav,
+            .nav,
             .footer-links,
             .about-stats {
                 justify-content: flex-start;
             }
 
             .showcase-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-columns: repeat(4, minmax(0, 1fr));
             }
 
             .category-row {
@@ -1072,7 +1153,10 @@
                 min-height: 310px;
             }
 
-            .showcase-grid,
+            .showcase-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
             .category-row {
                 grid-template-columns: 1fr;
             }
@@ -1098,12 +1182,61 @@
                 </span>
                 <span>Traffic Games</span>
             </a>
-            <nav aria-label="Primary">
-                <a href="/">Home</a>
-                <a href="#showcase">Featured</a>
-                <a href="#categories">Categories</a>
-                <a href="#about">About</a>
-                <a href="games/traffic-jam-3d.html">Traffic Jam 3D</a>
+            <nav class="nav" aria-label="Primary">
+                <a href="/" class="nav-link">Home</a>
+                <details class="nav-dropdown">
+                    <summary class="nav-link">Racing &amp; Driving <span class="dropdown-arrow">▼</span></summary>
+                    <div class="dropdown-menu">
+                        <a href="racing-games.html" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);"></span>
+                            <span class="dropdown-text">Racing Games</span>
+                        </a>
+                        <a href="driving-games.html" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);"></span>
+                            <span class="dropdown-text">Driving Games</span>
+                        </a>
+                    </div>
+                </details>
+                <details class="nav-dropdown">
+                    <summary class="nav-link">Parking &amp; Control <span class="dropdown-arrow">▼</span></summary>
+                    <div class="dropdown-menu">
+                        <a href="parking-games.html" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);"></span>
+                            <span class="dropdown-text">Parking Games</span>
+                        </a>
+                        <a href="traffic-control-games.html" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);"></span>
+                            <span class="dropdown-text">Traffic Control</span>
+                        </a>
+                    </div>
+                </details>
+                <details class="nav-dropdown">
+                    <summary class="nav-link">Fun &amp; Casual <span class="dropdown-arrow">▼</span></summary>
+                    <div class="dropdown-menu">
+                        <a href="escape-games.html" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);"></span>
+                            <span class="dropdown-text">Escape Games</span>
+                        </a>
+                        <a href="clicker-games.html" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);"></span>
+                            <span class="dropdown-text">Clicker Games</span>
+                        </a>
+                        <a href="two-player-games.html" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #14b8a6, #0d9488);"></span>
+                            <span class="dropdown-text">2 Player Games</span>
+                        </a>
+                    </div>
+                </details>
+                <details class="nav-dropdown">
+                    <summary class="nav-link">Trivia <span class="dropdown-arrow">▼</span></summary>
+                    <div class="dropdown-menu">
+                        <a href="trivia-games.html" class="dropdown-item">
+                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);"></span>
+                            <span class="dropdown-text">Trivia Games</span>
+                        </a>
+                    </div>
+                </details>
+                <a href="games/traffic-jam-3d.html" class="nav-link">Traffic Jam 3D</a>
             </nav>
         </div>
     </header>
@@ -1128,14 +1261,21 @@
                     </div>
                     <a class="player-link" id="spotlightLink" href="games/traffic-jam-3d.html">Open Page</a>
                 </div>
-                <iframe
-                    id="homeGameFrame"
-                    title="Traffic Jam 3D"
-                    src="https://html5.gamedistribution.com/337302b23b5943d8bcfc501d81d50cdb/?gd_sdk_referrer_url=https%3A%2F%2Fwww.onlinegames.io%2Fcat-runner%2F"
-                    loading="eager"
-                    allow="autoplay; fullscreen; gamepad"
-                    allowfullscreen
-                ></iframe>
+                <div class="player-stage" id="playerStage">
+                    <iframe
+                        id="homeGameFrame"
+                        title="Traffic Jam 3D"
+                        src="https://html5.gamedistribution.com/337302b23b5943d8bcfc501d81d50cdb/?gd_sdk_referrer_url=https%3A%2F%2Fwww.onlinegames.io%2Fcat-runner%2F"
+                        loading="eager"
+                        allow="autoplay; fullscreen; gamepad"
+                        allowfullscreen
+                    ></iframe>
+                    <button class="player-fullscreen" id="fullscreenBtn" type="button" aria-label="Fullscreen game">
+                        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                            <path fill="currentColor" d="M4 9V4h5v2H6v3zm10-5h5v5h-2V6h-3zM4 15h2v3h3v2H4zm13 3v-3h2v5h-5v-2z"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -1147,9 +1287,131 @@
                     <h2>Featured Games</h2>
                     <p>Jump into the most popular traffic and driving games right now.</p>
                 </div>
-                <div class="section-meta" id="showcaseMeta">708 games live</div>
+                <div class="section-meta">708 games live</div>
             </div>
-            <div class="showcase-grid" id="featuredGrid"></div>
+            <div class="showcase-grid">
+                <article class="game-card reveal" style="--delay:0s">
+                    <a href="racing/GTTrafficRacer.html">
+                        <div class="game-media">
+                            <img src="img/game_icon/racing/GTTrafficRacer.jpg" alt="GT Traffic Racer">
+                        </div>
+                        <div class="game-copy">
+                            <span class="game-tag">Racing</span>
+                            <h3>GT Traffic Racer</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="game-card reveal" style="--delay:0.12s">
+                    <a href="driving/ExtremeCarDrivingSimulator.html">
+                        <div class="game-media">
+                            <img src="img/game_icon/driving/ExtremeCarDrivingSimulator.jpeg" alt="Extreme Car Driving Simulator">
+                        </div>
+                        <div class="game-copy">
+                            <span class="game-tag">Driving</span>
+                            <h3>Extreme Car Driving Simulator</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="game-card reveal" style="--delay:0.24s">
+                    <a href="parking/ParkingFury3D.html">
+                        <div class="game-media">
+                            <img src="img/game_icon/parking/ParkingFury3D.jpeg" alt="Parking Fury 3D">
+                        </div>
+                        <div class="game-copy">
+                            <span class="game-tag">Parking</span>
+                            <h3>Parking Fury 3D</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="game-card reveal" style="--delay:0.36s">
+                    <a href="trafficControl/TrafficTapSurvival.html">
+                        <div class="game-media">
+                            <img src="img/game_icon/trafficControl/TrafficTapSurvival.jpg" alt="Traffic Tap Survival">
+                        </div>
+                        <div class="game-copy">
+                            <span class="game-tag">Control</span>
+                            <h3>Traffic Tap Survival</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="game-card reveal" style="--delay:0.48s">
+                    <a href="racing/HOTGEAR.html">
+                        <div class="game-media">
+                            <img src="img/game_icon/racing/HOTGEAR.jpg" alt="HOTGEAR">
+                        </div>
+                        <div class="game-copy">
+                            <span class="game-tag">Racing</span>
+                            <h3>HOTGEAR</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="game-card reveal" style="--delay:0.6s">
+                    <a href="escape/SCP173Escape.html">
+                        <div class="game-media">
+                            <img src="img/game_icon/escape/SCP173Escape.jpg" alt="SCP 173 Escape">
+                        </div>
+                        <div class="game-copy">
+                            <span class="game-tag">Escape</span>
+                            <h3>SCP 173 Escape</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="game-card reveal" style="--delay:0.72s">
+                    <a href="clicker/CapybaraCoinMaster.html">
+                        <div class="game-media">
+                            <img src="img/game_icon/clicker/CapybaraCoinMaster.jpg" alt="Capybara Coin Master">
+                        </div>
+                        <div class="game-copy">
+                            <span class="game-tag">Clicker</span>
+                            <h3>Capybara Coin Master</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="game-card reveal" style="--delay:0.84s">
+                    <a href="twoPlayer/BasketballStars2026.html">
+                        <div class="game-media">
+                            <img src="img/game_icon/twoPlayer/BasketballStars2026.jpg" alt="Basketball Stars 2026">
+                        </div>
+                        <div class="game-copy">
+                            <span class="game-tag">2 Player</span>
+                            <h3>Basketball Stars 2026</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="game-card reveal" style="--delay:0.96s">
+                    <a href="trivia/FlagMasterWorldFlagsQuiz.html">
+                        <div class="game-media">
+                            <img src="img/game_icon/trivia/FlagMasterWorldFlagsQuiz.jpg" alt="Flag Master World Flags Quiz">
+                        </div>
+                        <div class="game-copy">
+                            <span class="game-tag">Trivia</span>
+                            <h3>Flag Master</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="game-card reveal" style="--delay:1.08s">
+                    <a href="parking/ParkingJamEscape.html">
+                        <div class="game-media">
+                            <img src="img/game_icon/parking/ParkingJamEscape.jpeg" alt="Parking Jam Escape">
+                        </div>
+                        <div class="game-copy">
+                            <span class="game-tag">Parking</span>
+                            <h3>Parking Jam Escape</h3>
+                        </div>
+                    </a>
+                </article>
+                <article class="game-card reveal" style="--delay:1.2s">
+                    <a href="driving/CityBusSimulator3D.html">
+                        <div class="game-media">
+                            <img src="img/game_icon/driving/CityBusSimulator3D.jpeg" alt="City Bus Simulator 3D">
+                        </div>
+                        <div class="game-copy">
+                            <span class="game-tag">Driving</span>
+                            <h3>City Bus Simulator 3D</h3>
+                        </div>
+                    </a>
+                </article>
+            </div>
         </section>
 
         <section class="section category-strip reveal" id="categories">
@@ -1158,7 +1420,32 @@
                     <h2>Categories</h2>
                 </div>
             </div>
-            <div class="category-row" id="categoryStrip"></div>
+            <div class="category-row">
+                <a class="category-chip reveal" style="--delay:0s" href="driving-games.html">
+                    <span class="chip-mark" aria-hidden="true"></span>
+                    <span>Traffic Driving</span>
+                </a>
+                <a class="category-chip reveal" style="--delay:0.08s" href="racing-games.html">
+                    <span class="chip-mark" aria-hidden="true"></span>
+                    <span>Car Racing</span>
+                </a>
+                <a class="category-chip reveal" style="--delay:0.16s" href="escape-games.html">
+                    <span class="chip-mark" aria-hidden="true"></span>
+                    <span>Highway Escape</span>
+                </a>
+                <a class="category-chip reveal" style="--delay:0.24s" href="parking-games.html">
+                    <span class="chip-mark" aria-hidden="true"></span>
+                    <span>Parking Challenge</span>
+                </a>
+                <a class="category-chip reveal" style="--delay:0.32s" href="traffic-control-games.html">
+                    <span class="chip-mark" aria-hidden="true"></span>
+                    <span>Traffic Control</span>
+                </a>
+                <a class="category-chip reveal" style="--delay:0.4s" href="clicker-games.html">
+                    <span class="chip-mark" aria-hidden="true"></span>
+                    <span>Reaction Games</span>
+                </a>
+            </div>
         </section>
 
         <section class="section cta reveal" id="cta">
@@ -1182,7 +1469,7 @@
                     <h2>About Traffic Games</h2>
                     <p>Traffic Games is an online collection of driving, racing, parking, and traffic challenge games. Designed with a sleek urban style, it offers quick access to exciting browser games for players who love speed and action.</p>
                 </div>
-                <div class="about-stats" id="aboutStats">
+                <div class="about-stats">
                     <div class="about-stat">
                         <strong>708</strong>
                         <span>games in the archive</span>
@@ -1209,115 +1496,13 @@
             </div>
         </footer>
     </main>
-
-    <script src="js/game-hub-config.js"></script>
     <script>
         (function () {
-            var config = window.gameHubCatalog || {};
-            var spotlight = config.featuredBuild || {};
-            var cards = [
-                {
-                    tag: "Racing",
-                    title: "Highway Racer Pro",
-                    href: "racing/GTTrafficRacer.html",
-                    image: "img/game_icon/racing/GTTrafficRacer.jpg"
-                },
-                {
-                    tag: "Driving",
-                    title: "City Traffic Driver",
-                    href: "driving/ExtremeCarDrivingSimulator.html",
-                    image: "img/game_icon/driving/ExtremeCarDrivingSimulator.jpeg"
-                },
-                {
-                    tag: "Parking",
-                    title: "Parking Master 3D",
-                    href: "parking/ParkingFury3D.html",
-                    image: "img/game_icon/parking/ParkingFury3D.jpeg"
-                },
-                {
-                    tag: "Control",
-                    title: "Traffic Control Rush",
-                    href: "trafficControl/TrafficTapSurvival.html",
-                    image: "img/game_icon/trafficControl/TrafficTapSurvival.jpg"
-                }
-            ];
-            var categoryItems = [
-                { label: "Traffic Driving", href: "driving-games.html" },
-                { label: "Car Racing", href: "racing-games.html" },
-                { label: "Highway Escape", href: "escape-games.html" },
-                { label: "Parking Challenge", href: "parking-games.html" },
-                { label: "Traffic Control", href: "traffic-control-games.html" },
-                { label: "Reaction Games", href: "clicker-games.html" }
-            ];
-
-            var spotlightLabel = document.getElementById("spotlightLabel");
-            var spotlightTitle = document.getElementById("spotlightTitle");
-            var spotlightLink = document.getElementById("spotlightLink");
-            var homeGameFrame = document.getElementById("homeGameFrame");
-            var featuredGrid = document.getElementById("featuredGrid");
-            var categoryStrip = document.getElementById("categoryStrip");
-            var showcaseMeta = document.getElementById("showcaseMeta");
-            var aboutStats = document.getElementById("aboutStats");
             var topbar = document.getElementById("topbar");
+            var playerStage = document.getElementById("playerStage");
+            var fullscreenBtn = document.getElementById("fullscreenBtn");
+            var navDropdowns = Array.prototype.slice.call(document.querySelectorAll(".nav-dropdown"));
             var reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
-
-            if (spotlight.label && spotlightLabel) {
-                spotlightLabel.textContent = spotlight.label;
-            }
-
-            if (spotlight.title && spotlightTitle) {
-                spotlightTitle.textContent = spotlight.title;
-            }
-
-            if (spotlight.href && spotlightLink) {
-                spotlightLink.href = spotlight.href;
-            }
-
-            if (spotlight.iframeSrc && homeGameFrame && homeGameFrame.src !== spotlight.iframeSrc) {
-                homeGameFrame.src = spotlight.iframeSrc;
-            }
-
-            if (showcaseMeta) {
-                showcaseMeta.textContent = String(config.totalGames || 708) + " games live";
-            }
-
-            if (featuredGrid) {
-                featuredGrid.innerHTML = cards.map(function (card, index) {
-                    return '' +
-                        '<article class="game-card reveal" style="--delay:' + String(index * 0.12) + 's">' +
-                            '<a href="' + card.href + '">' +
-                                '<div class="game-media">' +
-                                    '<img src="' + card.image + '" alt="' + escapeHtml(card.title) + '">' +
-                                '</div>' +
-                                '<div class="game-copy">' +
-                                    '<span class="game-tag">' + escapeHtml(card.tag) + '</span>' +
-                                    '<h3>' + escapeHtml(card.title) + '</h3>' +
-                                    '<span class="btn btn-secondary card-link">Play Now</span>' +
-                                '</div>' +
-                            '</a>' +
-                        '</article>';
-                }).join("");
-                reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
-            }
-
-            if (categoryStrip) {
-                categoryStrip.innerHTML = categoryItems.map(function (item, index) {
-                    return '' +
-                        '<a class="category-chip reveal" style="--delay:' + String(index * 0.08) + 's" href="' + item.href + '">' +
-                            '<span class="chip-mark" aria-hidden="true"></span>' +
-                            '<span>' + escapeHtml(item.label) + '</span>' +
-                        '</a>';
-                }).join("");
-                reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
-            }
-
-            if (aboutStats) {
-                var categoryCount = config.categoryCount || 8;
-                aboutStats.innerHTML = '' +
-                    '<div class="about-stat"><strong>' + String(config.totalGames || 708) + '</strong><span>games in the archive</span></div>' +
-                    '<div class="about-stat"><strong>' + String(categoryCount) + '</strong><span>existing collections</span></div>' +
-                    '<div class="about-stat"><strong>1</strong><span>instant homepage play</span></div>';
-            }
 
             if ("IntersectionObserver" in window) {
                 var observer = new IntersectionObserver(function (entries) {
@@ -1345,21 +1530,53 @@
             window.addEventListener("scroll", updateScene, { passive: true });
             window.addEventListener("resize", updateScene);
 
+            if (fullscreenBtn && playerStage) {
+                fullscreenBtn.addEventListener("click", function () {
+                    if (document.fullscreenElement === playerStage || document.webkitFullscreenElement === playerStage) {
+                        if (document.exitFullscreen) {
+                            document.exitFullscreen();
+                        } else if (document.webkitExitFullscreen) {
+                            document.webkitExitFullscreen();
+                        }
+                        return;
+                    }
+
+                    if (playerStage.requestFullscreen) {
+                        playerStage.requestFullscreen();
+                    } else if (playerStage.webkitRequestFullscreen) {
+                        playerStage.webkitRequestFullscreen();
+                    }
+                });
+            }
+
+            navDropdowns.forEach(function (dropdown) {
+                dropdown.addEventListener("toggle", function () {
+                    if (!dropdown.open) {
+                        return;
+                    }
+
+                    navDropdowns.forEach(function (other) {
+                        if (other !== dropdown) {
+                            other.open = false;
+                        }
+                    });
+                });
+            });
+
+            document.addEventListener("click", function (event) {
+                navDropdowns.forEach(function (dropdown) {
+                    if (!dropdown.contains(event.target)) {
+                        dropdown.open = false;
+                    }
+                });
+            });
+
             function updateScene() {
                 var offset = window.scrollY || window.pageYOffset || 0;
                 document.documentElement.style.setProperty("--scroll-y", offset + "px");
                 if (topbar) {
                     topbar.classList.toggle("is-scrolled", offset > 12);
                 }
-            }
-
-            function escapeHtml(value) {
-                return String(value)
-                    .replace(/&/g, "&amp;")
-                    .replace(/</g, "&lt;")
-                    .replace(/>/g, "&gt;")
-                    .replace(/"/g, "&quot;")
-                    .replace(/'/g, "&#39;");
             }
         })();
     </script>
