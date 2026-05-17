@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Traffic Games is a stylish browser collection of traffic, driving, parking, and racing games with instant homepage play.">
-    <meta name="keywords" content="traffic games, driving games, racing games, parking games, browser games">
+    <meta name="description" content="Traffic Games is a focused platform for browser-based traffic driving games with instant play, featured picks, category pages, and fast game discovery.">
+    <meta name="keywords" content="traffic games, driving games, racing games, parking games, browser games, traffic jam 3d">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="author" content="Traffic Games">
-    <meta property="og:title" content="Traffic Games | Online Driving and Racing Games">
-    <meta property="og:description" content="Play fast-paced traffic, driving, parking, and racing games in one stylish place.">
+    <meta property="og:title" content="Traffic Games | Play The Best Traffic Games Online">
+    <meta property="og:description" content="Drive, race, park and escape in free browser games with instant homepage play.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.trafficgames.online/">
     <meta property="og:site_name" content="Traffic Games">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Traffic Games | Online Driving and Racing Games">
-    <meta name="twitter:description" content="Play fast-paced traffic, driving, parking, and racing games in one stylish place.">
-    <title>Traffic Games | Online Driving and Racing Games</title>
+    <meta name="twitter:title" content="Traffic Games | Play The Best Traffic Games Online">
+    <meta name="twitter:description" content="Drive, race, park and escape in free browser games with instant homepage play.">
+    <title>Traffic Games | Play The Best Traffic Games Online</title>
     <link rel="canonical" href="https://www.trafficgames.online/">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
@@ -32,35 +32,33 @@
         "@type": "WebSite",
         "name": "Traffic Games",
         "url": "https://www.trafficgames.online/",
-        "description": "An online collection of traffic, driving, parking, and racing games with instant homepage play.",
+        "description": "A focused platform for traffic driving games with featured picks, category pages, and instant homepage play.",
         "inLanguage": "en"
     }
     </script>
     <style>
         :root {
-            --bg: #04070b;
-            --bg-deep: #07111a;
-            --surface: rgba(8, 14, 22, 0.74);
-            --surface-strong: rgba(10, 17, 27, 0.92);
-            --surface-soft: rgba(255, 255, 255, 0.05);
-            --line: rgba(255, 255, 255, 0.1);
-            --line-strong: rgba(255, 255, 255, 0.18);
-            --text: #f4f8ff;
-            --muted: #94a8c1;
-            --muted-strong: #cfe0f2;
-            --cyan: #48d8ff;
-            --cyan-soft: rgba(72, 216, 255, 0.22);
-            --amber: #ffb44d;
-            --amber-soft: rgba(255, 180, 77, 0.2);
-            --green: #7ef1b7;
-            --rose: #ff738b;
-            --shadow: 0 30px 90px rgba(1, 6, 16, 0.48);
-            --glow-cyan: 0 0 0 1px rgba(72, 216, 255, 0.18), 0 0 22px rgba(72, 216, 255, 0.16);
-            --glow-amber: 0 0 0 1px rgba(255, 180, 77, 0.2), 0 0 24px rgba(255, 180, 77, 0.18);
-            --radius-xl: 30px;
-            --radius-lg: 24px;
-            --radius-md: 18px;
-            --content-width: min(1220px, calc(100% - 24px));
+            --bg: #0b1120;
+            --bg-deep: #070d18;
+            --panel: rgba(17, 24, 39, 0.92);
+            --panel-strong: rgba(15, 23, 42, 0.98);
+            --panel-soft: rgba(255, 255, 255, 0.04);
+            --line: rgba(148, 163, 184, 0.14);
+            --line-strong: rgba(148, 163, 184, 0.26);
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --muted-strong: #cbd5e1;
+            --primary: #38bdf8;
+            --primary-soft: rgba(56, 189, 248, 0.18);
+            --accent: #22c55e;
+            --accent-soft: rgba(34, 197, 94, 0.18);
+            --race: #ef4444;
+            --escape: #fb923c;
+            --parking: #22c55e;
+            --control: #facc15;
+            --reaction: #a855f7;
+            --shadow: 0 28px 70px rgba(2, 8, 23, 0.44);
+            --wrap: min(1280px, calc(100% - 24px));
             --scroll-y: 0px;
         }
 
@@ -77,9 +75,9 @@
             color: var(--text);
             font-family: "Manrope", sans-serif;
             background:
-                radial-gradient(circle at 16% 12%, rgba(72, 216, 255, 0.22), transparent 18%),
-                radial-gradient(circle at 84% 18%, rgba(255, 180, 77, 0.18), transparent 16%),
-                linear-gradient(180deg, #03060a 0%, #071019 42%, #060b11 100%);
+                radial-gradient(circle at 14% 10%, rgba(56, 189, 248, 0.16), transparent 18%),
+                radial-gradient(circle at 84% 12%, rgba(168, 85, 247, 0.12), transparent 16%),
+                linear-gradient(180deg, #080d18 0%, #0b1120 38%, #070d18 100%);
             overflow-x: hidden;
         }
 
@@ -94,20 +92,20 @@
 
         body::before {
             background:
-                radial-gradient(circle at 20% 30%, rgba(72, 216, 255, 0.12), transparent 20%),
-                radial-gradient(circle at 80% 20%, rgba(255, 180, 77, 0.1), transparent 18%),
-                linear-gradient(120deg, rgba(72, 216, 255, 0.05), transparent 30%, rgba(255, 115, 139, 0.05) 68%, transparent 100%);
-            filter: blur(22px);
-            animation: skyShift 16s ease-in-out infinite alternate;
+                radial-gradient(circle at 20% 24%, rgba(56, 189, 248, 0.1), transparent 16%),
+                radial-gradient(circle at 80% 18%, rgba(239, 68, 68, 0.08), transparent 16%),
+                linear-gradient(110deg, rgba(56, 189, 248, 0.04), transparent 32%, rgba(34, 197, 94, 0.04) 64%, transparent 100%);
+            filter: blur(18px);
+            animation: skyShift 18s ease-in-out infinite alternate;
             transform: translateY(calc(var(--scroll-y) * -0.03));
         }
 
         body::after {
             background:
-                linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 34%),
-                repeating-linear-gradient(90deg, transparent 0 116px, rgba(255, 255, 255, 0.018) 116px 117px);
-            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.82), transparent 88%);
-            opacity: 0.8;
+                linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 30%),
+                repeating-linear-gradient(90deg, transparent 0 108px, rgba(255, 255, 255, 0.016) 108px 109px);
+            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.86), transparent 88%);
+            opacity: 0.7;
         }
 
         a {
@@ -127,43 +125,204 @@
             overflow: hidden;
         }
 
+        .atmosphere::before {
+            content: "";
+            position: absolute;
+            left: -10%;
+            right: -10%;
+            top: 18%;
+            height: 220px;
+            background:
+                linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.1) 18%, transparent 42%, rgba(239, 68, 68, 0.08) 66%, transparent 100%);
+            filter: blur(30px);
+            animation: driftGlow 16s linear infinite;
+        }
+
         .particle {
             position: absolute;
             display: block;
             border-radius: 999px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.72), rgba(72, 216, 255, 0.22) 55%, transparent 72%);
-            opacity: 0.24;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.85), rgba(56, 189, 248, 0.2) 56%, transparent 76%);
+            opacity: 0.2;
             filter: blur(1px);
             animation: floatParticle var(--duration, 16s) linear infinite;
             animation-delay: var(--delay, 0s);
-            transform: translate3d(0, 0, 0);
         }
 
         .topbar {
             position: sticky;
             top: 0;
             z-index: 60;
-            background: rgba(6, 10, 15, 0.24);
+            background: rgba(7, 13, 24, 0.42);
             border-bottom: 1px solid transparent;
             transition: background 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, backdrop-filter 0.28s ease;
         }
 
         .topbar.is-scrolled {
-            background: rgba(6, 10, 15, 0.74);
-            border-bottom-color: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(16px) saturate(120%);
-            box-shadow: 0 10px 34px rgba(0, 0, 0, 0.18);
+            background: rgba(7, 13, 24, 0.82);
+            border-bottom-color: rgba(148, 163, 184, 0.12);
+            backdrop-filter: blur(18px) saturate(125%);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
         }
 
         .topbar-inner {
-            width: var(--content-width);
-            min-height: 64px;
+            width: var(--wrap);
+            min-height: 68px;
             margin: 0 auto;
             padding: 10px 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 18px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            white-space: nowrap;
+            transition: transform 0.22s ease, filter 0.22s ease;
+        }
+
+        .brand:hover {
+            transform: scale(1.03);
+            filter: drop-shadow(0 0 18px rgba(56, 189, 248, 0.22));
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: linear-gradient(145deg, rgba(56, 189, 248, 0.16), rgba(34, 197, 94, 0.14));
+            border: 1px solid rgba(148, 163, 184, 0.16);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 18px rgba(56, 189, 248, 0.08);
+        }
+
+        .brand-mark img {
+            width: 26px;
+            height: 26px;
+        }
+
+        .brand span:last-child {
+            font-size: 1.04rem;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex: 1 1 auto;
+            justify-content: center;
+            min-width: 0;
+        }
+
+        .nav-link,
+        .nav-dropdown > summary {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 42px;
+            padding: 0 14px;
+            border-radius: 12px;
+            color: var(--muted-strong);
+            text-decoration: none;
+            font-size: 0.94rem;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            transition: color 0.22s ease, background 0.22s ease;
+        }
+
+        .nav-dropdown > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .nav-link::after,
+        .nav-dropdown > summary::after {
+            content: "";
+            position: absolute;
+            left: 14px;
+            right: 14px;
+            bottom: 8px;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(56, 189, 248, 0), rgba(56, 189, 248, 1), rgba(34, 197, 94, 1), rgba(34, 197, 94, 0));
+            transform: scaleX(0.14);
+            transform-origin: center;
+            opacity: 0;
+            transition: transform 0.22s ease, opacity 0.22s ease;
+        }
+
+        .nav-link:hover,
+        .nav-dropdown[open] > summary {
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .nav-link:hover::after,
+        .nav-dropdown[open] > summary::after {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        .dropdown-arrow {
+            font-size: 0.72rem;
+            transition: transform 0.22s ease;
+        }
+
+        .nav-dropdown[open] .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            min-width: 240px;
+            padding: 10px;
+            border-radius: 18px;
+            border: 1px solid rgba(148, 163, 184, 0.14);
+            background: rgba(15, 23, 42, 0.96);
+            box-shadow: var(--shadow);
+            display: grid;
+            gap: 6px;
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 48px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            color: var(--muted-strong);
+            text-decoration: none;
+            transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease;
+        }
+
+        .dropdown-item:hover {
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.04);
+            transform: translateX(2px);
+        }
+
+        .dropdown-icon {
+            width: 12px;
+            height: 12px;
+            border-radius: 999px;
+            flex: 0 0 auto;
+            box-shadow: 0 0 14px currentColor;
         }
 
         .header-tools {
@@ -175,9 +334,9 @@
         .header-search {
             display: flex;
             align-items: center;
-            min-width: 220px;
+            min-width: 230px;
             border-radius: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(148, 163, 184, 0.12);
             background: rgba(255, 255, 255, 0.03);
             overflow: hidden;
         }
@@ -194,7 +353,7 @@
         }
 
         .header-search input::placeholder {
-            color: rgba(148, 168, 193, 0.85);
+            color: rgba(148, 163, 184, 0.88);
         }
 
         .search-btn {
@@ -202,331 +361,162 @@
             height: 42px;
             border: 0;
             background: transparent;
-            color: var(--green);
+            color: var(--primary);
             cursor: pointer;
             flex: 0 0 42px;
         }
 
+        .header-play,
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 0 16px;
+            border-radius: 14px;
+            border: 1px solid transparent;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 800;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+        }
+
         .header-play {
-            min-height: 42px;
-            padding: 0 14px;
-            border-radius: 14px;
-            border: 1px solid rgba(72, 216, 255, 0.18);
-            background: linear-gradient(135deg, rgba(72, 216, 255, 0.14), rgba(255, 180, 77, 0.12));
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 800;
-            box-shadow: 0 0 18px rgba(72, 216, 255, 0.08);
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.16), rgba(34, 197, 94, 0.14));
+            border-color: rgba(56, 189, 248, 0.18);
+            box-shadow: 0 0 18px rgba(56, 189, 248, 0.08);
         }
 
-        .brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            transition: transform 0.22s ease, filter 0.22s ease;
-            white-space: nowrap;
-        }
-
-        .brand:hover {
-            transform: scale(1.03);
-            filter: drop-shadow(0 0 18px rgba(72, 216, 255, 0.22));
-        }
-
-        .brand-mark {
-            width: 42px;
-            height: 42px;
-            display: grid;
-            place-items: center;
-            border-radius: 14px;
-            background: linear-gradient(145deg, rgba(72, 216, 255, 0.14), rgba(255, 180, 77, 0.16));
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 18px rgba(72, 216, 255, 0.08);
-        }
-
-        .brand-mark img {
-            width: 26px;
-            height: 26px;
-        }
-
-        .brand span:last-child {
-            font-size: 1.04rem;
-        }
-
-        .nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .nav-link {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            min-height: 42px;
-            padding: 10px 14px;
-            border-radius: 14px;
-            border: 1px solid transparent;
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 0.92rem;
-            font-weight: 700;
-            background: rgba(255, 255, 255, 0.02);
-            transition: color 0.22s ease, border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
-            cursor: pointer;
-            list-style: none;
-        }
-
-        .nav-link:hover,
-        .nav-dropdown[open] > .nav-link {
-            color: var(--text);
-            border-color: rgba(72, 216, 255, 0.18);
-            background: rgba(255, 255, 255, 0.05);
-            box-shadow: 0 0 0 1px rgba(72, 216, 255, 0.08), 0 0 18px rgba(72, 216, 255, 0.08);
-        }
-
-        .nav-dropdown {
-            position: relative;
-        }
-
-        .nav-dropdown > summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .dropdown-arrow {
-            color: var(--muted-strong);
-            font-size: 0.76rem;
-            transition: transform 0.2s ease;
-        }
-
-        .nav-dropdown[open] .dropdown-arrow {
-            transform: rotate(180deg);
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: calc(100% + 10px);
-            left: 0;
-            min-width: 230px;
-            padding: 12px;
-            display: grid;
-            gap: 8px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(8, 14, 22, 0.95);
-            box-shadow: 0 22px 46px rgba(1, 6, 16, 0.42);
-        }
-
-        .dropdown-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 12px;
-            border-radius: 14px;
-            border: 1px solid transparent;
-            color: var(--muted);
-            text-decoration: none;
-            background: rgba(255, 255, 255, 0.03);
-            transition: color 0.22s ease, border-color 0.22s ease, background 0.22s ease, transform 0.22s ease;
-        }
-
-        .dropdown-item:hover {
-            color: var(--text);
-            border-color: rgba(72, 216, 255, 0.18);
-            background: rgba(255, 255, 255, 0.06);
-            transform: translateX(2px);
-        }
-
-        .dropdown-icon {
-            width: 28px;
-            height: 28px;
-            flex: 0 0 28px;
-            border-radius: 10px;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        }
-
-        .dropdown-text {
-            line-height: 1.2;
+        .header-play:hover,
+        .btn:hover {
+            transform: translateY(-1px);
         }
 
         .page {
-            width: var(--content-width);
+            width: var(--wrap);
             margin: 0 auto;
-            padding: 18px 0 46px;
+            padding: 18px 0 42px;
         }
 
         .section {
             position: relative;
+            margin-top: 22px;
+            scroll-margin-top: 88px;
+        }
+
+        .section:not(.hero) {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 680px;
+        }
+
+        .panel {
+            position: relative;
             overflow: hidden;
-            margin-top: 16px;
-            border-radius: var(--radius-xl);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            border: 1px solid var(--line);
             background:
-                linear-gradient(180deg, rgba(9, 15, 24, 0.9), rgba(6, 10, 16, 0.96)),
-                radial-gradient(circle at top right, rgba(72, 216, 255, 0.1), transparent 28%);
+                linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(15, 23, 42, 0.94)),
+                radial-gradient(circle at top right, rgba(56, 189, 248, 0.08), transparent 28%);
             box-shadow: var(--shadow);
         }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-            transition-delay: var(--delay, 0s);
-        }
-
-        .reveal.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .hero {
-            padding: 20px;
-        }
-
-        .hero::before {
+        .panel::before {
             content: "";
             position: absolute;
             inset: 0;
-            background:
-                radial-gradient(circle at 12% 16%, rgba(72, 216, 255, 0.16), transparent 18%),
-                radial-gradient(circle at 90% 18%, rgba(255, 180, 77, 0.12), transparent 18%);
-            transform: translateY(calc(var(--scroll-y) * -0.02));
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 28%);
             pointer-events: none;
         }
 
-        .hero::after {
-            content: "";
-            position: absolute;
-            left: -20%;
-            right: -20%;
-            bottom: 158px;
-            height: 84px;
-            background:
-                linear-gradient(90deg, transparent 0%, rgba(72, 216, 255, 0.16) 22%, rgba(72, 216, 255, 0.04) 38%, transparent 55%, rgba(255, 180, 77, 0.14) 74%, transparent 100%);
-            filter: blur(12px);
-            opacity: 0.82;
-            animation: lightSweep 10s linear infinite;
-            pointer-events: none;
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.24fr);
+            gap: 18px;
+            padding: 20px;
+        }
+
+        .hero-copy,
+        .hero-player {
+            position: relative;
+            z-index: 1;
         }
 
         .hero-copy {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            gap: 12px;
-            padding: 8px 2px 18px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .eyebrow {
             display: inline-flex;
             align-items: center;
             width: fit-content;
-            min-height: 34px;
-            padding: 7px 13px;
+            min-height: 32px;
+            padding: 6px 12px;
             border-radius: 999px;
-            background: rgba(72, 216, 255, 0.1);
-            border: 1px solid rgba(72, 216, 255, 0.16);
-            color: #d9f7ff;
-            font-size: 0.79rem;
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.16);
+            color: #d6f5ff;
+            font-size: 0.78rem;
             font-weight: 800;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            box-shadow: var(--glow-cyan);
-            animation: breatheGlow 4.2s ease-in-out infinite;
         }
 
         h1,
         h2,
-        h3 {
+        h3,
+        h4,
+        summary span {
             margin: 0;
             font-family: "Space Grotesk", sans-serif;
-            letter-spacing: -0.05em;
+            letter-spacing: -0.04em;
         }
 
         h1 {
-            font-size: clamp(2.9rem, 6vw, 5.3rem);
-            line-height: 0.86;
-            text-shadow: 0 0 24px rgba(72, 216, 255, 0.12);
+            margin-top: 18px;
+            font-size: clamp(2.7rem, 5vw, 4.9rem);
+            line-height: 0.92;
+            max-width: 8.6ch;
         }
 
         h2 {
-            font-size: clamp(1.55rem, 3vw, 2.45rem);
-            line-height: 0.94;
+            font-size: clamp(1.5rem, 3vw, 2.4rem);
+            line-height: 0.98;
         }
 
         h3 {
-            font-size: 1.12rem;
-            line-height: 1.06;
+            font-size: 1.02rem;
+            line-height: 1.18;
         }
 
         p {
             margin: 0;
             color: var(--muted);
-            line-height: 1.68;
-        }
-
-        .hero-title,
-        .hero-subtitle,
-        .hero-actions {
-            opacity: 0;
-            transform: translateY(18px);
-            animation: heroReveal 0.7s ease forwards;
-        }
-
-        .hero-title {
-            animation-delay: 0.08s;
+            line-height: 1.7;
         }
 
         .hero-subtitle {
-            max-width: 58ch;
-            font-size: 1rem;
-            animation-delay: 0.22s;
+            margin-top: 16px;
+            max-width: 36ch;
+            font-size: 1.03rem;
+            color: var(--muted-strong);
         }
 
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
-            margin-top: 6px;
-            animation-delay: 0.34s;
-        }
-
-        .btn {
-            position: relative;
-            overflow: hidden;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 47px;
-            padding: 12px 18px;
-            border-radius: 16px;
-            border: 1px solid transparent;
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 800;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-            will-change: transform;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn:active {
-            transform: translateY(0) scale(0.98);
+            margin-top: 24px;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #ffbf5f, #ff9f43 60%, #ffd974 100%);
-            color: #281302;
-            box-shadow: 0 16px 36px rgba(255, 180, 77, 0.18);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #38bdf8, #22c55e);
+            color: #04111d;
+            box-shadow: 0 16px 34px rgba(56, 189, 248, 0.2);
         }
 
         .btn-primary::before {
@@ -543,31 +533,63 @@
             left: 140%;
         }
 
-        .btn-primary:hover {
-            box-shadow: 0 16px 40px rgba(255, 180, 77, 0.28), 0 0 20px rgba(255, 180, 77, 0.18);
-        }
-
         .btn-secondary {
             background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(255, 255, 255, 0.12);
+            border-color: rgba(148, 163, 184, 0.16);
             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
         }
 
         .btn-secondary:hover {
-            border-color: rgba(72, 216, 255, 0.24);
-            box-shadow: 0 0 0 1px rgba(72, 216, 255, 0.14), 0 0 22px rgba(72, 216, 255, 0.12);
+            border-color: rgba(56, 189, 248, 0.24);
+            box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.1), 0 0 22px rgba(56, 189, 248, 0.12);
+        }
+
+        .hero-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .hero-stat {
+            min-height: 40px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--muted-strong);
+            font-size: 0.88rem;
+            font-weight: 700;
+        }
+
+        .hero-lanes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .lane-pill {
+            min-height: 30px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            color: var(--muted-strong);
+            font-size: 0.78rem;
+            font-weight: 700;
         }
 
         .hero-player {
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-            border-radius: 26px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            min-height: 430px;
+            padding: 14px;
+            border-radius: 28px;
+            border: 1px solid rgba(148, 163, 184, 0.14);
             background:
-                linear-gradient(180deg, rgba(10, 16, 24, 0.96), rgba(6, 10, 16, 0.98)),
-                radial-gradient(circle at top right, rgba(255, 180, 77, 0.14), transparent 28%);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+                radial-gradient(circle at 18% 18%, rgba(56, 189, 248, 0.16), transparent 22%),
+                radial-gradient(circle at 84% 22%, rgba(239, 68, 68, 0.14), transparent 18%),
+                linear-gradient(180deg, rgba(10, 16, 28, 0.98), rgba(6, 10, 18, 0.98));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
         }
 
         .hero-player::before {
@@ -575,117 +597,118 @@
             position: absolute;
             inset: 0;
             background:
-                linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 36%),
-                linear-gradient(135deg, transparent 0%, rgba(72, 216, 255, 0.08) 44%, transparent 68%);
+                linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 18%),
+                linear-gradient(120deg, transparent 0%, rgba(56, 189, 248, 0.12) 26%, transparent 52%, rgba(239, 68, 68, 0.1) 80%, transparent 100%);
+            animation: roadSweep 14s linear infinite;
             pointer-events: none;
         }
 
-        .player-top {
-            position: relative;
+        .hero-player::after {
+            content: "";
+            position: absolute;
+            inset: 18px;
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            pointer-events: none;
+        }
+
+        .hero-deco {
+            position: absolute;
             z-index: 1;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 14px;
-            padding: 14px 16px;
-            background: rgba(255, 255, 255, 0.02);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+            border-radius: 18px;
+            border: 1px solid rgba(148, 163, 184, 0.14);
+            box-shadow: 0 18px 40px rgba(2, 8, 23, 0.3);
+            transform: rotate(var(--tilt, 0deg));
+            opacity: 0.9;
         }
 
-        .player-label {
-            display: inline-flex;
-            align-items: center;
-            min-height: 28px;
-            padding: 4px 10px;
-            border-radius: 999px;
-            background: rgba(126, 241, 183, 0.12);
-            color: #e0ffef;
-            font-size: 0.72rem;
-            font-weight: 800;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
+        .hero-deco img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.92) brightness(0.82);
         }
 
-        .player-title {
-            display: block;
-            margin-top: 8px;
-            color: var(--text);
-            font-family: "Space Grotesk", sans-serif;
-            font-size: 1.16rem;
-            letter-spacing: -0.04em;
+        .hero-deco-a {
+            width: 138px;
+            height: 88px;
+            top: -6px;
+            right: 34px;
+            --tilt: 8deg;
         }
 
-        .player-link {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 800;
-            white-space: nowrap;
+        .hero-deco-b {
+            width: 150px;
+            height: 92px;
+            left: -8px;
+            bottom: 28px;
+            --tilt: -8deg;
         }
 
-        .player-link:hover {
-            color: #ffffff;
-            text-shadow: 0 0 16px rgba(72, 216, 255, 0.18);
-        }
-
-        .player-stage {
+        .hero-stage {
             position: relative;
-            min-height: 458px;
+            z-index: 2;
+            overflow: hidden;
+            min-height: 400px;
+            height: 100%;
+            border-radius: 22px;
             background: #05080d;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
         }
 
-        .hero-player iframe {
-            position: relative;
-            z-index: 1;
+        .hero-stage iframe {
             display: block;
             width: 100%;
             height: 100%;
-            min-height: 388px;
+            min-height: 400px;
             border: 0;
             background: #05080d;
         }
 
         .player-fullscreen {
             position: absolute;
-            right: 16px;
-            bottom: 16px;
-            z-index: 2;
+            right: 14px;
+            bottom: 14px;
+            z-index: 3;
             width: 48px;
             height: 48px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(148, 163, 184, 0.16);
             border-radius: 14px;
-            background: rgba(6, 10, 16, 0.72);
+            background: rgba(7, 13, 24, 0.76);
             color: var(--text);
             cursor: pointer;
-            box-shadow: 0 12px 26px rgba(1, 6, 16, 0.3);
+            box-shadow: 0 12px 26px rgba(2, 8, 23, 0.3);
             transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
             backdrop-filter: blur(10px);
         }
 
         .player-fullscreen:hover {
             transform: translateY(-2px);
-            border-color: rgba(72, 216, 255, 0.24);
-            background: rgba(10, 16, 24, 0.88);
-            box-shadow: 0 0 0 1px rgba(72, 216, 255, 0.12), 0 0 18px rgba(72, 216, 255, 0.12);
+            border-color: rgba(56, 189, 248, 0.24);
+            background: rgba(10, 16, 28, 0.88);
+            box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.1), 0 0 18px rgba(56, 189, 248, 0.12);
         }
 
-        .player-fullscreen:active {
-            transform: scale(0.97);
+        .player-fullscreen:active,
+        .btn:active,
+        .header-play:active {
+            transform: scale(0.98);
         }
 
-        .player-stage:fullscreen,
-        .player-stage:-webkit-full-screen {
+        .hero-stage:fullscreen,
+        .hero-stage:-webkit-full-screen {
             width: 100vw;
             height: 100vh;
             border-radius: 0;
             background: #000;
         }
 
-        .player-stage:fullscreen iframe,
-        .player-stage:-webkit-full-screen iframe {
+        .hero-stage:fullscreen iframe,
+        .hero-stage:-webkit-full-screen iframe {
             min-height: 100vh;
             height: 100vh;
         }
@@ -694,51 +717,76 @@
             display: flex;
             align-items: end;
             justify-content: space-between;
-            gap: 16px;
+            gap: 18px;
             margin-bottom: 18px;
         }
 
-        .section-head p {
-            margin-top: 8px;
-            max-width: 60ch;
+        .section-copy {
+            max-width: 58ch;
         }
 
-        .section-meta {
+        .section-kicker {
             display: inline-flex;
             align-items: center;
-            min-height: 36px;
-            padding: 8px 12px;
+            min-height: 28px;
+            padding: 4px 10px;
             border-radius: 999px;
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text);
-            font-size: 0.84rem;
+            color: var(--muted-strong);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .section-copy h2 {
+            margin-top: 8px;
+        }
+
+        .section-copy p {
+            margin-top: 10px;
+        }
+
+        .section-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--muted-strong);
+            text-decoration: none;
+            font-size: 0.92rem;
             font-weight: 800;
             white-space: nowrap;
         }
 
-        .game-showcase,
-        .category-strip,
-        .cta,
-        .about {
-            padding: 20px;
+        .section-link:hover {
+            color: var(--text);
         }
 
-        .showcase-grid {
+        .cards-panel,
+        .faq-panel,
+        .footer-panel {
+            padding: 22px;
+        }
+
+        .game-grid {
             display: grid;
-            grid-template-columns: repeat(6, minmax(0, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+        }
+
+        .featured-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
         }
 
         .game-card {
             position: relative;
             overflow: hidden;
             min-height: 0;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 22px;
+            border: 1px solid rgba(148, 163, 184, 0.12);
             background:
-                linear-gradient(180deg, rgba(14, 21, 31, 0.94), rgba(9, 14, 21, 0.98)),
-                radial-gradient(circle at top right, rgba(72, 216, 255, 0.1), transparent 28%);
+                linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(15, 23, 42, 0.98)),
+                radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent 28%);
             transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
         }
 
@@ -747,7 +795,7 @@
             position: absolute;
             inset: 0;
             border-radius: inherit;
-            background: linear-gradient(135deg, rgba(72, 216, 255, 0.18), transparent 30%, transparent 70%, rgba(255, 180, 77, 0.16));
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.16), transparent 36%, transparent 68%, rgba(34, 197, 94, 0.14));
             opacity: 0;
             transition: opacity 0.28s ease;
             pointer-events: none;
@@ -755,8 +803,8 @@
 
         .game-card:hover {
             transform: translateY(-6px);
-            border-color: rgba(72, 216, 255, 0.28);
-            box-shadow: 0 24px 48px rgba(1, 6, 16, 0.4), 0 0 0 1px rgba(72, 216, 255, 0.14), 0 0 24px rgba(72, 216, 255, 0.14);
+            border-color: rgba(56, 189, 248, 0.24);
+            box-shadow: 0 22px 46px rgba(2, 8, 23, 0.34), 0 0 0 1px rgba(56, 189, 248, 0.12), 0 0 24px rgba(56, 189, 248, 0.12);
         }
 
         .game-card:hover::before {
@@ -770,31 +818,30 @@
             text-decoration: none;
         }
 
-        .game-media {
+        .card-media {
             position: relative;
             overflow: hidden;
             width: 100%;
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 1.1 / 1;
             border-radius: 18px;
             background: #08121b;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(148, 163, 184, 0.12);
         }
 
-        .game-media::after {
+        .card-media::after {
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, transparent 0%, rgba(3, 6, 10, 0.18) 48%, rgba(3, 6, 10, 0.62) 100%);
+            background: linear-gradient(180deg, transparent 0%, rgba(2, 8, 23, 0.1) 44%, rgba(2, 8, 23, 0.62) 100%);
             transition: opacity 0.28s ease;
-            opacity: 0.9;
             pointer-events: none;
         }
 
-        .game-card:hover .game-media::after {
-            opacity: 0.68;
+        .game-card:hover .card-media::after {
+            opacity: 0.7;
         }
 
-        .game-media img {
+        .card-media img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -802,273 +849,245 @@
             transition: transform 0.32s ease;
         }
 
-        .game-card:hover .game-media img {
+        .game-card:hover .card-media img {
             transform: scale(1.08);
         }
 
-        .game-copy {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            min-width: 0;
-            padding: 12px 2px 2px;
+        .card-body {
+            display: grid;
+            gap: 10px;
+            padding: 12px 4px 4px;
         }
 
-        .game-tag {
+        .card-topline {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .card-category,
+        .card-rating {
             display: inline-flex;
             align-items: center;
-            width: fit-content;
             min-height: 24px;
             padding: 4px 8px;
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.06);
-            color: #d8e5f4;
-            font-size: 0.68rem;
+            font-size: 0.72rem;
             font-weight: 800;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
-            transform: translateX(-8px);
-            opacity: 0.76;
-            transition: transform 0.26s ease, opacity 0.26s ease;
         }
 
-        .game-card:hover .game-tag {
+        .card-category {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--muted-strong);
+        }
+
+        .card-rating {
+            background: rgba(56, 189, 248, 0.12);
+            color: #d9f6ff;
+        }
+
+        .card-title {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .card-title h3 {
+            color: var(--text);
+            font-size: 0.98rem;
+        }
+
+        .card-arrow {
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--muted-strong);
+            flex: 0 0 auto;
             transform: translateX(0);
-            opacity: 1;
+            transition: transform 0.22s ease, color 0.22s ease, border-color 0.22s ease;
         }
 
-        .game-copy h3 {
-            margin-top: 8px;
-            opacity: 0.92;
-            font-size: 0.92rem;
-            line-height: 1.25;
-            transition: opacity 0.26s ease;
+        .game-card:hover .card-arrow {
+            transform: translateX(3px);
+            color: var(--text);
+            border-color: rgba(56, 189, 248, 0.2);
         }
 
-        .game-card:hover .game-copy h3 {
-            opacity: 1;
-        }
-
-        .category-row {
+        .category-grid {
             display: grid;
             grid-template-columns: repeat(6, minmax(0, 1fr));
-            gap: 10px;
-        }
-
-        .games-band {
-            display: grid;
-            gap: 16px;
-        }
-
-        .band-head {
-            display: flex;
-            align-items: end;
-            justify-content: space-between;
             gap: 14px;
         }
 
-        .band-head p {
-            margin-top: 8px;
-            max-width: 60ch;
-        }
-
-        .category-chip {
+        .category-card {
             position: relative;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            min-height: 56px;
-            padding: 12px 14px;
-            border-radius: 18px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: grid;
+            gap: 14px;
+            min-height: 190px;
+            padding: 18px;
+            border-radius: 24px;
+            border: 1px solid rgba(148, 163, 184, 0.12);
             background:
-                linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
-                radial-gradient(circle at top right, rgba(72, 216, 255, 0.08), transparent 46%);
-            color: var(--muted);
+                linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(15, 23, 42, 0.98)),
+                radial-gradient(circle at top right, color-mix(in srgb, var(--accent-color) 24%, transparent), transparent 50%);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
             text-decoration: none;
-            font-size: 0.92rem;
-            font-weight: 800;
-            transition: transform 0.24s ease, color 0.24s ease, border-color 0.24s ease, background 0.24s ease, box-shadow 0.24s ease;
+            transition: transform 0.26s ease, border-color 0.26s ease, box-shadow 0.26s ease;
         }
 
-        .category-chip::after {
+        .category-card::before {
             content: "";
             position: absolute;
-            left: 14px;
-            right: 14px;
+            left: 16px;
+            right: 16px;
             bottom: 0;
             height: 2px;
             border-radius: 999px;
-            background: linear-gradient(90deg, rgba(72, 216, 255, 0), rgba(72, 216, 255, 1), rgba(255, 180, 77, 1), rgba(255, 180, 77, 0));
-            transform: scaleX(0.2);
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            transform: scaleX(0.16);
             opacity: 0;
-            transition: transform 0.24s ease, opacity 0.24s ease;
+            transition: transform 0.26s ease, opacity 0.26s ease;
         }
 
-        .category-chip:hover {
-            transform: translateY(-4px);
-            color: var(--text);
-            border-color: rgba(72, 216, 255, 0.2);
-            background:
-                linear-gradient(180deg, rgba(72, 216, 255, 0.1), rgba(255, 180, 77, 0.06)),
-                linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
-            box-shadow: 0 16px 30px rgba(1, 6, 16, 0.28), 0 0 20px rgba(72, 216, 255, 0.08);
+        .category-card:hover {
+            transform: translateY(-6px);
+            border-color: color-mix(in srgb, var(--accent-color) 36%, rgba(148, 163, 184, 0.12));
+            box-shadow: 0 22px 42px rgba(2, 8, 23, 0.34), 0 0 24px color-mix(in srgb, var(--accent-color) 16%, transparent);
         }
 
-        .category-chip:hover::after {
-            opacity: 1;
+        .category-card:hover::before {
             transform: scaleX(1);
+            opacity: 1;
         }
 
-        .chip-mark {
-            width: 16px;
-            height: 16px;
-            border-radius: 5px;
-            background: linear-gradient(135deg, rgba(72, 216, 255, 0.94), rgba(255, 180, 77, 0.9));
-            box-shadow: 0 0 16px rgba(72, 216, 255, 0.2);
-            transform: rotate(0deg) scale(1);
+        .category-icon {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            border-radius: 18px;
+            background: color-mix(in srgb, var(--accent-color) 18%, rgba(255, 255, 255, 0.02));
+            border: 1px solid color-mix(in srgb, var(--accent-color) 28%, rgba(148, 163, 184, 0.12));
+            color: var(--accent-color);
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 0 18px color-mix(in srgb, var(--accent-color) 16%, transparent);
             transition: transform 0.24s ease;
-            flex: 0 0 auto;
         }
 
-        .category-chip:hover .chip-mark {
-            transform: rotate(6deg) scale(1.1);
+        .category-card:hover .category-icon {
+            transform: rotate(6deg) scale(1.06);
         }
 
-        .category-chip span:last-child {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        .category-icon svg {
+            width: 24px;
+            height: 24px;
         }
 
-        .cta {
-            background:
-                linear-gradient(135deg, rgba(72, 216, 255, 0.11), rgba(9, 14, 22, 0.96) 36%, rgba(255, 180, 77, 0.1) 100%),
-                linear-gradient(180deg, rgba(9, 15, 24, 0.9), rgba(6, 10, 16, 0.96));
+        .category-body {
+            display: grid;
+            gap: 8px;
         }
 
-        .cta::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background:
-                linear-gradient(90deg, transparent 0%, rgba(72, 216, 255, 0.1) 22%, transparent 44%, rgba(255, 180, 77, 0.1) 76%, transparent 100%);
-            animation: pulseRoad 12s linear infinite;
-            pointer-events: none;
+        .category-body h3 {
+            font-size: 1rem;
         }
 
-        .cta::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(72, 216, 255, 0.88), rgba(255, 180, 77, 0.88), transparent);
-            box-shadow: 0 0 16px rgba(72, 216, 255, 0.2);
-            pointer-events: none;
+        .category-count {
+            color: var(--muted-strong);
+            font-size: 0.86rem;
+            font-weight: 700;
         }
 
-        .cta-inner {
-            position: relative;
-            z-index: 1;
-            display: flex;
+        .category-label {
+            display: inline-flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 20px;
+            gap: 8px;
+            color: var(--muted);
+            font-size: 0.84rem;
+            font-weight: 700;
         }
 
-        .cta-copy h2 {
-            text-shadow: 0 0 20px rgba(72, 216, 255, 0.14);
-        }
-
-        .cta-copy p {
-            margin-top: 10px;
-            max-width: 50ch;
-        }
-
-        .cta-actions {
-            display: flex;
-            flex-wrap: wrap;
+        .faq-grid {
+            display: grid;
             gap: 12px;
         }
 
-        .about-card {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) auto;
-            gap: 20px;
-            align-items: end;
+        .faq-item {
+            overflow: hidden;
+            border-radius: 20px;
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            background: rgba(255, 255, 255, 0.03);
         }
 
-        .about-copy p {
-            margin-top: 12px;
-            max-width: 66ch;
-        }
-
-        .about-stats {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            gap: 10px;
-        }
-
-        .about-stat {
-            min-width: 136px;
-            padding: 14px 16px;
-            border-radius: 18px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
-        }
-
-        .about-stat strong {
-            display: block;
-            font-family: "Space Grotesk", sans-serif;
-            font-size: 1.45rem;
-            line-height: 1;
-            letter-spacing: -0.04em;
-        }
-
-        .about-stat span {
-            display: block;
-            margin-top: 8px;
-            color: var(--muted);
-            font-size: 0.88rem;
-            line-height: 1.45;
-        }
-
-        .site-footer {
+        .faq-item summary {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 18px;
+            gap: 16px;
             padding: 18px 20px;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary strong {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1rem;
+            letter-spacing: -0.03em;
+        }
+
+        .faq-item summary span:last-child {
             color: var(--muted);
-            font-size: 0.92rem;
+            font-size: 1.1rem;
+            transition: transform 0.2s ease;
         }
 
-        .site-footer::before {
-            content: "";
-            position: absolute;
-            left: 20px;
-            right: 20px;
-            top: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(72, 216, 255, 0.82), rgba(255, 180, 77, 0.82), transparent);
-            box-shadow: 0 0 14px rgba(72, 216, 255, 0.16);
+        .faq-item[open] summary span:last-child {
+            transform: rotate(45deg);
         }
 
-        .footer-copy {
-            opacity: 0;
-            animation: footerFade 0.9s ease 0.4s forwards;
+        .faq-content {
+            padding: 0 20px 18px;
+        }
+
+        .site-footer {
+            display: grid;
+            gap: 18px;
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            max-width: 36ch;
+        }
+
+        .footer-brand .brand {
+            margin-bottom: 12px;
         }
 
         .footer-links {
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-end;
-            gap: 14px;
+            gap: 12px 18px;
         }
 
         .footer-links a {
@@ -1079,7 +1098,35 @@
 
         .footer-links a:hover {
             color: var(--text);
-            text-shadow: 0 0 16px rgba(72, 216, 255, 0.16);
+            text-shadow: 0 0 14px rgba(56, 189, 248, 0.14);
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(148, 163, 184, 0.12);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-note {
+            opacity: 0;
+            animation: footerFade 0.9s ease 0.3s forwards;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.64s ease, transform 0.64s ease;
+            transition-delay: var(--delay, 0s);
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         @keyframes skyShift {
@@ -1091,16 +1138,30 @@
             }
         }
 
+        @keyframes driftGlow {
+            0% {
+                transform: translateX(-8%);
+                opacity: 0.42;
+            }
+            50% {
+                opacity: 0.88;
+            }
+            100% {
+                transform: translateX(8%);
+                opacity: 0.42;
+            }
+        }
+
         @keyframes floatParticle {
             0% {
-                transform: translate3d(0, 0, 0) scale(0.9);
+                transform: translate3d(0, 0, 0) scale(0.92);
                 opacity: 0;
             }
             12% {
                 opacity: 0.24;
             }
             88% {
-                opacity: 0.2;
+                opacity: 0.18;
             }
             100% {
                 transform: translate3d(var(--drift-x, 30px), -120vh, 0) scale(1.16);
@@ -1108,42 +1169,12 @@
             }
         }
 
-        @keyframes breatheGlow {
-            0%, 100% {
-                box-shadow: var(--glow-cyan);
-            }
-            50% {
-                box-shadow: 0 0 0 1px rgba(72, 216, 255, 0.22), 0 0 26px rgba(72, 216, 255, 0.24);
-            }
-        }
-
-        @keyframes heroReveal {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes lightSweep {
+        @keyframes roadSweep {
             0% {
-                transform: translateX(-12%) skewX(-8deg);
+                transform: translateX(-10%);
             }
             100% {
-                transform: translateX(12%) skewX(-8deg);
-            }
-        }
-
-        @keyframes pulseRoad {
-            0% {
-                transform: translateX(-12%);
-                opacity: 0.5;
-            }
-            50% {
-                opacity: 0.92;
-            }
-            100% {
-                transform: translateX(12%);
-                opacity: 0.5;
+                transform: translateX(10%);
             }
         }
 
@@ -1153,33 +1184,34 @@
             }
         }
 
-        @media (max-width: 1160px) {
-            .showcase-grid {
-                grid-template-columns: repeat(5, minmax(0, 1fr));
-            }
-
-            .category-row {
+        @media (max-width: 1180px) {
+            .featured-grid,
+            .category-grid {
                 grid-template-columns: repeat(3, minmax(0, 1fr));
             }
 
-            .hero-player iframe {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-player,
+            .hero-stage,
+            .hero-stage iframe {
                 min-height: 360px;
             }
         }
 
-        @media (max-width: 920px) {
+        @media (max-width: 980px) {
             .topbar-inner,
             .section-head,
-            .cta-inner,
-            .about-card,
-            .site-footer {
+            .footer-top,
+            .footer-bottom {
                 align-items: flex-start;
                 flex-direction: column;
             }
 
             .nav,
-            .footer-links,
-            .about-stats {
+            .footer-links {
                 justify-content: flex-start;
             }
 
@@ -1193,65 +1225,105 @@
                 flex: 1 1 220px;
             }
 
-            .showcase-grid {
-                grid-template-columns: repeat(4, minmax(0, 1fr));
-            }
-
-            .category-row {
+            .featured-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 720px) {
             .page,
             .topbar-inner {
                 width: min(100% - 20px, 100%);
             }
 
-            .hero,
-            .game-showcase,
-            .category-strip,
-            .cta,
-            .about,
-            .site-footer {
+            .nav {
+                width: 100%;
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 4px;
+            }
+
+            .nav::-webkit-scrollbar {
+                display: none;
+            }
+
+            .panel,
+            .hero-player,
+            .cards-panel,
+            .faq-panel,
+            .footer-panel {
                 border-radius: 24px;
             }
 
             .hero,
-            .game-showcase,
-            .category-strip,
-            .cta,
-            .about {
+            .cards-panel,
+            .faq-panel,
+            .footer-panel {
                 padding: 16px;
             }
 
             h1 {
-                font-size: clamp(2.4rem, 15vw, 4rem);
+                font-size: clamp(2.4rem, 13vw, 3.8rem);
             }
 
-            .hero-player iframe {
+            .hero-player,
+            .hero-stage,
+            .hero-stage iframe {
                 min-height: 300px;
             }
 
-            .showcase-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
+            .featured-grid,
+            .category-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
-            .category-row {
+            .game-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .hero-deco {
+                display: none;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .featured-grid,
+            .category-grid,
+            .game-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .hero-actions,
+            .hero-stats {
+                width: 100%;
+            }
+
+            .btn,
+            .header-play {
+                width: 100%;
+            }
+
+            .header-search,
+            .header-play {
+                flex: 1 1 100%;
+            }
+
+            .player-fullscreen {
+                width: 44px;
+                height: 44px;
             }
         }
     </style>
 </head>
 <body>
     <div class="atmosphere" aria-hidden="true">
-        <span class="particle" style="left:8%; bottom:-40px; width:10px; height:10px; --duration: 17s; --delay: 0s; --drift-x: 24px;"></span>
-        <span class="particle" style="left:18%; bottom:-80px; width:6px; height:6px; --duration: 13s; --delay: 2s; --drift-x: 38px;"></span>
-        <span class="particle" style="left:31%; bottom:-60px; width:12px; height:12px; --duration: 19s; --delay: 1s; --drift-x: -22px;"></span>
-        <span class="particle" style="left:47%; bottom:-52px; width:8px; height:8px; --duration: 15s; --delay: 4s; --drift-x: 26px;"></span>
-        <span class="particle" style="left:62%; bottom:-88px; width:7px; height:7px; --duration: 14s; --delay: 3s; --drift-x: -18px;"></span>
-        <span class="particle" style="left:73%; bottom:-46px; width:11px; height:11px; --duration: 16s; --delay: 1.4s; --drift-x: 34px;"></span>
-        <span class="particle" style="left:86%; bottom:-74px; width:9px; height:9px; --duration: 18s; --delay: 5s; --drift-x: -28px;"></span>
+        <span class="particle" style="left:8%; bottom:-40px; width:10px; height:10px; --duration:17s; --delay:0s; --drift-x:24px;"></span>
+        <span class="particle" style="left:18%; bottom:-80px; width:6px; height:6px; --duration:13s; --delay:2s; --drift-x:38px;"></span>
+        <span class="particle" style="left:31%; bottom:-60px; width:12px; height:12px; --duration:19s; --delay:1s; --drift-x:-22px;"></span>
+        <span class="particle" style="left:47%; bottom:-52px; width:8px; height:8px; --duration:15s; --delay:4s; --drift-x:26px;"></span>
+        <span class="particle" style="left:62%; bottom:-88px; width:7px; height:7px; --duration:14s; --delay:3s; --drift-x:-18px;"></span>
+        <span class="particle" style="left:73%; bottom:-46px; width:11px; height:11px; --duration:16s; --delay:1.4s; --drift-x:34px;"></span>
+        <span class="particle" style="left:86%; bottom:-74px; width:9px; height:9px; --duration:18s; --delay:5s; --drift-x:-28px;"></span>
     </div>
 
     <header class="topbar" id="topbar">
@@ -1262,58 +1334,75 @@
                 </span>
                 <span>Traffic Games</span>
             </a>
+
             <nav class="nav" aria-label="Primary">
                 <a href="/" class="nav-link">Home</a>
-                <a href="#showcase" class="nav-link">Featured</a>
-                <a href="#popular" class="nav-link">Popular</a>
+                <a href="#featured" class="nav-link">Featured</a>
+                <a href="#trending" class="nav-link">Popular</a>
+                <a href="#recent" class="nav-link">Recent</a>
                 <a href="#new" class="nav-link">New</a>
                 <details class="nav-dropdown">
-                    <summary class="nav-link">Categories <span class="dropdown-arrow">▼</span></summary>
+                    <summary class="nav-link">Categories <span class="dropdown-arrow">+</span></summary>
                     <div class="dropdown-menu">
-                        <a href="racing-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);"></span><span class="dropdown-text">Racing Games</span></a>
-                        <a href="driving-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);"></span><span class="dropdown-text">Driving Games</span></a>
-                        <a href="parking-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);"></span><span class="dropdown-text">Parking Games</span></a>
-                        <a href="traffic-control-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);"></span><span class="dropdown-text">Traffic Control</span></a>
-                        <a href="escape-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);"></span><span class="dropdown-text">Escape Games</span></a>
-                        <a href="clicker-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);"></span><span class="dropdown-text">Clicker Games</span></a>
-                        <a href="two-player-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #14b8a6, #0d9488);"></span><span class="dropdown-text">2 Player Games</span></a>
-                        <a href="trivia-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);"></span><span class="dropdown-text">Trivia Games</span></a>
+                        <a href="driving-games.html" class="dropdown-item"><span class="dropdown-icon" style="background:#38bdf8;"></span><span>Traffic Driving</span></a>
+                        <a href="racing-games.html" class="dropdown-item"><span class="dropdown-icon" style="background:#ef4444;"></span><span>Car Racing</span></a>
+                        <a href="escape-games.html" class="dropdown-item"><span class="dropdown-icon" style="background:#fb923c;"></span><span>Highway Escape</span></a>
+                        <a href="parking-games.html" class="dropdown-item"><span class="dropdown-icon" style="background:#22c55e;"></span><span>Parking Challenge</span></a>
+                        <a href="traffic-control-games.html" class="dropdown-item"><span class="dropdown-icon" style="background:#facc15;"></span><span>Traffic Control</span></a>
+                        <a href="clicker-games.html" class="dropdown-item"><span class="dropdown-icon" style="background:#a855f7;"></span><span>Reaction Games</span></a>
+                        <a href="categories.html" class="dropdown-item"><span class="dropdown-icon" style="background:#94a3b8;"></span><span>All Collections</span></a>
                     </div>
                 </details>
             </nav>
+
             <div class="header-tools">
                 <form class="header-search" action="categories.html" method="get">
                     <input type="text" name="search" placeholder="Search traffic games..." aria-label="Search traffic games">
                     <button type="submit" class="search-btn" aria-label="Search">
-                        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="13" y1="13" x2="18" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                            <circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                            <line x1="13" y1="13" x2="18" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></line>
+                        </svg>
                     </button>
                 </form>
-                <a href="games/traffic-jam-3d.html" class="header-play">Play Now</a>
+                <a href="games/traffic-jam-3d.html" class="header-play js-track-game" data-title="Traffic Jam 3D" data-href="games/traffic-jam-3d.html" data-image="img/screenshots/ss1.png" data-category="Featured" data-rating="4.9">Play Now</a>
             </div>
         </div>
     </header>
 
     <main class="page">
-        <section class="section hero reveal">
+        <section class="section panel hero reveal" id="home">
             <div class="hero-copy">
-                <div class="eyebrow">Online Driving and Racing Games</div>
-                <h1 class="hero-title">Traffic Games</h1>
-                <p class="hero-subtitle">Play fast-paced traffic, driving, parking, and racing games in one stylish place.</p>
+                <div class="eyebrow">Focused platform for traffic driving games</div>
+                <h1>Play The Best Traffic Games Online</h1>
+                <p class="hero-subtitle">Drive, race, park and escape in free browser games.</p>
                 <div class="hero-actions">
-                    <a href="#showcase" class="btn btn-primary">Explore Games</a>
-                    <a href="#popular" class="btn btn-secondary">Top Picks</a>
+                    <a href="#home-game" class="btn btn-primary">Play Now</a>
+                    <a href="#trending" class="btn btn-secondary">Trending Games</a>
+                </div>
+                <div class="hero-stats">
+                    <span class="hero-stat">708 games ready</span>
+                    <span class="hero-stat">6 core lanes</span>
+                    <span class="hero-stat">Instant homepage play</span>
+                </div>
+                <div class="hero-lanes">
+                    <span class="lane-pill">Driving</span>
+                    <span class="lane-pill">Racing</span>
+                    <span class="lane-pill">Parking</span>
+                    <span class="lane-pill">Escape</span>
+                    <span class="lane-pill">Control</span>
+                    <span class="lane-pill">Reaction</span>
                 </div>
             </div>
 
-            <div class="hero-player">
-                <div class="player-top">
-                    <div>
-                        <span class="player-label" id="spotlightLabel">Play instantly</span>
-                        <strong class="player-title" id="spotlightTitle">Traffic Jam 3D</strong>
-                    </div>
-                    <a class="player-link" id="spotlightLink" href="games/traffic-jam-3d.html">Open Page</a>
-                </div>
-                <div class="player-stage" id="playerStage">
+            <div class="hero-player reveal" style="--delay:0.08s;">
+                <span class="hero-deco hero-deco-a" aria-hidden="true">
+                    <img src="img/screenshots/ss2.png" alt="">
+                </span>
+                <span class="hero-deco hero-deco-b" aria-hidden="true">
+                    <img src="img/screenshots/ss3.png" alt="">
+                </span>
+                <div class="hero-stage" id="home-game">
                     <iframe
                         id="homeGameFrame"
                         title="Traffic Jam 3D"
@@ -1331,268 +1420,292 @@
             </div>
         </section>
 
-        <section class="section game-showcase reveal" id="showcase">
-            <div class="section-head reveal" style="--delay: 0.02s;">
-                <div>
+        <section class="section panel cards-panel reveal" id="featured">
+            <div class="section-head">
+                <div class="section-copy">
+                    <span class="section-kicker">Core picks</span>
                     <h2>Featured Games</h2>
-                    <p>Jump into the most popular traffic and driving games right now.</p>
+                    <p>Start with the strongest traffic, driving, and parking picks on the platform.</p>
                 </div>
-                <div class="section-meta">708 games live</div>
+                <a href="categories.html" class="section-link">Browse all collections</a>
             </div>
-            <div class="showcase-grid">
-                <article class="game-card reveal" style="--delay:0s">
-                    <a href="racing/GTTrafficRacer.html">
-                        <div class="game-media">
-                            <img src="img/game_icon/racing/GTTrafficRacer.jpg" alt="GT Traffic Racer">
-                        </div>
-                        <div class="game-copy">
-                            <span class="game-tag">Racing</span>
-                            <h3>GT Traffic Racer</h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="game-card reveal" style="--delay:0.12s">
-                    <a href="driving/ExtremeCarDrivingSimulator.html">
-                        <div class="game-media">
-                            <img src="img/game_icon/driving/ExtremeCarDrivingSimulator.jpeg" alt="Extreme Car Driving Simulator">
-                        </div>
-                        <div class="game-copy">
-                            <span class="game-tag">Driving</span>
-                            <h3>Extreme Car Driving Simulator</h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="game-card reveal" style="--delay:0.24s">
-                    <a href="parking/ParkingFury3D.html">
-                        <div class="game-media">
-                            <img src="img/game_icon/parking/ParkingFury3D.jpeg" alt="Parking Fury 3D">
-                        </div>
-                        <div class="game-copy">
-                            <span class="game-tag">Parking</span>
-                            <h3>Parking Fury 3D</h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="game-card reveal" style="--delay:0.36s">
-                    <a href="trafficControl/TrafficTapSurvival.html">
-                        <div class="game-media">
-                            <img src="img/game_icon/trafficControl/TrafficTapSurvival.jpg" alt="Traffic Tap Survival">
-                        </div>
-                        <div class="game-copy">
-                            <span class="game-tag">Control</span>
-                            <h3>Traffic Tap Survival</h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="game-card reveal" style="--delay:0.48s">
-                    <a href="racing/HOTGEAR.html">
-                        <div class="game-media">
-                            <img src="img/game_icon/racing/HOTGEAR.jpg" alt="HOTGEAR">
-                        </div>
-                        <div class="game-copy">
-                            <span class="game-tag">Racing</span>
-                            <h3>HOTGEAR</h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="game-card reveal" style="--delay:0.6s">
-                    <a href="escape/SCP173Escape.html">
-                        <div class="game-media">
-                            <img src="img/game_icon/escape/SCP173Escape.jpg" alt="SCP 173 Escape">
-                        </div>
-                        <div class="game-copy">
-                            <span class="game-tag">Escape</span>
-                            <h3>SCP 173 Escape</h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="game-card reveal" style="--delay:0.72s">
-                    <a href="clicker/CapybaraCoinMaster.html">
-                        <div class="game-media">
-                            <img src="img/game_icon/clicker/CapybaraCoinMaster.jpg" alt="Capybara Coin Master">
-                        </div>
-                        <div class="game-copy">
-                            <span class="game-tag">Clicker</span>
-                            <h3>Capybara Coin Master</h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="game-card reveal" style="--delay:0.84s">
-                    <a href="twoPlayer/BasketballStars2026.html">
-                        <div class="game-media">
-                            <img src="img/game_icon/twoPlayer/BasketballStars2026.jpg" alt="Basketball Stars 2026">
-                        </div>
-                        <div class="game-copy">
-                            <span class="game-tag">2 Player</span>
-                            <h3>Basketball Stars 2026</h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="game-card reveal" style="--delay:0.96s">
-                    <a href="trivia/FlagMasterWorldFlagsQuiz.html">
-                        <div class="game-media">
-                            <img src="img/game_icon/trivia/FlagMasterWorldFlagsQuiz.jpg" alt="Flag Master World Flags Quiz">
-                        </div>
-                        <div class="game-copy">
-                            <span class="game-tag">Trivia</span>
-                            <h3>Flag Master</h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="game-card reveal" style="--delay:1.08s">
-                    <a href="parking/ParkingJamEscape.html">
-                        <div class="game-media">
-                            <img src="img/game_icon/parking/ParkingJamEscape.jpeg" alt="Parking Jam Escape">
-                        </div>
-                        <div class="game-copy">
-                            <span class="game-tag">Parking</span>
-                            <h3>Parking Jam Escape</h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="game-card reveal" style="--delay:1.2s">
-                    <a href="driving/CityBusSimulator3D.html">
-                        <div class="game-media">
-                            <img src="img/game_icon/driving/CityBusSimulator3D.jpeg" alt="City Bus Simulator 3D">
-                        </div>
-                        <div class="game-copy">
-                            <span class="game-tag">Driving</span>
-                            <h3>City Bus Simulator 3D</h3>
-                        </div>
-                    </a>
-                </article>
-            </div>
+            <div class="game-grid featured-grid" id="featuredGrid"></div>
         </section>
 
-        <section class="section reveal" id="popular">
-            <div class="games-band">
-                <div class="band-head">
-                    <div>
-                        <h2>Popular Games</h2>
-                        <p>Fast picks that are easy to start and easy to continue.</p>
+        <section class="section panel cards-panel reveal" id="categories">
+            <div class="section-head">
+                <div class="section-copy">
+                    <span class="section-kicker">Six major lanes</span>
+                    <h2>Explore by Category</h2>
+                    <p>Jump straight into the style of play you want without digging through long lists.</p>
+                </div>
+                <a href="categories.html" class="section-link">All categories</a>
+            </div>
+            <div class="category-grid">
+                <a class="category-card reveal" style="--delay:0s; --accent-color:#38bdf8;" href="driving-games.html">
+                    <span class="category-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 13l2-5h10l2 5"></path>
+                            <path d="M5 13v4a1 1 0 0 0 1 1h1"></path>
+                            <path d="M19 13v4a1 1 0 0 1-1 1h-1"></path>
+                            <path d="M7 18h10"></path>
+                            <circle cx="8" cy="14" r="1"></circle>
+                            <circle cx="16" cy="14" r="1"></circle>
+                        </svg>
+                    </span>
+                    <div class="category-body">
+                        <h3>Traffic Driving</h3>
+                        <span class="category-count">57 games</span>
+                        <span class="category-label">City roads and flow</span>
                     </div>
-                </div>
-                <div class="showcase-grid">
-                    <article class="game-card reveal" style="--delay:0s"><a href="racing/FormulaTrafficRacer.html"><div class="game-media"><img src="img/game_icon/racing/FormulaTrafficRacer.jpg" alt="Formula Traffic Racer"></div><div class="game-copy"><span class="game-tag">Racing</span><h3>Formula Traffic Racer</h3></div></a></article>
-                    <article class="game-card reveal" style="--delay:0.08s"><a href="driving/CarSimulationGame.html"><div class="game-media"><img src="img/game_icon/driving/CarSimulationGame.jpeg" alt="Car Simulation Game"></div><div class="game-copy"><span class="game-tag">Driving</span><h3>Car Simulation Game</h3></div></a></article>
-                    <article class="game-card reveal" style="--delay:0.16s"><a href="parking/ParkingJamEscape.html"><div class="game-media"><img src="img/game_icon/parking/ParkingJamEscape.jpeg" alt="Parking Jam Escape"></div><div class="game-copy"><span class="game-tag">Parking</span><h3>Parking Jam Escape</h3></div></a></article>
-                    <article class="game-card reveal" style="--delay:0.24s"><a href="escape/Backrooms.html"><div class="game-media"><img src="img/game_icon/escape/Backrooms.jpg" alt="Backrooms"></div><div class="game-copy"><span class="game-tag">Escape</span><h3>Backrooms</h3></div></a></article>
-                    <article class="game-card reveal" style="--delay:0.32s"><a href="clicker/LifeClicker.html"><div class="game-media"><img src="img/game_icon/clicker/LifeClicker.jpg" alt="Life Clicker"></div><div class="game-copy"><span class="game-tag">Clicker</span><h3>Life Clicker</h3></div></a></article>
-                    <article class="game-card reveal" style="--delay:0.4s"><a href="twoPlayer/ArchersRandom.html"><div class="game-media"><img src="img/game_icon/twoPlayer/ArchersRandom.jpg" alt="Archers Random"></div><div class="game-copy"><span class="game-tag">2 Player</span><h3>Archers Random</h3></div></a></article>
-                </div>
-            </div>
-        </section>
+                </a>
 
-        <section class="section reveal" id="new">
-            <div class="games-band">
-                <div class="band-head">
-                    <div>
-                        <h2>New Games</h2>
-                        <p>Fresh entries from across the archive, ready to click and play.</p>
+                <a class="category-card reveal" style="--delay:0.06s; --accent-color:#ef4444;" href="racing-games.html">
+                    <span class="category-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 14h6"></path>
+                            <path d="M14 10h6"></path>
+                            <path d="M3 18h4"></path>
+                            <path d="M17 6h4"></path>
+                            <path d="M9 16l6-8"></path>
+                        </svg>
+                    </span>
+                    <div class="category-body">
+                        <h3>Car Racing</h3>
+                        <span class="category-count">110 games</span>
+                        <span class="category-label">Speed and nitro pressure</span>
                     </div>
-                </div>
-                <div class="showcase-grid">
-                    <article class="game-card reveal" style="--delay:0s"><a href="racing/TwoRX7Drifters.html"><div class="game-media"><img src="img/game_icon/racing/TwoRX7Drifters.jpg" alt="Two RX7 Drifters"></div><div class="game-copy"><span class="game-tag">Racing</span><h3>Two RX7 Drifters</h3></div></a></article>
-                    <article class="game-card reveal" style="--delay:0.08s"><a href="driving/HideSeekGoAndFind.html"><div class="game-media"><img src="img/game_icon/driving/Hide&SeekGoAndFind.jpg" alt="Hide & Seek Go And Find"></div><div class="game-copy"><span class="game-tag">Driving</span><h3>Hide &amp; Seek Go And Find</h3></div></a></article>
-                    <article class="game-card reveal" style="--delay:0.16s"><a href="parking/CarJamEscape.html"><div class="game-media"><img src="img/game_icon/parking/CarJamEscape.jpg" alt="Car Jam Escape"></div><div class="game-copy"><span class="game-tag">Parking</span><h3>Car Jam Escape</h3></div></a></article>
-                    <article class="game-card reveal" style="--delay:0.24s"><a href="trafficControl/CowJamFarmpuzzle.html"><div class="game-media"><img src="img/game_icon/trafficControl/CowJamFarmpuzzle.jpg" alt="Cow Jam Farm puzzle"></div><div class="game-copy"><span class="game-tag">Control</span><h3>Cow Jam Farm puzzle</h3></div></a></article>
-                    <article class="game-card reveal" style="--delay:0.32s"><a href="clicker/BrainrotEvolution.html"><div class="game-media"><img src="img/game_icon/clicker/BrainrotEvolution.jpg" alt="Brainrot Evolution"></div><div class="game-copy"><span class="game-tag">Clicker</span><h3>Brainrot Evolution</h3></div></a></article>
-                    <article class="game-card reveal" style="--delay:0.4s"><a href="trivia/QuizMaster.html"><div class="game-media"><img src="img/game_icon/trivia/QuizMaster.jpeg" alt="Quiz Master"></div><div class="game-copy"><span class="game-tag">Trivia</span><h3>Quiz Master</h3></div></a></article>
-                </div>
-            </div>
-        </section>
+                </a>
 
-        <section class="section category-strip reveal" id="categories">
-            <div class="section-head reveal" style="--delay: 0.02s;">
-                <div>
-                    <h2>Categories</h2>
-                </div>
-            </div>
-            <div class="category-row">
-                <a class="category-chip reveal" style="--delay:0s" href="driving-games.html">
-                    <span class="chip-mark" aria-hidden="true"></span>
-                    <span>Traffic Driving</span>
+                <a class="category-card reveal" style="--delay:0.12s; --accent-color:#fb923c;" href="escape-games.html">
+                    <span class="category-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 12h10"></path>
+                            <path d="M12 6l6 6-6 6"></path>
+                            <path d="M4 5v14"></path>
+                        </svg>
+                    </span>
+                    <div class="category-body">
+                        <h3>Highway Escape</h3>
+                        <span class="category-count">100 games</span>
+                        <span class="category-label">Pursuit and survival lanes</span>
+                    </div>
                 </a>
-                <a class="category-chip reveal" style="--delay:0.08s" href="racing-games.html">
-                    <span class="chip-mark" aria-hidden="true"></span>
-                    <span>Car Racing</span>
+
+                <a class="category-card reveal" style="--delay:0.18s; --accent-color:#22c55e;" href="parking-games.html">
+                    <span class="category-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 19V5h6a4 4 0 0 1 0 8H7"></path>
+                        </svg>
+                    </span>
+                    <div class="category-body">
+                        <h3>Parking Challenge</h3>
+                        <span class="category-count">102 games</span>
+                        <span class="category-label">Precision and tight turns</span>
+                    </div>
                 </a>
-                <a class="category-chip reveal" style="--delay:0.16s" href="escape-games.html">
-                    <span class="chip-mark" aria-hidden="true"></span>
-                    <span>Highway Escape</span>
+
+                <a class="category-card reveal" style="--delay:0.24s; --accent-color:#facc15;" href="traffic-control-games.html">
+                    <span class="category-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 4v16"></path>
+                            <rect x="8.5" y="5" width="7" height="4" rx="1"></rect>
+                            <rect x="8.5" y="10" width="7" height="4" rx="1"></rect>
+                            <rect x="8.5" y="15" width="7" height="4" rx="1"></rect>
+                        </svg>
+                    </span>
+                    <div class="category-body">
+                        <h3>Traffic Control</h3>
+                        <span class="category-count">101 games</span>
+                        <span class="category-label">Signals and smart timing</span>
+                    </div>
                 </a>
-                <a class="category-chip reveal" style="--delay:0.24s" href="parking-games.html">
-                    <span class="chip-mark" aria-hidden="true"></span>
-                    <span>Parking Challenge</span>
-                </a>
-                <a class="category-chip reveal" style="--delay:0.32s" href="traffic-control-games.html">
-                    <span class="chip-mark" aria-hidden="true"></span>
-                    <span>Traffic Control</span>
-                </a>
-                <a class="category-chip reveal" style="--delay:0.4s" href="clicker-games.html">
-                    <span class="chip-mark" aria-hidden="true"></span>
-                    <span>Reaction Games</span>
+
+                <a class="category-card reveal" style="--delay:0.3s; --accent-color:#a855f7;" href="clicker-games.html">
+                    <span class="category-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3v6"></path>
+                            <path d="M17.7 6.3l-4.2 4.2"></path>
+                            <path d="M21 12h-6"></path>
+                            <path d="M17.7 17.7l-4.2-4.2"></path>
+                            <path d="M12 21v-6"></path>
+                            <path d="M6.3 17.7l4.2-4.2"></path>
+                            <path d="M3 12h6"></path>
+                            <path d="M6.3 6.3l4.2 4.2"></path>
+                        </svg>
+                    </span>
+                    <div class="category-body">
+                        <h3>Reaction Games</h3>
+                        <span class="category-count">110 games</span>
+                        <span class="category-label">Tap speed and quick reads</span>
+                    </div>
                 </a>
             </div>
         </section>
 
         <aside class="ad-left"></aside>
-
-        <section class="section cta reveal" id="cta">
-            <div class="cta-inner">
-                <div class="cta-copy">
-                    <h2>Hit the road and keep the momentum going.</h2>
-                    <p>Browse more picks, jump between categories, or return to the featured run whenever you want another fast session.</p>
-                </div>
-                <div class="cta-actions">
-                    <a href="categories.html" class="btn btn-primary">Browse All Categories</a>
-                    <a href="games/traffic-jam-3d.html" class="btn btn-secondary">Open Featured Game</a>
-                </div>
-            </div>
-        </section>
-
         <aside class="ad-right"></aside>
 
-        <section class="section about reveal" id="about">
-            <div class="about-card">
-                <div class="about-copy">
-                    <h2>About Traffic Games</h2>
-                    <p>Traffic Games is an online collection of driving, racing, parking, and traffic challenge games. Designed with a sleek urban style, it offers quick access to exciting browser games for players who love speed and action.</p>
+        <section class="section panel cards-panel reveal" id="trending">
+            <div class="section-head">
+                <div class="section-copy">
+                    <span class="section-kicker">Hot this week</span>
+                    <h2>Trending Games</h2>
+                    <p>Fast click-through picks that feel closest to a real game platform homepage.</p>
                 </div>
-                <div class="about-stats">
-                    <div class="about-stat">
-                        <strong>708</strong>
-                        <span>games in the archive</span>
-                    </div>
-                    <div class="about-stat">
-                        <strong>8</strong>
-                        <span>existing collections</span>
-                    </div>
-                    <div class="about-stat">
-                        <strong>1</strong>
-                        <span>instant homepage play</span>
-                    </div>
+            </div>
+            <div class="game-grid" id="trendingGrid"></div>
+        </section>
+
+        <section class="section panel cards-panel reveal" id="recent">
+            <div class="section-head">
+                <div class="section-copy">
+                    <span class="section-kicker">Keep going</span>
+                    <h2>Recently Played</h2>
+                    <p>Games you open from this hub appear here so you can jump back in quickly.</p>
                 </div>
+            </div>
+            <div class="game-grid" id="recentGrid"></div>
+        </section>
+
+        <section class="section panel cards-panel reveal" id="new">
+            <div class="section-head">
+                <div class="section-copy">
+                    <span class="section-kicker">Fresh arrivals</span>
+                    <h2>New Games</h2>
+                    <p>Newer additions and newer-looking picks that help the homepage stay active.</p>
+                </div>
+            </div>
+            <div class="game-grid" id="newGrid"></div>
+        </section>
+
+        <section class="section panel faq-panel reveal" id="faq">
+            <div class="section-head">
+                <div class="section-copy">
+                    <span class="section-kicker">Quick answers</span>
+                    <h2>FAQ</h2>
+                </div>
+            </div>
+            <div class="faq-grid">
+                <details class="faq-item">
+                    <summary>
+                        <strong>What kinds of games are on Traffic Games?</strong>
+                        <span>+</span>
+                    </summary>
+                    <div class="faq-content">
+                        <p>The homepage focuses on traffic driving, car racing, highway escape, parking challenge, traffic control, and reaction-style games, with more collections still available through the category hub.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <strong>Can I start playing right from the homepage?</strong>
+                        <span>+</span>
+                    </summary>
+                    <div class="faq-content">
+                        <p>Yes. Traffic Jam 3D loads directly in the hero area so players can start without opening another page first.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <strong>Where do I find more games beyond the homepage picks?</strong>
+                        <span>+</span>
+                    </summary>
+                    <div class="faq-content">
+                        <p>Use the six category cards, the category dropdown in the header, or the full collections page to reach the deeper archive.</p>
+                    </div>
+                </details>
             </div>
         </section>
 
-        <footer class="section site-footer reveal">
-            <span class="footer-copy">Traffic Games Online</span>
-            <div class="footer-links">
-                <a href="categories.html">Categories</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy-policy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
+        <footer class="section panel footer-panel site-footer reveal">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="/" class="brand" aria-label="Traffic Games home">
+                        <span class="brand-mark">
+                            <img src="favicon.svg" alt="">
+                        </span>
+                        <span>Traffic Games</span>
+                    </a>
+                    <p>Built as a real traffic driving game platform: fast entry, strong game cards, clear categories, and quick returns to what players actually clicked.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#featured">Featured</a>
+                    <a href="#categories">Categories</a>
+                    <a href="#trending">Trending</a>
+                    <a href="#recent">Recently Played</a>
+                    <a href="#new">New Games</a>
+                    <a href="categories.html">All Collections</a>
+                    <a href="privacy-policy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-note">Traffic Games Online</span>
+                <span id="footerYear"></span>
             </div>
         </footer>
     </main>
+
     <script>
         (function () {
+            var featuredGames = [
+                { title: "Traffic Jam 3D", href: "games/traffic-jam-3d.html", image: "img/screenshots/ss1.png", category: "Featured", rating: "4.9" },
+                { title: "GT Traffic Racer", href: "racing/GTTrafficRacer.html", image: "img/game_icon/racing/GTTrafficRacer.jpg", category: "Racing", rating: "4.8" },
+                { title: "Extreme Car Driving Simulator", href: "driving/ExtremeCarDrivingSimulator.html", image: "img/game_icon/driving/ExtremeCarDrivingSimulator.jpeg", category: "Driving", rating: "4.7" },
+                { title: "Parking Fury 3D", href: "parking/ParkingFury3D.html", image: "img/game_icon/parking/ParkingFury3D.jpeg", category: "Parking", rating: "4.8" },
+                { title: "Traffic Tap Survival", href: "trafficControl/TrafficTapSurvival.html", image: "img/game_icon/trafficControl/TrafficTapSurvival.jpg", category: "Control", rating: "4.6" },
+                { title: "HOTGEAR", href: "racing/HOTGEAR.html", image: "img/game_icon/racing/HOTGEAR.jpg", category: "Racing", rating: "4.7" },
+                { title: "SCP 173 Escape", href: "escape/SCP173Escape.html", image: "img/game_icon/escape/SCP173Escape.jpg", category: "Escape", rating: "4.6" },
+                { title: "Capybara Coin Master", href: "clicker/CapybaraCoinMaster.html", image: "img/game_icon/clicker/CapybaraCoinMaster.jpg", category: "Reaction", rating: "4.5" }
+            ];
+
+            var trendingGames = [
+                { title: "Formula Traffic Racer", href: "racing/FormulaTrafficRacer.html", image: "img/game_icon/racing/FormulaTrafficRacer.jpg", category: "Racing", rating: "4.8" },
+                { title: "City Bus Simulator 3D", href: "driving/CityBusSimulator3D.html", image: "img/game_icon/driving/CityBusSimulator3D.jpeg", category: "Driving", rating: "4.6" },
+                { title: "Parking Jam Escape", href: "parking/ParkingJamEscape.html", image: "img/game_icon/parking/ParkingJamEscape.jpeg", category: "Parking", rating: "4.7" },
+                { title: "Air Traffic Controller", href: "trafficControl/AirTrafficController.html", image: "img/game_icon/trafficControl/AirTrafficController.jpeg", category: "Control", rating: "4.5" },
+                { title: "Backrooms", href: "escape/Backrooms.html", image: "img/game_icon/escape/Backrooms.jpg", category: "Escape", rating: "4.6" },
+                { title: "Life Clicker", href: "clicker/LifeClicker.html", image: "img/game_icon/clicker/LifeClicker.jpg", category: "Reaction", rating: "4.4" }
+            ];
+
+            var newGames = [
+                { title: "Two RX7 Drifters", href: "racing/TwoRX7Drifters.html", image: "img/game_icon/racing/TwoRX7Drifters.jpg", category: "Racing", rating: "4.7" },
+                { title: "Hide & Seek Go And Find", href: "driving/HideSeekGoAndFind.html", image: "img/game_icon/driving/Hide&SeekGoAndFind.jpg", category: "Driving", rating: "4.3" },
+                { title: "Car Jam Escape", href: "parking/CarJamEscape.html", image: "img/game_icon/parking/CarJamEscape.jpg", category: "Parking", rating: "4.6" },
+                { title: "Cow Jam Farm puzzle", href: "trafficControl/CowJamFarmpuzzle.html", image: "img/game_icon/trafficControl/CowJamFarmpuzzle.jpg", category: "Control", rating: "4.3" },
+                { title: "Brainrot Evolution", href: "clicker/BrainrotEvolution.html", image: "img/game_icon/clicker/BrainrotEvolution.jpg", category: "Reaction", rating: "4.2" },
+                { title: "Quiz Master", href: "trivia/QuizMaster.html", image: "img/game_icon/trivia/QuizMaster.jpeg", category: "Bonus", rating: "4.4" }
+            ];
+
+            var fallbackRecentGames = [
+                { title: "Traffic Jam 3D", href: "games/traffic-jam-3d.html", image: "img/screenshots/ss1.png", category: "Featured", rating: "4.9" },
+                { title: "Parking Fury 3D", href: "parking/ParkingFury3D.html", image: "img/game_icon/parking/ParkingFury3D.jpeg", category: "Parking", rating: "4.8" },
+                { title: "GT Traffic Racer", href: "racing/GTTrafficRacer.html", image: "img/game_icon/racing/GTTrafficRacer.jpg", category: "Racing", rating: "4.8" },
+                { title: "Traffic Tap Survival", href: "trafficControl/TrafficTapSurvival.html", image: "img/game_icon/trafficControl/TrafficTapSurvival.jpg", category: "Control", rating: "4.6" }
+            ];
+
+            var recentKey = "trafficGamesRecent";
             var topbar = document.getElementById("topbar");
-            var playerStage = document.getElementById("playerStage");
+            var heroStage = document.getElementById("home-game");
             var fullscreenBtn = document.getElementById("fullscreenBtn");
             var navDropdown = document.querySelector(".nav-dropdown");
             var reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+            var featuredGrid = document.getElementById("featuredGrid");
+            var trendingGrid = document.getElementById("trendingGrid");
+            var recentGrid = document.getElementById("recentGrid");
+            var newGrid = document.getElementById("newGrid");
+            var footerYear = document.getElementById("footerYear");
+
+            renderGrid(featuredGrid, featuredGames);
+            renderGrid(trendingGrid, trendingGames);
+            renderGrid(newGrid, newGames);
+            renderGrid(recentGrid, getRecentGames());
+
+            if (footerYear) {
+                footerYear.textContent = "Copyright " + new Date().getFullYear() + " Traffic Games";
+            }
 
             if ("IntersectionObserver" in window) {
                 var observer = new IntersectionObserver(function (entries) {
@@ -1603,8 +1716,8 @@
                         }
                     });
                 }, {
-                    threshold: 0.16,
-                    rootMargin: "0px 0px -40px 0px"
+                    threshold: 0.14,
+                    rootMargin: "0px 0px -42px 0px"
                 });
 
                 reveals.forEach(function (item) {
@@ -1620,9 +1733,9 @@
             window.addEventListener("scroll", updateScene, { passive: true });
             window.addEventListener("resize", updateScene);
 
-            if (fullscreenBtn && playerStage) {
+            if (fullscreenBtn && heroStage) {
                 fullscreenBtn.addEventListener("click", function () {
-                    if (document.fullscreenElement === playerStage || document.webkitFullscreenElement === playerStage) {
+                    if (document.fullscreenElement === heroStage || document.webkitFullscreenElement === heroStage) {
                         if (document.exitFullscreen) {
                             document.exitFullscreen();
                         } else if (document.webkitExitFullscreen) {
@@ -1631,10 +1744,10 @@
                         return;
                     }
 
-                    if (playerStage.requestFullscreen) {
-                        playerStage.requestFullscreen();
-                    } else if (playerStage.webkitRequestFullscreen) {
-                        playerStage.webkitRequestFullscreen();
+                    if (heroStage.requestFullscreen) {
+                        heroStage.requestFullscreen();
+                    } else if (heroStage.webkitRequestFullscreen) {
+                        heroStage.webkitRequestFullscreen();
                     }
                 });
             }
@@ -1643,7 +1756,81 @@
                 if (navDropdown && !navDropdown.contains(event.target)) {
                     navDropdown.open = false;
                 }
+
+                var link = event.target.closest(".js-track-game");
+                if (link) {
+                    saveRecentGame({
+                        title: link.getAttribute("data-title") || "",
+                        href: link.getAttribute("data-href") || link.getAttribute("href") || "#",
+                        image: link.getAttribute("data-image") || "",
+                        category: link.getAttribute("data-category") || "Game",
+                        rating: link.getAttribute("data-rating") || "4.5"
+                    });
+                }
             });
+
+            function renderGrid(target, items) {
+                if (!target) {
+                    return;
+                }
+
+                target.innerHTML = items.map(function (item) {
+                    return '' +
+                        '<article class="game-card reveal is-visible">' +
+                            '<a class="js-track-game" href="' + escapeHtml(item.href) + '"' +
+                                ' data-title="' + escapeHtml(item.title) + '"' +
+                                ' data-href="' + escapeHtml(item.href) + '"' +
+                                ' data-image="' + escapeHtml(item.image) + '"' +
+                                ' data-category="' + escapeHtml(item.category) + '"' +
+                                ' data-rating="' + escapeHtml(item.rating) + '">' +
+                                '<div class="card-media">' +
+                                    '<img src="' + escapeHtml(item.image) + '" alt="' + escapeHtml(item.title) + '" loading="lazy">' +
+                                '</div>' +
+                                '<div class="card-body">' +
+                                    '<div class="card-topline">' +
+                                        '<span class="card-category">' + escapeHtml(item.category) + '</span>' +
+                                        '<span class="card-rating">Star ' + escapeHtml(item.rating) + '</span>' +
+                                    '</div>' +
+                                    '<div class="card-title">' +
+                                        '<h3>' + escapeHtml(item.title) + '</h3>' +
+                                        '<span class="card-arrow" aria-hidden="true">+</span>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</a>' +
+                        '</article>';
+                }).join("");
+            }
+
+            function getRecentGames() {
+                try {
+                    var stored = JSON.parse(localStorage.getItem(recentKey) || "[]");
+                    if (Array.isArray(stored) && stored.length) {
+                        return stored.slice(0, 6);
+                    }
+                } catch (error) {
+                }
+
+                return fallbackRecentGames;
+            }
+
+            function saveRecentGame(game) {
+                if (!game || !game.href) {
+                    return;
+                }
+
+                try {
+                    var stored = JSON.parse(localStorage.getItem(recentKey) || "[]");
+                    var next = Array.isArray(stored) ? stored.filter(function (item) {
+                        return item.href !== game.href;
+                    }) : [];
+
+                    next.unshift(game);
+                    next = next.slice(0, 6);
+                    localStorage.setItem(recentKey, JSON.stringify(next));
+                    renderGrid(recentGrid, next);
+                } catch (error) {
+                }
+            }
 
             function updateScene() {
                 var offset = window.scrollY || window.pageYOffset || 0;
@@ -1651,6 +1838,15 @@
                 if (topbar) {
                     topbar.classList.toggle("is-scrolled", offset > 12);
                 }
+            }
+
+            function escapeHtml(value) {
+                return String(value)
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#39;");
             }
         })();
     </script>
