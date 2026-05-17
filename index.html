@@ -166,6 +166,59 @@
             gap: 18px;
         }
 
+        .header-tools {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-search {
+            display: flex;
+            align-items: center;
+            min-width: 220px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.03);
+            overflow: hidden;
+        }
+
+        .header-search input {
+            width: 100%;
+            min-height: 42px;
+            padding: 0 14px;
+            border: 0;
+            outline: none;
+            background: transparent;
+            color: var(--text);
+            font: inherit;
+        }
+
+        .header-search input::placeholder {
+            color: rgba(148, 168, 193, 0.85);
+        }
+
+        .search-btn {
+            width: 42px;
+            height: 42px;
+            border: 0;
+            background: transparent;
+            color: var(--green);
+            cursor: pointer;
+            flex: 0 0 42px;
+        }
+
+        .header-play {
+            min-height: 42px;
+            padding: 0 14px;
+            border-radius: 14px;
+            border: 1px solid rgba(72, 216, 255, 0.18);
+            background: linear-gradient(135deg, rgba(72, 216, 255, 0.14), rgba(255, 180, 77, 0.12));
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 800;
+            box-shadow: 0 0 18px rgba(72, 216, 255, 0.08);
+        }
+
         .brand {
             display: inline-flex;
             align-items: center;
@@ -587,7 +640,7 @@
             display: block;
             width: 100%;
             height: 100%;
-            min-height: 458px;
+            min-height: 388px;
             border: 0;
             background: #05080d;
         }
@@ -800,6 +853,23 @@
             display: grid;
             grid-template-columns: repeat(6, minmax(0, 1fr));
             gap: 10px;
+        }
+
+        .games-band {
+            display: grid;
+            gap: 16px;
+        }
+
+        .band-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .band-head p {
+            margin-top: 8px;
+            max-width: 60ch;
         }
 
         .category-chip {
@@ -1093,7 +1163,7 @@
             }
 
             .hero-player iframe {
-                min-height: 404px;
+                min-height: 360px;
             }
         }
 
@@ -1111,6 +1181,16 @@
             .footer-links,
             .about-stats {
                 justify-content: flex-start;
+            }
+
+            .header-tools {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+
+            .header-search {
+                min-width: 0;
+                flex: 1 1 220px;
             }
 
             .showcase-grid {
@@ -1150,7 +1230,7 @@
             }
 
             .hero-player iframe {
-                min-height: 310px;
+                min-height: 300px;
             }
 
             .showcase-grid {
@@ -1184,60 +1264,32 @@
             </a>
             <nav class="nav" aria-label="Primary">
                 <a href="/" class="nav-link">Home</a>
+                <a href="#showcase" class="nav-link">Featured</a>
+                <a href="#popular" class="nav-link">Popular</a>
+                <a href="#new" class="nav-link">New</a>
                 <details class="nav-dropdown">
-                    <summary class="nav-link">Racing &amp; Driving <span class="dropdown-arrow">▼</span></summary>
+                    <summary class="nav-link">Categories <span class="dropdown-arrow">▼</span></summary>
                     <div class="dropdown-menu">
-                        <a href="racing-games.html" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);"></span>
-                            <span class="dropdown-text">Racing Games</span>
-                        </a>
-                        <a href="driving-games.html" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);"></span>
-                            <span class="dropdown-text">Driving Games</span>
-                        </a>
+                        <a href="racing-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);"></span><span class="dropdown-text">Racing Games</span></a>
+                        <a href="driving-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);"></span><span class="dropdown-text">Driving Games</span></a>
+                        <a href="parking-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);"></span><span class="dropdown-text">Parking Games</span></a>
+                        <a href="traffic-control-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);"></span><span class="dropdown-text">Traffic Control</span></a>
+                        <a href="escape-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);"></span><span class="dropdown-text">Escape Games</span></a>
+                        <a href="clicker-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);"></span><span class="dropdown-text">Clicker Games</span></a>
+                        <a href="two-player-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #14b8a6, #0d9488);"></span><span class="dropdown-text">2 Player Games</span></a>
+                        <a href="trivia-games.html" class="dropdown-item"><span class="dropdown-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);"></span><span class="dropdown-text">Trivia Games</span></a>
                     </div>
                 </details>
-                <details class="nav-dropdown">
-                    <summary class="nav-link">Parking &amp; Control <span class="dropdown-arrow">▼</span></summary>
-                    <div class="dropdown-menu">
-                        <a href="parking-games.html" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);"></span>
-                            <span class="dropdown-text">Parking Games</span>
-                        </a>
-                        <a href="traffic-control-games.html" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);"></span>
-                            <span class="dropdown-text">Traffic Control</span>
-                        </a>
-                    </div>
-                </details>
-                <details class="nav-dropdown">
-                    <summary class="nav-link">Fun &amp; Casual <span class="dropdown-arrow">▼</span></summary>
-                    <div class="dropdown-menu">
-                        <a href="escape-games.html" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);"></span>
-                            <span class="dropdown-text">Escape Games</span>
-                        </a>
-                        <a href="clicker-games.html" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);"></span>
-                            <span class="dropdown-text">Clicker Games</span>
-                        </a>
-                        <a href="two-player-games.html" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #14b8a6, #0d9488);"></span>
-                            <span class="dropdown-text">2 Player Games</span>
-                        </a>
-                    </div>
-                </details>
-                <details class="nav-dropdown">
-                    <summary class="nav-link">Trivia <span class="dropdown-arrow">▼</span></summary>
-                    <div class="dropdown-menu">
-                        <a href="trivia-games.html" class="dropdown-item">
-                            <span class="dropdown-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);"></span>
-                            <span class="dropdown-text">Trivia Games</span>
-                        </a>
-                    </div>
-                </details>
-                <a href="games/traffic-jam-3d.html" class="nav-link">Traffic Jam 3D</a>
             </nav>
+            <div class="header-tools">
+                <form class="header-search" action="categories.html" method="get">
+                    <input type="text" name="search" placeholder="Search traffic games..." aria-label="Search traffic games">
+                    <button type="submit" class="search-btn" aria-label="Search">
+                        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="13" y1="13" x2="18" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </button>
+                </form>
+                <a href="games/traffic-jam-3d.html" class="header-play">Play Now</a>
+            </div>
         </div>
     </header>
 
@@ -1248,8 +1300,8 @@
                 <h1 class="hero-title">Traffic Games</h1>
                 <p class="hero-subtitle">Play fast-paced traffic, driving, parking, and racing games in one stylish place.</p>
                 <div class="hero-actions">
-                    <a href="#categories" class="btn btn-primary">Explore Games</a>
-                    <a href="#showcase" class="btn btn-secondary">Top Picks</a>
+                    <a href="#showcase" class="btn btn-primary">Explore Games</a>
+                    <a href="#popular" class="btn btn-secondary">Top Picks</a>
                 </div>
             </div>
 
@@ -1278,8 +1330,6 @@
                 </div>
             </div>
         </section>
-
-        <aside class="ad-left"></aside>
 
         <section class="section game-showcase reveal" id="showcase">
             <div class="section-head reveal" style="--delay: 0.02s;">
@@ -1414,6 +1464,44 @@
             </div>
         </section>
 
+        <section class="section reveal" id="popular">
+            <div class="games-band">
+                <div class="band-head">
+                    <div>
+                        <h2>Popular Games</h2>
+                        <p>Fast picks that are easy to start and easy to continue.</p>
+                    </div>
+                </div>
+                <div class="showcase-grid">
+                    <article class="game-card reveal" style="--delay:0s"><a href="racing/FormulaTrafficRacer.html"><div class="game-media"><img src="img/game_icon/racing/FormulaTrafficRacer.jpg" alt="Formula Traffic Racer"></div><div class="game-copy"><span class="game-tag">Racing</span><h3>Formula Traffic Racer</h3></div></a></article>
+                    <article class="game-card reveal" style="--delay:0.08s"><a href="driving/CarSimulationGame.html"><div class="game-media"><img src="img/game_icon/driving/CarSimulationGame.jpeg" alt="Car Simulation Game"></div><div class="game-copy"><span class="game-tag">Driving</span><h3>Car Simulation Game</h3></div></a></article>
+                    <article class="game-card reveal" style="--delay:0.16s"><a href="parking/ParkingJamEscape.html"><div class="game-media"><img src="img/game_icon/parking/ParkingJamEscape.jpeg" alt="Parking Jam Escape"></div><div class="game-copy"><span class="game-tag">Parking</span><h3>Parking Jam Escape</h3></div></a></article>
+                    <article class="game-card reveal" style="--delay:0.24s"><a href="escape/Backrooms.html"><div class="game-media"><img src="img/game_icon/escape/Backrooms.jpg" alt="Backrooms"></div><div class="game-copy"><span class="game-tag">Escape</span><h3>Backrooms</h3></div></a></article>
+                    <article class="game-card reveal" style="--delay:0.32s"><a href="clicker/LifeClicker.html"><div class="game-media"><img src="img/game_icon/clicker/LifeClicker.jpg" alt="Life Clicker"></div><div class="game-copy"><span class="game-tag">Clicker</span><h3>Life Clicker</h3></div></a></article>
+                    <article class="game-card reveal" style="--delay:0.4s"><a href="twoPlayer/ArchersRandom.html"><div class="game-media"><img src="img/game_icon/twoPlayer/ArchersRandom.jpg" alt="Archers Random"></div><div class="game-copy"><span class="game-tag">2 Player</span><h3>Archers Random</h3></div></a></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal" id="new">
+            <div class="games-band">
+                <div class="band-head">
+                    <div>
+                        <h2>New Games</h2>
+                        <p>Fresh entries from across the archive, ready to click and play.</p>
+                    </div>
+                </div>
+                <div class="showcase-grid">
+                    <article class="game-card reveal" style="--delay:0s"><a href="racing/TwoRX7Drifters.html"><div class="game-media"><img src="img/game_icon/racing/TwoRX7Drifters.jpg" alt="Two RX7 Drifters"></div><div class="game-copy"><span class="game-tag">Racing</span><h3>Two RX7 Drifters</h3></div></a></article>
+                    <article class="game-card reveal" style="--delay:0.08s"><a href="driving/HideSeekGoAndFind.html"><div class="game-media"><img src="img/game_icon/driving/Hide&SeekGoAndFind.jpg" alt="Hide & Seek Go And Find"></div><div class="game-copy"><span class="game-tag">Driving</span><h3>Hide &amp; Seek Go And Find</h3></div></a></article>
+                    <article class="game-card reveal" style="--delay:0.16s"><a href="parking/CarJamEscape.html"><div class="game-media"><img src="img/game_icon/parking/CarJamEscape.jpg" alt="Car Jam Escape"></div><div class="game-copy"><span class="game-tag">Parking</span><h3>Car Jam Escape</h3></div></a></article>
+                    <article class="game-card reveal" style="--delay:0.24s"><a href="trafficControl/CowJamFarmpuzzle.html"><div class="game-media"><img src="img/game_icon/trafficControl/CowJamFarmpuzzle.jpg" alt="Cow Jam Farm puzzle"></div><div class="game-copy"><span class="game-tag">Control</span><h3>Cow Jam Farm puzzle</h3></div></a></article>
+                    <article class="game-card reveal" style="--delay:0.32s"><a href="clicker/BrainrotEvolution.html"><div class="game-media"><img src="img/game_icon/clicker/BrainrotEvolution.jpg" alt="Brainrot Evolution"></div><div class="game-copy"><span class="game-tag">Clicker</span><h3>Brainrot Evolution</h3></div></a></article>
+                    <article class="game-card reveal" style="--delay:0.4s"><a href="trivia/QuizMaster.html"><div class="game-media"><img src="img/game_icon/trivia/QuizMaster.jpeg" alt="Quiz Master"></div><div class="game-copy"><span class="game-tag">Trivia</span><h3>Quiz Master</h3></div></a></article>
+                </div>
+            </div>
+        </section>
+
         <section class="section category-strip reveal" id="categories">
             <div class="section-head reveal" style="--delay: 0.02s;">
                 <div>
@@ -1447,6 +1535,8 @@
                 </a>
             </div>
         </section>
+
+        <aside class="ad-left"></aside>
 
         <section class="section cta reveal" id="cta">
             <div class="cta-inner">
@@ -1501,7 +1591,7 @@
             var topbar = document.getElementById("topbar");
             var playerStage = document.getElementById("playerStage");
             var fullscreenBtn = document.getElementById("fullscreenBtn");
-            var navDropdowns = Array.prototype.slice.call(document.querySelectorAll(".nav-dropdown"));
+            var navDropdown = document.querySelector(".nav-dropdown");
             var reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
 
             if ("IntersectionObserver" in window) {
@@ -1549,26 +1639,10 @@
                 });
             }
 
-            navDropdowns.forEach(function (dropdown) {
-                dropdown.addEventListener("toggle", function () {
-                    if (!dropdown.open) {
-                        return;
-                    }
-
-                    navDropdowns.forEach(function (other) {
-                        if (other !== dropdown) {
-                            other.open = false;
-                        }
-                    });
-                });
-            });
-
             document.addEventListener("click", function (event) {
-                navDropdowns.forEach(function (dropdown) {
-                    if (!dropdown.contains(event.target)) {
-                        dropdown.open = false;
-                    }
-                });
+                if (navDropdown && !navDropdown.contains(event.target)) {
+                    navDropdown.open = false;
+                }
             });
 
             function updateScene() {
