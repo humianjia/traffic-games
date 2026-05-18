@@ -8,4 +8,6 @@ Diverse Game Selection: Traffic Games offers a wide range of traffic-related gam
 User-Friendly Interface: The platform features an intuitive and easy-to-navigate interface, making it simple for players of all ages and skill levels to find and start playing their favorite games instantly.
 Regular Updates: We continuously update our game library with fresh content, ensuring that players always have access to the latest and greatest traffic-themed mini-games.
 Accessible Anywhere, Anytime: As an online platform, Traffic Games is accessible from any device with an internet connection, allowing you to enjoy your favorite games on the go or from the comfort of your home.
-Visit our homepage at https://www.trafficgames.online to explore our extensive collection of traffic games and start your gaming adventure today!
+Official website: [Traffic Games](https://www.trafficgames.online/)
+
+Visit our homepage at [https://www.trafficgames.online](https://www.trafficgames.online/) to explore our extensive collection of traffic games and start your gaming adventure today!
