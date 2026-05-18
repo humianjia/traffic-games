@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="A curated page of external game sites with quick links to Soccer Bros, Popcorn Game, Mine Fun IO, Open Front, Skillwarz, Veckio, Traffic Games, Twilight Princess, and Wrestle Bros.">
+    <meta name="keywords" content="game sites, external links, browser games, soccer bros, popcorngame, minefunio, openfront, skillwarz, veckio, traffic games, twilight princess, wrestlebros">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="More Sites | Traffic Games">
+    <meta property="og:description" content="Quick access to a curated set of game sites and browser playgrounds.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.trafficgames.online/more-sites.html">
+    <title>More Sites | Traffic Games</title>
+    <link rel="canonical" href="https://www.trafficgames.online/more-sites.html">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #08111f;
+            --panel: rgba(10, 18, 33, 0.92);
+            --panel-soft: rgba(13, 22, 39, 0.9);
+            --line: rgba(148, 163, 184, 0.16);
+            --line-strong: rgba(148, 163, 184, 0.28);
+            --text: #f8fafc;
+            --muted: #b8c5d8;
+            --shadow: 0 24px 60px rgba(2, 6, 23, 0.5);
+            --wrap: min(1220px, calc(100% - 32px));
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: var(--text);
+            font-family: "Manrope", sans-serif;
+            background:
+                radial-gradient(circle at 14% 10%, rgba(56, 189, 248, 0.16), transparent 18%),
+                radial-gradient(circle at 84% 12%, rgba(168, 85, 247, 0.12), transparent 16%),
+                linear-gradient(180deg, #07101c 0%, #091423 42%, #08111f 100%);
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .wrap {
+            width: var(--wrap);
+            margin: 0 auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            backdrop-filter: blur(16px);
+            background: rgba(4, 8, 15, 0.78);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .header-row,
+        .footer-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 18px 0;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, rgba(125, 249, 167, 0.22), rgba(88, 216, 255, 0.2));
+            border: 1px solid rgba(125, 249, 167, 0.28);
+        }
+
+        nav,
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a,
+        .footer-links a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        .footer-links a:hover {
+            color: var(--text);
+        }
+
+        main {
+            padding: 28px 0 88px;
+        }
+
+        section + section {
+            margin-top: 28px;
+        }
+
+        .hero,
+        .panel {
+            border: 1px solid var(--line);
+            border-radius: 30px;
+            background: linear-gradient(180deg, rgba(10, 18, 33, 0.96), rgba(8, 15, 29, 0.94));
+            box-shadow: var(--shadow);
+            padding: 26px;
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: auto 0 36% 52%;
+            height: 320px;
+            background: radial-gradient(circle, rgba(88, 216, 255, 0.16), transparent 60%);
+            pointer-events: none;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(88, 216, 255, 0.12);
+            color: #d0f5ff;
+            font-size: 0.86rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+            font-family: "Space Grotesk", sans-serif;
+            letter-spacing: -0.04em;
+        }
+
+        h1 {
+            margin-top: 18px;
+            font-size: clamp(2.5rem, 6vw, 4.8rem);
+            line-height: 0.95;
+            max-width: 12ch;
+        }
+
+        h2 {
+            font-size: clamp(1.6rem, 3vw, 2.5rem);
+            line-height: 1;
+        }
+
+        .hero p,
+        .panel p,
+        .card p {
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+        .hero p {
+            max-width: 68ch;
+            margin: 18px 0 0;
+            font-size: 1.04rem;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 13px 18px;
+            border-radius: 16px;
+            border: 1px solid transparent;
+            text-decoration: none;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .btn-primary {
+            color: #06111f;
+            background: linear-gradient(135deg, #d0f5ff, #7dd3fc);
+            box-shadow: 0 12px 30px rgba(88, 216, 255, 0.16);
+        }
+
+        .btn-secondary {
+            color: var(--text);
+            border-color: var(--line-strong);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-height: 180px;
+            padding: 20px;
+            border-radius: 24px;
+            border: 1px solid rgba(148, 163, 184, 0.14);
+            background:
+                linear-gradient(180deg, rgba(13, 22, 39, 0.96), rgba(9, 16, 30, 0.94)),
+                radial-gradient(circle at top right, rgba(88, 216, 255, 0.08), transparent 35%);
+            text-decoration: none;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(125, 249, 167, 0.34);
+            box-shadow: 0 16px 36px rgba(2, 6, 23, 0.35);
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .card-mark {
+            width: 40px;
+            height: 40px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            color: #06111f;
+            font-size: 0.86rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-a), var(--accent-b));
+        }
+
+        .card h3 {
+            font-size: 1.18rem;
+            line-height: 1.1;
+        }
+
+        .card small {
+            color: #94a3b8;
+            word-break: break-all;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .pill {
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(148, 163, 184, 0.14);
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .site-footer {
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            background: rgba(4, 8, 15, 0.62);
+        }
+
+        @media (max-width: 960px) {
+            .card-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .header-row,
+            .footer-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero,
+            .panel {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap header-row">
+            <a href="/" class="brand" aria-label="Traffic Games home">
+                <span class="brand-mark">
+                    <img src="favicon.svg" alt="" width="20" height="20">
+                </span>
+                <span>Traffic Games Online</span>
+            </a>
+            <nav aria-label="Primary">
+                <a href="/">Home</a>
+                <a href="categories.html">Categories</a>
+                <a href="more-sites.html">More Sites</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="hero">
+            <div class="eyebrow">External link hub</div>
+            <h1>More sites worth opening.</h1>
+            <p>A clean, no-fuss page for the extra links you wanted on the site. Each card opens in a new tab so the main hub stays right where it is.</p>
+            <div class="cta-row">
+                <a class="btn btn-primary" href="/">Back to homepage</a>
+                <a class="btn btn-secondary" href="categories.html">Browse categories</a>
+            </div>
+            <div class="pill-row">
+                <span class="pill">9 quick links</span>
+                <span class="pill">External sites</span>
+                <span class="pill">Open in new tabs</span>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Quick links</h2>
+            <p>These are placed here in a simple, natural layout so they feel like part of the site rather than a pasted list.</p>
+            <div class="card-grid">
+                <a class="card" href="https://www.soccerbros.space/" target="_blank" rel="noopener noreferrer" style="--accent-a:#7dd3fc; --accent-b:#34d399;">
+                    <div class="card-top">
+                        <span class="card-mark">01</span>
+                        <small>External</small>
+                    </div>
+                    <h3>Soccer Bros</h3>
+                    <p>soccerbros.space</p>
+                </a>
+                <a class="card" href="https://www.popcorngame.online/" target="_blank" rel="noopener noreferrer" style="--accent-a:#fca5a5; --accent-b:#fbbf24;">
+                    <div class="card-top">
+                        <span class="card-mark">02</span>
+                        <small>External</small>
+                    </div>
+                    <h3>Popcorn Game</h3>
+                    <p>popcorngame.online</p>
+                </a>
+                <a class="card" href="https://minefunio.space/" target="_blank" rel="noopener noreferrer" style="--accent-a:#86efac; --accent-b:#22c55e;">
+                    <div class="card-top">
+                        <span class="card-mark">03</span>
+                        <small>External</small>
+                    </div>
+                    <h3>Mine Fun IO</h3>
+                    <p>minefunio.space</p>
+                </a>
+                <a class="card" href="https://openfront.space/" target="_blank" rel="noopener noreferrer" style="--accent-a:#93c5fd; --accent-b:#a78bfa;">
+                    <div class="card-top">
+                        <span class="card-mark">04</span>
+                        <small>External</small>
+                    </div>
+                    <h3>Open Front</h3>
+                    <p>openfront.space</p>
+                </a>
+                <a class="card" href="https://www.skillwarz.online/" target="_blank" rel="noopener noreferrer" style="--accent-a:#f9a8d4; --accent-b:#f97316;">
+                    <div class="card-top">
+                        <span class="card-mark">05</span>
+                        <small>External</small>
+                    </div>
+                    <h3>Skillwarz</h3>
+                    <p>skillwarz.online</p>
+                </a>
+                <a class="card" href="https://veckio.space/" target="_blank" rel="noopener noreferrer" style="--accent-a:#67e8f9; --accent-b:#38bdf8;">
+                    <div class="card-top">
+                        <span class="card-mark">06</span>
+                        <small>External</small>
+                    </div>
+                    <h3>Veckio</h3>
+                    <p>veckio.space</p>
+                </a>
+                <a class="card" href="https://www.trafficgames.online/" target="_blank" rel="noopener noreferrer" style="--accent-a:#d9f99d; --accent-b:#22c55e;">
+                    <div class="card-top">
+                        <span class="card-mark">07</span>
+                        <small>Home</small>
+                    </div>
+                    <h3>Traffic Games</h3>
+                    <p>trafficgames.online</p>
+                </a>
+                <a class="card" href="https://twilightprincess.website/" target="_blank" rel="noopener noreferrer" style="--accent-a:#c4b5fd; --accent-b:#60a5fa;">
+                    <div class="card-top">
+                        <span class="card-mark">08</span>
+                        <small>External</small>
+                    </div>
+                    <h3>Twilight Princess</h3>
+                    <p>twilightprincess.website</p>
+                </a>
+                <a class="card" href="https://www.wrestlebros.space/" target="_blank" rel="noopener noreferrer" style="--accent-a:#fda4af; --accent-b:#fb7185;">
+                    <div class="card-top">
+                        <span class="card-mark">09</span>
+                        <small>External</small>
+                    </div>
+                    <h3>Wrestle Bros</h3>
+                    <p>wrestlebros.space</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-row">
+            <div>
+                <strong>Traffic Games Online</strong>
+                <p style="color:var(--muted); max-width:52ch;">A simple extra-links page that keeps the main site tidy while still making the curated URLs easy to reach.</p>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="categories.html">Categories</a>
+                <a href="more-sites.html">More Sites</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
