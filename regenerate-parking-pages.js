@@ -35,7 +35,7 @@ const generatePage = (game) => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Play the best traffic games online. Enjoy a wide variety of traffic games including racing, parking, and traffic control games." />
     <meta name="keywords" content="traffic games, traffic rider games, traffic rider, road traffic games, traffic games car, traffic car games, ${gameName}, parking games, free online games, car games" />
-    <meta name="robots" content="noindex, follow" />
+    <meta name="robots" content="index, follow" />
     <title>traffic games - ${gameName} - Play Free Online Parking Game</title>
     <link rel="canonical" href="https://www.trafficgames.online/parking/${safeFileName}.html" />
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">

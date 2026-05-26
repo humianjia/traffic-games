@@ -13,8 +13,8 @@ $legacyDirs = @(
 
 $adsensePattern = '(?ms)^[ \t]*<!-- Google AdSense -->\r?\n[ \t]*<script async src="https://pagead2\.googlesyndication\.com/pagead/js/adsbygoogle\.js\?client=ca-pub-7534347140708021"\s*\r?\n?[ \t]*crossorigin="anonymous"></script>\r?\n?'
 $gaScriptPattern = "(?ms)^[ \t]*<!-- Google tag \(gtag\.js\) -->\r?\n[ \t]*<script async src=""https://www\.googletagmanager\.com/gtag/js\?id=G-VWTXKBQEVM""></script>\r?\n[ \t]*<script>\r?\n.*?gtag\('config', 'G-VWTXKBQEVM'\);\r?\n[ \t]*</script>\r?\n?"
-$robotsPattern = '<meta name="robots" content="index, follow"\s*/?>'
-$robotsReplacement = '<meta name="robots" content="noindex, follow" />'
+$robotsPattern = '<meta name="robots" content="[^"]+"\s*/?>'
+$robotsReplacement = '<meta name="robots" content="index, follow" />'
 
 $updatedFiles = @()
 

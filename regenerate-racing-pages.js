@@ -37,7 +37,7 @@ const generatePage = (game) => {
     <!-- SEO优化：强化online/free/browser关键词 -->
     <meta name="description" content="Play ${gameName} Online for Free! Enjoy this exciting traffic racing game directly in your browser. No download required - start playing instantly on mobile or desktop!" />
     <meta name="keywords" content="${gameName}, ${gameName} online, play ${gameName}, traffic games, racing games online, free racing games, browser games, no download games, car games online" />
-    <meta name="robots" content="noindex, follow" />
+    <meta name="robots" content="index, follow" />
     <!-- 优化Title：核心词前置 -->
     <title>${gameName} Online - Play Free Racing Game in Browser | Traffic Games</title>
     <link rel="canonical" href="https://www.trafficgames.online/racing/${safeFileName}.html" />
